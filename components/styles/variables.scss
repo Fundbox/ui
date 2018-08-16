@@ -1,0 +1,64 @@
+// Globals
+$default-fbx-font: "museo-sans";
+$tisaOT-font: "Tisa OT";
+$tisaPro-font: "Tisa Pro";
+$global-font-size: 16px;
+
+// Typography
+$font-weights-default: (
+  light: 100,
+  regular: 300,
+  bold: 500,
+);
+
+$font-weights-tisaOT: (
+  light: 200,
+  regular: 400,
+  bold: 500,
+  xbold: 700,
+);
+// NOTE #1: (font-size: line-height)
+// NOTE #2: All font sizes are with `px` unit
+$font-size-line-heights: (
+  10: 14px,
+  12: 15px,
+  14: 18px,
+  16: 21px,
+  18: 24px,
+  24: normal,
+  36: normal,
+  42: normal,
+  48: normal,
+);
+
+// Sizes
+$sidebar-width: 235px;
+$sidepane-width: 485px;
+$app-view-width: 1280px;
+$input-height: 50px;
+$top-section-height: 200px;
+$app-padding: 20px;
+
+// Z-Index
+$app-body-main: 100;
+$app-body-backdrop: 150;
+$bottom-notification-index: 160;
+$modal-index: 200;
+$support-button-index: 1035; // can't be more 1039 because of the modal backdrop
+$alert-index: 3000; // can't be less than 1041 because of the modal backdrop
+$fb-popover-backdrop-index: 1999;
+$fb-popover-index: 2000;
+
+// Animations
+$super-fast-ease: .1s ease;
+$fast-ease: .3s ease;
+$medium-ease: .6s ease;
+$medium-bounce: .6s cubic-bezier(.68, -.20, .265, 1.20);
+
+// Breakpoints
+$break-small: 640px;
+$break-medium: 1024px;
+$break-large: 1200px;
+
+// Others
+$fbx-backdrop-opacity: .4;

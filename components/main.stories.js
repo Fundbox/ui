@@ -2,4 +2,4 @@
 
 import IntroductionStories from './introduction/introduction.stories';
 import ButtonStories from './button/button.stories';
-
+import CheckboxStories from './checkbox/checkbox.stories';

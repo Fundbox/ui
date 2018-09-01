@@ -8,8 +8,6 @@ import summary from './button.md';
 
 const stories = storiesOf('Button', module);
 
-stories.addDecorator(withKnobs);
-
 stories.add('with text', withInfo({ summary })(() => ({
   components: { FbxButton },
   template: `<fbx-button

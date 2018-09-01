@@ -1,0 +1,175 @@
+@import "./variables.scss";
+@import "./color-palette.scss";
+@import "./mixins.scss";
+@import "./animations.scss";
+@import "./visibility-utils.scss";
+
+// General
+.reset-box {
+  margin: 0;
+  padding: 0;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+input[type=checkbox].fbx-checkbox {
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid $extra-dark-gray;
+  margin: 0;
+
+  &:checked {
+    background: url("~fbx_common/src/assets/images/icon_check_active.svg") center no-repeat;
+    &:disabled {
+      background-image: url("~fbx_common/src/assets/images/icon_check_disabled.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $light-gray;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal-paragraph-margin {
+  margin-bottom: 10px;
+}
+
+.whitespace-no-wrap {
+  white-space: nowrap;
+}
+
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.nbsp:after {
+  content: " ";
+  white-space: pre;
+}
+
+.nbsp-before::before {
+  content: " ";
+  white-space: pre;
+}
+
+.diagonal-background {
+  background: url("~fbx_common/src/assets/images/diagonal-pattern.svg") repeat;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.capitalize-text {
+  text-transform: capitalize;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.dash-mask::after {
+  font-size: 24px;
+  font-weight: 100;
+  content: "----";
+  letter-spacing: 8px;
+  color: $extra-dark-gray;
+}
+
+.dots-divider {
+  width: 100%;
+  background: url("~fbx_common/src/assets/images/divider-dot.png") repeat-x;
+  min-height: 2px;
+  background-size: 7px;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.running-text-link {
+  text-decoration: none;
+}
+
+// Animations
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: .45s;
+  animation-duration: .45s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+// Layout
+.layout-row {
+  @include layout-row;
+}
+
+.layout-column {
+  @include layout-column;
+}
+
+.responsive-layout {
+  &-md {
+    @include layout-column;
+    @include viewport("md") {
+      @include layout-row;
+    }
+  }
+  &-lg {
+    @include layout-column;
+    @include viewport("lg") {
+      @include layout-row;
+    }
+  }
+}
+
+.flex {
+  flex: 1 1 auto;
+}
+
+.flex-fixed {
+  flex: 0 0 auto;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

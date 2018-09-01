@@ -1,0 +1,343 @@
+@import "./variables.scss";
+
+@mixin defineFontFace($font-name, $font-file, $font-directory, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-name;
+    src: local($font-file),
+    url("#{$font-directory}/#{$font-file}.woff2") format('woff2'),
+    url("#{$font-directory}/#{$font-file}.woff") format('woff');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+// Create `font` rule via our specifications
+@mixin font($font-size, $font-weight: regular, $family: $default-fbx-font) {
+
+  $font-weights: $font-weights-default;
+  @if ($family == $tisaOT-font) {
+    $font-weights: $font-weights-tisaOT;
+  }
+
+  @if map-has-key($font-weights, $font-weight) {
+    $font-weight: map-get($font-weights, $font-weight);
+  } @else {
+    @error "@mixin font(): You gave unsupported weight of #{$font-weight}";
+  }
+
+  $line-height: inherit;
+  @if map-has-key($font-size-line-heights, $font-size) {
+    $line-height: map_get($font-size-line-heights, $font-size);
+  } @else {
+    @error "@mixin font(): You gave unsupported $font-size of #{$font-size}";
+  }
+
+  font-weight: #{$font-weight};
+  font-size: #{$font-size}px;
+  line-height: #{$line-height};
+  font-family: $family, sans-serif;
+}
+
+// Breakpoints mixin
+@mixin viewport($media) {
+  @if $media == sm {
+    @media only screen and (max-width: $break-small - 1) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: $break-small) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: $break-medium) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (min-width: $break-large) {
+      @content;
+    }
+  }
+}
+
+// Layout
+@mixin layout-row {
+  display: flex;
+  flex-direction: row;
+
+  &.split {
+    justify-content: space-between;
+  }
+
+  &.horizontal-left {
+    justify-content: flex-start;
+  }
+  &.horizontal-center {
+    justify-content: center;
+  }
+  &.horizontal-right {
+    justify-content: flex-end;
+  }
+
+  &.vertical-top {
+    align-items: flex-start;
+  }
+  &.vertical-center {
+    align-items: center;
+  }
+  &.vertical-bottom {
+    align-items: flex-end;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin layout-column {
+  display: flex;
+  flex-direction: column;
+
+  &.horizontal-center {
+    align-items: center;
+  }
+
+  &.vertical-center {
+    justify-content: center;
+  }
+
+  &.center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin create-popover-outlined-theme($bg-color, $text-color, $border-color: $text-color) {
+  $arrow-edge-offset: 8px;
+  $arrow-size: 10px;
+  $arrow-position-offset: 19px;
+
+  position: absolute;
+  display: block;
+  z-index: 1000;
+
+  // NOTE: we use both `.tooltip` and `.popover` because bootstrap
+  .tooltip-inner,
+  .popover-inner {
+    border: 1px solid $border-color;
+    background-color: $bg-color;
+    color: $text-color;
+  }
+
+  //
+  // Arrow
+  //
+
+  & > .tooltip-arrow,
+  & > .arrow {
+    position: absolute;
+
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      content: " ";
+      border: solid $arrow-size transparent;
+    }
+  }
+
+  &.top > .tooltip-arrow,
+  &.top > .arrow {
+    left: calc(50% - (#{$arrow-position-offset} / 2));
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    bottom: calc(-#{$arrow-position-offset} - 1px) !important;
+    border-top-color: $bg-color;
+
+    &::before {
+      bottom: 0;
+      border-top-color: $border-color;
+    }
+
+    &::after {
+      bottom: 1px;
+      border-top-color: $bg-color;
+    }
+  }
+
+  &.top-left > .tooltip-arrow,
+  &.top-left > .arrow {
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    left: $arrow-edge-offset !important;
+  }
+
+  &.top-right > .tooltip-arrow,
+  &.top-right > .arrow {
+    left: auto;
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    right: ($arrow-edge-offset + $arrow-size * 2) !important;
+  }
+
+  &.right > .tooltip-arrow,
+  &.right > .arrow {
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    left: calc(-#{$arrow-position-offset}) !important;
+    top: calc(50% - (#{$arrow-position-offset} / 2));
+
+    &::before {
+      border-right-color: $border-color;
+    }
+
+    &::after {
+      left: 1px;
+      border-right-color: $bg-color;
+    }
+  }
+
+  &.right-top > .tooltip-arrow,
+  &.right-top > .arrow {
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    top: $arrow-edge-offset !important;
+  }
+
+  &.right-bottom > .tooltip-arrow,
+  &.right-bottom > .arrow {
+    top: auto;
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    bottom: ($arrow-edge-offset + $arrow-size * 2) !important;
+  }
+
+  &.bottom > .tooltip-arrow,
+  &.bottom > .arrow {
+    left: calc(50% - (#{$arrow-position-offset} / 2));
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    top: calc(-#{$arrow-position-offset} - 1px) !important;
+    border-bottom-color: $bg-color;
+
+    &::before {
+      top: 0;
+      border-bottom-color: $border-color;
+    }
+
+    &::after {
+      top: 1px;
+      border-bottom-color: $bg-color;
+    }
+  }
+
+  &.bottom-left > .tooltip-arrow,
+  &.bottom-left > .arrow {
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    left: $arrow-edge-offset !important;
+  }
+
+  &.bottom-right > .tooltip-arrow,
+  &.bottom-right > .arrow {
+    left: auto;
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    right: ($arrow-edge-offset + $arrow-size * 2) !important;
+  }
+
+  &.left > .tooltip-arrow,
+  &.left > .arrow {
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    right: calc(-#{$arrow-position-offset} - 1px) !important;
+    top: calc(50% - (#{$arrow-position-offset} / 2));
+
+    &::before {
+      right: 0;
+      border-left-color: $border-color;
+    }
+
+    &::after {
+      right: 1px;
+      border-left-color: $bg-color;
+    }
+  }
+
+  &.left-top > .tooltip-arrow,
+  &.left-top > .arrow {
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    top: $arrow-edge-offset !important;
+  }
+
+  &.left-bottom > .tooltip-arrow,
+  &.left-bottom > .arrow {
+    top: auto;
+    // NOTE: the `!important` it's because TWBS enforce inline style that collides
+    bottom: ($arrow-edge-offset + $arrow-size * 2) !important;
+  }
+}
+
+@mixin angular-uib-carousel-modal() {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include viewport("md") {
+    display: none;
+  }
+
+  .carousel-inner {
+    height: 365px;
+  }
+
+  .carousel-control {
+    top: 230px;
+
+    &.right, &.left {
+      background-image: none;
+      text-shadow: none;
+      opacity: 1;
+    }
+
+    &.disabled {
+      display: none;
+    }
+  }
+
+  .carousel-indicators {
+    display: flex;
+    width: 66px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    left: calc(50% - 33px);
+    bottom: 90px;
+    @include viewport("md") {
+      bottom: 75px;
+    }
+
+    li {
+      width: 6px;
+      height: 6px;
+      background-color: $medium-gray;
+      border: none;
+      margin: 0;
+
+      &.active {
+        background-color: $dark-green;
+      }
+    }
+  }
+}
+
+@mixin styles-for-placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::placeholder {
+    @content;
+  }
+  &.placeholder {
+    @content;
+  }
+  &::-moz-placeholder,
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+}

@@ -26,9 +26,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/color-palete";
-@import "./../styles/variables";
-@import "./../styles/mixins";
+@import "./../styles/utils/color-palette";
+@import "./../styles/utils/variables";
+@import "./../styles/utils/mixins";
 
 $button-min-height: 30px;
 $button-min-width: 120px;

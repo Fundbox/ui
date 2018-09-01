@@ -8,13 +8,16 @@
     "build": "build-storybook",
     "test": "jest --config test/unit/jest.conf.js --coverage"
   },
-  "contributors": [{
-    "name" : "Yogev Ahuvia",
-    "email" : "yogev.ahuvia@gmail.com"
-  },{
-    "name" : "Dima Kuzmich",
-    "email" : "forforeach@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Yogev Ahuvia",
+      "email": "yogev.ahuvia@gmail.com"
+    },
+    {
+      "name": "Dima Kuzmich",
+      "email": "forforeach@gmail.com"
+    }
+  ],
   "license": "ISC",
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.10",
@@ -42,16 +45,19 @@
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.6",
     "postcss-url": "^7.3.2",
+    "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.1.0",
     "storybook-addon-vue-info": "^0.5.0",
     "style-loader": "^0.21.0",
+    "url-loader": "^1.1.1",
     "vue-jest": "^2.6.0",
-    "vue-loader": "14.2.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17"
   },
   "dependencies": {
+    "vee-validate": "^2.1.0-beta.8",
     "vue": "^2.5.17",
+    "vue-loader": "^15.4.1",
     "vue-test-utils": "^1.0.0-beta.11"
   }
 }

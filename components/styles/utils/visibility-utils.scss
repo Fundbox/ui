@@ -1,0 +1,111 @@
+@import "./variables.scss";
+
+.is-visible {
+  display: block !important;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+@media screen and (max-width: $break-small - 1) {
+  .hide-for-small-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: $break-small) {
+  .show-for-small-only {
+    display: none !important;
+  }
+}
+
+@media print, screen and (min-width: $break-small) {
+  .hide-for-medium {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: $break-small - 1) {
+  .show-for-medium {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: $break-small) and (max-width: $break-medium - 1) {
+  .hide-for-medium-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: $break-small - 1), screen and (min-width: $break-large) {
+  .show-for-medium-only {
+    display: none !important;
+  }
+}
+
+@media print, screen and (min-width: $break-large) {
+  .hide-for-large {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: $break-large - 1) {
+  .show-for-large {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: $break-large) {
+  .hide-for-large-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: $break-large - 1) {
+  .show-for-large-only {
+    display: none !important;
+  }
+}
+
+.show-for-landscape,
+.hide-for-portrait {
+  display: block !important;
+}
+@media screen and (orientation: landscape) {
+  .show-for-landscape,
+  .hide-for-portrait {
+    display: block !important;
+  }
+}
+@media screen and (orientation: portrait) {
+  .show-for-landscape,
+  .hide-for-portrait {
+    display: none !important;
+  }
+}
+
+.hide-for-landscape,
+.show-for-portrait {
+  display: none !important;
+}
+@media screen and (orientation: landscape) {
+  .hide-for-landscape,
+  .show-for-portrait {
+    display: none !important;
+  }
+}
+@media screen and (orientation: portrait) {
+  .hide-for-landscape,
+  .show-for-portrait {
+    display: block !important;
+  }
+}

@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="fbx-checkbox-container">
     <label class="fbx-checkbox" :class="{invalid: isInvalid}">
-      <input type="checkbox" class="input" v-validate="validations" v-bind="$attrs" :value="value" @input="$emit('input', $event.target.checked)" />
+      <input type="checkbox" class="input" v-validate="validations" v-bind="$attrs" :value="value" :checked="value" v-on="listeners" />
       <span class="box"></span>
       <slot></slot>
     </label>
-    <!-- <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message> -->
+    <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
   </div>
 </template>
 
@@ -15,7 +15,10 @@ export default {
   inheritAttrs: false,
   inject: ["$validator"],
   props: {
-    value: Boolean,
+    value: {
+      type: Boolean,
+      default: false
+    },
     validations: String
   },
   computed: {
@@ -24,6 +27,15 @@ export default {
     },
     validationMessage () {
       return this.errors.first(this.$attrs.name);
+    },
+    listeners () {
+      return {
+        // Pass all component listeners directly to input
+        ...this.$listeners,
+        input: (event) => {
+          this.$emit('input', event.target.checked);
+        }
+      };
     }
   }
 };
@@ -31,26 +43,30 @@ export default {
 
 <style lang="scss" scoped>
 @import "./../styles/utils/color-palette";
+
+.fbx-checkbox-container {
+  display: inline-block;
+}
+
 .fbx-checkbox {
   position: relative;
-  display: block;
-  width: 100%;
   text-align: left;
   padding-left: 25px;
 
   .input {
     opacity: 0;
-    height: 16px;
-    width: 16px;
-    margin: 0 10px 0 0;
-    position: absolute;
 
+    &,
     & + .box {
       position: absolute;
-      top: 2px;
+      top: calc(50% - 8px);
       left: 0;
       height: 16px;
       width: 16px;
+      margin: 0;
+    }
+
+    & + .box {
       border: 1px solid $extra-dark-gray;
       background-color: $white;
       border-radius: 0;
@@ -69,12 +85,10 @@ export default {
       border-color: $medium-gray;
     }
   }
-  &.invalid {
-    padding-bottom: 10px;
-    border-bottom: 1px solid $light-red;
-  }
 }
 .validation-message {
-  padding-top: 10px;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid $light-red;
 }
 </style>

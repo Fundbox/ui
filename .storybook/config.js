@@ -4,6 +4,7 @@ import { configure, addDecorator } from "@storybook/vue"
 import { setOptions } from "@storybook/addon-options";
 import FbxStylesAddon from './../.storybook/addons/fundbox-styles-addon';
 import { withKnobs } from '@storybook/addon-knobs';
+import "./../index";
 
 addDecorator(FbxStylesAddon)
 addDecorator(withKnobs)

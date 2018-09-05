@@ -14,11 +14,13 @@ stories.add('Default', withInfo({ summary })(() => ({
                 @click="click"
                 :loading="${boolean('Loading', false)}"
                 ${boolean('Disabled', false) ? 'disabled' : ''}
-              >${text('Text', 'Click me')}</fbx-button>`,
+              >
+                ${text('Text', 'Click me')}
+              </fbx-button>`,
   methods: { click: action('clicked') },
 })));
 
-stories.add('with HTML attributes', () => ({
+stories.add('with HTML attributes', withInfo({ summary })(() => ({
   components: { FbxButton },
   template: `<fbx-button
               name="fbx-button"
@@ -27,4 +29,4 @@ stories.add('with HTML attributes', () => ({
               tabindex="3"
             >Click me</fbx-button>`,
   methods: { click: action('clicked') },
-}));
+})));

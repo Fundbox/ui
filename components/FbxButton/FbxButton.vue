@@ -52,6 +52,8 @@ export default {
   transition: background $super-fast-ease;
   font-size: 14px;
   font-weight: 300;
+  // Prevent font mixin from making the button text uncentered
+  line-height: normal !important;
   color: $white;
   text-align: center;
   outline: none;

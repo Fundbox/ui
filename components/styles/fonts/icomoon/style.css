@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.woff?611gq6') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fbx-icon-"], [class*=" fbx-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fbx-icon-32_round_X:before {
+  content: "\e909";
+}
+.fbx-icon-32_round_question:before {
+  content: "\e921";
+}
+.fbx-icon-32_badge_check_mark:before {
+  content: "\e922";
+}
+.fbx-icon-24_arrow-down:before {
+  content: "\e91d";
+}
+.fbx-icon-24_arrow-left:before {
+  content: "\e91c";
+}
+.fbx-icon-24_arrow-right:before {
+  content: "\e911";
+}
+.fbx-icon-24_check:before {
+  content: "\e912";
+}
+.fbx-icon-24_checkmark-in-circle:before {
+  content: "\e913";
+}
+.fbx-icon-24_close_hover:before {
+  content: "\e914";
+}
+.fbx-icon-24_close:before {
+  content: "\e915";
+}
+.fbx-icon-24_lock:before {
+  content: "\e919";
+}
+.fbx-icon-24_warning-triangle:before {
+  content: "\e91a";
+}
+.fbx-icon-24_x-alerts:before {
+  content: "\e91b";
+}
+.fbx-icon-green-checkmark-in-circle:before {
+  content: "\e90c";
+}
+.fbx-icon-add:before {
+  content: "\e90b";
+}
+.fbx-icon-warning-triangle2:before {
+  content: "\e91f";
+}
+.fbx-icon-lock:before {
+  content: "\e908";
+}
+.fbx-icon-x-alerts:before {
+  content: "\e907";
+}
+.fbx-icon-close:before {
+  content: "\e900";
+}
+.fbx-icon-close_hover:before {
+  content: "\e903";
+}
+.fbx-icon-arrow-down:before {
+  content: "\e901";
+}
+.fbx-icon-arrow-left:before {
+  content: "\e906";
+}
+.fbx-icon-arrow-right:before {
+  content: "\e905";
+}
+.fbx-icon-check:before {
+  content: "\e902";
+}
+.fbx-icon-printer:before {
+  content: "\e904";
+}
+.fbx-icon-warning-triangle:before {
+  content: "\e90a";
+}
+.fbx-icon-x:before {
+  content: "\e920";
+}
+.fbx-icon-24_thumbs-down:before {
+  content: "\e910";
+}
+.fbx-icon-24_thumbs-up:before {
+  content: "\e90d";
+}
+.fbx-icon-24_lightbulb-on:before {
+  content: "\e90f";
+}
+.fbx-icon-24_lightbulb-off:before {
+  content: "\e90e";
+}
+.fbx-icon-16_document:before {
+  content: "\e916";
+}
+.fbx-icon-16_pencil:before {
+  content: "\e917";
+}
+.fbx-icon-16_plus:before {
+  content: "\e918";
+}
+.fbx-icon-16_switch:before {
+  content: "\e91e";
+}

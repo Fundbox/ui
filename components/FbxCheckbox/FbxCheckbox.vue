@@ -35,7 +35,6 @@ export default {
     },
     listeners () {
       return {
-        // Pass all component listeners directly to input
         ...this.$listeners,
         input: (event) => {
           this.$emit('input', event.target.checked);

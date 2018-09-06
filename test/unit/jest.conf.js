@@ -17,6 +17,7 @@ module.exports = {
   transformIgnorePatterns: [
     "<rootDir>/(node_modules)/"
   ],
+  testEnvironment: "node",
   testPathIgnorePatterns: [
     '<rootDir>/test/e2e',
   ],

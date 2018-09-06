@@ -1,3 +1,4 @@
-import Vue from 'vue';
+require('jsdom-global')()
+import Vue from 'vue'
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false

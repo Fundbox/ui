@@ -11,22 +11,16 @@ const stories = storiesOf('FbxButton', module);
 stories.add('Default', withInfo({ summary })(() => ({
   components: { FbxButton },
   template: `<fbx-button
+                name="fbx-button"
+                id="my-id"
+                data-qa="button-qa"
+                tabindex="3"
                 @click="click"
                 :loading="${boolean('Loading', false)}"
+                :inverse="${boolean('Inverse', false)}"
                 ${boolean('Disabled', false) ? 'disabled' : ''}
               >
                 ${text('Text', 'Click me')}
               </fbx-button>`,
-  methods: { click: action('clicked') },
-})));
-
-stories.add('with HTML attributes', withInfo({ summary })(() => ({
-  components: { FbxButton },
-  template: `<fbx-button
-              name="fbx-button"
-              id="my-id"
-              data-qa="button-qa"
-              tabindex="3"
-            >Click me</fbx-button>`,
   methods: { click: action('clicked') },
 })));

@@ -1,15 +1,13 @@
-import { mount } from 'vue-test-utils';
-import Button from './index';
+import { shallowMount } from "@vue/test-utils"
+import FbxButton from "./FbxButton.vue"
 
-describe('button.vue', () => {
-  it('should render correct contents', () => {
-    const btnText = 'Hello button';
-    const component = mount(Button, {
-      slots: {
-        default: btnText,
-      },
-    });
-    expect(component.vm.$el.textContent.trim())
-      .toEqual(btnText);
-  });
-});
+const buttonText = "Submit"
+const defaultSlot = { default: buttonText };
+
+describe("FbxButton", () => {
+  it("renders correctly", () => {
+    const wrapper = shallowMount(FbxButton, { slots: defaultSlot })
+
+    expect(wrapper.html()).toMatchSnapshot()
+  })
+})

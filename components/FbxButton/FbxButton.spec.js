@@ -5,9 +5,32 @@ const buttonText = "Submit"
 const defaultSlot = { default: buttonText };
 
 describe("FbxButton", () => {
-  it("renders correctly", () => {
-    const wrapper = shallowMount(FbxButton, { slots: defaultSlot })
+  describe("snapshots", () => {
+    it("renders the default correctly", () => {
+      const wrapper = shallowMount(FbxButton, {
+        slots: defaultSlot,
+      })
 
-    expect(wrapper.html()).toMatchSnapshot()
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it("renders loading correctly", () => {
+      const wrapper = shallowMount(FbxButton, {
+        propsData: { loading: true },
+        slots: defaultSlot,
+      })
+
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it("renders inverse correctly", () => {
+      const wrapper = shallowMount(FbxButton, {
+        propsData: { inverse: true },
+        slots: defaultSlot,
+      })
+
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+  })
   })
 })

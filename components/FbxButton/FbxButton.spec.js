@@ -32,5 +32,25 @@ describe("FbxButton", () => {
       expect(wrapper.html()).toMatchSnapshot()
     })
   })
+
+  describe("@events", () => {
+    it("listens to any event listener you pass", () => {
+      const mockClick = jest.fn()
+      const mockHover = jest.fn()
+      const wrapper = shallowMount(FbxButton, {
+        listeners: {
+          click: mockClick,
+          hover: mockHover,
+        }
+      })
+
+      wrapper.trigger("click")
+      wrapper.trigger("hover")
+
+      expect(mockClick).toHaveBeenCalledTimes(1)
+      expect(mockHover).toHaveBeenCalledTimes(1)
+    })
+  })
+
   })
 })

@@ -1,6 +1,7 @@
 # FbxButton
 
 ## Basic usage
+
 - Pass any HTML attribute or native DOM event to `fbx-button`
 - When `:loading` is `true`, a spinning icon will replace the button text, and the user will not be able to click the button again until loading has finished and is `false`
 - Button text is passed as a `<slot>`

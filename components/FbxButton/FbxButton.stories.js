@@ -19,8 +19,8 @@ stories.add('Default', withInfo({ summary })(() => ({
                 :loading="${boolean('Loading', false)}"
                 :inverse="${boolean('Inverse', false)}"
                 :disabled="${boolean('Disabled', false)}"
-              >
-                ${text('Text', 'Click me')}
-              </fbx-button>`,
+            >
+              ${text('Text', 'Click me')}
+            </fbx-button>`,
   methods: { click: action('clicked') },
 })));

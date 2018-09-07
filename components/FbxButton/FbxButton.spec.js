@@ -52,5 +52,26 @@ describe("FbxButton", () => {
     })
   })
 
+  describe("disabled", () => {
+    it("prohibits clicking again while loading", () => {
+      const mockClick = jest.fn()
+      const wrapper = shallowMount(FbxButton, {
+        listeners: {
+          click: mockClick,
+        },
+        slots: defaultSlot,
+      })
+
+      wrapper.trigger("click")
+      wrapper.setProps({ loading: true })
+      expect(mockClick).toHaveBeenCalledTimes(1)
+
+      wrapper.trigger("click")
+      expect(mockClick).toHaveBeenCalledTimes(1)
+
+      wrapper.setProps({ loading: false })
+      wrapper.trigger("click")
+      expect(mockClick).toHaveBeenCalledTimes(2)
+    })
   })
 })

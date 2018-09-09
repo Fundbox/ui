@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "fbx-close-button",
+  name: "FbxCloseButton",
   data() {
     return {
       hover: false,

@@ -1,0 +1,81 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "./color-palette.scss";
+@import "./../fonts/fonts.scss";
+
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+::selection {
+  background: $extra-light-green;
+}
+
+html,
+body {
+  font-family: $default-fbx-font, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background: $white;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  align-items: center;
+  color: $medium-blue;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $dark-green;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  user-select: none;
+}
+
+input {
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  &:focus {
+    outline: none;
+  }
+}

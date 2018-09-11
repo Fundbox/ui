@@ -1,0 +1,13 @@
+@import "./../../utils/variables.scss";
+@import "./../../utils/mixins.scss";
+
+$fontDir: "./styles/fonts/tisa";
+@include defineFontFace($tisaPro-font, 'TisaPro-Regular', $fontDir, 'normal', 'normal');
+@include defineFontFace($tisaPro-font, 'TisaPro-Medi', $fontDir, 500, 'normal');
+@include defineFontFace($tisaPro-font, 'TisaPro-Bold', $fontDir, 700, 'normal');
+
+@include defineFontFace($tisaOT-font, 'TisaOT-Light', $fontDir, 200, 'normal');
+@include defineFontFace($tisaOT-font, 'TisaOT', $fontDir, 'normal', 'normal');
+@include defineFontFace($tisaOT-font, 'TisaOT-Medi', $fontDir, 500, 'normal');
+@include defineFontFace($tisaOT-font, 'TisaOT-Bold', $fontDir, 700, 'normal');
+

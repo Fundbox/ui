@@ -1,0 +1,21 @@
+// Notice!
+// Only include this file once(!) per project
+// Including this file will generate all the available fonts-size classes
+// If included more then once it will generate all the classes multiple times
+
+@import "./mixins.scss";
+@import "./variables.scss";
+
+@each $font-size in map-keys($font-size-line-heights) {
+  .font-#{$font-size} {
+    @include font($font-size, regular);
+  }
+
+  .font-#{$font-size}-light {
+    @include font($font-size, light);
+  }
+
+  .font-#{$font-size}-bold {
+    @include font($font-size, bold);
+  }
+}

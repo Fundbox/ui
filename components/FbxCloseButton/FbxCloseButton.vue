@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "fbx-close-button",
+  name: "FbxCloseButton",
   computed: {
     listeners() {
       return {

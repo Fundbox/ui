@@ -67,7 +67,7 @@
   const log = () => console.log('Welcome to storybook!')
 
   export default {
-    name: 'introduction',
+    name: 'FbxIntroduction',
 
     props: {
       showApp: {

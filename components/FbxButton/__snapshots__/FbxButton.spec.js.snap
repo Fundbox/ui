@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FbxButton snapshots renders inverse correctly 1`] = `<button tabindex="0" type="submit" class="fbx-cta-button fbx-button-inverse">Submit</button>`;
+
+exports[`FbxButton snapshots renders loading correctly 1`] = `<button tabindex="0" type="submit" disabled="disabled" class="fbx-cta-button loading"><span class="fbx-button-loading"></span></button>`;
+
+exports[`FbxButton snapshots renders the default correctly 1`] = `<button tabindex="0" type="submit" class="fbx-cta-button">Submit</button>`;

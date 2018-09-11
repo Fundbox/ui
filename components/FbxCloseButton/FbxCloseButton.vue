@@ -1,21 +1,10 @@
 <template>
-<span
-  class="fbx-close-button"
-  :class="{ 'fbx-icon-close_hover': hover, 'fbx-icon-close': !hover }"
-  @mouseover="toggleHover"
-  @mouseleave="toggleHover"
-  v-on="listeners"></span>
-
+<span class="fbx-close-button fbx-icon-close" v-on="listeners"></span>
 </template>
 
 <script>
 export default {
   name: "FbxCloseButton",
-  data() {
-    return {
-      hover: false,
-    };
-  },
   computed: {
     listeners() {
       return {
@@ -23,15 +12,10 @@ export default {
       }
     },
   },
-  methods: {
-    toggleHover() {
-      this.hover = !this.hover;
-    }
-  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./../styles/utils/color-palette.scss";
 @import "./../styles/fonts/icomoon/style.css";
 

@@ -77,7 +77,7 @@
 .fbx-icon-close:before {
   content: "\e900";
 }
-.fbx-icon-close_hover:before {
+.fbx-icon-close:hover:before {
   content: "\e903";
 }
 .fbx-icon-arrow-down:before {

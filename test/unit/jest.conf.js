@@ -18,6 +18,7 @@ module.exports = {
   transformIgnorePatterns: [
     "<rootDir>/(node_modules)/"
   ],
+  testResultsProcessor: "jest-teamcity-reporter",
   testPathIgnorePatterns: [
     '<rootDir>/test/e2e',
   ],

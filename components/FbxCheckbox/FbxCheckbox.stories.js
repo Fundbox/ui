@@ -8,7 +8,7 @@ import summary from './FbxCheckbox.md';
 
 const stories = storiesOf('FbxCheckbox', module);
 
-stories.add('Default', withInfo({ summary })(() => ({
+stories.add('default', withInfo({ summary })(() => ({
   components: { FbxCheckbox },
   template: `<fbx-checkbox
                 name="fbx-checkbox"

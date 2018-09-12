@@ -7,7 +7,7 @@ import summary from './FbxCloseButton.md';
 
 const stories = storiesOf('FbxCloseButton', module);
 
-stories.add('Default', withInfo({ summary })(() => ({
+stories.add('default', withInfo({ summary })(() => ({
   components: { FbxCloseButton },
   template: `<fbx-close-button
                 data-qa="close-button"

@@ -1,7 +1,16 @@
 <template>
   <div class="fbx-checkbox-container">
     <label class="fbx-checkbox" :class="{invalid: isInvalid}">
-      <input type="checkbox" class="input" v-validate="validations" v-bind="$attrs" :value="value" :checked="value" v-on="listeners" />
+      <input
+        tabindex="0"
+        type="checkbox"
+        class="input"
+        v-validate="validations"
+        v-bind="$attrs"
+        v-on="listeners"
+        :value="value"
+        :checked="value"
+      />
       <span class="box"></span>
       <slot></slot>
     </label>

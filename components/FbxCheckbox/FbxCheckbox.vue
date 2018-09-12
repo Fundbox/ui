@@ -1,6 +1,6 @@
 <template>
   <div class="fbx-checkbox-container">
-    <label class="fbx-checkbox" :class="{invalid: isInvalid}">
+    <label class="fbx-checkbox" :class="{ 'fbx-checkbox-invalid': isInvalid }">
       <input
         tabindex="0"
         type="checkbox"
@@ -96,7 +96,7 @@ export default {
     }
   }
 
-  &.invalid {
+  &.fbx-checkbox-invalid {
     padding-bottom: 10px;
     border-bottom: 1px solid $light-red;
   }

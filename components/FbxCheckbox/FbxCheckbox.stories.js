@@ -8,12 +8,15 @@ import summary from './FbxCheckbox.md';
 
 const stories = storiesOf('FbxCheckbox', module);
 
-stories.add('simple', withInfo({ summary })(() => ({
+stories.add('Default', withInfo({ summary })(() => ({
   components: { FbxCheckbox },
   template: `<fbx-checkbox
-                name="foo"
+                name="fbx-checkbox"
+                id="my-id"
+                data-qa="checkbox-qa"
+                tabindex="1"
                 v-model="value"
-              >${text('Text', 'Simple checkbox usage')}</fbx-checkbox>`,
+              >${text('Text', 'Toggle me')}</fbx-checkbox>`,
   data () { return { value: true } },
   watch: {
     value (val) {
@@ -25,7 +28,7 @@ stories.add('simple', withInfo({ summary })(() => ({
 stories.add('with validation', withInfo({ summary })(() => ({
   components: { FbxCheckbox },
   template: `<fbx-checkbox
-                name="foo"
+                name="fbx-checkbox"
                 v-model="value"
                 validations="required"
               >${text('Text', 'Checkbox with required validation')}</fbx-checkbox>`,
@@ -40,7 +43,7 @@ stories.add('with validation', withInfo({ summary })(() => ({
 stories.add('with events', withInfo({ summary })(() => ({
   components: { FbxCheckbox },
   template: `<fbx-checkbox
-                name="foo"
+                name="fbx-checkbox"
                 v-model="value"
                 @click="onClick"
                 @change="onChange"

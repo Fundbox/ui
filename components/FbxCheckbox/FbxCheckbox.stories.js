@@ -25,6 +25,25 @@ stories.add('default', withInfo({ summary })(() => ({
   }
 })));
 
+stories.add('with long, wrapping text', withInfo({ summary })(() => ({
+  components: { FbxCheckbox },
+  template: `<div style="width: 300px; fontSize: 14px; fontWeight: 300;">
+              <fbx-checkbox
+                name="fbx-checkbox"
+                v-model="value"
+                validations="required"
+              >
+                ${text('Text', 'Tiramisu licorice sugar brownie halvah tart caramels. candy chupa chups caramels marzipan. candy canes.')}
+              </fbx-checkbox>
+            </div>`,
+  data () { return { value: true } },
+  watch: {
+    value: function (val) {
+      action(`New value: ${val}`)()
+    },
+  }
+})));
+
 stories.add('with validation', withInfo({ summary })(() => ({
   components: { FbxCheckbox },
   template: `<fbx-checkbox

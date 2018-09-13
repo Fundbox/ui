@@ -8,7 +8,7 @@ import summary from './FbxButton.md';
 
 const stories = storiesOf('FbxButton', module);
 
-stories.add('Default', withInfo({ summary })(() => ({
+stories.add('default', withInfo({ summary })(() => ({
   components: { FbxButton },
   template: `<fbx-button
                 name="fbx-button"

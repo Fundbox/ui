@@ -1,7 +1,16 @@
 <template>
   <div class="fbx-checkbox-container">
-    <label class="fbx-checkbox" :class="{invalid: isInvalid}">
-      <input type="checkbox" class="input" v-validate="validations" v-bind="$attrs" :value="value" :checked="value" v-on="listeners" />
+    <label class="fbx-checkbox" :class="{ 'fbx-checkbox-invalid': isInvalid }">
+      <input
+        tabindex="0"
+        type="checkbox"
+        class="input"
+        v-validate="validations"
+        v-bind="$attrs"
+        v-on="listeners"
+        :value="value"
+        :checked="value"
+      />
       <span class="box"></span>
       <slot></slot>
     </label>
@@ -48,12 +57,9 @@ export default {
 <style lang="scss" scoped>
 @import "./../styles/utils/color-palette";
 
-.fbx-checkbox-container {
-  display: inline-block;
-}
-
 .fbx-checkbox {
   position: relative;
+  display: block;
   text-align: left;
   padding-left: 25px;
 
@@ -63,7 +69,7 @@ export default {
     &,
     & + .box {
       position: absolute;
-      top: calc(50% - 8px);
+      top: 2px;
       left: 0;
       height: 16px;
       width: 16px;
@@ -89,10 +95,13 @@ export default {
       border-color: $medium-gray;
     }
   }
+
+  &.fbx-checkbox-invalid {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $light-red;
+  }
 }
 .validation-message {
-  margin-top: 5px;
-  padding-top: 5px;
-  border-top: 1px solid $light-red;
+  padding-top: 10px;
 }
 </style>

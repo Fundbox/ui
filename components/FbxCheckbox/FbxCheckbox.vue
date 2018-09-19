@@ -47,6 +47,9 @@ export default {
         ...this.$listeners,
         input: (event) => {
           this.$emit('input', event.target.checked);
+        },
+        change: (event) => {
+          this.$emit('input', event.target.checked);
         }
       };
     }

@@ -3,7 +3,7 @@
     <div
       class="fbx-tab"
       v-for="(tab, i) in tabs"
-      :key="tab"
+      :key="i"
       :class="{ 'active': activeTabIndex === i }"
       @click="onTabClick(i)"
     >

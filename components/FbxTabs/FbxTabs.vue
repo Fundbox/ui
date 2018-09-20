@@ -4,7 +4,7 @@
       class="fbx-tab"
       v-for="(tab, i) in tabs"
       :key="tab"
-      :class="{ 'active': currentTabIndex === i }"
+      :class="{ 'active': activeTabIndex === i }"
       @click="onTabClick(i)"
     >
       {{ tab }}
@@ -15,18 +15,16 @@
 <script>
 export default {
   name: "FbxTabs",
-  data() {
-    return {
-      currentTabIndex: 0,
-    }
-  },
   props: {
     tabs: Array,
+    activeTabIndex: {
+      type: Number,
+      required: true,
+    }
   },
   methods: {
     onTabClick(i) {
-      this.currentTabIndex = i
-      this.$emit("tabSelected", this.tabs[i])
+      this.$emit("tabIndexSelected", i)
     },
   },
 };
@@ -40,10 +38,8 @@ export default {
   display: flex;
 
   .fbx-tab {
-    flex: 1;
-    padding: 0 14px;
+    padding: 14px 30px;
     @include font(16);
-    line-height: 45px;
     color: $medium-blue;
     background-color: $light-gray;
     border: 1px solid $medium-gray;

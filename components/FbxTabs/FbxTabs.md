@@ -2,8 +2,8 @@
 
 ## Basic usage
 
-- Pass an array to `fbx-tabs` and listen to the `tabSelected` event in order to know which tab is selected. The first tab is active by default.
+- Pass an array to `fbx-tabs`, the `activeTabIndex`, and listen to the `tabIndexSelected` event in order to know which tab is selected.
 
 ```html
-<fbx-tabs :tabs="tabs" @tabSelected="onTabSelect" />
+<fbx-tabs :tabs="tabs" @tabIndexSelected="onTabSelect" />
 ```

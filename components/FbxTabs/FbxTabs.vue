@@ -16,7 +16,10 @@
 export default {
   name: "FbxTabs",
   props: {
-    tabs: Array,
+    tabs: {
+      type: Array,
+      required: true,
+    },
     activeTabIndex: {
       type: Number,
       required: true,

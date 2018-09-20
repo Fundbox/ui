@@ -1,32 +1,32 @@
 <template>
   <div class="fbx-tabs">
-    <fbx-tab v-for="tab in tabs" :data-qa="getDataQaForTab(tab)" :key="tab">
+    <div
+      class="fbx-tab"
+      v-for="(tab, i) in tabs"
+      :key="tab"
+      :class="{ 'active': currentTabIndex === i }"
+      @click="onTabClick(i)"
+    >
       {{ tab }}
-    </fbx-tab>
+    </div>
   </div>
 </template>
 
 <script>
-import FbxTab from "./FbxTab.vue"
-import { toKebabCase } from "../../utils/utils.js"
-
 export default {
   name: "FbxTabs",
-  components: {
-    FbxTab,
-  },
-  mounted() {
-    console.log('hi', this.tabs)
-  },
-  props: {
-    tabs: {
-      type: Array,
-      required: true,
+  data() {
+    return {
+      currentTabIndex: 0,
     }
   },
+  props: {
+    tabs: Array,
+  },
   methods: {
-    getDataQaForTab(tabName) {
-      return toKebabCase(`${tabName}-tab`)
+    onTabClick(i) {
+      this.currentTabIndex = i
+      this.$emit("tabSelected", this.tabs[i])
     },
   },
 };
@@ -34,6 +34,32 @@ export default {
 
 <style lang="scss" scoped>
 @import "./../styles/utils/color-palette";
+@import "./../styles/utils/mixins";
 
-.fbx-tabs {}
+.fbx-tabs {
+  display: flex;
+
+  .fbx-tab {
+    flex: 1;
+    padding: 0 14px;
+    @include font(16);
+    line-height: 45px;
+    color: $medium-blue;
+    background-color: $light-gray;
+    border: 1px solid $medium-gray;
+    text-align: center;
+    cursor: pointer;
+
+    & + .fbx-tab {
+      border-left: none;
+    }
+
+    &.active {
+      font-weight: 500;
+      background-color: $white;
+      border-bottom: 1px solid $white;
+      cursor: default;
+    }
+  }
+}
 </style>

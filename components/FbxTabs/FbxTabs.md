@@ -2,8 +2,9 @@
 
 ## Basic usage
 
-- Pass an array to `fbx-tabs`, the `activeTabIndex`, and listen to the `tabIndexSelected` event in order to know which tab is selected.
+- Pass the required props `tabs` and `activeTabIndex` to `fbx-tabs`
+- Listen to the `tabIndexSelected` event in order to know which tab has been selected.
 
 ```html
-<fbx-tabs :tabs="tabs" @tabIndexSelected="onTabSelect" />
+<fbx-tabs :tabs="tabs" :active-tab-index="currentIndex" @tabIndexSelected="onTabSelect" />
 ```

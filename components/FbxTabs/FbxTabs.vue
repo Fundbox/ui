@@ -4,7 +4,7 @@
       class="fbx-tab"
       v-for="(tab, i) in tabs"
       :key="i"
-      :class="{ 'active': activeTabIndex === i }"
+      :class="{ 'active': currentIndex === i }"
       @click="onTabClick(i)"
     >
       {{ tab }}
@@ -22,11 +22,17 @@ export default {
     },
     activeTabIndex: {
       type: Number,
-      required: true,
+      default: 0,
+    }
+  },
+  data() {
+    return {
+      currentIndex: this.activeTabIndex,
     }
   },
   methods: {
     onTabClick(i) {
+      this.currentIndex = i
       this.$emit("tabIndexSelected", i)
     },
   },

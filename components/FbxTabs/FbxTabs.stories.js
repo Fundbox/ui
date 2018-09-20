@@ -14,6 +14,6 @@ stories.add('default', withInfo({ summary })(() => ({
       tabs: array('Tabs', ['Settings', 'Profile']),
     }
   },
-  template: `<fbx-tabs :tabs="tabs" @tabSelected="onTabSelect"></fbx-tabs>`,
+  template: `<fbx-tabs :tabs="tabs" :active-tab-index="1" @tabIndexSelected="onTabSelect"></fbx-tabs>`,
   methods: { onTabSelect: action('onTabSelect') },
 })));

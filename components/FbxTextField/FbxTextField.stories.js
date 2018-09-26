@@ -5,7 +5,7 @@ import { text } from '@storybook/addon-knobs';
 
 import FbxTextField from './FbxTextField.vue';
 import summary from './FbxTextField.md';
-const stories = storiesOf('FbxTextField', module);
+const stories = storiesOf('TextField', module);
 
 stories.add('default', withInfo({ summary })(() => ({
   components: { FbxTextField },

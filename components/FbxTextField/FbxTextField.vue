@@ -80,7 +80,8 @@ export default {
   .fbx-text-field__label {
     display: block;
     margin-bottom: 7px;
-    @include font(16);
+    color: $extra-dark-gray;
+    @include font(16, light);
   }
 
   .fbx-text-field__input-wrapper {

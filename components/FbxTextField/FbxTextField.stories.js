@@ -20,17 +20,19 @@ stories.add('default', withInfo({ summary })(() => ({
       action(`New value: ${value}`)()
     },
   },
-  template: `<fbx-text-field
-              name="email"
-              class="input"
-              validations="required"
-              placeholder="Enter your email"
-              :label="labelText"
-              v-model="inputText"
-            />`,
+  template: `
+    <fbx-text-field
+      name="email"
+      class="input"
+      validations="required"
+      placeholder="Enter your email"
+      :label="labelText"
+      v-model="inputText"
+    />
+  `,
 })));
 
-stories.add('password', withInfo({ summary })(() => ({
+stories.add('password', () => ({
   components: { FbxTextField },
   data() {
     return {
@@ -43,13 +45,17 @@ stories.add('password', withInfo({ summary })(() => ({
       action(`New value: ${value}`)()
     },
   },
-  template: `<fbx-text-field
-              name="password"
-              type="password"
-              class="input"
-              validations="required"
-              placeholder="Enter your password"
-              :label="labelText"
-              v-model="inputText"
-            />`,
-})));
+  template: `
+    <div style="width: 300px; padding: 30px;">
+      <fbx-text-field
+        name="password"
+        type="password"
+        class="input"
+        validations="required"
+        placeholder="Enter your password"
+        :label="labelText"
+        v-model="inputText"
+      />
+    </div>
+  `,
+}));

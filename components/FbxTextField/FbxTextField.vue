@@ -104,12 +104,12 @@ export default {
     }
 
     &:focus {
-      border-bottom: 2px solid $dark-green;
+      border-bottom: 1px solid $dark-green;
     }
 
     &.invalid {
       background-color: $extra-light-red;
-      border-bottom: 2px solid $light-red;
+      border-bottom: 1px solid $light-red;
     }
   }
 

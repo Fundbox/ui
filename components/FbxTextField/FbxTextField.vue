@@ -59,10 +59,13 @@ export default {
 
 .fbx-text-field {
   .fbx-text-field__label {
-    @include font(10);
+    display: block;
+    margin-bottom: 16px;
+    @include font(16);
   }
 
   .fbx-text-field__input {
+    display: block;
     width: inherit;
     height: 50px;
     min-width: 240px;

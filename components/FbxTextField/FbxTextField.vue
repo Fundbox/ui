@@ -85,6 +85,7 @@ export default {
 
   .fbx-text-field__input-wrapper {
     position: relative;
+    margin-bottom: 22px;
   }
 
   .fbx-text-field__input {

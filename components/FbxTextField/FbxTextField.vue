@@ -4,9 +4,10 @@
 
     <input
       :type="type"
-      v-validate="validations"
+      tabindex="0"
       class="fbx-text-field__input"
       :class="{ invalid: isInvalid }"
+      v-validate="validations"
       v-bind="$attrs"
       :value="value"
       @input="onInput"

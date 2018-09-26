@@ -6,7 +6,7 @@
       :type="type"
       tabindex="0"
       class="fbx-text-field__input"
-      :class="{ invalid: isInvalid }"
+      :class="{ password: isPassword, invalid: isInvalid }"
       v-validate="validations"
       v-bind="$attrs"
       :value="value"
@@ -14,17 +14,25 @@
       @change="onChange"
     />
 
+    <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
+
     <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
   </div>
 </template>
 
 <script>
+import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue"
+
 export default {
   name: "FbxTextField",
+  components: {
+    FbxValidationMessage,
+  },
   inheritAttrs: false,
   inject: ["$validator"],
   data() {
     return {
+      isPassword: this.$attrs.type === "password",
       type: this.$attrs.type || "text",
     }
   },
@@ -34,6 +42,9 @@ export default {
     validations: String,
   },
   computed: {
+    passwordButtonText() {
+      return this.isPassword && this.type === "text" ? "Hide" : "Show";
+    },
     isInvalid() {
       return this.errors.has(this.$attrs.name)
     },
@@ -42,9 +53,12 @@ export default {
     }
   },
   methods: {
+    togglePassword() {
+      this.type = this.type === "password" ? "text" : "password";
+    },
     onInput(event) {
       this.$emit("input", event.target.value)
-      // this.$forceUpdate()
+      this.$forceUpdate()
     },
     onChange(event) {
       this.$emit("change", event.target.value)
@@ -58,6 +72,10 @@ export default {
 @import "./../styles/utils/mixins";
 
 .fbx-text-field {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
   .fbx-text-field__label {
     display: block;
     margin-bottom: 16px;
@@ -71,10 +89,14 @@ export default {
     min-width: 240px;
     padding: 15px;
     @include font(16);
-    border-radius: 3px;
     border: none;
+    color: $medium-blue;
     background-color: $extra-light-gray;
     outline: none;
+
+    &.password {
+      padding-right: 60px;
+    }
 
     &:focus {
       border-bottom: 2px solid $dark-green;
@@ -84,6 +106,16 @@ export default {
       background-color: $extra-light-red;
       border-bottom: 2px solid $light-red;
     }
+  }
+
+  .fbx-text-field__password-button {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    color: $dark-green;
+    @include font(16);
+    cursor: pointer;
+    user-select: none;
   }
 
   .validation-message {

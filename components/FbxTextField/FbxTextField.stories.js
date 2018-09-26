@@ -29,3 +29,27 @@ stories.add('default', withInfo({ summary })(() => ({
               v-model="inputText"
             />`,
 })));
+
+stories.add('password', withInfo({ summary })(() => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: "",
+      labelText: text("Label", "Password"),
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value: ${value}`)()
+    },
+  },
+  template: `<fbx-text-field
+              name="password"
+              type="password"
+              class="input"
+              validations="required"
+              placeholder="Enter your password"
+              :label="labelText"
+              v-model="inputText"
+            />`,
+})));

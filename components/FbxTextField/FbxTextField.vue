@@ -79,7 +79,7 @@ export default {
 
   .fbx-text-field__label {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 7px;
     @include font(16);
   }
 

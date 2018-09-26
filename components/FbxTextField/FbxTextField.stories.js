@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
-import { array } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 
 import FbxTextField from './FbxTextField.vue';
 import summary from './FbxTextField.md';
@@ -11,9 +11,21 @@ stories.add('default', withInfo({ summary })(() => ({
   components: { FbxTextField },
   data() {
     return {
-      // tabs: array('Tabs', ['Settings', 'Profile']),
+      inputText: "",
+      labelText: text("Label", "Email Address"),
     }
   },
-  template: `<fbx-text-field />`,
-  // methods: { onTabSelect: action('onTabSelect') },
+  watch: {
+    inputText(value) {
+      action(`New value: ${value}`)()
+    },
+  },
+  template: `<fbx-text-field
+              name="email"
+              class="input"
+              validations="required"
+              placeholder="Enter your email"
+              :label="labelText"
+              v-model="inputText"
+            />`,
 })));

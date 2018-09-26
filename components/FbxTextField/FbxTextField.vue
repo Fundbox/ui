@@ -60,7 +60,6 @@ export default {
     },
     onInput(event) {
       this.$emit("input", event.target.value)
-      this.$forceUpdate()
     },
     onChange(event) {
       this.$emit("change", event.target.value)

@@ -1,7 +1,7 @@
 <template>
 <button
   tabindex="0"
-  type="submit"
+  type="button"
   class="fbx-cta-button"
   :class="{'fbx-button-inverse': inverse, 'loading': loading }"
   :disabled="loading"

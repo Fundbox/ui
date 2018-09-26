@@ -2,19 +2,21 @@
   <div class="fbx-text-field">
     <label class="fbx-text-field__label">{{ label }}</label>
 
-    <input
-      :type="type"
-      tabindex="0"
-      class="fbx-text-field__input"
-      :class="{ password: isPassword, invalid: isInvalid }"
-      v-validate="validations"
-      v-bind="$attrs"
-      :value="value"
-      @input="onInput"
-      @change="onChange"
-    />
+    <div class="fbx-text-field__input-wrapper">
+      <input
+        :type="type"
+        tabindex="0"
+        class="fbx-text-field__input"
+        :class="{ password: isPassword, invalid: isInvalid }"
+        v-validate="validations"
+        v-bind="$attrs"
+        :value="value"
+        @input="onInput"
+        @change="onChange"
+      />
 
-    <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
+      <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
+    </div>
 
     <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
   </div>
@@ -82,6 +84,10 @@ export default {
     @include font(16);
   }
 
+  .fbx-text-field__input-wrapper {
+    position: relative;
+  }
+
   .fbx-text-field__input {
     display: block;
     width: inherit;
@@ -111,7 +117,8 @@ export default {
   .fbx-text-field__password-button {
     position: absolute;
     right: 15px;
-    top: 13px;
+    top: 50%;
+    transform: translateY(-50%);
     color: $dark-green;
     @include font(16);
     cursor: pointer;

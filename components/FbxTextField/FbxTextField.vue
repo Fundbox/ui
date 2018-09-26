@@ -91,7 +91,7 @@ export default {
 
   .fbx-text-field__input {
     display: block;
-    width: inherit;
+    width: 100%;
     height: 50px;
     min-width: 240px;
     padding: 15px;

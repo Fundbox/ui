@@ -5,7 +5,7 @@ import { withInfo } from 'storybook-addon-vue-info';
 import FbxCloseButton from './FbxCloseButton.vue';
 import summary from './FbxCloseButton.md';
 
-const stories = storiesOf('FbxCloseButton', module);
+const stories = storiesOf('CloseButton', module);
 
 stories.add('default', withInfo({ summary })(() => ({
   components: { FbxCloseButton },

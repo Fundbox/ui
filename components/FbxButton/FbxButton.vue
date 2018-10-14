@@ -13,7 +13,9 @@
 </template>
 
 <script>
-export default {
+import Vue from "vue";
+
+const FbxButton = {
   name: "FbxButton",
   props: {
     loading: {
@@ -33,6 +35,9 @@ export default {
     },
   },
 };
+
+Vue.component("FbxButton", FbxButton);
+export default FbxButton;
 </script>
 
 <style lang="scss" scoped>

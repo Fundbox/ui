@@ -13,7 +13,7 @@
 </template>
 
 <script>
-const FbxButton = {
+export default {
   name: "FbxButton",
   props: {
     loading: {

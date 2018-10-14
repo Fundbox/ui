@@ -31,6 +31,7 @@ export default {
     FbxValidationMessage,
   },
   inheritAttrs: false,
+  inject: ["$validator"],
   data() {
     return {
       isPassword: this.$attrs.type === "password",

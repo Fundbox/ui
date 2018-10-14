@@ -13,8 +13,6 @@
 </template>
 
 <script>
-import Vue from "vue";
-
 const FbxButton = {
   name: "FbxButton",
   props: {
@@ -35,9 +33,6 @@ const FbxButton = {
     },
   },
 };
-
-Vue.component("FbxButton", FbxButton);
-export default FbxButton;
 </script>
 
 <style lang="scss" scoped>

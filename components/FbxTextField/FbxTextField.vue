@@ -2,21 +2,23 @@
   <div class="fbx-text-field">
     <label class="fbx-text-field__label">{{ label }}</label>
 
-    <div class="fbx-text-field__input-wrapper">
-      <input
-        :type="type"
-        tabindex="0"
-        class="fbx-text-field__input"
-        :class="{ password: isPassword, invalid: isInvalid }"
-        v-validate="validations"
-        v-bind="$attrs"
-        :value="value"
-        @input="onInput"
-        @change="onChange"
-      />
+    <div class="fbx-text-field__wrapper">
+      <div class="fbx-text-field__input-wrapper">
+        <input
+          :type="type"
+          tabindex="0"
+          class="fbx-text-field__input"
+          :class="{ password: isPassword, invalid: isInvalid }"
+          v-validate="validations"
+          v-bind="$attrs"
+          :value="value"
+          @input="onInput"
+          @change="onChange"
+        />
 
-      <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
+        <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 
+      </div>
       <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
     </div>
   </div>
@@ -84,9 +86,12 @@ export default {
     @include font(16, light);
   }
 
+  .fbx-text-field__wrapper {
+    margin-bottom: 22px;
+  }
+
   .fbx-text-field__input-wrapper {
     position: relative;
-    margin-bottom: 22px;
   }
 
   .fbx-text-field__input {

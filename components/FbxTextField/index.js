@@ -1,4 +1,4 @@
 import Vue from "vue";
 import FbxTextField from "./FbxTextField.vue";
-Vue.component("FbxTextField", FbxTextField);
-export default FbxTextField;
+const vComponent = Vue.component(FbxTextField.name, FbxTextField);
+export default vComponent;

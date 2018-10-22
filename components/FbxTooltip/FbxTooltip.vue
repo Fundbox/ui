@@ -1,6 +1,6 @@
 <template>
   <div class="fbx-tooltip">
-    <b-tooltip :target="target" :delay="delay" :title="title" :placement="placement" :triggers="triggers" :container="container" :boundary="boundary">
+    <b-tooltip :offset="offset" :target="target" :delay="delay" :title="title" :placement="placement" :triggers="triggers" :container="container" :boundary="boundary">
       <slot />
     </b-tooltip>
   </div>
@@ -45,6 +45,10 @@
       boundary: {
         type: String,
         default: "scrollParent"
+      },
+      offset: {
+        type: String,
+        default: "0"
       }
     },
     computed: {},
@@ -57,6 +61,7 @@
   .tooltip {
     position: absolute;
     opacity: 0;
+    margin: 10px;
     &.fade { transition: opacity .15s linear; }
     &.show { opacity: 1; }
 
@@ -65,16 +70,16 @@
       padding: 13px;
       color: $white;
     }
-  }
-
-  .arrow {
-    .tooltip & {
+    .arrow {
       display: block;
       width: 0;
       height: 0;
       border-style: solid;
       position: absolute;
     }
+  }
+
+  .arrow {
     .tooltip[x-placement="top"] & {
       border-width: 7px 7px 0;
       border-color: $medium-blue transparent transparent transparent;

@@ -1,6 +1,6 @@
 <template>
   <div class="fbx-tooltip">
-    <b-tooltip :offset="offset" :target="target" :delay="delay" :title="title" :placement="placement" :triggers="triggers" :container="container" :boundary="boundary">
+    <b-tooltip v-bind="$attrs">
       <slot />
     </b-tooltip>
   </div>
@@ -17,42 +17,9 @@
     data() {
       return {}
     },
-    props: {
-      target: {
-        required: true,
-        type: String
-      },
-      title: {
-        type:  String,
-        default: ""
-      },
-      placement: {
-        type: String,
-        default: "top"
-      },
-      triggers: {
-        type: String,
-        default: "hover focus"
-      },
-      delay: {
-        type: String,
-        default: ""
-      },
-      container: {
-        type: String,
-        default: null
-      },
-      boundary: {
-        type: String,
-        default: "scrollParent"
-      },
-      offset: {
-        type: String,
-        default: "0"
-      }
-    },
-    computed: {},
-    methods: {}
+    mounted() {
+      console.log("$attrs", this.$attrs);
+    }
   }
 </script>
 

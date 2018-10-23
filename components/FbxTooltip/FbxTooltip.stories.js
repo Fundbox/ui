@@ -3,21 +3,23 @@ import { withInfo } from 'storybook-addon-vue-info';
 
 import FbxTooltip from './FbxTooltip.vue';
 import summary from './FbxTooltip.md';
+import { text } from "@storybook/addon-knobs";
 const stories = storiesOf('Tooltip', module);
 const storyWithInfo = withInfo({ summary });
 
 const defaultStory = () => ({
   components: { FbxTooltip },
   data() {
-    return {}
+    return {
+      inputText: "",
+      tooltip: text("Label", "Tooltip"),
+    }
   },
   watch: {},
   template: `
     <div>
       <span id="tooltip">Hover me to see a tooltip :)</span>
-      <fbx-tooltip target="tooltip">
-        I'm a tooltip
-      </fbx-tooltip>
+      <fbx-tooltip target="tooltip">{{tooltip}}</fbx-tooltip>
     </div>
   `,
 });
@@ -34,10 +36,10 @@ const directionStory = () => ({
       <span id="tooltipBottom">Hover me to see a bottom tooltip :)</span><br />
       <span id="tooltipLeft" style="float: right;">Hover me to see a left tooltip :)</span><br />
       <span id="tooltipRight">Hover me to see a right tooltip :)</span><br />
-      <fbx-tooltip target="tooltipTop" placement="top">Pointing up</fbx-tooltip>
-      <fbx-tooltip target="tooltipBottom" placement="bottom">Pointing down</fbx-tooltip>
-      <fbx-tooltip target="tooltipLeft" placement="left" boundary="viewport">Pointing left</fbx-tooltip>
-      <fbx-tooltip target="tooltipRight" placement="right" boundary="viewport">Pointing right</fbx-tooltip>
+      <fbx-tooltip target="tooltipTop" placement="top">{{tooltip}}</fbx-tooltip>
+      <fbx-tooltip target="tooltipBottom" placement="bottom">{{tooltip}}</fbx-tooltip>
+      <fbx-tooltip target="tooltipLeft" placement="left" boundary="viewport">{{tooltip}}</fbx-tooltip>
+      <fbx-tooltip target="tooltipRight" placement="right" boundary="viewport">{{tooltip}}</fbx-tooltip>
     </div>
   `,
 });
@@ -52,8 +54,8 @@ const triggersStory = () => ({
     <div>
       <span id="hover">Hover me to see a top tooltip :)</span><br />
       <span id="click">click me to see a top tooltip :)</span><br />
-      <fbx-tooltip target="hover" triggers="hover">focused</fbx-tooltip>
-      <fbx-tooltip target="click" triggers="click">clicked</fbx-tooltip>
+      <fbx-tooltip target="hover" triggers="hover">{{tooltip}}</fbx-tooltip>
+      <fbx-tooltip target="click" triggers="click">{{tooltip}}</fbx-tooltip>
     </div>
   `,
 });

@@ -7,19 +7,8 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import bTooltip from 'bootstrap-vue/es/components/tooltip/tooltip';
-
-  Vue.component('b-tooltip', bTooltip);
-
   export default {
     name: "FbxTooltip",
-    data() {
-      return {}
-    },
-    mounted() {
-      console.log("$attrs", this.$attrs);
-    }
   }
 </script>
 

@@ -5,6 +5,7 @@
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
         <input
+          v-mask="mask"
           :type="type"
           tabindex="0"
           class="fbx-text-field__input"
@@ -44,6 +45,10 @@ export default {
     label: String,
     value: [String, Number],
     validations: String,
+    mask: {
+      type: String,
+      default: ""
+    }
   },
   computed: {
     passwordButtonText() {

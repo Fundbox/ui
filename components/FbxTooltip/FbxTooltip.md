@@ -3,7 +3,7 @@
 ## Basic usage
 
 - Use `FbxTooltip` to add a tooltip element anywhere in the dom.
-- You can see defaults [here](https://bootstrap-vue.js.org/docs/components/tooltip/)
+- `FbxTooltip` uses `bootstrap-vue tooltip` You can see configs and defaults [here](https://bootstrap-vue.js.org/docs/components/tooltip/)
 
 ```html
 <!-- Example Usage -->

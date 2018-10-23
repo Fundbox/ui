@@ -1,8 +1,8 @@
 import Vue from "vue";
-import FbxTooltip from "./FbxTooltip.vue";
 import bTooltip from 'bootstrap-vue/es/components/tooltip/tooltip';
+import FbxTooltip from "./FbxTooltip.vue";
 
-Vue.component("FbxTooltip", FbxTooltip);
 Vue.component('b-tooltip', bTooltip);
+Vue.component("FbxTooltip", FbxTooltip);
 
 export default FbxTooltip;

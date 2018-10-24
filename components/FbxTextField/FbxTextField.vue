@@ -55,10 +55,10 @@ export default {
       return this.isPassword && this.type === "text" ? "Hide" : "Show";
     },
     isInvalid() {
-      return this.errors.has(this.$attrs.name)
+      return this.errors.has(this.$attrs.name, this.$attrs.scope)
     },
     validationMessage() {
-      return this.errors.first(this.$attrs.name)
+      return this.errors.first(this.$attrs.name, this.$attrs.scope)
     }
   },
   methods: {

@@ -1,9 +1,7 @@
 <template>
-  <div class="fbx-tooltip">
-    <b-tooltip v-bind="$attrs">
-      <slot />
-    </b-tooltip>
-  </div>
+  <b-tooltip v-bind="$attrs">
+    <slot />
+  </b-tooltip>
 </template>
 
 <script>

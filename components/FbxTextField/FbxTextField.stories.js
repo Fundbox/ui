@@ -77,10 +77,10 @@ const maskStory = () => ({
   template: `
     <fbx-text-field
       mask="(###) ###-####"
-      name="email"
+      name="phone"
       class="input"
       validations="required"
-      placeholder="Enter your email"
+      placeholder="Enter your phone number"
       :label="labelText"
       v-model="inputText"
     />

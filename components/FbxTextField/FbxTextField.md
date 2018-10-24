@@ -17,4 +17,15 @@
   v-model.trim="email"
   data-qa="my-email-qa"
 />
+
+<!-- Example Usage with mask -->
+<fbx-text-field
+  mask="(###) ###-####"
+  name="phone"
+  class="input"
+  validations="required"
+  placeholder="Enter your phone number"
+  :label="labelText"
+  v-model="inputText"
+/>
 ```

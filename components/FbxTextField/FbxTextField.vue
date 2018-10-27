@@ -1,10 +1,12 @@
 <template>
   <div class="fbx-text-field">
     <label class="fbx-text-field__label">{{ label }}</label>
-
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
         <input
+          v-fbx-address-autocomplete="addressAutocomplete"
+          v-fbx-autofocus="autofocus"
+          ref="input"
           v-mask="mask"
           :type="type"
           tabindex="0"
@@ -16,22 +18,35 @@
           @input="onInput"
           @change="onChange"
         />
-
-        <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
-
+        <span
+          class="fbx-text-field__password-button"
+          @click="togglePassword"
+          v-if="isPassword">
+            {{ passwordButtonText }}
+        </span>
       </div>
-      <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
+      <fbx-validation-message
+        class="validation-message"
+        v-if="isInvalid">
+          {{ validationMessage }}
+      </fbx-validation-message>
     </div>
   </div>
 </template>
 
 <script>
 import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue"
+import FbxAddressAutocomplete from "../../directives/FbxAddressAutocomplete/FbxAddressAutocomplete";
+import FbxAutofocus from "../../directives/FbxAutofocus/FbxAutofocus";
 
 export default {
   name: "FbxTextField",
   components: {
     FbxValidationMessage,
+  },
+  directives: {
+    FbxAddressAutocomplete,
+    FbxAutofocus
   },
   inheritAttrs: false,
   inject: ["$validator"],
@@ -39,6 +54,7 @@ export default {
     return {
       isPassword: this.$attrs.type === "password",
       type: this.$attrs.type || "text",
+      inputValue: this.value || ""
     }
   },
   props: {
@@ -48,7 +64,15 @@ export default {
     mask: {
       type: String,
       default: ""
-    }
+    },
+    autofocus: {
+      type: Boolean,
+      default: false
+    },
+    addressAutocomplete: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     passwordButtonText() {
@@ -76,8 +100,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/utils/color-palette";
-@import "./../styles/utils/mixins";
+@import "../../styles/utils/color-palette";
+@import "../../styles/utils/mixins";
 
 .fbx-text-field {
   position: relative;

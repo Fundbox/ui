@@ -1,5 +1,5 @@
-@import "./../../utils/variables.scss";
-@import "./../../utils/mixins.scss";
+@import "../../utils/variables";
+@import "../../utils/mixins";
 
 // NOTE: There is a probably bug with the resolver of one of the loaders
 // related to CSS, so we need to use `./fonts/` for resolving a file that

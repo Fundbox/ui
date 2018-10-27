@@ -6,16 +6,17 @@
 
 <script>
   export default {
-    name: "FbxTooltip",
+    name: "FbxTooltip"
   }
 </script>
 
 <style lang="scss">
-  @import "./../styles/utils/color-palette";
+  @import "../../styles/utils/color-palette";
   .tooltip {
     position: absolute;
     opacity: 0;
     margin: 10px;
+    max-width: 250px;
     &.fade { transition: opacity .15s linear; }
     &.show { opacity: 1; }
 

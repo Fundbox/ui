@@ -36,9 +36,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/utils/mixins.scss";
-@import "../styles/utils/variables.scss";
-@import "../styles/utils/color-palette.scss";
+@import "../../styles/utils/mixins.scss";
+@import "../../styles/utils/variables.scss";
+@import "../../styles/utils/color-palette.scss";
 
 .fbx-cta-button {
   position: relative;

@@ -1,6 +1,11 @@
 const webpack = require("webpack");
 const VueLoaderPlugin = require("vue-loader/lib/plugin")
 
+const plugins = [new VueLoaderPlugin()];
+if (process.env.NODE_ENV !== "production") {
+  plugins.push(new webpack.HotModuleReplacementPlugin());
+}
+
 module.exports = {
   resolve: {
     alias: {
@@ -57,8 +62,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new VueLoaderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins,
 };

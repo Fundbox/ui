@@ -5,6 +5,7 @@
 >
   <input
     type="radio"
+    name="fbx-panel-radio-button"
     class="radio-input--hidden"
     v-bind="$attrs"
   />

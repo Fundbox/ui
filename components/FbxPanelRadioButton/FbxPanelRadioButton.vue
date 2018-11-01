@@ -93,6 +93,7 @@ export default {
 }
 
 .panel-radio-button__header-text {
+  flex: 1;
   @include font(18);
 }
 

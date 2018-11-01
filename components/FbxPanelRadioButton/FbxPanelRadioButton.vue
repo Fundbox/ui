@@ -16,9 +16,9 @@
 
       <div class="panel-radio-button__header-text"><slot name="header"></slot></div>
 
-      <div
+      <img
         class="panel-radio-button__icon"
-        :style="headerIconStyles"
+        :src="iconPath"
         v-if="iconPath">
       </div>
     </div>
@@ -37,13 +37,6 @@ export default {
   props: {
     iconPath: String,
   },
-  data() {
-    return {
-      headerIconStyles: {
-        backgroundImage: `url(${this.iconPath})`
-      }
-    }
-  }
 };
 </script>
 
@@ -117,10 +110,9 @@ export default {
 
 .panel-radio-button__icon {
   flex: 0 0 auto;
-  width: 30px;
-  height: 30px;
+  max-width: 30px;
+  height: auto;
   margin-left: 15px;
-  background-size: contain;
   @include viewport("lg") {
     margin-left: 0;
     margin-bottom: 13px;

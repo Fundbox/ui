@@ -55,6 +55,10 @@ export default {
   display: block;
   border: 1px solid $medium-gray;
   background-color: $white;
+  max-width: 540px;
+  @include viewport("lg") {
+    width: 300px;
+  }
 }
 
 .radio-input--hidden {
@@ -62,14 +66,21 @@ export default {
   opacity: 0;
 }
 
-.panel-radio-button__inner-content {
-}
-
 .panel-radio-button__header {
   display: flex;
   align-items: center;
+  min-height: 59px;
   padding: 5px 12px;
   background-color: $extra-light-gray;
+  @include viewport("md") {
+    min-height: 56px;
+  }
+  @include viewport("lg") {
+    flex-direction: column-reverse;
+    min-height: 88px;
+    padding-top: 14px;
+    padding-bottom: 18px;
+  }
 }
 
 .panel-radio-button__circle-indicator {
@@ -82,6 +93,9 @@ export default {
   margin-right: 11px;
   border-radius: 50%;
   border: 1px solid $extra-dark-gray;
+  @include viewport("lg") {
+    display: none;
+  }
 }
 
 .selected-radio-circle {
@@ -95,6 +109,10 @@ export default {
 .panel-radio-button__header-text {
   flex: 1;
   @include font(18);
+  @include viewport("lg") {
+    text-align: center;
+    line-height: 22px;
+  }
 }
 
 .panel-radio-button__icon {
@@ -103,6 +121,10 @@ export default {
   height: 30px;
   margin-left: 15px;
   background-size: contain;
+  @include viewport("lg") {
+    margin-left: 0;
+    margin-bottom: 13px;
+  }
 }
 
 .panel-radio-button__body {
@@ -110,5 +132,12 @@ export default {
   @include font(14);
   line-height: 23px;
   color: $extra-dark-gray;
+  @include viewport('md') {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  @include viewport("lg") {
+    padding: 22px 21px 25px;
+  }
 }
 </style>

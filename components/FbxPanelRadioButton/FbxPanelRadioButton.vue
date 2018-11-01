@@ -47,9 +47,9 @@ export default {
 
 .fbx-panel-radio-button {
   display: block;
+  max-width: 540px;
   border: 1px solid $medium-gray;
   background-color: $white;
-  max-width: 540px;
   @include viewport("lg") {
     width: 300px;
   }

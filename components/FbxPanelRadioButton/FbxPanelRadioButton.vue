@@ -69,7 +69,6 @@ export default {
   display: flex;
   align-items: center;
   padding: 5px 12px;
-  @include font(18);
   background-color: $extra-light-gray;
 }
 
@@ -91,6 +90,10 @@ export default {
   height: 10px;
   border-radius: 50%;
   background-color: $dark-green;
+}
+
+.panel-radio-button__header-text {
+  @include font(18);
 }
 
 .panel-radio-button__icon {

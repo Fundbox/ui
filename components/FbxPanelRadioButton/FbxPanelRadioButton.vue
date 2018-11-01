@@ -14,7 +14,7 @@
         <div class="selected-radio-circle"></div>
       </div>
 
-      <slot name="header"></slot>
+      <div class="panel-radio-button__header-text"><slot name="header"></slot></div>
 
       <div
         class="panel-radio-button__icon"

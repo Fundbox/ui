@@ -5,17 +5,24 @@ import { text } from '@storybook/addon-knobs';
 
 import FbxPanelRadioButton from './FbxPanelRadioButton.vue';
 import summary from './FbxPanelRadioButton.md';
+import icon from '../assets/logo.png';
+import icon2 from '../assets/icon_check_active.svg';
+import storyHTML from './FbxPanelRadioButton.stories.html';
+import './FbxPanelRadioButton.stories.scss';
 
 const stories = storiesOf('PanelRadioButton', module);
 
-stories.add('default', withInfo({ summary })(() => ({
+// stories.add('default', withInfo({ summary })(() => ({
+stories.add('default', () => ({
   components: { FbxPanelRadioButton },
-  template: `<fbx-panel-radio-button
-                name="my-panel-radio-button"
-                tabindex="3"
-                @click="click"
-            >
-              ${text('Text', 'Click me')}
-            </fbx-panel-radio-button>`,
+  data() {
+    return {
+      icon,
+      icon2,
+      headerText: text('Header Text', 'Caramels toffee  gummi bears'),
+      bodyText: text('Text', 'Halvah chupa chups caramels sugar sugar plum ice cream wafer sugar pudding fruitcake snaps donut. lemon drops topping marshmallow sesame gummi bears sugar. biscuit dessert powder croissant jujubes powder chocolate tootsie topping.')
+    }
+  },
+  template: storyHTML,
   methods: { click: action('clicked') },
-})));
+}));

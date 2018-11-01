@@ -15,6 +15,12 @@
       </div>
 
       <slot name="header"></slot>
+
+      <div
+        class="panel-radio-button__icon"
+        :style="headerIconStyles"
+        v-if="iconPath">
+      </div>
     </div>
 
     <div class="panel-radio-button__body">
@@ -28,6 +34,16 @@
 export default {
   name: "FbxPanelRadioButton",
   inheritAttrs: false,
+  props: {
+    iconPath: String,
+  },
+  data() {
+    return {
+      headerIconStyles: {
+        backgroundImage: `url(${this.iconPath})`
+      }
+    }
+  }
 };
 </script>
 
@@ -75,6 +91,14 @@ export default {
   height: 10px;
   border-radius: 50%;
   background-color: $dark-green;
+}
+
+.panel-radio-button__icon {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  background-size: contain;
 }
 
 .panel-radio-button__body {

@@ -17,7 +17,6 @@ const defaultStory = () => ({
 
 const textFieldStory = () => ({
   components: { FbxTextField },
-  directives: { FbxAutofocus },
   data() {
     return { value: "" };
   },

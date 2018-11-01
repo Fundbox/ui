@@ -25,7 +25,7 @@ function parseMapsResponseReducer(model, { types, short_name: shortName, long_na
 }
 
 export default Vue.directive("fbxAddressAutocomplete", {
-  inserted: function (el, { value: active }, vnode) {
+  inserted(el, { value: active }, vnode) {
     if (active === false) {
       return;
     }

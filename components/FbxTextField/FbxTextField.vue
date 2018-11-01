@@ -53,8 +53,7 @@ export default {
   data() {
     return {
       isPassword: this.$attrs.type === "password",
-      type: this.$attrs.type || "text",
-      inputValue: this.value || ""
+      type: this.$attrs.type || "text"
     }
   },
   props: {

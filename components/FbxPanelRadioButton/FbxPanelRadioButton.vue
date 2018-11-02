@@ -1,9 +1,5 @@
 <template>
-<label
-  tabindex="0"
-  class="fbx-panel-radio-button"
-  @change="onChange"
->
+<label tabindex="0" class="fbx-panel-radio-button" @change="onChange">
   <input
     type="radio"
     name="fbx-panel-radio-button"

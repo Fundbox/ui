@@ -1,5 +1,10 @@
 <template>
-<label tabindex="0" class="fbx-panel-radio-button" @change="onChange">
+<label
+  tabindex="0"
+  class="fbx-panel-radio-button"
+  :class="{ 'fbx-panel-radio-button--checked': shouldBeChecked }"
+  @change="onChange"
+>
   <input
     type="radio"
     name="fbx-panel-radio-button"
@@ -70,6 +75,14 @@ export default {
   }
   @include viewport("lg") {
     width: 300px;
+  }
+
+.fbx-panel-radio-button--checked {
+  border: 1px solid $dark-green;
+
+  .panel-radio-button__header {
+    border: 3px solid $white;
+    background-color: $extra-light-green;
   }
 }
 

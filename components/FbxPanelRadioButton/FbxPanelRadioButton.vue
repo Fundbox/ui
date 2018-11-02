@@ -67,6 +67,9 @@ export default {
   max-width: 540px;
   border: 1px solid $medium-gray;
   background-color: $white;
+  @include viewport("md") {
+    cursor: pointer;
+  }
   @include viewport("lg") {
     width: 300px;
   }

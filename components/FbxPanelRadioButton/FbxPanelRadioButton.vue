@@ -17,7 +17,9 @@
         <div class="selected-radio-circle" v-if="shouldBeChecked"></div>
       </div>
 
-      <div class="panel-radio-button__header-text"><slot name="header"></slot></div>
+      <div class="panel-radio-button__header-text">
+        <slot name="header"></slot>
+      </div>
 
       <div class="panel-radio-button__icon" v-if="iconPath">
         <img :src="iconPath" />

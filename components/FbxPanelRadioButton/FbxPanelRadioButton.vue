@@ -109,7 +109,6 @@ export default {
 
   @include viewport("lg") {
     .panel-radio-button__header {
-      border: 3px solid $white;
       background-color: $extra-light-green;
     }
   }

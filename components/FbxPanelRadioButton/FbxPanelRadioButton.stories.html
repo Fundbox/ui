@@ -5,7 +5,7 @@
     <fbx-panel-radio-button
         :iconPath="icon"
         v-model="selectedDataSource"
-        value="option1"
+        :value="headerText"
     >
       <div slot="header">{{ headerText }}</div>
       <div slot="body">{{ bodyText }}</div>
@@ -14,7 +14,7 @@
     <fbx-panel-radio-button
         :iconPath="icon2"
         v-model="selectedDataSource"
-        value="option2"
+        value="OPTION TWO"
     >
       <div slot="header">Option 2</div>
       <div slot="body">
@@ -26,7 +26,7 @@
 
     <fbx-panel-radio-button
       v-model="selectedDataSource"
-      value="option3"
+      value="option the third"
     >
       <div slot="header">Option 3</div>
       <div slot="body">This option is the best</div>

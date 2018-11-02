@@ -113,7 +113,6 @@ export default {
 }
 
 .selected-radio-circle {
-  display: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;

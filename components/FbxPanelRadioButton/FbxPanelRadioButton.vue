@@ -178,7 +178,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 26px;
-  width: 26px;
+  width: 32px;
   margin-left: 15px;
   @include viewport("lg") {
     margin-left: 0;

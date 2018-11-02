@@ -90,7 +90,7 @@ export default {
     width: 300px;
     transition: all .1s ease-in-out;
 
-    &:hover {
+    &:hover:not(.fbx-panel-radio-button--checked) {
       transform: scale(1.03);
 
       .panel-radio-button__header {

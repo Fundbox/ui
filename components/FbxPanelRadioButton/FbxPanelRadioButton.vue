@@ -15,7 +15,7 @@
   <div class="panel-radio-button__inner-content">
     <div class="panel-radio-button__header">
       <div class="panel-radio-button__circle-indicator">
-        <div class="selected-radio-circle" v-if="shouldBeChecked"></div>
+        <div class="selected-radio-circle" :class="{ 'selected-radio-circle--visible': shouldBeChecked }"></div>
       </div>
 
       <div class="panel-radio-button__header-text">
@@ -72,19 +72,32 @@ export default {
   background-color: $white;
   @include viewport("md") {
     cursor: pointer;
+
+    &:hover {
+      border: 1px solid $dark-green;
+
+      .panel-radio-button__circle-indicator {
+        border-color: $dark-green;
+      }
+
+      .selected-radio-circle:not(.selected-radio-circle--visible) {
+        display: block;
+        background-color: $extra-light-green;
+      }
+    }
   }
   @include viewport("lg") {
     width: 300px;
   }
 
 .fbx-panel-radio-button--checked {
+  border: 1px solid $dark-green;
+
   .panel-radio-button__circle-indicator {
     border-color: $dark-green;
   }
 
   @include viewport("lg") {
-    border: 1px solid $dark-green;
-
     .panel-radio-button__header {
       border: 3px solid $white;
       background-color: $extra-light-green;
@@ -130,10 +143,15 @@ export default {
 }
 
 .selected-radio-circle {
+  display: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: $dark-green;
+}
+
+.selected-radio-circle--visible {
+  display: block;
 }
 
 .panel-radio-button__header-text {

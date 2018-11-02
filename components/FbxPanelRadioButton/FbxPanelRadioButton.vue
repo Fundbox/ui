@@ -78,11 +78,13 @@ export default {
   }
 
 .fbx-panel-radio-button--checked {
-  border: 1px solid $dark-green;
+  @include viewport("lg") {
+    border: 1px solid $dark-green;
 
-  .panel-radio-button__header {
-    border: 3px solid $white;
-    background-color: $extra-light-green;
+    .panel-radio-button__header {
+      border: 3px solid $white;
+      background-color: $extra-light-green;
+    }
   }
 }
 

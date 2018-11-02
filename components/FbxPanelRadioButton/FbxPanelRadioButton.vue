@@ -132,7 +132,7 @@ export default {
   @include viewport("lg") {
     flex-direction: column-reverse;
     min-height: 88px;
-    padding-top: 14px;
+    padding-top: 12px;
     padding-bottom: 18px;
   }
 }

@@ -17,10 +17,8 @@
 
       <div class="panel-radio-button__header-text"><slot name="header"></slot></div>
 
-      <img
-        class="panel-radio-button__icon"
-        :src="iconPath"
-        v-if="iconPath">
+      <div class="panel-radio-button__icon" v-if="iconPath">
+        <img :src="iconPath" />
       </div>
     </div>
 
@@ -111,12 +109,20 @@ export default {
 
 .panel-radio-button__icon {
   flex: 0 0 auto;
-  max-width: 30px;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  width: 26px;
   margin-left: 15px;
   @include viewport("lg") {
     margin-left: 0;
     margin-bottom: 13px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 

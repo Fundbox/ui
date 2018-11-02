@@ -1,9 +1,13 @@
 @import "../styles/utils/mixins.scss";
 
+.fbx-panel-trio-wrapper {
+  padding: 16px;
+}
+
 .fbx-panel-radio-button-trio {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  margin-top: 20px;
   @include viewport("lg") {
     flex-direction: row;
   }

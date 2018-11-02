@@ -88,7 +88,17 @@ export default {
   }
   @include viewport("lg") {
     width: 300px;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+
+      .panel-radio-button__header {
+        background-color: $extra-light-green;
+      }
+    }
   }
+}
 
 .fbx-panel-radio-button--checked {
   border: 1px solid $dark-green;

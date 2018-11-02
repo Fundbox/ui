@@ -7,6 +7,7 @@ import FbxPanelRadioButton from './FbxPanelRadioButton.vue';
 import summary from './FbxPanelRadioButton.md';
 import icon from '../assets/logo.png';
 import icon2 from '../assets/icon_check_active.svg';
+import icon3 from '../assets/icon_check_disabled.svg';
 import storyHTML from './FbxPanelRadioButton.stories.html';
 import './FbxPanelRadioButton.stories.scss';
 
@@ -20,6 +21,7 @@ stories.add('default', () => ({
       selectedDataSource: null,
       icon,
       icon2,
+      icon3,
       headerText: text('Header Text', 'Caramels toffee  gummi bears'),
       bodyText: text('Text', 'Halvah chupa chups caramels sugar sugar plum ice cream wafer sugar pudding fruitcake snaps donut. lemon drops topping marshmallow sesame gummi bears sugar. biscuit dessert powder croissant jujubes powder chocolate tootsie topping.')
     }

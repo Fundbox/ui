@@ -78,6 +78,10 @@ export default {
   }
 
 .fbx-panel-radio-button--checked {
+  .panel-radio-button__circle-indicator {
+    border-color: $dark-green;
+  }
+
   @include viewport("lg") {
     border: 1px solid $dark-green;
 

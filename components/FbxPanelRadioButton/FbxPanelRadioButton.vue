@@ -2,17 +2,19 @@
 <label
   tabindex="0"
   class="fbx-panel-radio-button"
+  @change="onChange"
 >
   <input
     type="radio"
     name="fbx-panel-radio-button"
     class="radio-input--hidden"
-    v-bind="$attrs"
+    :value="value"
+    :checked="shouldBeChecked"
   />
   <div class="panel-radio-button__inner-content">
     <div class="panel-radio-button__header">
       <div class="panel-radio-button__circle-indicator">
-        <div class="selected-radio-circle"></div>
+        <div class="selected-radio-circle" v-if="shouldBeChecked"></div>
       </div>
 
       <div class="panel-radio-button__header-text"><slot name="header"></slot></div>
@@ -32,10 +34,27 @@
 <script>
 export default {
   name: "FbxPanelRadioButton",
-  inheritAttrs: false,
+  model: {
+    prop: "modelValue",
+    event: "change",
+  },
   props: {
     iconPath: String,
+    value: String,
+    modelValue: {
+      default: "",
+    },
   },
+  computed: {
+    shouldBeChecked() {
+      return this.modelValue === this.value
+    },
+  },
+  methods: {
+    onChange() {
+      this.$emit("change", this.value)
+    },
+  }
 };
 </script>
 

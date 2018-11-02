@@ -17,6 +17,7 @@ stories.add('default', () => ({
   components: { FbxPanelRadioButton },
   data() {
     return {
+      selectedDataSource: null,
       icon,
       icon2,
       headerText: text('Header Text', 'Caramels toffee  gummi bears'),

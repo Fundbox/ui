@@ -7,3 +7,4 @@ import FbxCloseButtonStories from './FbxCloseButton/FbxCloseButton.stories.js';
 import FbxTabs from './FbxTabs/FbxTabs.stories.js';
 import FbxTextField from './FbxTextField/FbxTextField.stories.js';
 import FbxTooltip from './FbxTooltip/FbxTooltip.stories.js';
+import FbxSelect from './FbxSelect/FbxSelect.stories.js';

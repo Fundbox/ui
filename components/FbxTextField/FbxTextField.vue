@@ -59,7 +59,7 @@ export default {
   props: {
     label: String,
     value: [String, Number],
-    validations: String,
+    validations: [String, Object],
     mask: {
       type: String,
       default: ""
@@ -71,7 +71,7 @@ export default {
     addressAutocomplete: {
       type: Boolean,
       default: false
-    },
+    }
   },
   computed: {
     passwordButtonText() {
@@ -82,7 +82,7 @@ export default {
     },
     validationMessage() {
       return this.errors.first(this.$attrs.name, this.$attrs.scope)
-    }
+    },
   },
   methods: {
     togglePassword() {

@@ -87,6 +87,46 @@ const maskStory = () => ({
   `
 });
 
+const addressAutocomplete = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: "",
+      addressData: {}
+    }
+  },
+  methods: {
+    onAddressChange(addressData) {
+      this.addressData = addressData;
+    },
+    onAddressSelected(value) {
+      this.inputText = value;
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value: ${value}`)()
+    },
+  },
+  template: `
+    <fbx-text-field
+      address-autocomplete
+      :validations="{
+        addressRequired: addressData,
+        addressInsideUSA: addressData,
+        fullAddress: addressData
+      }"
+      name="phone"
+      class="input"
+      placeholder="Enter your phone number"
+      v-model="inputText"
+      @addressChange="onAddressChange"
+      @addressSelected="onAddressSelected"
+    />
+  `
+});
+
 stories.add('default', withSummery(defaultStory));
 stories.add('password', withSummery(passwordStory));
 stories.add('mask', withSummery(maskStory));
+stories.add('address autocomplete', withSummery(addressAutocomplete));

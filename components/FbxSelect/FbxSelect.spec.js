@@ -17,6 +17,13 @@ localVue.use(VeeValidate, {
   events: "change"
 });
 
+const formatHtml = (html) => {
+  return html.replace(/\n/g, "")
+    .replace(/[\t ]+\</g, "<")
+    .replace(/\>[\t ]+\</g, "><")
+    .replace(/\>[\t ]+$/g, ">")
+};
+
 describe("FbxSelect", () => {
   describe("snapshots", () => {
     it("renders the default correctly", async () => {
@@ -30,7 +37,8 @@ describe("FbxSelect", () => {
         localVue
       });
       await flushPromises();
-      expect(wrapper.html()).toMatchSnapshot();
+      console.log(formatHtml(wrapper.html()));
+      expect(formatHtml(wrapper.html())).toMatchSnapshot();
     });
 
     it("renders validations correctly", async () => {
@@ -53,7 +61,7 @@ describe("FbxSelect", () => {
         localVue
       });
       await flushPromises();
-      expect(wrapper.html()).toMatchSnapshot();
+      expect(formatHtml(wrapper.html())).toMatchSnapshot();
       expect(wrapper.html()).toContain(validationMessage)
     });
   });

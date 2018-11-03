@@ -32,7 +32,7 @@ export default {
       return {
         // Pass all component listeners directly to button
         ...this.$listeners,
-        input: ({ target }) => {
+        change: ({ target }) => {
           this.$emit("input", target.value)
         }
       };

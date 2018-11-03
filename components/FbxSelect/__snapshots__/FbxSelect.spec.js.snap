@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FbxSelect snapshots renders the default correctly 1`] = `
-<div>
-  <select class="fbx-select" aria-required="false" aria-invalid="false">
+<div><select class="fbx-select" aria-required="false" aria-invalid="false">
     <option>Default</option>
     <option value="Option 1">Option 1</option>
   </select>
@@ -11,8 +10,7 @@ exports[`FbxSelect snapshots renders the default correctly 1`] = `
 `;
 
 exports[`FbxSelect snapshots renders validations correctly 1`] = `
-<div>
-  <select name="select" class="fbx-select invalid" aria-required="false" aria-invalid="false">
+<div><select name="select" class="fbx-select invalid" aria-required="false" aria-invalid="false">
     <option>Default</option>
     <option value="Option 1">Option 1</option>
   </select>

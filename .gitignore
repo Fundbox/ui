@@ -16,3 +16,4 @@ storybook-static/
 *.ntvs*
 *.njsproj
 *.sln
+.cache

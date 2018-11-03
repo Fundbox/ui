@@ -1,39 +1,45 @@
 <template>
   <div>
-    <select class="fbx-select" v-validate="validations" v-bind="$attrs" v-on="listeners" :value="value" :class="{ invalid: isInvalid }">
+    <select
+      class="fbx-select"
+      v-validate="validations"
+      v-bind="$attrs"
+      v-on="listeners"
+      :value="value"
+      :class="{ invalid: isInvalid }"
+    >
       <slot></slot>
     </select>
-    <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}
-    </fbx-validation-message>
+    <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
   </div>
 </template>
 
 <script>
-import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue"
+import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue";
 export default {
   name: "FbxSelect",
   inheritAttrs: false,
   inject: ["$validator"],
   components: {
-    FbxValidationMessage,
+    FbxValidationMessage
   },
   props: {
     validations: String,
     value: String
   },
   computed: {
-    isInvalid () {
+    isInvalid() {
       return this.errors.has(this.$attrs.name);
     },
-    validationMessage () {
+    validationMessage() {
       return this.errors.first(this.$attrs.name);
     },
-    listeners () {
+    listeners() {
       return {
         // Pass all component listeners directly to button
         ...this.$listeners,
         change: ({ target }) => {
-          this.$emit("input", target.value)
+          this.$emit("input", target.value);
         }
       };
     }

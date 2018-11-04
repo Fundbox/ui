@@ -3,7 +3,7 @@ import { withInfo } from "storybook-addon-vue-info";
 import FbxAutofocus from "./FbxAutofocus";
 import summary from './FbxAutofocus.md';
 
-const stories = storiesOf('directives/Autofocus', module);
+const stories = storiesOf('Directives/Autofocus', module);
 const storyWithInfo = withInfo({ summary });
 
 const defaultStory = () => ({

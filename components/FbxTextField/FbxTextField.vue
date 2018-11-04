@@ -74,7 +74,7 @@ export default {
     },
     validationMessage() {
       return this.errors.first(this.$attrs.name, this.$attrs.scope)
-    },
+    }
   },
   methods: {
     togglePassword() {

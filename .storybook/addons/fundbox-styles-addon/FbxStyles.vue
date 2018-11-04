@@ -9,6 +9,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "./../../../components/styles/utils/reset.scss";
-@import "./../../../components/styles/utils/fonts-generator.scss";
+@import "../../../styles/utils/reset.scss";
+@import "../../../styles/utils/fonts-generator.scss";
 </style>

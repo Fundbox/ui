@@ -6,7 +6,7 @@ import { text } from '@storybook/addon-knobs';
 import FbxCheckbox from './FbxCheckbox.vue';
 import summary from './FbxCheckbox.md';
 
-const stories = storiesOf('Checkbox', module);
+const stories = storiesOf('components/Checkbox', module);
 
 stories.add('default', withInfo({ summary })(() => ({
   components: { FbxCheckbox },

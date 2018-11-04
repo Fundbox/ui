@@ -16,8 +16,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./../styles/utils/color-palette.scss";
-@import "./../styles/fonts/icomoon/style.css";
+@import "../../styles/utils/color-palette.scss";
+@import "../../styles/fonts/icomoon/style.css";
 
 .fbx-close-button {
   // Make sure icon container is not bigger then the icon itself.

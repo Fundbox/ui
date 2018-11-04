@@ -36,9 +36,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/utils/mixins.scss";
-@import "../styles/utils/variables.scss";
-@import "../styles/utils/color-palette.scss";
+@import "../../styles/utils/mixins.scss";
+@import "../../styles/utils/variables.scss";
+@import "../../styles/utils/color-palette.scss";
 
 .fbx-cta-button {
   position: relative;
@@ -110,7 +110,7 @@ export default {
   display: block;
   content: "";
   position: absolute;
-  background-image: url("../assets/btn-ajax-loading.gif");
+  background-image: url("../../assets/btn-ajax-loading.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;

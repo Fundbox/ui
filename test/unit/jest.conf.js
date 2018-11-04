@@ -26,10 +26,13 @@ module.exports = {
   coverageDirectory: '<rootDir>/test/unit/coverage',
   collectCoverageFrom: [
     '!**/node_modules/**',
+    '!components/introduction/**/*',
     'components/**/*.{js,vue}',
     '!components/**/*.stories.js',
+    '!components/**/index.js',
     'directives/**/*.{js,vue}',
     '!directives/**/*.stories.js',
-    '!main.stories.js',
+    '!directives/**/index.js',
+    '!main.stories.js'
   ],
 };

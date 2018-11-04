@@ -16,7 +16,7 @@ VeeValidate.Validator.extend("password", {
 
 VeeValidate.Validator.extend("phoneNumber", {
   getMessage: () => "Please enter a valid phone number",
-  validate: addressInsideUSAValidation,
+  validate: phoneNumberValidation,
 });
 
 VeeValidate.Validator.extend("addressRequired", {
@@ -26,12 +26,12 @@ VeeValidate.Validator.extend("addressRequired", {
 
 VeeValidate.Validator.extend("addressInsideUSA", {
   getMessage: () => "State must be within the U.S. region",
-  validate: fullAddressValidation
+  validate: addressInsideUSAValidation
 });
 
 VeeValidate.Validator.extend("fullAddress", {
   getMessage: () => "Address must contain street and number",
-  validate: phoneNumberValidation
+  validate: fullAddressValidation
 });
 
 Vue.use(VeeValidate);

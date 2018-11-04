@@ -87,6 +87,32 @@ const maskStory = () => ({
   `
 });
 
+const autofocusStory = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: "",
+      labelText: text("Label", "Email Address"),
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value: ${value}`)()
+    },
+  },
+  template: `
+    <fbx-text-field
+      autofocus
+      name="phone"
+      class="input"
+      validations="required"
+      placeholder="Enter your phone number"
+      :label="labelText"
+      v-model="inputText"
+    />
+  `
+});
+
 const addressAutocomplete = () => ({
   components: { FbxTextField },
   data() {
@@ -129,4 +155,5 @@ const addressAutocomplete = () => ({
 stories.add('default', withSummery(defaultStory));
 stories.add('password', withSummery(passwordStory));
 stories.add('mask', withSummery(maskStory));
+stories.add('autofocus', withSummery(autofocusStory));
 stories.add('address autocomplete', withSummery(addressAutocomplete));

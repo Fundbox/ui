@@ -10,7 +10,7 @@ describe("Directives/FbxAutofocus", () => {
     expect(mockComponent.contains("input:focus")).toBe(true);
   });
 
-  it("Should auto focus input element with `v-fbx-autofocus` directive set to `false", () => {
+  it("Should not auto focus input element with `v-fbx-autofocus` directive set to `false", () => {
     const mockComponent = shallowMount({
       template: "<input v-fbx-autofocus='false'>",
     });

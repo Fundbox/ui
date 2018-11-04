@@ -40,8 +40,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/utils/color-palette";
-@import "./../styles/utils/mixins";
+@import "../../styles/utils/color-palette";
+@import "../../styles/utils/mixins";
 
 .fbx-tabs {
   display: flex;

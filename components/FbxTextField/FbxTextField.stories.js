@@ -5,7 +5,7 @@ import { text } from '@storybook/addon-knobs';
 
 import FbxTextField from '../FbxTextField';
 import summary from './FbxTextField.md';
-const stories = storiesOf('TextField', module);
+const stories = storiesOf('Components/TextField', module);
 const withSummery = withInfo({ summary });
 
 const defaultStory = () => ({

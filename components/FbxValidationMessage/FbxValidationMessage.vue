@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/utils/color-palette";
+@import "../../styles/utils/color-palette";
 .fbx-validation-message {
   color: $light-red;
   text-align: left;

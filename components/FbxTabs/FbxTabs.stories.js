@@ -5,7 +5,7 @@ import { array } from '@storybook/addon-knobs';
 
 import FbxTabs from './FbxTabs.vue';
 import summary from './FbxTabs.md';
-const stories = storiesOf('Tabs', module);
+const stories = storiesOf('Components/Tabs', module);
 
 stories.add('default', withInfo({ summary })(() => ({
   components: { FbxTabs },

@@ -6,7 +6,7 @@ import { array } from '@storybook/addon-knobs';
 import FbxSelect from './FbxSelect.vue';
 import FbxButton from './../FbxButton/FbxButton.vue';
 import summary from './FbxSelect.md';
-const stories = storiesOf('Select', module);
+const stories = storiesOf('components/Select', module);
 const withSummary = withInfo({ summary });
 
 const data = () => ({

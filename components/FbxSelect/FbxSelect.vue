@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/utils/color-palette";
+@import "./../../styles/utils/color-palette";
 
 .fbx-select {
   font-size: inherit;

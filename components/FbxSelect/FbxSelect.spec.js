@@ -2,7 +2,6 @@ import { shallowMount, createLocalVue } from "@vue/test-utils";
 import flushPromises from "flush-promises"
 import VeeValidate from "vee-validate";
 import FbxSelect from "../FbxSelect";
-import { select } from "@storybook/addon-knobs/dist/react";
 
 const option1 = "Option 1";
 const defaultSlot = {

@@ -110,7 +110,7 @@ export default {
   display: block;
   content: "";
   position: absolute;
-  background-image: url("../assets/btn-ajax-loading.gif");
+  background-image: url("../../assets/btn-ajax-loading.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-color: transparent;

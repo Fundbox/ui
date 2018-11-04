@@ -6,7 +6,6 @@
         <input
           v-fbx-address-autocomplete="addressAutocomplete"
           v-fbx-autofocus="autofocus"
-          ref="input"
           v-mask="mask"
           :type="type"
           tabindex="0"
@@ -18,18 +17,11 @@
           @input="onInput"
           @change="onChange"
         />
-        <span
-          class="fbx-text-field__password-button"
-          @click="togglePassword"
-          v-if="isPassword">
-            {{ passwordButtonText }}
-        </span>
+
+        <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
+
       </div>
-      <fbx-validation-message
-        class="validation-message"
-        v-if="isInvalid">
-          {{ validationMessage }}
-      </fbx-validation-message>
+      <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
     </div>
   </div>
 </template>
@@ -42,7 +34,7 @@ import FbxAutofocus from "../../directives/FbxAutofocus/FbxAutofocus";
 export default {
   name: "FbxTextField",
   components: {
-    FbxValidationMessage,
+    FbxValidationMessage
   },
   directives: {
     FbxAddressAutocomplete,

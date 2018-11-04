@@ -30,4 +30,4 @@ setOptions({
   addonPanelInRight: true,
 });
 
-configure(() => require("../components/main.stories"), module);
+configure(() => require("../main.stories"), module);

@@ -3,7 +3,7 @@ import { withInfo } from 'storybook-addon-vue-info';
 import FbxTooltip from '../FbxTooltip';
 import summary from './FbxTooltip.md';
 
-const stories = storiesOf('Tooltip', module);
+const stories = storiesOf('components/Tooltip', module);
 const storyWithInfo = withInfo({ summary });
 
 const defaultStory = () => ({

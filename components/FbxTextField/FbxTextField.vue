@@ -5,6 +5,7 @@
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
         <input
+          v-fbx-autofocus="autofocus"
           v-mask="mask"
           :type="type"
           tabindex="0"
@@ -27,11 +28,13 @@
 
 <script>
 import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue"
+import FbxAutofocus from "../../directives/FbxAutofocus/FbxAutofocus";
 
 export default {
   name: "FbxTextField",
   components: {
     FbxValidationMessage,
+    FbxAutofocus
   },
   inheritAttrs: false,
   inject: ["$validator"],
@@ -48,6 +51,10 @@ export default {
     mask: {
       type: String,
       default: ""
+    },
+    autofocus: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -76,8 +83,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/utils/color-palette";
-@import "./../styles/utils/mixins";
+@import "../../styles/utils/color-palette";
+@import "../../styles/utils/mixins";
 
 .fbx-text-field {
   position: relative;

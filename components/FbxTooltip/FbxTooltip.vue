@@ -11,7 +11,7 @@
 </script>
 
 <style lang="scss">
-  @import "./../styles/utils/color-palette";
+  @import "../../styles/utils/color-palette";
   .tooltip {
     position: absolute;
     opacity: 0;

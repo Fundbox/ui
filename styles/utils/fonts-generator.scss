@@ -3,8 +3,8 @@
 // Including this file will generate all the available fonts-size classes
 // If included more then once it will generate all the classes multiple times
 
-@import "./mixins.scss";
-@import "./variables.scss";
+@import "mixins";
+@import "variables";
 
 @each $font-size in map-keys($font-size-line-heights) {
   .font-#{$font-size} {

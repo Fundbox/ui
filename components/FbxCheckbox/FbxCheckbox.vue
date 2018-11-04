@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/utils/color-palette";
+@import "../../styles/utils/color-palette";
 
 .fbx-checkbox {
   position: relative;
@@ -86,7 +86,7 @@ export default {
     }
 
     &:checked + .box {
-      background: url("./../assets/icon_check_active.svg") no-repeat 50% 50%;
+      background: url("../../assets/icon_check_active.svg") no-repeat 50% 50%;
     }
 
     &:focus + .box {
@@ -94,7 +94,7 @@ export default {
     }
 
     &:disabled + .box {
-      background: url("./../assets/icon_check_disabled.svg") no-repeat 50% 50%;
+      background: url("../../assets/icon_check_disabled.svg") no-repeat 50% 50%;
       border-color: $medium-gray;
     }
   }

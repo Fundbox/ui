@@ -5,9 +5,9 @@ import { text } from '@storybook/addon-knobs';
 
 import FbxPanelRadioButton from './FbxPanelRadioButton.vue';
 import summary from './FbxPanelRadioButton.md';
-import icon from '../assets/logo.png';
-import icon2 from '../assets/icon_check_active.svg';
-import icon3 from '../assets/icon_check_disabled.svg';
+import icon from '../../assets/logo.png';
+import icon2 from '../../assets/icon_check_active.svg';
+import icon3 from '../../assets/icon_check_disabled.svg';
 import storyHTML from './FbxPanelRadioButton.stories.html';
 import './FbxPanelRadioButton.stories.scss';
 

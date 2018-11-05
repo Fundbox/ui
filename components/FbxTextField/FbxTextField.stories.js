@@ -87,6 +87,72 @@ const maskStory = () => ({
   `
 });
 
+const autofocusStory = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: "",
+      labelText: text("Label", "Email Address"),
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value: ${value}`)()
+    },
+  },
+  template: `
+    <fbx-text-field
+      autofocus
+      name="phone"
+      class="input"
+      validations="required"
+      placeholder="Enter your phone number"
+      :label="labelText"
+      v-model="inputText"
+    />
+  `
+});
+
+const addressAutocomplete = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: "",
+      addressData: {}
+    }
+  },
+  methods: {
+    onAddressDataChanged(addressData) {
+      this.addressData = addressData;
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value`)(value)
+    },
+    addressData(value) {
+      action(`Address data`)(value)
+    }
+  },
+  template: `
+    <fbx-text-field
+      address-autocomplete
+      :validations="{
+        addressRequired: addressData,
+        addressInsideUSA: addressData,
+        fullAddress: addressData
+      }"
+      name="phone"
+      class="input"
+      placeholder="Enter your address"
+      v-model="inputText"
+      @addressDataChanged="onAddressDataChanged"
+    />
+  `
+});
+
 stories.add('default', withSummery(defaultStory));
 stories.add('password', withSummery(passwordStory));
 stories.add('mask', withSummery(maskStory));
+stories.add('autofocus', withSummery(autofocusStory));
+stories.add('address autocomplete', withSummery(addressAutocomplete));

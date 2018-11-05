@@ -13,4 +13,4 @@ Available scaffolding types:
   >Usage: `npx hygen component new --name ComponentName`
 
 - **Directives** - will generate directive structure and register it to stories. Also, prefixes the given name with `Fbx`
-  >Usage: `npx hygen directive new --name ComponentName`
+  >Usage: `npx hygen directive new --name DirectiveName`

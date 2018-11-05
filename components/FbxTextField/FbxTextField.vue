@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue"
+import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue";
 import FbxAddressAutocomplete from "../../directives/FbxAddressAutocomplete/FbxAddressAutocomplete";
 import FbxAutofocus from "../../directives/FbxAutofocus/FbxAutofocus";
 

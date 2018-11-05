@@ -6,7 +6,7 @@ import { text, boolean } from '@storybook/addon-knobs';
 import FbxButton from './FbxButton.vue';
 import summary from './FbxButton.md';
 
-const stories = storiesOf('Button', module);
+const stories = storiesOf('Components/Button', module);
 
 stories.add('default', withInfo({ summary })(() => ({
   components: { FbxButton },

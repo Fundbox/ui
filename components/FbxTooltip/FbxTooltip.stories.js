@@ -3,7 +3,7 @@ import { withInfo } from 'storybook-addon-vue-info';
 import FbxTooltip from '../FbxTooltip';
 import summary from './FbxTooltip.md';
 
-const stories = storiesOf('Tooltip', module);
+const stories = storiesOf('Components/Tooltip', module);
 const storyWithInfo = withInfo({ summary });
 
 const defaultStory = () => ({
@@ -69,7 +69,7 @@ const customHTMLStory = () => ({
           <li>item 1</li>
           <li>item 2</li>
         </ul>
-      </fbx-tooltip> 
+      </fbx-tooltip>
     </div>
   `,
 });

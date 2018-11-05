@@ -1,7 +1,7 @@
-@import "./mixins.scss";
-@import "./variables.scss";
-@import "./color-palette.scss";
-@import "./../fonts/fonts.scss";
+@import "mixins";
+@import "variables";
+@import "color-palette";
+@import "../fonts/fonts";
 
 * {
   box-sizing: border-box;

@@ -1,8 +1,7 @@
-@import "./variables.scss";
-@import "./color-palette.scss";
-@import "./mixins.scss";
-@import "./animations.scss";
-@import "./visibility-utils.scss";
+@import "variables";
+@import "color-palette";
+@import "mixins";
+@import "visibility-utils";
 
 // General
 .reset-box {

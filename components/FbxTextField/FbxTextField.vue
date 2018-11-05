@@ -1,10 +1,11 @@
 <template>
   <div class="fbx-text-field">
     <label class="fbx-text-field__label">{{ label }}</label>
-
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
         <input
+          v-fbx-address-autocomplete="addressAutocomplete"
+          v-fbx-autofocus="autofocus"
           v-mask="mask"
           :type="type"
           tabindex="0"
@@ -26,28 +27,42 @@
 </template>
 
 <script>
-import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue"
+import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue";
+import FbxAddressAutocomplete from "../../directives/FbxAddressAutocomplete/FbxAddressAutocomplete";
+import FbxAutofocus from "../../directives/FbxAutofocus/FbxAutofocus";
 
 export default {
   name: "FbxTextField",
   components: {
-    FbxValidationMessage,
+    FbxValidationMessage
+  },
+  directives: {
+    FbxAddressAutocomplete,
+    FbxAutofocus
   },
   inheritAttrs: false,
   inject: ["$validator"],
   data() {
     return {
       isPassword: this.$attrs.type === "password",
-      type: this.$attrs.type || "text",
+      type: this.$attrs.type || "text"
     }
   },
   props: {
     label: String,
     value: [String, Number],
-    validations: String,
+    validations: [String, Object],
     mask: {
       type: String,
       default: ""
+    },
+    autofocus: {
+      type: Boolean,
+      default: false
+    },
+    addressAutocomplete: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -76,8 +91,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./../styles/utils/color-palette";
-@import "./../styles/utils/mixins";
+@import "../../styles/utils/color-palette";
+@import "../../styles/utils/mixins";
 
 .fbx-text-field {
   position: relative;

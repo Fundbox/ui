@@ -1,7 +1,6 @@
 const webpack = require("webpack");
-const VueLoaderPlugin = require("vue-loader/lib/plugin")
 
-const plugins = [new VueLoaderPlugin()];
+const plugins = [];
 if (process.env.NODE_ENV !== "production") {
   plugins.push(new webpack.HotModuleReplacementPlugin());
 }

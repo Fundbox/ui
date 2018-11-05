@@ -8,6 +8,7 @@ import FbxCloseButtonStories from './components/FbxCloseButton/FbxCloseButton.st
 import FbxTabs from './components/FbxTabs/FbxTabs.stories.js';
 import FbxTextField from './components/FbxTextField/FbxTextField.stories.js';
 import FbxTooltip from './components/FbxTooltip/FbxTooltip.stories.js';
+import FbxSelect from './components/FbxSelect/FbxSelect.stories.js';
 
 // Directives
 import FbxAddressAutocomplete from "./directives/FbxAddressAutocomplete/FbxAddressAutocomplete.stories.js";

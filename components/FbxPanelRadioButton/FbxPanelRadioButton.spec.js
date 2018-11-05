@@ -21,31 +21,35 @@ describe("FbxPanelRadioButton", () => {
     })
 
     xit("renders inverse correctly", () => {
+  describe("@events", () => {
+    it("the @change event emits to the parent with the selected value", () => {
+      const mockOnChange = jest.fn()
       const wrapper = shallowMount(FbxPanelRadioButton, {
-        propsData: { inverse: true },
-        slots: defaultSlot,
+        propsData: {
+          value: "42",
+        },
+        listeners: {
+          change: mockOnChange,
+        }
       })
 
-      expect(wrapper.html()).toMatchSnapshot()
-    })
-  })
+      wrapper.trigger("change")
 
-  xdescribe("@events", () => {
-    it("listens to any event listener you pass", () => {
+      expect(mockOnChange).toHaveBeenCalledTimes(1)
+      expect(mockOnChange).toHaveBeenCalledWith("42")
+    })
+
+    it("emits the @change event when you click the panel radio button", () => {
       const mockClick = jest.fn()
-      const mockHover = jest.fn()
       const wrapper = shallowMount(FbxPanelRadioButton, {
         listeners: {
-          click: mockClick,
-          hover: mockHover,
+          change: mockClick,
         }
       })
 
       wrapper.trigger("click")
-      wrapper.trigger("hover")
 
       expect(mockClick).toHaveBeenCalledTimes(1)
-      expect(mockHover).toHaveBeenCalledTimes(1)
     })
   })
 })

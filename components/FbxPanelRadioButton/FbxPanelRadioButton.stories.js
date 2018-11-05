@@ -11,7 +11,7 @@ import icon3 from '../../assets/icon_check_disabled.svg';
 import storyHTML from './FbxPanelRadioButton.stories.html';
 import './FbxPanelRadioButton.stories.scss';
 
-const stories = storiesOf('PanelRadioButton', module);
+const stories = storiesOf('Components/PanelRadioButton', module);
 
 // stories.add('default', withInfo({ summary })(() => ({
 stories.add('default', () => ({

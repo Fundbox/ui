@@ -1,10 +1,6 @@
 import { shallowMount } from "@vue/test-utils"
 import FbxPanelRadioButton from "../FbxPanelRadioButton"
 
-const buttonText = "Submit"
-const defaultHeaderSlot = { default: buttonText };
-const defaultBodySlot = { default: buttonText };
-
 describe("FbxPanelRadioButton", () => {
   describe("snapshots", () => {
     it("renders the default correctly", () => {

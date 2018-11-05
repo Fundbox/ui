@@ -23,3 +23,7 @@ export function addressInsideUSAValidation(__value, [addressData]) {
 export function fullAddressValidation(__value, [addressData]) {
   return !!(addressData.streetNumber && addressData.street);
 }
+
+export function fullNameValidation(value) {
+  return /[a-zA-Z0-9]*/.test(value) && value.indexOf(" ") > 0;
+}

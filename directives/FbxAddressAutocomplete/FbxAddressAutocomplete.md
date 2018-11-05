@@ -9,5 +9,4 @@
 ```html
 <!-- Example Usage -->
 <input v-fbx-address-autocomplete />
-<fbx-text-field address-autocomplete />
 ```

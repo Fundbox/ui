@@ -122,17 +122,20 @@ const addressAutocomplete = () => ({
     }
   },
   methods: {
-    onAddressChange(addressData) {
+    onAddressDataChanged(addressData) {
       this.addressData = addressData;
     },
-    onAddressSelected(value) {
+    onAddressStringChanged(value) {
       this.inputText = value;
     }
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)()
+      action(`New value`)(value)
     },
+    addressData(value) {
+      action(`Address data`)(value)
+    }
   },
   template: `
     <fbx-text-field
@@ -144,10 +147,10 @@ const addressAutocomplete = () => ({
       }"
       name="phone"
       class="input"
-      placeholder="Enter your phone number"
+      placeholder="Enter your address"
       v-model="inputText"
-      @addressChange="onAddressChange"
-      @addressSelected="onAddressSelected"
+      @addressDataChanged="onAddressDataChanged"
+      @addressStringChanged="onAddressStringChanged"
     />
   `
 });

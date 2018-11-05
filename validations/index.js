@@ -6,7 +6,8 @@ import {
   addressInsideUSAValidation,
   addressRequiredValidation,
   fullAddressValidation,
-  phoneNumberValidation
+  phoneNumberValidation,
+  fullNameValidation
 } from "./validations";
 
 VeeValidate.Validator.extend("password", {
@@ -32,6 +33,11 @@ VeeValidate.Validator.extend("addressInsideUSA", {
 VeeValidate.Validator.extend("fullAddress", {
   getMessage: () => "Address must contain street and number",
   validate: fullAddressValidation
+});
+
+VeeValidate.Validator.extend("fullName", {
+  getMessage: () => "Please enter full name",
+  validate: fullNameValidation
 });
 
 Vue.use(VeeValidate);

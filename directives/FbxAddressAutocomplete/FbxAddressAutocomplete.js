@@ -30,19 +30,29 @@ export default Vue.directive("fbxAddressAutocomplete", {
     if (active === false) {
       return;
     }
+
     if (google && google.maps) {
       const mapsAutocomplete = new google.maps.places.Autocomplete(el, { types: ["address"] });
+
+      // Listen to the google's `place_changed` event
       mapsAutocomplete.addListener("place_changed", () => {
         const selection = mapsAutocomplete.getPlace();
+
+        // Use our common `parseMapsResponseReducer` to return a normalized response
         const addressData = reduce(selection.address_components, parseMapsResponseReducer, {});
-        vnode.context.$emit("addressChange", addressData);
+
+        // Emit the data to the parent element
+        vnode.context.$emit("addressDataChanged", addressData);
       });
 
       // Support selecting address with the enter key
       google.maps.event.addDomListener(el, "keydown", function(event) {
         if (event.keyCode === 13) {
+          // Prevent form submit on address selection
           event.preventDefault();
-          vnode.context.$emit("addressSelected", el.value);
+
+          // Send the input value to the parent
+          vnode.context.$emit("addressStringChanged", el.value);
         }
       });
 
@@ -50,21 +60,27 @@ export default Vue.directive("fbxAddressAutocomplete", {
       el.autocompleteMousedownHandler = function(event) {
         let target;
         if (document.getElementsByClassName("pac-container").length > 0) {
+
+          // Traverse the DOM and check if autocomplete item was clicked
           for (target=event.target; target && target !== this; target = target.parentNode) {
             if (target.matches && target.matches(".pac-item")) {
+
+              // Extract and format the text from the autocomplete item
               const textArr = map(target.children, child => child.textContent);
               textArr.shift();
               const value = textArr.join(", ");
-              vnode.context.$emit("addressSelected", value);
+
+              // Send the clicked item value to the parent
+              vnode.context.$emit("addressStringChanged", value);
               break;
             }
           }
         }
       };
-      document.addEventListener("mousedown", el.autocompleteMousedownHandler);
+      document.body.addEventListener("mousedown", el.autocompleteMousedownHandler);
     }
   },
   unbind(el) {
-    document.removeEventListener("mousedown", el.autocompleteMousedownHandler);
+    document.body.removeEventListener("mousedown", el.autocompleteMousedownHandler);
   }
 });

@@ -62,8 +62,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/utils/mixins.scss";
-@import "../styles/utils/color-palette.scss";
+@import "../../styles/utils/mixins.scss";
+@import "../../styles/utils/color-palette.scss";
 
 .fbx-panel-radio-button {
   display: block;

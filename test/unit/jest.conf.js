@@ -27,6 +27,8 @@ module.exports = {
   collectCoverageFrom: [
     '!**/node_modules/**',
     '!components/introduction/**/*',
+    'validations/**/*.js',
+    '!validations/**/index.js',
     'components/**/*.{js,vue}',
     '!components/**/*.stories.js',
     '!components/**/index.js',

@@ -1,4 +1,4 @@
-{
+module.exports = {
   "env": {
     "test": {
       "presets": [
@@ -14,4 +14,4 @@
       ]
     }
   }
-}
+};

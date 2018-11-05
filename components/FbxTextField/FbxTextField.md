@@ -42,6 +42,5 @@
   placeholder="Enter your address"
   v-model="inputText"
   @addressDataChanged="onAddressDataChanged"
-  @addressStringChanged="onAddressStringChanged"
 />
 ```

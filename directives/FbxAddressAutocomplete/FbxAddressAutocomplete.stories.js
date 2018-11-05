@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/vue";
 import { withInfo } from "storybook-addon-vue-info";
 import summary from "./FbxAddressAutocomplete.md";
 
-const stories = storiesOf("directives/Address Autocomplete", module);
+const stories = storiesOf("Directives/Address Autocomplete", module);
 const storyWithInfo = withInfo({ summary });
 
 const defaultStory = () => ({

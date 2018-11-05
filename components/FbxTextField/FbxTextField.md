@@ -4,10 +4,7 @@
 
 - Use `FbxTextField` for inputs of common types, e.g. `type="text"`, `type="email"`. If your input type isn't supported, open up a PR to add support for that input type
 - The default `type` is `text`, if you don't provide one
-- You can pass a `mask` prop to set up masking. See more info [here](https://www.npmjs.com/package/v-mask)
-- To use `address-autocomplete` feature you need to sync the data via the provided events.
-When the user selects an address it will trigger `addressStringChanged` with the string value, use this to update the v-model value to make sure it syncs with the user's selection
-The selection also triggers `addressDataChanged` with the selected address raw data. Use this to get the actual address data. 
+- You can pass a `mask` prop to set up masking. See more info [here](https://www.npmjs.com/package/v-mask) 
 
 ```html
 <!-- Example Usage -->

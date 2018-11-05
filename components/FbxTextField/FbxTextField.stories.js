@@ -124,9 +124,6 @@ const addressAutocomplete = () => ({
   methods: {
     onAddressDataChanged(addressData) {
       this.addressData = addressData;
-    },
-    onAddressStringChanged(value) {
-      this.inputText = value;
     }
   },
   watch: {
@@ -150,7 +147,6 @@ const addressAutocomplete = () => ({
       placeholder="Enter your address"
       v-model="inputText"
       @addressDataChanged="onAddressDataChanged"
-      @addressStringChanged="onAddressStringChanged"
     />
   `
 });

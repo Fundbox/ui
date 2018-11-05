@@ -52,7 +52,7 @@ export default Vue.directive("fbxAddressAutocomplete", {
           event.preventDefault();
 
           // Send the input value to the parent
-          vnode.context.$emit("addressStringChanged", el.value);
+          vnode.context.$emit("input", el.value);
         }
       });
 
@@ -71,7 +71,7 @@ export default Vue.directive("fbxAddressAutocomplete", {
               const value = textArr.join(", ");
 
               // Send the clicked item value to the parent
-              vnode.context.$emit("addressStringChanged", value);
+              vnode.context.$emit("input", value);
               break;
             }
           }

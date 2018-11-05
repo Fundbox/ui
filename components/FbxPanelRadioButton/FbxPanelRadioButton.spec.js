@@ -1,26 +1,33 @@
 import { shallowMount } from "@vue/test-utils"
 import FbxPanelRadioButton from "../FbxPanelRadioButton"
 
+const slots = {
+  header: "<div>I am the <span>header</span> slot text</div>",
+  body: "<div>I am the <strong>body</strong> slot text</div>",
+}
+
 describe("FbxPanelRadioButton", () => {
   describe("snapshots", () => {
     it("renders the default correctly", () => {
       const wrapper = shallowMount(FbxPanelRadioButton, {
-        slots: defaultSlot,
+        propsData: {
+          iconPath: "../../assets/logo.png",
+        },
+        slots,
       })
 
       expect(wrapper.html()).toMatchSnapshot()
     })
 
-    xit("renders loading correctly", () => {
+    it("renders without an iconPath correctly", () => {
       const wrapper = shallowMount(FbxPanelRadioButton, {
-        propsData: { loading: true },
-        slots: defaultSlot,
+        slots,
       })
 
       expect(wrapper.html()).toMatchSnapshot()
     })
+  })
 
-    xit("renders inverse correctly", () => {
   describe("@events", () => {
     it("the @change event emits to the parent with the selected value", () => {
       const mockOnChange = jest.fn()

@@ -6,6 +6,7 @@
       :iconPath="icon"
       v-model="selectedDataSource"
       :value="headerText"
+      @change="onCoolChange"
     >
       <div slot="header">{{ headerText }}</div>
       <div slot="body">{{ bodyText }}</div>
@@ -15,6 +16,7 @@
       :iconPath="icon2"
       v-model="selectedDataSource"
       value="OPTION TWO"
+      @change="onCoolChange"
     >
       <div slot="header">Option 2</div>
       <div slot="body">
@@ -28,6 +30,7 @@
       :iconPath="icon3"
       v-model="selectedDataSource"
       value="option the third"
+      @change="onCoolChange"
     >
       <div slot="header">Option 3</div>
       <div slot="body">This option is the best</div>

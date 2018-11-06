@@ -26,5 +26,7 @@ stories.add('default', withInfo({ summary })(() => ({
     }
   },
   template: storyHTML,
-  methods: { click: action('clicked') },
+  methods: {
+    onCoolChange: action('@change')
+  },
 })));

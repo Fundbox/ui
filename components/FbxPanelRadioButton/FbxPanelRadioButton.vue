@@ -120,6 +120,10 @@ export default {
   cursor: inherit;
 }
 
+.panel-radio-button__inner-content {
+  user-select: none;
+}
+
 .panel-radio-button__header {
   display: flex;
   align-items: center;

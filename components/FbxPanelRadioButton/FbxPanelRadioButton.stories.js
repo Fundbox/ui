@@ -32,7 +32,7 @@ stories.add('default', withInfo({ summary })(() => ({
   },
 })));
 
-stories.add('no icons', () => ({
+stories.add('without icons', () => ({
   components: { FbxPanelRadioButton },
   data() {
     return {

@@ -13,8 +13,7 @@ import './FbxPanelRadioButton.stories.scss';
 
 const stories = storiesOf('Components/PanelRadioButton', module);
 
-// stories.add('default', withInfo({ summary })(() => ({
-stories.add('default', () => ({
+stories.add('default', withInfo({ summary })(() => ({
   components: { FbxPanelRadioButton },
   data() {
     return {
@@ -28,4 +27,4 @@ stories.add('default', () => ({
   },
   template: storyHTML,
   methods: { click: action('clicked') },
-}));
+})));

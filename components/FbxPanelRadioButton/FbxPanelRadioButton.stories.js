@@ -4,12 +4,15 @@ import { withInfo } from 'storybook-addon-vue-info';
 import { text } from '@storybook/addon-knobs';
 
 import FbxPanelRadioButton from './FbxPanelRadioButton.vue';
+import FbxButton from '../FbxButton';
+import FbxValidationMessage from '../FbxValidationMessage';
 import summary from './FbxPanelRadioButton.md';
 import icon from '../../assets/logo.png';
 import icon2 from '../../assets/icon_check_active.svg';
 import icon3 from '../../assets/icon_check_disabled.svg';
 import storyHTML from './FbxPanelRadioButton.stories.html';
 import noIconsStoryHTML from './FbxPanelRadioButton-no-icons.stories.html';
+import validationStoryHTML from './FbxPanelRadioButton-validation.stories.html';
 import './FbxPanelRadioButton.stories.scss';
 
 const stories = storiesOf('Components/PanelRadioButton', module);
@@ -40,4 +43,36 @@ stories.add('without icons', () => ({
     }
   },
   template: noIconsStoryHTML,
+}));
+
+stories.add('with validation', () => ({
+  components: { FbxPanelRadioButton, FbxValidationMessage, FbxButton },
+  data() {
+    return {
+      selectedDataSource: null,
+    }
+  },
+  computed: {
+    isInvalid() {
+      return this.errors.has("fbx-panel-radio-button")
+    },
+    validationMessage() {
+      return this.errors.first("fbx-panel-radio-button")
+    },
+  },
+  methods: {
+    onSubmit() {
+      this.$validator.validate().then(valid => {
+        if (valid) {
+          action(`Submitted value: ${this.selectedDataSource}`)()
+        } else {
+          action("Form is invalid. Nothing selected.")()
+        }
+      });
+    },
+    onReset() {
+      this.selectedDataSource = null
+    },
+  },
+  template: validationStoryHTML,
 }));

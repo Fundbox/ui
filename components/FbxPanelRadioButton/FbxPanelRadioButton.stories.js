@@ -9,6 +9,7 @@ import icon from '../../assets/logo.png';
 import icon2 from '../../assets/icon_check_active.svg';
 import icon3 from '../../assets/icon_check_disabled.svg';
 import storyHTML from './FbxPanelRadioButton.stories.html';
+import noIconsStoryHTML from './FbxPanelRadioButton-no-icons.stories.html';
 import './FbxPanelRadioButton.stories.scss';
 
 const stories = storiesOf('Components/PanelRadioButton', module);
@@ -30,3 +31,13 @@ stories.add('default', withInfo({ summary })(() => ({
     onCoolChange: action('@change')
   },
 })));
+
+stories.add('no icons', () => ({
+  components: { FbxPanelRadioButton },
+  data() {
+    return {
+      selectedDataSource: null,
+    }
+  },
+  template: noIconsStoryHTML,
+}));

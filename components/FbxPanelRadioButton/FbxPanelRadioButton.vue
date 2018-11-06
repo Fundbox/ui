@@ -117,6 +117,7 @@ export default {
 .radio-input--hidden {
   position: absolute;
   opacity: 0;
+  cursor: inherit;
 }
 
 .panel-radio-button__header {

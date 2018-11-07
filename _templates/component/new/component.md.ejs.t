@@ -1,0 +1,4 @@
+---
+to: components/Fbx<%= name %>/Fbx<%= name %>.md
+---
+# Fbx<%= name %>

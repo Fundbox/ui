@@ -47,16 +47,16 @@ describe("FbxPanelRadioButton", () => {
     })
 
     it("emits the @change event when you click the panel radio button", () => {
-      const mockClick = jest.fn()
+      const mockOnChange = jest.fn()
       const wrapper = shallowMount(FbxPanelRadioButton, {
         listeners: {
-          change: mockClick,
+          change: mockOnChange,
         }
       })
 
       wrapper.trigger("click")
 
-      expect(mockClick).toHaveBeenCalledTimes(1)
+      expect(mockOnChange).toHaveBeenCalledTimes(1)
     })
   })
 })

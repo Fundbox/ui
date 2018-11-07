@@ -4,9 +4,9 @@
 ## Development
 
 ### Scaffolding
-In order to improve productivity you can generate new elements' structure with CLI commands. We use [hygen](http://www.hygen.io/) for this porpouse. There are couple of ways to use `hygen`:
+In order to improve productivity you can generate new elements' structure with CLI commands. We use [hygen](http://www.hygen.io/) for this purpose. There are couple of ways to use `hygen`:
 1. `npm i -g hygen` - which installs `hygen` globally
-2. `npx hygen ...` - which runs hygen remotly
+2. `npx hygen ...` - which runs `hygen` remotely
 
 Available scaffolding types:
 - **Components** - will generate component structure and register it to stories. Also, prefixes the given name with `Fbx`

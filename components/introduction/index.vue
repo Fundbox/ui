@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <h1>Welcome to STORYBOOK</h1>
+    <h1>Welcome to the Fundbox StoryBook</h1>
     <p>
       This is a UI component dev environment for your app.
     </p>

@@ -1,9 +1,17 @@
+const path = require('path');
 const inquirer = require('inquirer');
 const { spawn } = require('child_process');
 const { Spinner } = require('clui');
 const clear = require('clear');
 const chalk = require('chalk');
 const figlet = require('figlet');
+
+const fbxColorModifier = chalk.hex('#00bd9c');
+let error = null;
+
+function capitalize(str) {
+  return  str.charAt(0).toUpperCase() + str.substr(1);
+}
 
 const questions = [
   {
@@ -19,18 +27,14 @@ const questions = [
     type: 'input',
     name: 'name',
     message: `Give it a name:`,
-    filter: function (val) {
-      return val.replace(/\w\S*/g, function(txt) {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-      });
-    }
+    filter: capitalize
   }
 ];
 
 clear();
 
 console.log(
-  chalk.cyan(
+  fbxColorModifier(
     figlet.textSync('Fundbox UI', {
       horizontalLayout: 'full'
     })
@@ -41,8 +45,8 @@ inquirer
   .prompt(questions)
   .then(answers => {
     const command = `npx hygen ${answers.type} new --name ${answers.name}`;
-    const loader = new Spinner("Building...");
-    let process = spawn(command, {
+    const loader = new Spinner("Generating...");
+    let childProcess = spawn(command, {
       shell: true
     });
     let paths = [];
@@ -50,21 +54,30 @@ inquirer
     console.log('');
     loader.start();
 
-    process.stdout.on('data', (data) => {
+    childProcess.stdout.on('data', (data) => {
       let line = data.toString().trim();
-      if (line.indexOf('added:') == 0) {
-        const file = line.replace('added: ', '');
-        paths.push(file);
+
+      if (line.indexOf('exists') > -1) {
+        loader.stop();
+        error = `${capitalize(answers.type)} already exists.`;
+        childProcess.kill('SIGHUP');
+      }
+
+      if (line.indexOf('added:') > -1) {
+        let filePath = line.replace('added: ', '');
+        let fileName = path.basename(filePath);
+        filePath = filePath.replace(fileName, '');
+        paths.push(`  ${fbxColorModifier('➜')} ${chalk.gray(filePath)}${fileName}`);
       }
     });
 
-    process.on('exit', (code) => {
+    childProcess.on('exit', (code) => {
       loader.stop();
 
       if (code !== 0) {
-        console.log(chalk.red('Error!'));
+        console.log(chalk.red(error || 'Error! Something went wrong.'), '\n');
       } else {
-        console.log(chalk.green('Done!'), chalk.cyan('Here\'s what have been created:'));
+        console.log(chalk.green('Done!'), fbxColorModifier("Here's what have been created:"));
         paths.forEach(file => console.log(file));
         console.log('');
       }

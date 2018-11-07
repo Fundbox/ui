@@ -11,7 +11,7 @@ import icon from '../../assets/logo.png';
 import icon2 from '../../assets/icon_check_active.svg';
 import icon3 from '../../assets/icon_check_disabled.svg';
 import storyHTML from './FbxPanelRadioButton.stories.html';
-import noIconsStoryHTML from './FbxPanelRadioButton-no-icons.stories.html';
+import NoIconsStoryComponent from './FbxPanelRadioButton.NoIcons.story.vue';
 import validationStoryHTML from './FbxPanelRadioButton-validation.stories.html';
 import './FbxPanelRadioButton.stories.scss';
 
@@ -35,16 +35,7 @@ stories.add('default', withInfo({ summary })(() => ({
   },
 })));
 
-stories.add('without icons', () => ({
-  components: { FbxPanelRadioButton },
-  data() {
-    return {
-      selectedDataSource: null,
-    }
-  },
-  template: noIconsStoryHTML,
-}));
-
+stories.add('without icons', () => NoIconsStoryComponent);
 stories.add('with validation', () => ({
   components: { FbxPanelRadioButton, FbxValidationMessage, FbxButton },
   data() {

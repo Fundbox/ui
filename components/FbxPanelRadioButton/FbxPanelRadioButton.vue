@@ -2,7 +2,7 @@
 <label
   tabindex="0"
   class="fbx-panel-radio-button"
-  :class="{ 'fbx-panel-radio-button--checked': shouldBeChecked }"
+  :class="{ 'fbx-panel-radio-button--checked': isChecked }"
   @change="onChange"
 >
   <input
@@ -10,12 +10,12 @@
     name="fbx-panel-radio-button"
     class="radio-input--hidden"
     :value="value"
-    :checked="shouldBeChecked"
+    :checked="isChecked"
   />
   <div class="panel-radio-button__inner-content">
     <div class="panel-radio-button__header">
       <div class="panel-radio-button__circle-indicator">
-        <div class="selected-radio-circle" :class="{ 'selected-radio-circle--visible': shouldBeChecked }"></div>
+        <div class="selected-radio-circle" :class="{ 'selected-radio-circle--visible': isChecked }"></div>
       </div>
 
       <div class="panel-radio-button__header-text">
@@ -49,7 +49,7 @@ export default {
     },
   },
   computed: {
-    shouldBeChecked() {
+    isChecked() {
       return this.modelValue === this.value
     },
   },

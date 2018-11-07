@@ -77,7 +77,7 @@ inquirer
       if (code !== 0) {
         console.log(chalk.red(error || 'Error! Something went wrong.'), '\n');
       } else {
-        console.log(chalk.green('Done!'), fbxColorModifier("Here's what have been created:"));
+        console.log(chalk.green('Done!'), fbxColorModifier("Here's what's been created:"));
         paths.forEach(file => console.log(file));
         console.log('');
       }

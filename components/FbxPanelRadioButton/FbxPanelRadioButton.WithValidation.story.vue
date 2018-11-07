@@ -1,3 +1,4 @@
+<template>
 <form class="fbx-panel-group-wrapper">
   <div>➡️ Click the Submit button below <em>without</em> choosing an option to see the validation message</div>
 
@@ -33,3 +34,42 @@
 
   <fbx-button @click="onReset">Reset Form</fbx-button>
 </form>
+</template>
+
+<script>
+import FbxPanelRadioButton from './FbxPanelRadioButton.vue';
+import FbxButton from '../FbxButton';
+import FbxValidationMessage from '../FbxValidationMessage';
+
+export default {
+  components: { FbxPanelRadioButton, FbxValidationMessage, FbxButton },
+  data() {
+    return {
+      selectedDataSource: null,
+    }
+  },
+  computed: {
+    isInvalid() {
+      return this.errors.has("fbx-panel-radio-button")
+    },
+    validationMessage() {
+      return this.errors.first("fbx-panel-radio-button")
+    },
+  },
+  methods: {
+    onSubmit() {
+      this.$validator.validate().then(valid => {
+        if (valid) {
+          action(`Submitted value: ${this.selectedDataSource}`)()
+        } else {
+          action("Form is invalid. Nothing selected.")()
+        }
+      });
+    },
+    onReset() {
+      this.selectedDataSource = null
+    },
+  },
+}
+</script>
+

@@ -9,7 +9,7 @@
     "deploy-gh-branch": "gh-pages -d dist",
     "deploy": "npm run build && npm run deploy-gh-branch",
     "test": "jest --config test/unit/jest.conf.js --coverage",
-    "create": "node cli.js"
+    "create": "node scripts/cli.js"
   },
   "contributors": [
     {

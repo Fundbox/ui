@@ -4,7 +4,7 @@ import { configure, addDecorator } from "@storybook/vue"
 import { setOptions } from "@storybook/addon-options";
 import FbxStylesAddon from './../.storybook/addons/fundbox-styles-addon';
 import { withKnobs } from '@storybook/addon-knobs';
-import "./../index";
+// import "./../index";
 
 addDecorator(FbxStylesAddon)
 addDecorator(withKnobs)
@@ -25,9 +25,9 @@ Vue.use(VeeValidate, {
 });
 
 setOptions({
-  name: "Fundbox UI Components Library",
+  name: "Fundbox UI Library",
   url: "https://github.com/Fundbox/ui",
   addonPanelInRight: true,
 });
 
-configure(() => require("../main.stories"), module);
+configure(() => require("../src/main.stories"), module);

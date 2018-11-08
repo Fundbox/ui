@@ -58,7 +58,7 @@ export default {
   appearance: none;
   padding: 15px;
   color: $extra-dark-gray;
-  background: url("../assets/arrow-down.svg") no-repeat right 10px center white;
+  background: url("../../assets/arrow-down.svg") no-repeat right 10px center white;
   background-color: $extra-light-gray;
   height: 50px;
   width: 100%;

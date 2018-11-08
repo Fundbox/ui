@@ -21,6 +21,9 @@ describe("FbxSelect", () => {
     it("renders the default correctly", async () => {
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
+        attrs: {
+          name: "select",
+        },
         // running async test because of vee-validate and @vue/test-utils
         // Here are the reffs:
         // https://github.com/baianat/vee-validate/issues/1267

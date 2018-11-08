@@ -1,15 +1,15 @@
 <template>
-<button
-  tabindex="0"
-  type="button"
-  class="fbx-cta-button"
-  :class="{'fbx-button-inverse': inverse, 'loading': loading }"
-  :disabled="loading"
-  v-on="listeners"
->
-  <span v-if="loading" class="fbx-button-loading"></span>
-  <slot v-else></slot>
-</button>
+  <button
+    tabindex="0"
+    type="button"
+    class="fbx-cta-button"
+    :class="{'fbx-button-inverse': inverse, 'loading': loading }"
+    :disabled="loading"
+    v-on="listeners"
+  >
+    <span v-if="loading" class="fbx-button-loading"></span>
+    <slot v-else></slot>
+  </button>
 </template>
 
 <script>
@@ -18,20 +18,20 @@ export default {
   props: {
     loading: {
       type: Boolean,
-      default: false,
+      default: false
     },
     inverse: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   computed: {
     listeners() {
       return {
-        ...this.$listeners,
-      }
-    },
-  },
+        ...this.$listeners
+      };
+    }
+  }
 };
 </script>
 

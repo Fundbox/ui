@@ -37,9 +37,9 @@
 </template>
 
 <script>
-import FbxPanelRadioButton from './FbxPanelRadioButton.vue';
-import FbxButton from '../FbxButton';
-import FbxValidationMessage from '../FbxValidationMessage';
+import FbxPanelRadioButton from '../FbxPanelRadioButton.vue';
+import FbxButton from '../../FbxButton';
+import FbxValidationMessage from '../../FbxValidationMessage';
 
 export default {
   components: { FbxPanelRadioButton, FbxValidationMessage, FbxButton },

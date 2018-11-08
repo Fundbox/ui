@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import FbxPanelRadioButton from './FbxPanelRadioButton.vue';
+import FbxPanelRadioButton from '../FbxPanelRadioButton.vue';
 
 export default {
   components: { FbxPanelRadioButton },

@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { withInfo } from 'storybook-addon-vue-info';
+import { doc } from 'storybook-readme';
 
 import './FbxPanelRadioButton.stories.scss';
 import summary from './FbxPanelRadioButton.md';
@@ -9,7 +9,7 @@ import WithValidationStoryComponent from './FbxPanelRadioButton.WithValidation.s
 
 const stories = storiesOf('Components/PanelRadioButton', module);
 
-stories.add('default', withInfo({ summary })(() => DefaultStoryComponent));
+stories.add('description', doc(summary));
 stories.add('dynamic text and icons', () => DynamicValuesStoryComponent);
 stories.add('without icons', () => NoIconsStoryComponent);
 stories.add('with validation', () => WithValidationStoryComponent);

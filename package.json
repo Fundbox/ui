@@ -8,7 +8,8 @@
     "build": "build-storybook -o dist",
     "deploy-gh-branch": "gh-pages -d dist",
     "deploy": "npm run build && npm run deploy-gh-branch",
-    "test": "jest --config test/unit/jest.conf.js --coverage"
+    "test": "jest --config test/unit/jest.conf.js --coverage",
+    "create": "node cli.js"
   },
   "contributors": [
     {
@@ -54,10 +55,15 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-dynamic-import-node": "^2.0.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
     "css-loader": "^1.0.0",
+    "figlet": "^1.2.1",
     "file-loader": "^1.1.11",
     "flush-promises": "^1.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "inquirer": "^6.2.0",
     "jest": "^23.6.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^1.0.0",

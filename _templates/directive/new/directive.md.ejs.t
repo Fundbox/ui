@@ -1,4 +1,4 @@
 ---
-to: directives/Fbx<%= name %>/Fbx<%= name %>.md
+to: src/directives/Fbx<%= name %>/Fbx<%= name %>.md
 ---
 # Fbx<%= name %>

@@ -1,5 +1,5 @@
 ---
-to: directives/Fbx<%= name %>/Fbx<%= name %>.spec.js
+to: src/directives/Fbx<%= name %>/Fbx<%= name %>.spec.js
 ---
 import { shallowMount } from "@vue/test-utils"
 import Fbx<%= name %> from "../Fbx<%= name %>"

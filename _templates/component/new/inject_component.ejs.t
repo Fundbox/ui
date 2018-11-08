@@ -1,6 +1,6 @@
 ---
 inject: true
-to: main.stories.js
+to: src/main.stories.js
 skip_if: <%= name %>
 after: "// Components"
 ---

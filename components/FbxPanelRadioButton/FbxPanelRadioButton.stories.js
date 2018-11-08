@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { doc } from 'storybook-readme';
 
-import './FbxPanelRadioButton.stories.scss';
+import './stories/FbxPanelRadioButton.stories.scss';
 import summary from './FbxPanelRadioButton.md';
 import DynamicValuesStoryComponent from "./FbxPanelRadioButton.DynamicValues.story.vue";
 import NoIconsStoryComponent from './FbxPanelRadioButton.NoIcons.story.vue';

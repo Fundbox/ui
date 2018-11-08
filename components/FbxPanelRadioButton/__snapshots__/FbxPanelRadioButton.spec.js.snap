@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FbxPanelRadioButton snapshots renders the default correctly 1`] = `
+<label tabindex="0" class="fbx-panel-radio-button"><input type="radio" name="fbx-panel-radio-button" class="radio-input--hidden" value="">
+  <div class="panel-radio-button__inner-content">
+    <div class="panel-radio-button__header">
+      <div class="panel-radio-button__circle-indicator">
+        <div class="selected-radio-circle"></div>
+      </div>
+      <div class="panel-radio-button__header-text">
+        <div>I am the <span>header</span> slot text</div>
+      </div>
+      <div class="panel-radio-button__icon"><img src="../../assets/logo.png"></div>
+    </div>
+    <div class="panel-radio-button__body">
+      <div>I am the <strong>body</strong> slot text</div>
+    </div>
+  </div>
+</label>
+`;
+
+exports[`FbxPanelRadioButton snapshots renders without an iconPath correctly 1`] = `
+<label tabindex="0" class="fbx-panel-radio-button"><input type="radio" name="fbx-panel-radio-button" class="radio-input--hidden" value="">
+  <div class="panel-radio-button__inner-content">
+    <div class="panel-radio-button__header">
+      <div class="panel-radio-button__circle-indicator">
+        <div class="selected-radio-circle"></div>
+      </div>
+      <div class="panel-radio-button__header-text">
+        <div>I am the <span>header</span> slot text</div>
+      </div>
+      <!---->
+    </div>
+    <div class="panel-radio-button__body">
+      <div>I am the <strong>body</strong> slot text</div>
+    </div>
+  </div>
+</label>
+`;

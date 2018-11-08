@@ -3,9 +3,9 @@ import { doc } from 'storybook-readme';
 
 import './stories/FbxPanelRadioButton.stories.scss';
 import summary from './FbxPanelRadioButton.md';
-import DynamicValuesStoryComponent from "./FbxPanelRadioButton.DynamicValues.story.vue";
-import NoIconsStoryComponent from './FbxPanelRadioButton.NoIcons.story.vue';
-import WithValidationStoryComponent from './FbxPanelRadioButton.WithValidation.story.vue';
+import DynamicValuesStoryComponent from "./FbxPanelRadioButton.dynamic-values.story.vue";
+import NoIconsStoryComponent from './FbxPanelRadioButton.no-icons.story.vue';
+import WithValidationStoryComponent from './FbxPanelRadioButton.with-validation.story.vue';
 
 const stories = storiesOf('Components/PanelRadioButton', module);
 

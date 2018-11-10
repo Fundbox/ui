@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils"
-import FbxPanelRadioButton from "../FbxPanelRadioButton"
+import FbxPanelRadioButton from "./FbxPanelRadioButton.vue"
 
 const slots = {
   header: "<div>I am the <span>header</span> slot text</div>",

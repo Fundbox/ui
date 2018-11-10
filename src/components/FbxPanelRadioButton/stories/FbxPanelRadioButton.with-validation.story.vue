@@ -38,8 +38,8 @@
 
 <script>
 import FbxPanelRadioButton from '../FbxPanelRadioButton.vue';
-import FbxButton from '../../FbxButton';
-import FbxValidationMessage from '../../FbxValidationMessage';
+import FbxButton from '../../FbxButton/FbxButton';
+import FbxValidationMessage from '../../FbxValidationMessage/FbxValidationMessage';
 
 export default {
   components: { FbxPanelRadioButton, FbxValidationMessage, FbxButton },

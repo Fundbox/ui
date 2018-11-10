@@ -1,7 +1,7 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
 import flushPromises from "flush-promises"
 import VeeValidate from "vee-validate";
-import FbxSelect from "../FbxSelect";
+import FbxSelect from "./FbxSelect.vue";
 
 const option1 = "Option 1";
 const defaultSlot = {

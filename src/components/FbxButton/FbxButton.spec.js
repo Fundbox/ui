@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils"
-import FbxButton from "../FbxButton"
+import FbxButton from "./FbxButton.vue"
 
 const buttonText = "Submit"
 const defaultSlot = { default: buttonText };

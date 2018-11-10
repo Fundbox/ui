@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { withInfo } from 'storybook-addon-vue-info';
 import { text } from '@storybook/addon-knobs';
 
-import FbxTextField from '../FbxTextField';
+import FbxTextField from './FbxTextField.vue';
 import summary from './FbxTextField.md';
 const stories = storiesOf('Components/TextField', module);
 const withSummery = withInfo({ summary });

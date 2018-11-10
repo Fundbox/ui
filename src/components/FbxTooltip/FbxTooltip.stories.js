@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';
-import FbxTooltip from '../FbxTooltip';
+import FbxTooltip from './FbxTooltip.vue';
 import summary from './FbxTooltip.md';
 
 const stories = storiesOf('Components/Tooltip', module);

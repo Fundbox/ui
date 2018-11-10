@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import "../../validations";
+import { VueMaskDirective } from "v-mask"
 import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue";
 import FbxAddressAutocomplete from "../../directives/FbxAddressAutocomplete/FbxAddressAutocomplete";
 import FbxAutofocus from "../../directives/FbxAutofocus/FbxAutofocus";
@@ -37,6 +39,7 @@ export default {
     FbxValidationMessage
   },
   directives: {
+    "mask": VueMaskDirective,
     FbxAddressAutocomplete,
     FbxAutofocus
   },

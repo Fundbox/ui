@@ -5,8 +5,12 @@
 </template>
 
 <script>
+import bTooltip from "bootstrap-vue/es/components/tooltip/tooltip";
 export default {
-  name: "FbxTooltip"
+  name: "FbxTooltip",
+  components: {
+    bTooltip
+  }
 };
 </script>
 

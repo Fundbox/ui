@@ -1,5 +1,4 @@
-import isObject from "lodash/isObject";
-import isEmpty from "lodash/isEmpty";
+import { isObject, isEmpty } from "lodash";
 import { US_STATES } from "../consts/us-states.const";
 
 export function passwordValidation(value) {

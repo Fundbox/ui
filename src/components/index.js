@@ -6,6 +6,7 @@ import FbxTabs from "./FbxTabs"
 import FbxTextField from "./FbxTextField"
 import FbxTooltip from "./FbxTooltip"
 import FbxValidationMessage from "./FbxValidationMessage"
+import FbxPanelRadioButton from "./FbxPanelRadioButton"
 
 export {
   FbxButton,
@@ -15,5 +16,6 @@ export {
   FbxTabs,
   FbxTextField,
   FbxTooltip,
-  FbxValidationMessage
+  FbxValidationMessage,
+  FbxPanelRadioButton
 }

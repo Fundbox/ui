@@ -31,6 +31,7 @@ module.exports = {
     'src/validations/**/*.js',
     '!src/validations/**/index.js',
     'src/components/**/*.{js,vue}',
+    '!src/components/**/*.story.{js,vue}',
     '!src/components/**/*.stories.js',
     '!src/components/**/index.js',
     'src/directives/**/*.{js,vue}',

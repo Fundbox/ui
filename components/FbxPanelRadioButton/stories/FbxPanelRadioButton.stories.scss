@@ -1,0 +1,36 @@
+@import "../../../styles/utils/mixins.scss";
+
+.fbx-panel-group-wrapper {
+  padding: 16px;
+}
+
+.fbx-panel-radio-button-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  @include viewport("lg") {
+    flex-direction: row;
+  }
+
+  .fbx-panel-radio-button {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include viewport("lg") {
+      margin-bottom: 0;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.validation-message {
+  margin-top: 20px;
+}
+
+.fbx-cta-button {
+  margin-top: 20px;
+}

@@ -1,7 +1,19 @@
 ---
 to: src/components/Fbx<%= name %>/index.js
 ---
-import Vue from "vue";
 import Fbx<%= name %> from "./Fbx<%= name %>.vue";
-Vue.component(Fbx<%= name %>.name, Fbx<%= name %>);
-export default Fbx<%= name %>;
+import { registerComponents, vueUse } from '../../utils/plugins'
+
+const components = {
+  Fbx<%= name %>
+}
+
+const VuePlugin = {
+  install (Vue) {
+    registerComponents(Vue, components)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import { action } from '@storybook/addon-actions';
 import FbxPanelRadioButton from '../FbxPanelRadioButton.vue';
 import FbxButton from '../../FbxButton/FbxButton';
 import FbxValidationMessage from '../../FbxValidationMessage/FbxValidationMessage';

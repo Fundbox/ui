@@ -1,6 +1,16 @@
-import Vue from "vue";
-import FbxAddressAutocomplete from "./FbxAddressAutocomplete";
+import FbxAddressAutocomplete from './FbxAddressAutocomplete'
+import { registerDirectives, vueUse } from '../../utils/plugins'
 
-Vue.directive("FbxAddressAutocomplete", FbxAddressAutocomplete);
+const directives = {
+  FbxAddressAutocomplete
+}
 
-export default FbxAddressAutocomplete;
+const VuePlugin = {
+  install (Vue) {
+    registerDirectives(Vue, directives)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

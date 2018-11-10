@@ -1,4 +1,16 @@
-import Vue from "vue";
-import FbxCloseButton from "./FbxCloseButton.vue";
-Vue.component(FbxCloseButton.name, FbxCloseButton);
-export default FbxCloseButton;
+import FbxCloseButton from './FbxCloseButton.vue'
+import { registerComponents, vueUse } from '../../utils/plugins'
+
+const components = {
+  FbxCloseButton
+}
+
+const VuePlugin = {
+  install (Vue) {
+    registerComponents(Vue, components)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

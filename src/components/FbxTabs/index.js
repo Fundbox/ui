@@ -1,4 +1,16 @@
-import Vue from "vue";
-import FbxTabs from "./FbxTabs.vue";
-Vue.component(FbxTabs.name, FbxTabs);
-export default FbxTabs;
+import FbxTabs from './FbxTabs.vue'
+import { registerComponents, vueUse } from '../../utils/plugins'
+
+const components = {
+  FbxTabs
+}
+
+const VuePlugin = {
+  install (Vue) {
+    registerComponents(Vue, components)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

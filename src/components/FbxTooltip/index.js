@@ -1,8 +1,16 @@
-import Vue from "vue";
-import bTooltip from "bootstrap-vue/es/components/tooltip/tooltip";
 import FbxTooltip from "./FbxTooltip.vue";
+import { registerComponents, vueUse } from '../../utils/plugins'
 
-Vue.component("b-tooltip", bTooltip);
-Vue.component("FbxTooltip", FbxTooltip);
+const components = {
+  FbxTooltip
+}
 
-export default FbxTooltip;
+const VuePlugin = {
+  install (Vue) {
+    registerComponents(Vue, components)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

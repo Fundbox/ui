@@ -1,6 +1,16 @@
-import Vue from "vue";
-import FbxSelect from "./FbxSelect.vue";
+import FbxSelect from './FbxSelect.vue'
+import { registerComponents, vueUse } from '../../utils/plugins'
 
-Vue.component(FbxSelect.name, FbxSelect);
+const components = {
+  FbxSelect
+}
 
-export default FbxSelect;
+const VuePlugin = {
+  install (Vue) {
+    registerComponents(Vue, components)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

@@ -1,4 +1,16 @@
-import Vue from "vue";
-import FbxCheckbox from "./FbxCheckbox.vue";
-Vue.component(FbxCheckbox.name, FbxCheckbox);
-export default FbxCheckbox;
+import FbxCheckbox from './FbxCheckbox.vue'
+import { registerComponents, vueUse } from '../../utils/plugins'
+
+const components = {
+  FbxCheckbox
+}
+
+const VuePlugin = {
+  install (Vue) {
+    registerComponents(Vue, components)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

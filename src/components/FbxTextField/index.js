@@ -1,9 +1,16 @@
-import "../../validations";
-import Vue from "vue";
-import { VueMaskDirective } from "v-mask"
-import FbxTextField from "./FbxTextField.vue";
+import FbxTextField from './FbxTextField.vue'
+import { registerComponents, vueUse } from '../../utils/plugins'
 
-Vue.component(FbxTextField.name, FbxTextField);
-Vue.directive("mask", VueMaskDirective);
+const components = {
+  FbxTextField
+}
 
-export default FbxTextField;
+const VuePlugin = {
+  install (Vue) {
+    registerComponents(Vue, components)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

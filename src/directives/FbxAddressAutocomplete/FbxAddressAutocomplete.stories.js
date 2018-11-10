@@ -1,4 +1,4 @@
-import "../FbxAddressAutocomplete";
+import FbxAddressAutocomplete from "./FbxAddressAutocomplete";
 import "../../validations"
 import { storiesOf } from "@storybook/vue";
 import { withInfo } from "storybook-addon-vue-info";
@@ -8,6 +8,9 @@ const stories = storiesOf("Directives/Address Autocomplete", module);
 const storyWithInfo = withInfo({ summary });
 
 const defaultStory = () => ({
+  directives: {
+    FbxAddressAutocomplete
+  },
   data() {
     return { inputText: "" };
   },

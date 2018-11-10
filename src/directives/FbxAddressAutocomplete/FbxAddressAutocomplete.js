@@ -1,6 +1,4 @@
-import Vue from "vue";
-import map from "lodash/map";
-import reduce from "lodash/reduce";
+import { map, reduce } from "lodash";
 
 function parseMapsResponseReducer(model, { types, short_name: shortName, long_name: longName }) {
   if (types.includes("street_number")) {
@@ -25,7 +23,7 @@ function parseMapsResponseReducer(model, { types, short_name: shortName, long_na
   return model;
 }
 
-export default Vue.directive("fbxAddressAutocomplete", {
+export default {
   inserted(el, { value: active }, vnode) {
     if (active === false) {
       return;
@@ -83,4 +81,4 @@ export default Vue.directive("fbxAddressAutocomplete", {
   unbind(el) {
     document.body.removeEventListener("mousedown", el.autocompleteMousedownHandler);
   }
-});
+};

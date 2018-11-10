@@ -1,7 +1,5 @@
-import Vue from "vue";
-
-export default Vue.directive("FbxAutofocus", {
+export default {
   inserted(el, { value: active }) {
     if (active !== false) el.focus();
   }
-});
+};

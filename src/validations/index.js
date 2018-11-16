@@ -37,7 +37,7 @@ VeeValidate.Validator.extend("fullAddress", {
 
 VeeValidate.Validator.extend("fullName", {
   getMessage: () => "Please enter full name",
-validate: fullNameValidation
+  validate: fullNameValidation
 });
 
 Vue.use(VeeValidate);

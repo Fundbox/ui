@@ -2,6 +2,6 @@
 inject: true
 to: src/main.stories.js
 skip_if: <%= name %>
-after: "// Components"
+after: '// Components'
 ---
 import Fbx<%= name %> from './components/Fbx<%= name %>/Fbx<%= name %>.stories.js';

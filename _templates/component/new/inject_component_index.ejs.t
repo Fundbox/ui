@@ -2,6 +2,6 @@
 inject: true
 to: src/components/index.js
 skip_if: <%= name %>
-after: "export {"
+after: 'export {'
 ---
   Fbx<%= name %>,

@@ -7,7 +7,7 @@ to: src/components/Fbx<%= name %>/Fbx<%= name %>.vue
 
 <script>
 export default {
-  name: "Fbx<%= name %>"
+  name: 'Fbx<%= name %>'
 };
 </script>
 

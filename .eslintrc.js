@@ -19,6 +19,7 @@ module.exports = {
     'vue'
   ],
   globals: {
+    google: true,
     module: true,
     require: true,
     exports: true,
@@ -38,7 +39,7 @@ module.exports = {
       properties: "never",
     }],
     "comma-style": [1, "last"],
-    "comma-dangle": [1, "always-multiline"],
+    "comma-dangle": [0, "always-multiline"],
     "computed-property-spacing": [1, "never"],
     "constructor-super": [2],
     curly: [2, "multi-line"],

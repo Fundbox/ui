@@ -12,5 +12,5 @@ import FbxTooltip from './components/FbxTooltip/FbxTooltip.stories.js';
 import FbxSelect from './components/FbxSelect/FbxSelect.stories.js';
 
 // Directives
-import FbxAddressAutocomplete from "./directives/FbxAddressAutocomplete/FbxAddressAutocomplete.stories.js";
-import FbxAutofocus from "./directives/FbxAutofocus/FbxAutofocus.stories.js";
+import FbxAddressAutocomplete from './directives/FbxAddressAutocomplete/FbxAddressAutocomplete.stories.js';
+import FbxAutofocus from './directives/FbxAutofocus/FbxAutofocus.stories.js';

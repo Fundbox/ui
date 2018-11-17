@@ -16,9 +16,9 @@ module.exports = {
     '^.+\\.js$': 'babel-jest'
   },
   transformIgnorePatterns: [
-    "<rootDir>/(node_modules)/"
+    '<rootDir>/(node_modules)/'
   ],
-  testResultsProcessor: "jest-teamcity-reporter",
+  testResultsProcessor: 'jest-teamcity-reporter',
   testPathIgnorePatterns: [
     '<rootDir>/test/e2e',
   ],

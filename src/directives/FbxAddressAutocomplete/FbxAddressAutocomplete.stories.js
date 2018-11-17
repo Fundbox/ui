@@ -1,10 +1,10 @@
-import FbxAddressAutocomplete from "./FbxAddressAutocomplete";
-import "../../validations"
-import { storiesOf } from "@storybook/vue";
-import { withInfo } from "storybook-addon-vue-info";
-import summary from "./FbxAddressAutocomplete.md";
+import FbxAddressAutocomplete from './FbxAddressAutocomplete';
+import '../../validations';
+import { storiesOf } from '@storybook/vue';
+import { withInfo } from 'storybook-addon-vue-info';
+import summary from './FbxAddressAutocomplete.md';
 
-const stories = storiesOf("Directives/Address Autocomplete", module);
+const stories = storiesOf('Directives/Address Autocomplete', module);
 const storyWithInfo = withInfo({ summary });
 
 const defaultStory = () => ({
@@ -12,9 +12,9 @@ const defaultStory = () => ({
     FbxAddressAutocomplete
   },
   data() {
-    return { inputText: "" };
+    return { inputText: '' };
   },
   template: `<input v-fbx-address-autocomplete v-model="inputText" />`,
 });
 
-stories.add("default", storyWithInfo(defaultStory));
+stories.add('default', storyWithInfo(defaultStory));

@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const UglifyJsPlugin = require('uglifyjs-3-webpack-plugin');
 
 const getTypePath = (elementType) => elementType ? `/${elementType}` : '';
@@ -12,7 +12,7 @@ const getEntryPath = (elementName, elementType) =>
 
 const getOutputPath = (outputDirectory, elementType) => `${outputDirectory}${getTypePath(elementType)}`;
 
-const getOutputFilename = (elementName = 'index') => `${elementName}.js`
+const getOutputFilename = (elementName = 'index') => `${elementName}.js`;
 
 module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   mode: process.env.NODE_ENV,
@@ -22,10 +22,10 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   },
   externals: {
     'bootstrap-vue': 'bootstrap-vue',
-    'lodash': 'lodash',
+    lodash: 'lodash',
     'v-mask': 'v-mask',
     'vee-validate': 'vee-validate',
-    'vue': 'vue'
+    vue: 'vue'
   },
   output: {
     filename: getOutputFilename(elementName),

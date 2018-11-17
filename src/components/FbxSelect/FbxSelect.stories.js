@@ -10,13 +10,13 @@ const stories = storiesOf('Components/Select', module);
 const withSummary = withInfo({ summary });
 
 const data = () => ({
-  selected: "",
+  selected: '',
   options: array('Options', ['Option 1', 'Option 2', 'Option 3', 'Option 4']),
 });
 
 const watch = {
-  selected (value) {
-    action(`New selected value: ${value}`)()
+  selected(value) {
+    action(`New selected value: ${value}`)();
   },
 };
 
@@ -42,12 +42,12 @@ const validationsStory = {
   data,
   watch,
   methods: {
-    handleSubmit () {
+    handleSubmit() {
       this.$validator.validate().then(valid => {
         if (valid) {
-          action(`Submitted value: ${this.selected}`)()
+          action(`Submitted value: ${this.selected}`)();
         } else {
-          action("Form is invalid. Submittion prevented.")()
+          action('Form is invalid. Submittion prevented.')();
         }
       });
     }

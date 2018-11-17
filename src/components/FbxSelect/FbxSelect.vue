@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue";
+import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue';
 export default {
-  name: "FbxSelect",
+  name: 'FbxSelect',
   inheritAttrs: false,
-  inject: ["$validator"],
+  inject: ['$validator'],
   components: {
     FbxValidationMessage
   },
@@ -39,7 +39,7 @@ export default {
         // Pass all component listeners directly to button
         ...this.$listeners,
         change: ({ target }) => {
-          this.$emit("input", target.value);
+          this.$emit('input', target.value);
         }
       };
     }

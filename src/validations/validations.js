@@ -1,6 +1,6 @@
-import isObject from "lodash/isObject";
-import isEmpty from "lodash/isEmpty";
-import { US_STATES } from "../consts/us-states.const";
+import isObject from 'lodash/isObject';
+import isEmpty from 'lodash/isEmpty';
+import { US_STATES } from '../consts/us-states.const';
 
 export function passwordValidation(value) {
   const hasNumbersOrSymbols = /[^a-zA-Z]/g;
@@ -25,5 +25,5 @@ export function fullAddressValidation(__value, [addressData]) {
 }
 
 export function fullNameValidation(value) {
-  return /[a-zA-Z0-9]*/.test(value) && value.indexOf(" ") > 0;
+  return /[a-zA-Z0-9]*/.test(value) && value.indexOf(' ') > 0;
 }

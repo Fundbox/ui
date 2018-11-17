@@ -59,10 +59,10 @@ export default {
       icon3,
       headerText: text('Header Text', 'Caramels toffee  gummi bears'),
       bodyText: text('Text', 'Halvah chupa chups caramels sugar sugar plum ice cream wafer sugar pudding fruitcake snaps donut. lemon drops topping marshmallow sesame gummi bears sugar. biscuit dessert powder croissant jujubes powder chocolate tootsie topping.')
-    }
+    };
   },
   methods: {
     onCoolChange: action('@change')
   },
-}
+};
 </script>

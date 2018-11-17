@@ -47,30 +47,30 @@ export default {
   data() {
     return {
       selectedDataSource: null,
-    }
+    };
   },
   computed: {
     isInvalid() {
-      return this.errors.has("fbx-panel-radio-button")
+      return this.errors.has('fbx-panel-radio-button');
     },
     validationMessage() {
-      return this.errors.first("fbx-panel-radio-button")
+      return this.errors.first('fbx-panel-radio-button');
     },
   },
   methods: {
     onSubmit() {
       this.$validator.validate().then(valid => {
         if (valid) {
-          action(`Submitted value: ${this.selectedDataSource}`)()
+          action(`Submitted value: ${this.selectedDataSource}`)();
         } else {
-          action("Form is invalid. Nothing selected.")()
+          action('Form is invalid. Nothing selected.')();
         }
       });
     },
     onReset() {
-      this.selectedDataSource = null
+      this.selectedDataSource = null;
     },
   },
-}
+};
 </script>
 

@@ -17,10 +17,10 @@ stories.add('default', withInfo({ summary })(() => ({
                 tabindex="1"
                 v-model="value"
               >${text('Text', 'Toggle me')}</fbx-checkbox>`,
-  data () { return { value: true } },
+  data() { return { value: true }; },
   watch: {
-    value (val) {
-      action(`New value: ${val}`)()
+    value(val) {
+      action(`New value: ${val}`)();
     },
   }
 })));
@@ -36,10 +36,10 @@ stories.add('with long, wrapping text', withInfo({ summary })(() => ({
                 ${text('Text', 'Tiramisu licorice sugar brownie halvah tart caramels. candy chupa chups caramels marzipan. candy canes.')}
               </fbx-checkbox>
             </div>`,
-  data () { return { value: true } },
+  data() { return { value: true }; },
   watch: {
-    value: function (val) {
-      action(`New value: ${val}`)()
+    value(val) {
+      action(`New value: ${val}`)();
     },
   }
 })));
@@ -51,10 +51,10 @@ stories.add('with validation', withInfo({ summary })(() => ({
                 v-model="value"
                 validations="required"
               >${text('Text', 'Checkbox with required validation')}</fbx-checkbox>`,
-  data () { return { value: true } },
+  data() { return { value: true }; },
   watch: {
-    value: function (val) {
-      action(`New value: ${val}`)()
+    value(val) {
+      action(`New value: ${val}`)();
     },
   }
 })));
@@ -67,7 +67,7 @@ stories.add('with events', withInfo({ summary })(() => ({
                 @click="onClick"
                 @change="onChange"
               >${text('Text', 'Checkbox with event handlers')}</fbx-checkbox>`,
-  data () { return { value: true } },
+  data() { return { value: true }; },
   methods: {
     onClick: action('Checkbox click handler'),
     onChange: action('Checkbox change handler'),

@@ -20,7 +20,7 @@ const defaultStory = () => ({
 const directionStory = () => ({
   components: { FbxTooltip },
   data() {
-    return {}
+    return {};
   },
   watch: {},
   template: `
@@ -40,7 +40,7 @@ const directionStory = () => ({
 const triggersStory = () => ({
   components: { FbxTooltip },
   data() {
-    return {}
+    return {};
   },
   watch: {},
   template: `
@@ -56,7 +56,7 @@ const triggersStory = () => ({
 const customHTMLStory = () => ({
   components: { FbxTooltip },
   data() {
-    return {}
+    return {};
   },
   watch: {},
   template: `

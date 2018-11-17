@@ -1,9 +1,9 @@
-import { shallowMount, createLocalVue } from "@vue/test-utils";
-import flushPromises from "flush-promises"
-import VeeValidate from "vee-validate";
-import FbxSelect from "./FbxSelect.vue";
+import { shallowMount, createLocalVue } from '@vue/test-utils';
+import flushPromises from 'flush-promises';
+import VeeValidate from 'vee-validate';
+import FbxSelect from './FbxSelect.vue';
 
-const option1 = "Option 1";
+const option1 = 'Option 1';
 const defaultSlot = {
   default: `
     <option>Default</option>
@@ -13,16 +13,16 @@ const defaultSlot = {
 
 const localVue = createLocalVue();
 localVue.use(VeeValidate, {
-  events: "change"
+  events: 'change'
 });
 
-describe("FbxSelect", () => {
-  describe("snapshots", () => {
-    it("renders the default correctly", async () => {
+describe('FbxSelect', () => {
+  describe('snapshots', () => {
+    it('renders the default correctly', async() => {
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
         attrs: {
-          name: "select",
+          name: 'select',
         },
         // running async test because of vee-validate and @vue/test-utils
         // Here are the reffs:
@@ -35,15 +35,15 @@ describe("FbxSelect", () => {
       expect(wrapper.html()).toMatchSnapshot();
     });
 
-    it("renders validations correctly", async () => {
-      const validationMessage = "This field is required";
+    it('renders validations correctly', async() => {
+      const validationMessage = 'This field is required';
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
         attrs: {
-          name: "select"
+          name: 'select'
         },
         props: {
-          validations: "required"
+          validations: 'required'
         },
         mocks: {
           errors: {
@@ -56,16 +56,16 @@ describe("FbxSelect", () => {
       });
       await flushPromises();
       expect(wrapper.html()).toMatchSnapshot();
-      expect(wrapper.html()).toContain(validationMessage)
+      expect(wrapper.html()).toContain(validationMessage);
     });
   });
 
-  describe("initialization", () => {
-    it("sets correct value by passing value attr", async () => {
+  describe('initialization', () => {
+    it('sets correct value by passing value attr', async() => {
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
         attrs: {
-          name: "select",
+          name: 'select',
           value: option1,
         },
         sync: false,
@@ -79,13 +79,13 @@ describe("FbxSelect", () => {
     });
   });
 
-  describe("events", () => {
-    it("calls input event with selected value on value select", () => {
+  describe('events', () => {
+    it('calls input event with selected value on value select', () => {
       const mockInput = jest.fn();
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
         attrs: {
-          name: "select"
+          name: 'select'
         },
         listeners: {
           input: mockInput,
@@ -99,12 +99,12 @@ describe("FbxSelect", () => {
       expect(mockInput).toHaveBeenCalledWith(option1);
     });
 
-    it("calls regular events of select", () => {
+    it('calls regular events of select', () => {
       const mockClick = jest.fn();
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
         attrs: {
-          name: "select"
+          name: 'select'
         },
         listeners: {
           click: mockClick,
@@ -113,7 +113,7 @@ describe("FbxSelect", () => {
         localVue
       });
       const select = wrapper.find('select');
-      select.trigger("click")
+      select.trigger('click');
       expect(mockClick).toHaveBeenCalledTimes(1);
     });
   });

@@ -1,16 +1,16 @@
-import FbxTabs from './FbxTabs.vue'
-import { registerComponents, vueUse } from '../../utils/plugins'
+import FbxTabs from './FbxTabs.vue';
+import { registerComponents, vueUse } from '../../utils/plugins';
 
 const components = {
   FbxTabs
-}
+};
 
 const VuePlugin = {
-  install (Vue) {
-    registerComponents(Vue, components)
+  install(Vue) {
+    registerComponents(Vue, components);
   }
-}
+};
 
-vueUse(VuePlugin)
+vueUse(VuePlugin);
 
-export default VuePlugin
+export default VuePlugin;

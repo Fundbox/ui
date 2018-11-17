@@ -1,3 +1,4 @@
+/* eslint no-console: 0 */
 const path = require('path');
 const inquirer = require('inquirer');
 const { spawn } = require('child_process');
@@ -19,7 +20,7 @@ const questions = [
     name: 'type',
     message: 'What do you want to create?',
     choices: ['Component', 'Directive'],
-    filter: function(val) {
+    filter(val) {
       return val.toLowerCase();
     }
   },
@@ -45,7 +46,7 @@ inquirer
   .prompt(questions)
   .then(answers => {
     const command = `npx hygen ${answers.type} new --name ${answers.name}`;
-    const loader = new Spinner("Generating...");
+    const loader = new Spinner('Generating...');
     let childProcess = spawn(command, {
       shell: true
     });
@@ -74,12 +75,12 @@ inquirer
     childProcess.on('exit', (code) => {
       loader.stop();
 
-      if (code !== 0) {
-        console.log(chalk.red(error || 'Error! Something went wrong.'), '\n');
-      } else {
+      if (code === 0) {
         console.log(chalk.green('Done!'), fbxColorModifier("Here's what's been created:"));
         paths.forEach(file => console.log(file));
         console.log('');
+      } else {
+        console.log(chalk.red(error || 'Error! Something went wrong.'), '\n');
       }
     });
   });

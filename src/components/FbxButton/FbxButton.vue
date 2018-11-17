@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "FbxButton",
+  name: 'FbxButton',
   props: {
     loading: {
       type: Boolean,

@@ -4,14 +4,14 @@
  * @param {string} Component name
  * @param {object} Component definition
  */
-export function registerComponent (Vue, name, def) {
-  Vue._fundbox_ui_components_ = Vue._fundbox_ui_components_ || {}
-  const loaded = Vue._fundbox_ui_components_[name]
+export function registerComponent(Vue, name, def) {
+  Vue.fundbox_ui_components = Vue.fundbox_ui_components || {};
+  const loaded = Vue.fundbox_ui_components[name];
   if (!loaded && def && name) {
-    Vue._fundbox_ui_components_[name] = true
-    Vue.component(name, def)
+    Vue.fundbox_ui_components[name] = true;
+    Vue.component(name, def);
   }
-  return loaded
+  return loaded;
 }
 
 /**
@@ -19,9 +19,9 @@ export function registerComponent (Vue, name, def) {
  * @param {object} Vue
  * @param {object} Object of component definitions
  */
-export function registerComponents (Vue, components) {
+export function registerComponents(Vue, components) {
   for (let component in components) {
-    registerComponent(Vue, component, components[component])
+    registerComponent(Vue, component, components[component]);
   }
 }
 
@@ -31,14 +31,14 @@ export function registerComponents (Vue, components) {
  * @param {string} Directive name
  * @param {object} Directive definition
  */
-export function registerDirective (Vue, name, def) {
-  Vue._fundbox_ui_directives_ = Vue._fundbox_ui_directives_ || {}
-  const loaded = Vue._fundbox_ui_directives_[name]
+export function registerDirective(Vue, name, def) {
+  Vue.fundbox_ui_directives = Vue.fundbox_ui_directives || {};
+  const loaded = Vue.fundbox_ui_directives[name];
   if (!loaded && def && name) {
-    Vue._fundbox_ui_directives_[name] = true
-    Vue.directive(name, def)
+    Vue.fundbox_ui_directives[name] = true;
+    Vue.directive(name, def);
   }
-  return loaded
+  return loaded;
 }
 
 /**
@@ -46,9 +46,9 @@ export function registerDirective (Vue, name, def) {
  * @param {object} Vue
  * @param {object} Object of directive definitions
  */
-export function registerDirectives (Vue, directives) {
+export function registerDirectives(Vue, directives) {
   for (let directive in directives) {
-    registerDirective(Vue, directive, directives[directive])
+    registerDirective(Vue, directive, directives[directive]);
   }
 }
 
@@ -56,8 +56,8 @@ export function registerDirectives (Vue, directives) {
  * Install plugin if window.Vue available
  * @param {object} Plugin definition
  */
-export function vueUse (VuePlugin) {
+export function vueUse(VuePlugin) {
   if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(VuePlugin)
+    window.Vue.use(VuePlugin);
   }
 }

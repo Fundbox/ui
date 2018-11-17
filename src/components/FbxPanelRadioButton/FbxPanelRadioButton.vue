@@ -36,26 +36,26 @@
 
 <script>
 export default {
-  name: "FbxPanelRadioButton",
+  name: 'FbxPanelRadioButton',
   model: {
-    prop: "modelValue",
-    event: "change",
+    prop: 'modelValue',
+    event: 'change',
   },
   props: {
     iconPath: String,
     value: String,
     modelValue: {
-      default: "",
+      default: '',
     },
   },
   computed: {
     isChecked() {
-      return this.modelValue === this.value
+      return this.modelValue === this.value;
     },
   },
   methods: {
     onChange() {
-      this.$emit("change", this.value)
+      this.$emit('change', this.value);
     },
   }
 };

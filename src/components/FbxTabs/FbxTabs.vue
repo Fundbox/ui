@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "FbxTabs",
+  name: 'FbxTabs',
   props: {
     tabs: {
       type: Array,
@@ -28,12 +28,12 @@ export default {
   data() {
     return {
       currentIndex: this.activeTabIndex,
-    }
+    };
   },
   methods: {
     onTabClick(i) {
-      this.currentIndex = i
-      this.$emit("tabIndexSelected", i)
+      this.currentIndex = i;
+      this.$emit('tabIndexSelected', i);
     },
   },
 };

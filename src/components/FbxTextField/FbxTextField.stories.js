@@ -12,13 +12,13 @@ const defaultStory = () => ({
   components: { FbxTextField },
   data() {
     return {
-      inputText: "",
-      labelText: text("Label", "Email Address"),
-    }
+      inputText: '',
+      labelText: text('Label', 'Email Address'),
+    };
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)()
+      action(`New value: ${value}`)();
     },
   },
   template: `
@@ -37,13 +37,13 @@ const passwordStory = () => ({
   components: { FbxTextField },
   data() {
     return {
-      inputText: "",
-      labelText: text("Label", "Password"),
-    }
+      inputText: '',
+      labelText: text('Label', 'Password'),
+    };
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)()
+      action(`New value: ${value}`)();
     },
   },
   template: `
@@ -65,13 +65,13 @@ const maskStory = () => ({
   components: { FbxTextField },
   data() {
     return {
-      inputText: "",
-      labelText: text("Label", "Email Address"),
-    }
+      inputText: '',
+      labelText: text('Label', 'Email Address'),
+    };
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)()
+      action(`New value: ${value}`)();
     },
   },
   template: `
@@ -91,13 +91,13 @@ const autofocusStory = () => ({
   components: { FbxTextField },
   data() {
     return {
-      inputText: "",
-      labelText: text("Label", "Email Address"),
-    }
+      inputText: '',
+      labelText: text('Label', 'Email Address'),
+    };
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)()
+      action(`New value: ${value}`)();
     },
   },
   template: `
@@ -117,9 +117,9 @@ const addressAutocomplete = () => ({
   components: { FbxTextField },
   data() {
     return {
-      inputText: "",
+      inputText: '',
       addressData: {}
-    }
+    };
   },
   methods: {
     onAddressDataChanged(addressData) {
@@ -128,10 +128,10 @@ const addressAutocomplete = () => ({
   },
   watch: {
     inputText(value) {
-      action(`New value`)(value)
+      action(`New value`)(value);
     },
     addressData(value) {
-      action(`Address data`)(value)
+      action(`Address data`)(value);
     }
   },
   template: `

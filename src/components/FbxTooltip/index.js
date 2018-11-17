@@ -1,16 +1,16 @@
-import FbxTooltip from "./FbxTooltip.vue";
-import { registerComponents, vueUse } from '../../utils/plugins'
+import FbxTooltip from './FbxTooltip.vue';
+import { registerComponents, vueUse } from '../../utils/plugins';
 
 const components = {
   FbxTooltip
-}
+};
 
 const VuePlugin = {
-  install (Vue) {
-    registerComponents(Vue, components)
+  install(Vue) {
+    registerComponents(Vue, components);
   }
-}
+};
 
-vueUse(VuePlugin)
+vueUse(VuePlugin);
 
-export default VuePlugin
+export default VuePlugin;

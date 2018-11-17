@@ -4,12 +4,12 @@
 
 <script>
 export default {
-  name: "FbxCloseButton",
+  name: 'FbxCloseButton',
   computed: {
     listeners() {
       return {
         ...this.$listeners,
-      }
+      };
     },
   },
 };

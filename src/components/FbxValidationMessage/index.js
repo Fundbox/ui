@@ -1,16 +1,16 @@
-import FbxValidationMessage from './FbxValidationMessage.vue'
-import { registerComponents, vueUse } from '../../utils/plugins'
+import FbxValidationMessage from './FbxValidationMessage.vue';
+import { registerComponents, vueUse } from '../../utils/plugins';
 
 const components = {
   FbxValidationMessage
-}
+};
 
 const VuePlugin = {
-  install (Vue) {
-    registerComponents(Vue, components)
+  install(Vue) {
+    registerComponents(Vue, components);
   }
-}
+};
 
-vueUse(VuePlugin)
+vueUse(VuePlugin);
 
-export default VuePlugin
+export default VuePlugin;

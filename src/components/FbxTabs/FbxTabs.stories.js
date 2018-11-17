@@ -12,7 +12,7 @@ stories.add('default', withInfo({ summary })(() => ({
   data() {
     return {
       tabs: array('Tabs', ['Settings', 'Profile']),
-    }
+    };
   },
   template: `<fbx-tabs :tabs="tabs" :active-tab-index="1" @tabIndexSelected="onTabSelect"></fbx-tabs>`,
   methods: { onTabSelect: action('onTabSelect') },

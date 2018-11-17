@@ -19,15 +19,15 @@
 </template>
 
 <script>
-import FbxValidationMessage from "../FbxValidationMessage/FbxValidationMessage.vue"
+import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue';
 
 export default {
-  name: "FbxCheckbox",
+  name: 'FbxCheckbox',
   components: {
     FbxValidationMessage,
   },
   inheritAttrs: false,
-  inject: ["$validator"],
+  inject: ['$validator'],
   props: {
     value: {
       type: Boolean,
@@ -36,13 +36,13 @@ export default {
     validations: String
   },
   computed: {
-    isInvalid () {
+    isInvalid() {
       return this.errors.has(this.$attrs.name);
     },
-    validationMessage () {
+    validationMessage() {
       return this.errors.first(this.$attrs.name);
     },
-    listeners () {
+    listeners() {
       return {
         ...this.$listeners,
         input: (event) => {

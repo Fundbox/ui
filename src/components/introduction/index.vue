@@ -64,25 +64,25 @@
 </template>
 
 <script>
-  const log = () => console.log('Welcome to storybook!')
+const log = () => console.log('Welcome to storybook!'); // eslint-disable-line no-console
 
-  export default {
-    name: 'FbxIntroduction',
+export default {
+  name: 'FbxIntroduction',
 
-    props: {
-      showApp: {
-        type: Function,
-        default: log
-      }
-    },
+  props: {
+    showApp: {
+      type: Function,
+      default: log
+    }
+  },
 
-    methods: {
-      onClick (event) {
-        event.preventDefault()
-        this.showApp()
-      }
+  methods: {
+    onClick(event) {
+      event.preventDefault();
+      this.showApp();
     }
   }
+};
 </script>
 
 <style>

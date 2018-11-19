@@ -1,10 +1,8 @@
 ---
-to: directives/Fbx<%= name %>/Fbx<%= name %>.js
+to: src/directives/Fbx<%= name %>/Fbx<%= name %>.js
 ---
-import Vue from "vue";
-
-export default Vue.directive("Fbx<%= name %>", {
+export default {
   inserted(el, { value }) {
     // Make some magic here!
   }
-});
+};

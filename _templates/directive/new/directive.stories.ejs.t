@@ -1,5 +1,5 @@
 ---
-to: directives/Fbx<%= name %>/Fbx<%= name %>.stories.js
+to: src/directives/Fbx<%= name %>/Fbx<%= name %>.stories.js
 ---
 import { storiesOf } from '@storybook/vue';
 import { withInfo } from 'storybook-addon-vue-info';

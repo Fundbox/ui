@@ -5,4 +5,4 @@ export default {
   inserted(el, { value }) {
     // Make some magic here!
   }
-};
+}

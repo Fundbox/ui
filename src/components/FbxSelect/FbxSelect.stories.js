@@ -1,24 +1,24 @@
-import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from 'storybook-addon-vue-info';
-import { array } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+import { withInfo } from 'storybook-addon-vue-info'
+import { array } from '@storybook/addon-knobs'
 
-import FbxSelect from './FbxSelect.vue';
-import FbxButton from './../FbxButton/FbxButton.vue';
-import summary from './FbxSelect.md';
-const stories = storiesOf('Components/Select', module);
-const withSummary = withInfo({ summary });
+import FbxSelect from './FbxSelect.vue'
+import FbxButton from './../FbxButton/FbxButton.vue'
+import summary from './FbxSelect.md'
+const stories = storiesOf('Components/Select', module)
+const withSummary = withInfo({ summary })
 
 const data = () => ({
   selected: '',
   options: array('Options', ['Option 1', 'Option 2', 'Option 3', 'Option 4']),
-});
+})
 
 const watch = {
   selected(value) {
-    action(`New selected value: ${value}`)();
+    action(`New selected value: ${value}`)()
   },
-};
+}
 
 const defaultStory = {
   components: { FbxSelect },
@@ -34,8 +34,8 @@ const defaultStory = {
     <h3>Selected option: {{selected}}</h3>
   </div>
   `,
-};
-stories.add('default', withSummary(() => defaultStory));
+}
+stories.add('default', withSummary(() => defaultStory))
 
 const validationsStory = {
   components: { FbxSelect, FbxButton },
@@ -45,11 +45,11 @@ const validationsStory = {
     handleSubmit() {
       this.$validator.validate().then(valid => {
         if (valid) {
-          action(`Submitted value: ${this.selected}`)();
+          action(`Submitted value: ${this.selected}`)()
         } else {
-          action('Form is invalid. Submittion prevented.')();
+          action('Form is invalid. Submittion prevented.')()
         }
-      });
+      })
     }
   },
   template: `
@@ -64,6 +64,6 @@ const validationsStory = {
     <h3>Selected option: {{selected}}</h3>
   </form>
   `,
-};
+}
 
-stories.add('validations', withSummary(() => validationsStory));
+stories.add('validations', withSummary(() => validationsStory))

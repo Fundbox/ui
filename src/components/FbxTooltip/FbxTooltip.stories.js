@@ -1,10 +1,10 @@
-import { storiesOf } from '@storybook/vue';
-import { withInfo } from 'storybook-addon-vue-info';
-import FbxTooltip from './FbxTooltip.vue';
-import summary from './FbxTooltip.md';
+import { storiesOf } from '@storybook/vue'
+import { withInfo } from 'storybook-addon-vue-info'
+import FbxTooltip from './FbxTooltip.vue'
+import summary from './FbxTooltip.md'
 
-const stories = storiesOf('Components/Tooltip', module);
-const storyWithInfo = withInfo({ summary });
+const stories = storiesOf('Components/Tooltip', module)
+const storyWithInfo = withInfo({ summary })
 
 const defaultStory = () => ({
   components: { FbxTooltip },
@@ -15,12 +15,12 @@ const defaultStory = () => ({
       <fbx-tooltip target="tooltip">I'm a tooltip</fbx-tooltip>
     </div>
   `,
-});
+})
 
 const directionStory = () => ({
   components: { FbxTooltip },
   data() {
-    return {};
+    return {}
   },
   watch: {},
   template: `
@@ -35,12 +35,12 @@ const directionStory = () => ({
       <fbx-tooltip target="tooltipRight" placement="right" boundary="viewport">I'm a tooltip</fbx-tooltip>
     </div>
   `,
-});
+})
 
 const triggersStory = () => ({
   components: { FbxTooltip },
   data() {
-    return {};
+    return {}
   },
   watch: {},
   template: `
@@ -51,12 +51,12 @@ const triggersStory = () => ({
       <fbx-tooltip target="click" triggers="click">I'm a tooltip</fbx-tooltip>
     </div>
   `,
-});
+})
 
 const customHTMLStory = () => ({
   components: { FbxTooltip },
   data() {
-    return {};
+    return {}
   },
   watch: {},
   template: `
@@ -72,9 +72,9 @@ const customHTMLStory = () => ({
       </fbx-tooltip>
     </div>
   `,
-});
+})
 
-stories.add('default', storyWithInfo(defaultStory));
-stories.add('placements', storyWithInfo(directionStory));
-stories.add('triggers', storyWithInfo(triggersStory));
-stories.add('custom content', storyWithInfo(customHTMLStory));
+stories.add('default', storyWithInfo(defaultStory))
+stories.add('placements', storyWithInfo(directionStory))
+stories.add('triggers', storyWithInfo(triggersStory))
+stories.add('custom content', storyWithInfo(customHTMLStory))

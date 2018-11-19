@@ -1,16 +1,16 @@
-import FbxPanelRadioButton from './FbxPanelRadioButton.vue';
-import { registerComponents, vueUse } from '../../utils/plugins';
+import FbxPanelRadioButton from './FbxPanelRadioButton.vue'
+import { registerComponents, vueUse } from '../../utils/plugins'
 
 const components = {
   FbxPanelRadioButton
-};
+}
 
 const VuePlugin = {
   install(Vue) {
-    registerComponents(Vue, components);
+    registerComponents(Vue, components)
   }
-};
+}
 
-vueUse(VuePlugin);
+vueUse(VuePlugin)
 
-export default VuePlugin;
+export default VuePlugin

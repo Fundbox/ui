@@ -28,15 +28,15 @@ export default {
   data() {
     return {
       currentIndex: this.activeTabIndex,
-    };
+    }
   },
   methods: {
     onTabClick(i) {
-      this.currentIndex = i;
-      this.$emit('tabIndexSelected', i);
+      this.currentIndex = i
+      this.$emit('tabIndexSelected', i)
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

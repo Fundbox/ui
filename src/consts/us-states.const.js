@@ -58,4 +58,4 @@ export const US_STATES = Object.freeze({
   PR: 'Puerto Rico',
   PW: 'Palau',
   VI: 'Virgin Islands',
-});
+})

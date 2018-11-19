@@ -50,15 +50,15 @@ export default {
   },
   computed: {
     isChecked() {
-      return this.modelValue === this.value;
+      return this.modelValue === this.value
     },
   },
   methods: {
     onChange() {
-      this.$emit('change', this.value);
+      this.$emit('change', this.value)
     },
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

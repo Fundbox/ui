@@ -37,40 +37,40 @@
 </template>
 
 <script>
-import { action } from '@storybook/addon-actions';
-import FbxPanelRadioButton from '../FbxPanelRadioButton.vue';
-import FbxButton from '../../FbxButton/FbxButton';
-import FbxValidationMessage from '../../FbxValidationMessage/FbxValidationMessage';
+import { action } from '@storybook/addon-actions'
+import FbxPanelRadioButton from '../FbxPanelRadioButton.vue'
+import FbxButton from '../../FbxButton/FbxButton'
+import FbxValidationMessage from '../../FbxValidationMessage/FbxValidationMessage'
 
 export default {
   components: { FbxPanelRadioButton, FbxValidationMessage, FbxButton },
   data() {
     return {
       selectedDataSource: null,
-    };
+    }
   },
   computed: {
     isInvalid() {
-      return this.errors.has('fbx-panel-radio-button');
+      return this.errors.has('fbx-panel-radio-button')
     },
     validationMessage() {
-      return this.errors.first('fbx-panel-radio-button');
+      return this.errors.first('fbx-panel-radio-button')
     },
   },
   methods: {
     onSubmit() {
       this.$validator.validate().then(valid => {
         if (valid) {
-          action(`Submitted value: ${this.selectedDataSource}`)();
+          action(`Submitted value: ${this.selectedDataSource}`)()
         } else {
-          action('Form is invalid. Nothing selected.')();
+          action('Form is invalid. Nothing selected.')()
         }
-      });
+      })
     },
     onReset() {
-      this.selectedDataSource = null;
+      this.selectedDataSource = null
     },
   },
-};
+}
 </script>
 

@@ -1,11 +1,11 @@
-import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from 'storybook-addon-vue-info';
+import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+import { withInfo } from 'storybook-addon-vue-info'
 
-import FbxCloseButton from './FbxCloseButton.vue';
-import summary from './FbxCloseButton.md';
+import FbxCloseButton from './FbxCloseButton.vue'
+import summary from './FbxCloseButton.md'
 
-const stories = storiesOf('Components/CloseButton', module);
+const stories = storiesOf('Components/CloseButton', module)
 
 stories.add('default', withInfo({ summary })(() => ({
   components: { FbxCloseButton },
@@ -15,4 +15,4 @@ stories.add('default', withInfo({ summary })(() => ({
                 @click="onClick"
               />`,
   methods: { onClick: action('clicked') },
-})));
+})))

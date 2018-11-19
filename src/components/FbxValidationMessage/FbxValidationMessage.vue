@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'FbxValidationMessage'
-};
+}
 </script>
 
 <style lang="scss" scoped>

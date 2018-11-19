@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue';
+import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue'
 export default {
   name: 'FbxSelect',
   inheritAttrs: false,
@@ -29,22 +29,22 @@ export default {
   },
   computed: {
     isInvalid() {
-      return this.errors.has(this.$attrs.name);
+      return this.errors.has(this.$attrs.name)
     },
     validationMessage() {
-      return this.errors.first(this.$attrs.name);
+      return this.errors.first(this.$attrs.name)
     },
     listeners() {
       return {
         // Pass all component listeners directly to button
         ...this.$listeners,
         change: ({ target }) => {
-          this.$emit('input', target.value);
+          this.$emit('input', target.value)
         }
-      };
+      }
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -5,13 +5,13 @@
  * @param {object} Component definition
  */
 export function registerComponent(Vue, name, def) {
-  Vue.fundbox_ui_components = Vue.fundbox_ui_components || {};
-  const loaded = Vue.fundbox_ui_components[name];
+  Vue.fundbox_ui_components = Vue.fundbox_ui_components || {}
+  const loaded = Vue.fundbox_ui_components[name]
   if (!loaded && def && name) {
-    Vue.fundbox_ui_components[name] = true;
-    Vue.component(name, def);
+    Vue.fundbox_ui_components[name] = true
+    Vue.component(name, def)
   }
-  return loaded;
+  return loaded
 }
 
 /**
@@ -21,7 +21,7 @@ export function registerComponent(Vue, name, def) {
  */
 export function registerComponents(Vue, components) {
   for (let component in components) {
-    registerComponent(Vue, component, components[component]);
+    registerComponent(Vue, component, components[component])
   }
 }
 
@@ -32,13 +32,13 @@ export function registerComponents(Vue, components) {
  * @param {object} Directive definition
  */
 export function registerDirective(Vue, name, def) {
-  Vue.fundbox_ui_directives = Vue.fundbox_ui_directives || {};
-  const loaded = Vue.fundbox_ui_directives[name];
+  Vue.fundbox_ui_directives = Vue.fundbox_ui_directives || {}
+  const loaded = Vue.fundbox_ui_directives[name]
   if (!loaded && def && name) {
-    Vue.fundbox_ui_directives[name] = true;
-    Vue.directive(name, def);
+    Vue.fundbox_ui_directives[name] = true
+    Vue.directive(name, def)
   }
-  return loaded;
+  return loaded
 }
 
 /**
@@ -48,7 +48,7 @@ export function registerDirective(Vue, name, def) {
  */
 export function registerDirectives(Vue, directives) {
   for (let directive in directives) {
-    registerDirective(Vue, directive, directives[directive]);
+    registerDirective(Vue, directive, directives[directive])
   }
 }
 
@@ -58,6 +58,6 @@ export function registerDirectives(Vue, directives) {
  */
 export function vueUse(VuePlugin) {
   if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(VuePlugin);
+    window.Vue.use(VuePlugin)
   }
 }

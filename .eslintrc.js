@@ -139,7 +139,7 @@ module.exports = {
     "prefer-spread": [1],
     "prefer-template": [1],
     radix: [1],
-    semi: [1, "always"],
+    semi: [1, "never"],
     "semi-spacing": [1, {
       before: false,
       after: true,

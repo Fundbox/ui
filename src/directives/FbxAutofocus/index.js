@@ -1,16 +1,16 @@
-import FbxAutofocus from './FbxAutofocus';
-import { registerDirectives, vueUse } from '../../utils/plugins';
+import FbxAutofocus from './FbxAutofocus'
+import { registerDirectives, vueUse } from '../../utils/plugins'
 
 const directives = {
   FbxAutofocus
-};
+}
 
 const VuePlugin = {
   install(Vue) {
-    registerDirectives(Vue, directives);
+    registerDirectives(Vue, directives)
   }
-};
+}
 
-vueUse(VuePlugin);
+vueUse(VuePlugin)
 
-export default VuePlugin;
+export default VuePlugin

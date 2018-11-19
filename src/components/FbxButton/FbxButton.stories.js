@@ -1,12 +1,12 @@
-import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from 'storybook-addon-vue-info';
-import { text, boolean } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+import { withInfo } from 'storybook-addon-vue-info'
+import { text, boolean } from '@storybook/addon-knobs'
 
-import FbxButton from './FbxButton.vue';
-import summary from './FbxButton.md';
+import FbxButton from './FbxButton.vue'
+import summary from './FbxButton.md'
 
-const stories = storiesOf('Components/Button', module);
+const stories = storiesOf('Components/Button', module)
 
 stories.add('default', withInfo({ summary })(() => ({
   components: { FbxButton },
@@ -23,4 +23,4 @@ stories.add('default', withInfo({ summary })(() => ({
               ${text('Text', 'Click me')}
             </fbx-button>`,
   methods: { click: action('clicked') },
-})));
+})))

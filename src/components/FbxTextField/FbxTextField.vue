@@ -27,11 +27,11 @@
 </template>
 
 <script>
-import '../../validations';
-import { VueMaskDirective } from 'v-mask';
-import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue';
-import FbxAddressAutocomplete from '../../directives/FbxAddressAutocomplete/FbxAddressAutocomplete';
-import FbxAutofocus from '../../directives/FbxAutofocus/FbxAutofocus';
+import '../../validations'
+import { VueMaskDirective } from 'v-mask'
+import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue'
+import FbxAddressAutocomplete from '../../directives/FbxAddressAutocomplete/FbxAddressAutocomplete'
+import FbxAutofocus from '../../directives/FbxAutofocus/FbxAutofocus'
 
 export default {
   name: 'FbxTextField',
@@ -49,7 +49,7 @@ export default {
     return {
       isPassword: this.$attrs.type === 'password',
       type: this.$attrs.type || 'text'
-    };
+    }
   },
   props: {
     label: String,
@@ -70,27 +70,27 @@ export default {
   },
   computed: {
     passwordButtonText() {
-      return this.isPassword && this.type === 'text' ? 'Hide' : 'Show';
+      return this.isPassword && this.type === 'text' ? 'Hide' : 'Show'
     },
     isInvalid() {
-      return this.errors.has(this.$attrs.name, this.$attrs.scope);
+      return this.errors.has(this.$attrs.name, this.$attrs.scope)
     },
     validationMessage() {
-      return this.errors.first(this.$attrs.name, this.$attrs.scope);
+      return this.errors.first(this.$attrs.name, this.$attrs.scope)
     }
   },
   methods: {
     togglePassword() {
-      this.type = this.type === 'password' ? 'text' : 'password';
+      this.type = this.type === 'password' ? 'text' : 'password'
     },
     onInput(event) {
-      this.$emit('input', event.target.value);
+      this.$emit('input', event.target.value)
     },
     onChange(event) {
-      this.$emit('change', event.target.value);
+      this.$emit('change', event.target.value)
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

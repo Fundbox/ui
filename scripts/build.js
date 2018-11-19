@@ -1,98 +1,98 @@
 /* eslint no-console: 0 */
-const util = require('util');
-const exec = util.promisify(require('child_process').exec);
-const { lstatSync, readdirSync } = require('fs');
-const { join } = require('path');
-const webpack = util.promisify(require('webpack'));
-const getWebpackConfig = require('./webpack.config.build');
-const chalk = require('chalk');
+const util = require('util')
+const exec = util.promisify(require('child_process').exec)
+const { lstatSync, readdirSync } = require('fs')
+const { join } = require('path')
+const webpack = util.promisify(require('webpack'))
+const getWebpackConfig = require('./webpack.config.build')
+const chalk = require('chalk')
 
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'production'
 
 const logger = {
   formatMessage(message = '') {
-    const requiredLength = 100;
-    const lengtToAttach = parseInt((requiredLength - message.length - 2) / 2, 10);
-    const dashes = Array(lengtToAttach).fill('-').join('');
-    return `\n${dashes} ${message} ${dashes}`;
+    const requiredLength = 100
+    const lengtToAttach = parseInt((requiredLength - message.length - 2) / 2, 10)
+    const dashes = Array(lengtToAttach).fill('-').join('')
+    return `\n${dashes} ${message} ${dashes}`
   },
-  info(message) { console.log(chalk.magenta.bold(this.formatMessage(message))); },
-  error(message) { console.log(chalk.red.bold(this.formatMessage(message))); }
-};
+  info(message) { console.log(chalk.magenta.bold(this.formatMessage(message))) },
+  error(message) { console.log(chalk.red.bold(this.formatMessage(message))) }
+}
 
 const execCommand = async(command) => {
-  const { stdout, stderr } = await exec(command);
-  console.log(stdout);
+  const { stdout, stderr } = await exec(command)
+  console.log(stdout)
   if (stderr) {
-    process.exit(1);
+    process.exit(1)
   }
-};
+}
 
 const cleanup = async() => {
-  await execCommand('rm -rf es dist');
-  logger.info('Removed output directories');
-};
+  await execCommand('rm -rf es dist')
+  logger.info('Removed output directories')
+}
 
-const SRC_PATH = 'src';
-const availableTypes = ['components', 'directives'];
+const SRC_PATH = 'src'
+const availableTypes = ['components', 'directives']
 
-const isDirectory = source => lstatSync(source).isDirectory();
+const isDirectory = source => lstatSync(source).isDirectory()
 
 const getDirectories = (source, type, exclude = []) =>
   readdirSync(source)
     .map((name) => ({ name, type, path: join(source, name) }))
     .filter((dir) => isDirectory(dir.path))
-    .filter((dir) => !exclude.includes(dir.name));
+    .filter((dir) => !exclude.includes(dir.name))
 
 const handleWebpackOutput = (stats) => {
-  console.group();
-  console.group();
-  console.log(stats.toString({ colors: true }));
-  console.groupEnd();
-  console.groupEnd();
-};
+  console.group()
+  console.group()
+  console.log(stats.toString({ colors: true }))
+  console.groupEnd()
+  console.groupEnd()
+}
 
 const buildElements = async() => {
-  logger.info('Started elements build');
+  logger.info('Started elements build')
   const builds = availableTypes
     .reduce((dirs, type) => {
-      const directories = getDirectories(`${SRC_PATH}/${type}`, type, ['introduction']);
-      return [...dirs, ...directories];
+      const directories = getDirectories(`${SRC_PATH}/${type}`, type, ['introduction'])
+      return [...dirs, ...directories]
     }, [])
     .map((dir) => {
       return webpack(getWebpackConfig(dir.name, dir.type, 'es'))
         .then((stats) => {
-          logger.info(`Started ${dir.name} build`);
-          return stats;
+          logger.info(`Started ${dir.name} build`)
+          return stats
         })
         .then(handleWebpackOutput)
-        .then(() => logger.info(`Finished ${dir.name} build`));
-    });
-  await Promise.all(builds);
-  logger.info('Finished elements build');
-};
+        .then(() => logger.info(`Finished ${dir.name} build`))
+    })
+  await Promise.all(builds)
+  logger.info('Finished elements build')
+}
 
 const buildValidations = async() => {
-  logger.info('Started validations build');
-  const stats = await webpack(getWebpackConfig(null, 'validations', 'es'));
-  handleWebpackOutput(stats);
-  logger.info('Finished validations build');
-};
+  logger.info('Started validations build')
+  const stats = await webpack(getWebpackConfig(null, 'validations', 'es'))
+  handleWebpackOutput(stats)
+  logger.info('Finished validations build')
+}
 
 const buildLibrary = async() => {
-  logger.info('Started main library build');
-  const stats = await webpack(getWebpackConfig());
-  handleWebpackOutput(stats);
-  logger.info('Finished main library build');
+  logger.info('Started main library build')
+  const stats = await webpack(getWebpackConfig())
+  handleWebpackOutput(stats)
+  logger.info('Finished main library build')
 };
 
 (async() => {
-  logger.info('Started Fbx build');
-  console.time('Fbx build');
-  await cleanup();
-  await buildElements();
-  await buildValidations();
-  await buildLibrary();
-  console.timeEnd('Fbx build');
-  logger.info('Finished Fbx build');
-})();
+  logger.info('Started Fbx build')
+  console.time('Fbx build')
+  await cleanup()
+  await buildElements()
+  await buildValidations()
+  await buildLibrary()
+  console.timeEnd('Fbx build')
+  logger.info('Finished Fbx build')
+})()

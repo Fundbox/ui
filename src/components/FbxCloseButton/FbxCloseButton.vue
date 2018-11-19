@@ -9,10 +9,10 @@ export default {
     listeners() {
       return {
         ...this.$listeners,
-      };
+      }
     },
   },
-};
+}
 </script>
 
 <style lang="scss">

@@ -1,12 +1,12 @@
-import { storiesOf } from '@storybook/vue';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from 'storybook-addon-vue-info';
-import { text } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/vue'
+import { action } from '@storybook/addon-actions'
+import { withInfo } from 'storybook-addon-vue-info'
+import { text } from '@storybook/addon-knobs'
 
-import FbxTextField from './FbxTextField.vue';
-import summary from './FbxTextField.md';
-const stories = storiesOf('Components/TextField', module);
-const withSummery = withInfo({ summary });
+import FbxTextField from './FbxTextField.vue'
+import summary from './FbxTextField.md'
+const stories = storiesOf('Components/TextField', module)
+const withSummery = withInfo({ summary })
 
 const defaultStory = () => ({
   components: { FbxTextField },
@@ -14,11 +14,11 @@ const defaultStory = () => ({
     return {
       inputText: '',
       labelText: text('Label', 'Email Address'),
-    };
+    }
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)();
+      action(`New value: ${value}`)()
     },
   },
   template: `
@@ -31,7 +31,7 @@ const defaultStory = () => ({
       v-model="inputText"
     />
   `,
-});
+})
 
 const passwordStory = () => ({
   components: { FbxTextField },
@@ -39,11 +39,11 @@ const passwordStory = () => ({
     return {
       inputText: '',
       labelText: text('Label', 'Password'),
-    };
+    }
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)();
+      action(`New value: ${value}`)()
     },
   },
   template: `
@@ -59,7 +59,7 @@ const passwordStory = () => ({
       />
     </div>
   `,
-});
+})
 
 const maskStory = () => ({
   components: { FbxTextField },
@@ -67,11 +67,11 @@ const maskStory = () => ({
     return {
       inputText: '',
       labelText: text('Label', 'Email Address'),
-    };
+    }
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)();
+      action(`New value: ${value}`)()
     },
   },
   template: `
@@ -85,7 +85,7 @@ const maskStory = () => ({
       v-model="inputText"
     />
   `
-});
+})
 
 const autofocusStory = () => ({
   components: { FbxTextField },
@@ -93,11 +93,11 @@ const autofocusStory = () => ({
     return {
       inputText: '',
       labelText: text('Label', 'Email Address'),
-    };
+    }
   },
   watch: {
     inputText(value) {
-      action(`New value: ${value}`)();
+      action(`New value: ${value}`)()
     },
   },
   template: `
@@ -111,7 +111,7 @@ const autofocusStory = () => ({
       v-model="inputText"
     />
   `
-});
+})
 
 const addressAutocomplete = () => ({
   components: { FbxTextField },
@@ -119,19 +119,19 @@ const addressAutocomplete = () => ({
     return {
       inputText: '',
       addressData: {}
-    };
+    }
   },
   methods: {
     onAddressDataChanged(addressData) {
-      this.addressData = addressData;
+      this.addressData = addressData
     }
   },
   watch: {
     inputText(value) {
-      action(`New value`)(value);
+      action(`New value`)(value)
     },
     addressData(value) {
-      action(`Address data`)(value);
+      action(`Address data`)(value)
     }
   },
   template: `
@@ -149,10 +149,10 @@ const addressAutocomplete = () => ({
       @addressDataChanged="onAddressDataChanged"
     />
   `
-});
+})
 
-stories.add('default', withSummery(defaultStory));
-stories.add('password', withSummery(passwordStory));
-stories.add('mask', withSummery(maskStory));
-stories.add('autofocus', withSummery(autofocusStory));
-stories.add('address autocomplete', withSummery(addressAutocomplete));
+stories.add('default', withSummery(defaultStory))
+stories.add('password', withSummery(passwordStory))
+stories.add('mask', withSummery(maskStory))
+stories.add('autofocus', withSummery(autofocusStory))
+stories.add('address autocomplete', withSummery(addressAutocomplete))

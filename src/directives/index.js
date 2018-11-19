@@ -1,7 +1,7 @@
-import FbxAddressAutocomplete from './FbxAddressAutocomplete';
-import FbxAutofocus from './FbxAutofocus';
+import FbxAddressAutocomplete from './FbxAddressAutocomplete'
+import FbxAutofocus from './FbxAutofocus'
 
 export {
   FbxAddressAutocomplete,
   FbxAutofocus
-};
+}

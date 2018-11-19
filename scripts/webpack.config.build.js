@@ -1,18 +1,18 @@
-const path = require('path');
-const webpack = require('webpack');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const UglifyJsPlugin = require('uglifyjs-3-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const UglifyJsPlugin = require('uglifyjs-3-webpack-plugin')
 
-const getTypePath = (elementType) => elementType ? `/${elementType}` : '';
+const getTypePath = (elementType) => elementType ? `/${elementType}` : ''
 
-const getNamePath = (elementName) => elementName ? `/${elementName}` : '';
+const getNamePath = (elementName) => elementName ? `/${elementName}` : ''
 
 const getEntryPath = (elementName, elementType) =>
-  `./src${getTypePath(elementType)}${getNamePath(elementName)}/index.js`;
+  `./src${getTypePath(elementType)}${getNamePath(elementName)}/index.js`
 
-const getOutputPath = (outputDirectory, elementType) => `${outputDirectory}${getTypePath(elementType)}`;
+const getOutputPath = (outputDirectory, elementType) => `${outputDirectory}${getTypePath(elementType)}`
 
-const getOutputFilename = (elementName = 'index') => `${elementName}.js`;
+const getOutputFilename = (elementName = 'index') => `${elementName}.js`
 
 module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   mode: process.env.NODE_ENV,
@@ -84,4 +84,4 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
       })
     ]
   }
-});
+})

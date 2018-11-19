@@ -64,7 +64,7 @@
 </template>
 
 <script>
-const log = () => console.log('Welcome to storybook!'); // eslint-disable-line no-console
+const log = () => console.log('Welcome to storybook!') // eslint-disable-line no-console
 
 export default {
   name: 'FbxIntroduction',
@@ -78,11 +78,11 @@ export default {
 
   methods: {
     onClick(event) {
-      event.preventDefault();
-      this.showApp();
+      event.preventDefault()
+      this.showApp()
     }
   }
-};
+}
 </script>
 
 <style>

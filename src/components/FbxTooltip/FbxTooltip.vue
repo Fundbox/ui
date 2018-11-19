@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import bTooltip from 'bootstrap-vue/es/components/tooltip/tooltip';
+import bTooltip from 'bootstrap-vue/es/components/tooltip/tooltip'
 export default {
   name: 'FbxTooltip',
   components: {
     bTooltip
   }
-};
+}
 </script>
 
 <style lang="scss">

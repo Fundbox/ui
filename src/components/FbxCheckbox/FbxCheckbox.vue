@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue';
+import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue'
 
 export default {
   name: 'FbxCheckbox',
@@ -37,24 +37,24 @@ export default {
   },
   computed: {
     isInvalid() {
-      return this.errors.has(this.$attrs.name);
+      return this.errors.has(this.$attrs.name)
     },
     validationMessage() {
-      return this.errors.first(this.$attrs.name);
+      return this.errors.first(this.$attrs.name)
     },
     listeners() {
       return {
         ...this.$listeners,
         input: (event) => {
-          this.$emit('input', event.target.checked);
+          this.$emit('input', event.target.checked)
         },
         change: (event) => {
-          this.$emit('input', event.target.checked);
+          this.$emit('input', event.target.checked)
         }
-      };
+      }
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

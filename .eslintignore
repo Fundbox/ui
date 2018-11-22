@@ -1,5 +1,9 @@
-/build/
-/config/
+/_templates/
+/.chache/
+/.storybook/
+/.vscode/
 /dist/
-/*.js
+/es/
+/docs/
+/node_modules/
 /test/unit/coverage/

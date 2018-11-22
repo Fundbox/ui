@@ -1,5 +1,5 @@
 ---
-to: components/Fbx<%= name %>/Fbx<%= name %>.vue
+to: src/components/Fbx<%= name %>/Fbx<%= name %>.vue
 ---
 <template>
   <div>Hello from Fbx<%= name %>!</div>
@@ -7,8 +7,8 @@ to: components/Fbx<%= name %>/Fbx<%= name %>.vue
 
 <script>
 export default {
-  name: "Fbx<%= name %>"
-};
+  name: 'Fbx<%= name %>'
+}
 </script>
 
 <style lang="scss" scoped>

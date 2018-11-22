@@ -1,7 +1,19 @@
 ---
-to: directives/Fbx<%= name %>/index.js
+to: src/directives/Fbx<%= name %>/index.js
 ---
-import Vue from "vue";
-import Fbx<%= name %> from "./Fbx<%= name %>.js";
-Vue.directive(Fbx<%= name %>.name, Fbx<%= name %>);
-export default Fbx<%= name %>;
+import Fbx<%= name %> from './Fbx<%= name %>'
+import { registerDirectives, vueUse } from '../../utils/plugins'
+
+const directives = {
+  Fbx<%= name %>
+}
+
+const VuePlugin = {
+  install(Vue) {
+    registerDirectives(Vue, directives)
+  }
+}
+
+vueUse(VuePlugin)
+
+export default VuePlugin

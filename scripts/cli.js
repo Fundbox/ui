@@ -1,16 +1,17 @@
-const path = require('path');
-const inquirer = require('inquirer');
-const { spawn } = require('child_process');
-const { Spinner } = require('clui');
-const clear = require('clear');
-const chalk = require('chalk');
-const figlet = require('figlet');
+/* eslint no-console: 0 */
+const path = require('path')
+const inquirer = require('inquirer')
+const { spawn } = require('child_process')
+const { Spinner } = require('clui')
+const clear = require('clear')
+const chalk = require('chalk')
+const figlet = require('figlet')
 
-const fbxColorModifier = chalk.hex('#00bd9c');
-let error = null;
+const fbxColorModifier = chalk.hex('#00bd9c')
+let error = null
 
 function capitalize(str) {
-  return  str.charAt(0).toUpperCase() + str.substr(1);
+  return  str.charAt(0).toUpperCase() + str.substr(1)
 }
 
 const questions = [
@@ -19,8 +20,8 @@ const questions = [
     name: 'type',
     message: 'What do you want to create?',
     choices: ['Component', 'Directive'],
-    filter: function(val) {
-      return val.toLowerCase();
+    filter(val) {
+      return val.toLowerCase()
     }
   },
   {
@@ -29,9 +30,9 @@ const questions = [
     message: `Give it a name:`,
     filter: capitalize
   }
-];
+]
 
-clear();
+clear()
 
 console.log(
   fbxColorModifier(
@@ -39,47 +40,47 @@ console.log(
       horizontalLayout: 'full'
     })
   )
-);
+)
 
 inquirer
   .prompt(questions)
   .then(answers => {
-    const command = `npx hygen ${answers.type} new --name ${answers.name}`;
-    const loader = new Spinner("Generating...");
+    const command = `npx hygen ${answers.type} new --name ${answers.name}`
+    const loader = new Spinner('Generating...')
     let childProcess = spawn(command, {
       shell: true
-    });
-    let paths = [];
+    })
+    let paths = []
 
-    console.log('');
-    loader.start();
+    console.log('')
+    loader.start()
 
     childProcess.stdout.on('data', (data) => {
-      let line = data.toString().trim();
+      let line = data.toString().trim()
 
       if (line.indexOf('exists') > -1) {
-        loader.stop();
-        error = `${capitalize(answers.type)} already exists.`;
-        childProcess.kill('SIGHUP');
+        loader.stop()
+        error = `${capitalize(answers.type)} already exists.`
+        childProcess.kill('SIGHUP')
       }
 
       if (line.indexOf('added:') > -1) {
-        let filePath = line.replace('added: ', '');
-        let fileName = path.basename(filePath);
-        filePath = filePath.replace(fileName, '');
-        paths.push(`  ${fbxColorModifier('➜')} ${chalk.gray(filePath)}${fileName}`);
+        let filePath = line.replace('added: ', '')
+        let fileName = path.basename(filePath)
+        filePath = filePath.replace(fileName, '')
+        paths.push(`  ${fbxColorModifier('➜')} ${chalk.gray(filePath)}${fileName}`)
       }
-    });
+    })
 
     childProcess.on('exit', (code) => {
-      loader.stop();
+      loader.stop()
 
-      if (code !== 0) {
-        console.log(chalk.red(error || 'Error! Something went wrong.'), '\n');
+      if (code === 0) {
+        console.log(chalk.green('Done!'), fbxColorModifier("Here's what's been created:"))
+        paths.forEach(file => console.log(file))
+        console.log('')
       } else {
-        console.log(chalk.green('Done!'), fbxColorModifier("Here's what's been created:"));
-        paths.forEach(file => console.log(file));
-        console.log('');
+        console.log(chalk.red(error || 'Error! Something went wrong.'), '\n')
       }
-    });
-  });
+    })
+  })

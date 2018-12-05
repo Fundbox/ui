@@ -19,19 +19,36 @@ import debounce from 'lodash/debounce'
 
 export default {
   name: 'FbxIosSwitchButton',
-  props: ['value', 'debounceDisabled'],
+  props: {
+    value: {
+      type: Boolean,
+      default: false,
+    },
+    debounceDisabled: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     listeners() {
       return {
         ...this.$listeners,
-        input: (event) => {
-          this.debounceDisabled ? this.$emit('input', event.target.checked) : debounce(() => {
-            this.$emit('input', event.target.checked)
-          }, 1500)
-        }
+        input: this.triggerDebouncedListener(this.inputEmitter),
+        change: this.triggerDebouncedListener(this.changeEmitter)
       }
     }
   },
+  methods: {
+    inputEmitter(event) {
+      this.$emit('input', event.target.checked)
+    },
+    changeEmitter(event) {
+      this.$emit('change', event.target.checked)
+    },
+    triggerDebouncedListener(listenerFn) {
+      return this.debounceDisabled ? listenerFn : debounce(listenerFn, 1500)
+    }
+  }
 }
 </script>
 

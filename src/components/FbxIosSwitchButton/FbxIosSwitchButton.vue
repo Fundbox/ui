@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <label class="switch">
       <input
         class="input"

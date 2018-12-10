@@ -9,5 +9,12 @@ describe('Components/FbxIosSwitchButton', () => {
       })
       expect(wrapper.html()).toMatchSnapshot()
     })
+    it('renders the component correctly when component value is different than default state which is false', () => {
+      const wrapper = shallowMount(FbxIosSwitchButton, {
+        // mounting options https://vue-test-utils.vuejs.org/api/options.html
+      })
+      wrapper.setProps({ value: true })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
   })
 })

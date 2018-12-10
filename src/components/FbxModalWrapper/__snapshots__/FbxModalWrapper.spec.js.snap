@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FbxModalWrapper snapshots renders the default correctly 1`] = `
+<div class="fbx-ui-modal-wrapper layout-column">
+  <div class="header layout-row vertical-center">
+    <div class="font-18"></div>
+    <fbxclosebutton-stub class="modal-close-button"></fbxclosebutton-stub>
+  </div>
+  <div class="body"></div>
+</div>
+`;

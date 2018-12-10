@@ -4,6 +4,7 @@ import { configure, addDecorator } from "@storybook/vue"
 import { setOptions } from "@storybook/addon-options";
 import FbxStylesAddon from './../.storybook/addons/fundbox-styles-addon';
 import { withKnobs } from '@storybook/addon-knobs';
+import VModal from 'vue-js-modal';
 
 addDecorator(FbxStylesAddon)
 addDecorator(withKnobs)
@@ -22,6 +23,8 @@ VeeValidate.Validator.dictionary.merge(dictionary);
 Vue.use(VeeValidate, {
   events: "change"
 });
+
+Vue.use(VModal, { dynamic: true, injectModalsContainer: true });
 
 setOptions({
   name: "Fundbox UI Library",

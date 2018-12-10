@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/FbxIosSwitchButton snapshots renders the component correctly when component value is different than default state which is false 1`] = `<div class="container"><label class="switch"><input type="checkbox" class="input" value="true"> <span class="slider round"></span></label></div>`;
+exports[`Components/FbxIosSwitchButton snapshots renders the component correctly when component value is different than default state which is false 1`] = `<div><label class="switch"><input type="checkbox" class="input" value="true"> <span class="slider round"></span></label></div>`;
 
-exports[`Components/FbxIosSwitchButton snapshots renders the default correctly 1`] = `<div class="container"><label class="switch"><input type="checkbox" class="input" value="false"> <span class="slider round"></span></label></div>`;
+exports[`Components/FbxIosSwitchButton snapshots renders the default correctly 1`] = `<div><label class="switch"><input type="checkbox" class="input" value="false"> <span class="slider round"></span></label></div>`;

@@ -33,6 +33,7 @@ export default {
     title: String,
     modalName: String
   },
+  inject: ['$validator'],
   methods: {
     onCloseClick() {
       this.$modal.hide(this.modalName, { closedBtnClicked: true })

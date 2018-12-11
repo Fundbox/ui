@@ -39,6 +39,10 @@ export default {
   @import "../../styles/utils/mixins.scss";
   @import "../../styles/utils/color-palette";
 
+  .v--modal-top-right {
+    display: none;
+  }
+
   .v--modal-overlay {
     // $medium-blue with $fbx-backdrop-opacity
     // if we're using the opacity rule then it affects the inner modal box
@@ -68,10 +72,13 @@ export default {
 
   .fbx-ui-modal {
     &.v--modal-box {
+      position: static;
+      margin: 100px auto;
       @include viewport("sm") {
+        position: absolute;
         top: 0 !important;
         height: 100% !important;
-        position: absolute;
+        margin: 0;
       }
     }
   }

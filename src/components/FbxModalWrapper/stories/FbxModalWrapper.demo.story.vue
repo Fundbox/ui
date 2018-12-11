@@ -17,7 +17,7 @@ export default {
       const modalName = 'my-modal-name'
       // this will be called via a dedicated vuex modal store
       // it's only here so that we can show the modal opening
-      this.$modal.show(FbxDemoModal, { someParam: 'param sent from outside', modalName },
+      this.$modal.show(FbxDemoModal, { showText: true, modalName },
         {
           name: modalName,
           adaptive: true,

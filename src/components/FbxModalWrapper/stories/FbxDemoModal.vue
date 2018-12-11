@@ -3,8 +3,9 @@
     title="DEMO MODAL TITLE"
     close-btn-data-qa="demo-modal-close-btn"
     :modal-name="modalName"
+    :on-close-btn-clicked="runClosebtnClicked"
   >
-    <div>Hello from demo modal with a {{ someParam }}</div>
+    <div v-if="showText">I am shown when showText is true</div>
     <div>some more text</div>
     <div>some more text</div>
     <div>some more text</div>
@@ -37,7 +38,21 @@ import FbxModalWrapper from '../FbxModalWrapper.vue'
 export default {
   components: { FbxModalWrapper },
   name: 'FbxDemoModal',
-  props: ['someParam', 'modalName']
+  props: {
+    modalName: {
+      type: String,
+      default: '',
+      required: true
+    },
+    showText: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    runClosebtnClicked() {
+    }
+  }
 }
 </script>
 

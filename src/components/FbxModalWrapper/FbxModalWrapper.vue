@@ -1,7 +1,14 @@
 <template>
   <div class="fbx-ui-modal-wrapper layout-column">
-    <div class="header layout-row vertical-center">
+    <div v-if="!!title" class="header layout-row vertical-center">
       <div class="font-18">{{ title }}</div>
+      <fbx-close-button
+        :data-qa="closeBtnDataQa"
+        class="modal-close-button"
+        @click="onCloseClick"
+      />
+    </div>
+    <div v-else class="no-header">
       <fbx-close-button
         :data-qa="closeBtnDataQa"
         class="modal-close-button"
@@ -22,12 +29,14 @@ export default {
   components: { FbxCloseButton },
   name: 'FbxDemoModal',
   props: {
+    onCloseBtnClicked: Function,
     closeBtnDataQa: String,
     title: String,
     modalName: String
   },
   methods: {
     onCloseClick() {
+      this.onCloseBtnClicked()
       this.$modal.hide(this.modalName)
     }
   }
@@ -84,6 +93,7 @@ export default {
   }
 
   .fbx-ui-modal-wrapper {
+    position: relative;
     height: 100%;
     background-color: $white;
 
@@ -96,8 +106,15 @@ export default {
       }
     }
 
+    .no-header {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+
     .modal-close-button {
       font-size: 24px;
+      line-height: 24px !important;
     }
 
     .body {

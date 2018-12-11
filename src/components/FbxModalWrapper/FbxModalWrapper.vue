@@ -1,14 +1,7 @@
 <template>
   <div class="fbx-ui-modal-wrapper layout-column">
-    <div v-if="!!title" class="header layout-row vertical-center">
+    <div :class="[headerClass, 'layout-row', 'vertical-center']">
       <div class="font-18">{{ title }}</div>
-      <fbx-close-button
-        :data-qa="closeBtnDataQa"
-        class="modal-close-button"
-        @click="onCloseClick"
-      />
-    </div>
-    <div v-else class="no-header">
       <fbx-close-button
         :data-qa="closeBtnDataQa"
         class="modal-close-button"
@@ -36,6 +29,11 @@ export default {
     closeBtnDataQa: String,
     title: String,
     modalName: String
+  },
+  computed: {
+    headerClass() {
+      return this.title ? 'header' : 'no-header'
+    }
   },
   inject: ['$validator'],
   methods: {
@@ -67,6 +65,10 @@ export default {
     background-color: rgba(44, 62, 80, 0.4);
   }
 
+  .v--modal-overlay.scrollable .v--modal-box {
+    margin: 0;
+  }
+
   .overlay-transition-enter-active,
   .overlay-transition-leave-active {
     transition: opacity $medium-ease;
@@ -92,10 +94,10 @@ export default {
     &.v--modal-box {
       position: static;
       @include viewport("sm") {
+        margin: 0;
         position: absolute;
         top: 0 !important;
         height: 100% !important;
-        margin: 0;
       }
     }
   }
@@ -118,6 +120,7 @@ export default {
       position: absolute;
       top: 16px;
       right: 16px;
+      z-index: 1;
     }
 
     .modal-close-button {

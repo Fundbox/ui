@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 // Components
+import FbxTileGrid from './components/FbxTileGrid/FbxTileGrid.stories.js'
 import IntroductionStories from './components/introduction/introduction.stories.js'
 import FbxButtonStories from './components/FbxButton/FbxButton.stories.js'
 import FbxCheckboxStories from './components/FbxCheckbox/FbxCheckbox.stories.js'

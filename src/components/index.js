@@ -1,3 +1,4 @@
+import FbxTileGrid from './FbxTileGrid'
 import FbxButton from './FbxButton'
 import FbxCheckbox from './FbxCheckbox'
 import FbxCloseButton from './FbxCloseButton'
@@ -9,6 +10,7 @@ import FbxValidationMessage from './FbxValidationMessage'
 import FbxPanelRadioButton from './FbxPanelRadioButton'
 
 export {
+  FbxTileGrid,
   FbxButton,
   FbxCheckbox,
   FbxCloseButton,

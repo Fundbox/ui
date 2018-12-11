@@ -1,4 +1,5 @@
 import FbxModalWrapper from './FbxModalWrapper'
+import FbxIosSwitchButton from './FbxIosSwitchButton'
 import FbxButton from './FbxButton'
 import FbxCheckbox from './FbxCheckbox'
 import FbxCloseButton from './FbxCloseButton'
@@ -11,6 +12,7 @@ import FbxPanelRadioButton from './FbxPanelRadioButton'
 
 export {
   FbxModalWrapper,
+  FbxIosSwitchButton,
   FbxButton,
   FbxCheckbox,
   FbxCloseButton,

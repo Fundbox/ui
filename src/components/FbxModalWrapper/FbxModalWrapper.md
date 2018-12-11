@@ -1,14 +1,16 @@
 # FbxModalWrapper
 
 #### Note: This component is only the wrapping of a modal to contain it's `header`, `body`, `close-button` and their styles and should be used in conjuction with the vue modal service.
-## Basic usage
+## Usage
 
-* All modals should implement a `fbx-modal-wrapper` tag and pass it some mandatory attributes:
-    * `title` is well... the modal's title.
+* All modals should implement a `fbx-modal-wrapper` tag.
+* `fbx-modal-wrapper` attributes:
+    * `title` the modal's title to render. omiting it will render a modal without the header but only a close button.
     * `close-btn-data-qa` should be unique per modal. This will be the close button data-qa value for testing purposes.
-    * `modal-name` is passed so that the close button will reference the modal to close.
-* On desktop viewport sizes A modal has a default width of 600px.
-    * This width can be overriden by placing a media query on the specific modal implementation scss
+    * `modal-name` is passed so that firing `this.$modal.hide(modalName)` anywhere will have a reference to which modal it should close.
+* `this.$modal.hide` can accept an object as a second argument. This object can be referenced in `before-close` callback handler.
+* On desktop viewport sizes A modal has a default width of 600px and it's height set to `auto` to fit it's content.
+    * `width` can be overriden by placing a media query on the specific modal implementation scss
 * On mobile viewport sizes we enforce the modal to capture the whole screen dimensions.
 
 ```html
@@ -18,13 +20,10 @@
     close-btn-data-qa="demo-modal-close-btn"
     :modal-name="modalName"
   >
-    <div>Hello from demo modal with a {{ someParam }}</div>
+    <div v-if="showText">I am shown when showText is true</div>
     <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-  </fbx-modal-wrapper>
+  </fbx-modal-wrapper
+    title="DEMO MODAL TITLE">
 </template>
 
 <script>
@@ -33,7 +32,17 @@ import FbxModalWrapper from '../FbxModalWrapper.vue'
 export default {
   components: { FbxModalWrapper },
   name: 'FbxDemoModal',
-  props: ['someParam', 'modalName']
+  props: {
+    modalName: {
+      type: String,
+      default: '',
+      required: true
+    },
+    showText: {
+      type: Boolean,
+      default: false,
+    },
+  }
 }
 </script>
 
@@ -46,7 +55,29 @@ export default {
     }
   }
 </style>
-
+```
+```javascript
+this.$modal.show(FbxDemoModal,
+    {
+        showText: true,
+        modalName: 'my-modal-name'
+    },
+    {
+        name: 'my-modal-name',
+        adaptive: true,
+        scrollable: true,
+        transition: 'box-transition',
+        overlayTransition: 'overlay-transition',
+        classes: ['fbx-ui-modal'],
+        height: 'auto'
+    },
+    {
+        'before-open': this.beforeOpen,
+        opened: this.opened,
+        'before-close': this.beforeClose,
+        closed: this.closed
+    }
+)
 ```
 
 

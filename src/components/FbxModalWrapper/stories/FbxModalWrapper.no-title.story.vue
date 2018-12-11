@@ -1,23 +1,23 @@
 <template>
   <div class="demo-modal">
     <fbx-button @click="openModal">
-      Open demo modal
+      Open modal with no title
     </fbx-button>
   </div>
 </template>
 
 <script>
-import FbxDemoModal from './FbxDemoModal.vue'
+import FbxNoTitleModal from './FbxModal.no-title.vue'
 import FbxButton from '../../FbxButton/FbxButton.vue'
 
 export default {
-  components: { FbxDemoModal, FbxButton },
+  components: { FbxNoTitleModal, FbxButton },
   methods: {
     openModal() {
       const modalName = 'my-modal-name'
       // this will be called via a dedicated vuex modal store
       // it's only here so that we can show the modal opening
-      this.$modal.show(FbxDemoModal, { showText: true, modalName },
+      this.$modal.show(FbxNoTitleModal, { showText: true, modalName },
         {
           name: modalName,
           adaptive: true,

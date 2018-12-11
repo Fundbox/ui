@@ -17,7 +17,10 @@
     </div>
 
     <div class="body">
-      <slot/>
+      <div v-if="isLoading" class="loading"></div>
+      <div v-else>
+        <slot/>
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +32,7 @@ export default {
   components: { FbxCloseButton },
   name: 'FbxDemoModal',
   props: {
+    isLoading: Boolean,
     closeBtnDataQa: String,
     title: String,
     modalName: String
@@ -121,8 +125,27 @@ export default {
     }
 
     .body {
-      overflow-y: scroll;
       padding: 30px;
+      position: relative;
+      flex: 1;
+      @include viewport("sm") {
+        overflow-y: auto;
+      }
+    }
+
+    .loading {
+      background-image: url("../../assets/loading-anim.gif");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      background-size: 100px;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      position: absolute;
     }
   }
 

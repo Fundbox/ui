@@ -6,28 +6,6 @@
   >
     <div v-if="showText">I am shown when showText is true</div>
     <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
-    <div>some more text</div>
   </fbx-modal-wrapper>
 </template>
 

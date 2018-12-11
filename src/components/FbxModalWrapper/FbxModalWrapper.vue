@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     onCloseClick() {
-      this.$modal.hide(this.modalName, { fromClose: true })
+      this.$modal.hide(this.modalName, { closedBtnClicked: true })
     }
   }
 }

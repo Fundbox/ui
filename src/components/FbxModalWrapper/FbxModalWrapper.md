@@ -5,79 +5,54 @@
 
 * All modals should implement a `fbx-modal-wrapper` tag.
 * `fbx-modal-wrapper` attributes:
-    * `title` the modal's title to render. omiting it will render a modal without the header but only a close button.
+    * `title` the modal's title to render. Omitting it will render a modal without the header but only a close button.
     * `close-btn-data-qa` should be unique per modal. This will be the close button data-qa value for testing purposes.
-    * `modal-name` is passed so that firing `this.$modal.hide(modalName)` anywhere will have a reference to which modal it should close.
+    * `modal-name` is passed as prop into `FbxModalWrapper` so that firing `this.$modal.hide(modalName)` anywhere will have a reference to which modal it should close.
 * `this.$modal.hide` can accept an object as a second argument. This object can be referenced in `before-close` callback handler.
 * On desktop viewport sizes A modal has a default width of 600px and it's height set to `auto` to fit it's content.
     * `width` can be overriden by placing a media query on the specific modal implementation scss
 * On mobile viewport sizes we enforce the modal to capture the whole screen dimensions.
 
 ```html
-<template>
-  <fbx-modal-wrapper
-    title="DEMO MODAL TITLE"
-    close-btn-data-qa="demo-modal-close-btn"
-    :modal-name="modalName"
-  >
-    <div v-if="showText">I am shown when showText is true</div>
-    <div>some more text</div>
-  </fbx-modal-wrapper
-    title="DEMO MODAL TITLE">
-</template>
-
-<script>
-import FbxModalWrapper from '../FbxModalWrapper.vue'
-
-export default {
-  components: { FbxModalWrapper },
-  name: 'FbxDemoModal',
-  props: {
-    modalName: {
-      type: String,
-      default: '',
-      required: true
-    },
-    showText: {
-      type: Boolean,
-      default: false,
-    },
-  }
-}
-</script>
-
-<style lang="scss">
-  @import "../../../styles/utils/mixins.scss";
-
-  @include viewport("md") {
-    .fbx-ui-modal {
-      width: 700px !important;
-    }
-  }
-</style>
+<fbx-modal-wrapper
+  title="BASIC MODAL TITLE"
+  close-btn-data-qa="basic-modal-close-btn"
+  :modal-name="modalName"
+>
+  <div v-if="showText">I am shown when showText is true</div>
+  <div>some more text</div>
+</fbx-modal-wrapper>
 ```
-```javascript
-this.$modal.show(FbxDemoModal,
-    {
-        showText: true,
-        modalName: 'my-modal-name'
-    },
-    {
-        name: 'my-modal-name',
-        adaptive: true,
-        scrollable: true,
-        transition: 'box-transition',
-        overlayTransition: 'overlay-transition',
-        classes: ['fbx-ui-modal'],
-        height: 'auto'
-    },
-    {
-        'before-open': this.beforeOpen,
-        opened: this.opened,
-        'before-close': this.beforeClose,
-        closed: this.closed
-    }
-)
+```html
+<fbx-modal-wrapper
+  title="LOADING MODAL TITLE"
+  close-btn-data-qa="loading-modal-close-btn"
+  :modal-name="modalName"
+  :is-loading="true"
+>
+  <div v-if="showText">I am shown when showText is true</div>
+  <div>some more text</div>
+</fbx-modal-wrapper>
+
 ```
-
-
+```html
+<fbx-modal-wrapper
+  close-btn-data-qa="no-title-modal-close-btn"
+  :modal-name="modalName"
+>
+  <div v-if="showText">I am shown when showText is true</div>
+  <div>some more text</div>
+</fbx-modal-wrapper>
+```
+```html
+<fbx-modal-wrapper
+  title="SCROLLABLE MODAL TITLE"
+  close-btn-data-qa="scrollable-modal-close-btn"
+  :modal-name="modalName"
+>
+  <div>some more text</div>
+  <div>some more text</div>
+  <div>some more text</div>
+  ...
+</fbx-modal-wrapper>
+```

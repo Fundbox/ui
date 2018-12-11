@@ -1,7 +1,7 @@
 <template>
   <fbx-modal-wrapper
-    title="DEMO MODAL TITLE"
-    close-btn-data-qa="demo-modal-close-btn"
+    title="BASIC MODAL TITLE"
+    close-btn-data-qa="basic-modal-close-btn"
     :modal-name="modalName"
   >
     <div v-if="showText">I am shown when showText is true</div>
@@ -14,7 +14,7 @@ import FbxModalWrapper from '../FbxModalWrapper.vue'
 
 export default {
   components: { FbxModalWrapper },
-  name: 'FbxDemoModal',
+  name: 'FbxBasicModal',
   props: {
     modalName: {
       type: String,

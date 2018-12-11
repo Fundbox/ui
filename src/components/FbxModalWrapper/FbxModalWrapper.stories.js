@@ -11,8 +11,8 @@ import LoadingModalWrapperStoryComponent from './stories/FbxModalWrapper.loading
 const stories = storiesOf('Components/ModalWrapper', module)
 
 stories.add('description', doc(summary))
+stories.add('loading', () => LoadingModalWrapperStoryComponent)
 stories.add('basic', () => BasicModalWrapperStoryComponent)
 stories.add('no title', () => NoTitleModalWrapperStoryComponent)
 stories.add('scrollable', () => ScrollableModalWrapperStoryComponent)
-stories.add('loading', () => LoadingModalWrapperStoryComponent)
 

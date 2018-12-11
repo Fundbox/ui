@@ -14,6 +14,6 @@ exports[`FbxSelect snapshots renders validations correctly 1`] = `
     <option>Default</option>
     <option value="Option 1">Option 1</option>
   </select>
-  <fbxvalidationmessage-stub class="validation-message">This field is required</fbxvalidationmessage-stub>
+  <fbx-validation-message-stub class="validation-message">This field is required</fbx-validation-message-stub>
 </div>
 `;

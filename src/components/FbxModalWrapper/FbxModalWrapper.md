@@ -7,8 +7,8 @@
     * `title` is well... the modal's title.
     * `close-btn-data-qa` should be unique per modal. This will be the close button data-qa value for testing purposes.
     * `modal-name` is passed so that the close button will reference the modal to close.
-* On desktop viewport sizes A modal has a height of 300px and width of 600px.
-    * These values can be overriden by placing a media query on the specific modal implementation scss
+* On desktop viewport sizes A modal has a default width of 600px.
+    * This width can be overriden by placing a media query on the specific modal implementation scss
 * On mobile viewport sizes we enforce the modal to capture the whole screen dimensions.
 
 ```html
@@ -43,7 +43,6 @@ export default {
   @include viewport("md") {
     .fbx-ui-modal {
       width: 700px !important;
-      height: 450px !important;
     }
   }
 </style>

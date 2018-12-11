@@ -3,7 +3,6 @@
     title="DEMO MODAL TITLE"
     close-btn-data-qa="demo-modal-close-btn"
     :modal-name="modalName"
-    :on-close-btn-clicked="runClosebtnClicked"
   >
     <div v-if="showText">I am shown when showText is true</div>
     <div>some more text</div>
@@ -48,10 +47,6 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  methods: {
-    runClosebtnClicked() {
-    }
   }
 }
 </script>
@@ -62,7 +57,6 @@ export default {
   @include viewport("md") {
     .fbx-ui-modal {
       width: 700px !important;
-      height: 450px !important;
     }
   }
 </style>

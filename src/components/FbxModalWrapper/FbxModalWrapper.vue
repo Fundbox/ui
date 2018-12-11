@@ -29,15 +29,13 @@ export default {
   components: { FbxCloseButton },
   name: 'FbxDemoModal',
   props: {
-    onCloseBtnClicked: Function,
     closeBtnDataQa: String,
     title: String,
     modalName: String
   },
   methods: {
     onCloseClick() {
-      this.onCloseBtnClicked()
-      this.$modal.hide(this.modalName)
+      this.$modal.hide(this.modalName, { fromClose: true })
     }
   }
 }
@@ -50,6 +48,12 @@ export default {
 
   .v--modal-top-right {
     display: none;
+  }
+
+  .v--modal-background-click {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .v--modal-overlay {
@@ -82,7 +86,6 @@ export default {
   .fbx-ui-modal {
     &.v--modal-box {
       position: static;
-      margin: 100px auto;
       @include viewport("sm") {
         position: absolute;
         top: 0 !important;

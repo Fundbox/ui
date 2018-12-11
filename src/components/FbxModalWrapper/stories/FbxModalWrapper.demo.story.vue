@@ -24,7 +24,8 @@ export default {
           scrollable: true,
           transition: 'box-transition',
           overlayTransition: 'overlay-transition',
-          classes: 'fbx-ui-modal',
+          classes: ['fbx-ui-modal'],
+          height: 'auto'
         },
         {
           'before-open': this.beforeOpen,
@@ -39,8 +40,8 @@ export default {
     opened() {
       // console.log('opened')
     },
-    beforeClose() {
-      // console.log('before-close')
+    beforeClose(params) {
+      // console.log('closed with params', params)
     },
     closed() {
       // console.log('closed')

@@ -20,10 +20,16 @@
 
 <script>
 import FbxCloseButton from '../FbxCloseButton/FbxCloseButton.vue'
+import { isFunction } from 'lodash'
 
 export default {
   components: { FbxCloseButton },
-  name: 'FbxDemoModal',
+  name: 'FbxModalWrapper',
+  destroyed() {
+    if (isFunction(this.onClose)) {
+      this.onClose()
+    }
+  },
   props: {
     isLoading: Boolean,
     closeBtnDataQa: String,
@@ -39,7 +45,7 @@ export default {
   inject: ['$validator'],
   methods: {
     onCloseClick() {
-      this.$modal.hide(this.modalName, { closedBtnClicked: true, onClose: this.onClose })
+      this.$modal.hide(this.modalName, { closedBtnClicked: true })
     }
   }
 }

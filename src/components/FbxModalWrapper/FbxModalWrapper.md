@@ -8,6 +8,8 @@
     * `title` the modal's title to render. Omitting it will render a modal without the header but only a close button.
     * `close-btn-data-qa` should be unique per modal. This will be the close button data-qa value for testing purposes.
     * `modal-name` is passed as prop into `FbxModalWrapper` so that firing `this.$modal.hide(modalName)` anywhere will have a reference to which modal it should close.
+    * `on-close` optional close handler.
+    * `is-loading` will render the loader instead of the slotted children till the loading is `false`.
 * `this.$modal.hide` can accept an object as a second argument. This object can be referenced in `before-close` callback handler.
 * On desktop viewport sizes A modal has a default width of 600px and it's height set to `auto` to fit it's content.
     * `width` can be overriden by placing a media query on the specific modal implementation scss
@@ -18,6 +20,7 @@
   title="BASIC MODAL TITLE"
   close-btn-data-qa="basic-modal-close-btn"
   :modal-name="modalName"
+  :on-close="runWhenClosed"
 >
   <div v-if="showText">I am shown when showText is true</div>
   <div>some more text</div>

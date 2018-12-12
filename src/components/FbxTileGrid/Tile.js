@@ -1,12 +1,16 @@
+function defineReadOnlyProperties(context, props) {
+  for (let prop in props) {
+    if (props.hasOwnProperty(prop)) {
+      Object.defineProperty(context, prop, { value: props[prop], writable: false })
+    }
+  }
+}
+
+
 export class Tile {
-  constructor(name, imgNormal, imgHover, imgDisabled, isEnabled = true, isConnected = false) {
-    Object.defineProperties(this, {
-      name: { get() { return name } },
-      imgNormal: { get() { return imgNormal }  },
-      imgHover: { get() { return imgHover } },
-      imgDisabled: { get() { return imgDisabled } },
-      isEnabled: { get() { return isEnabled } },
-      isConnected: { get() { return isConnected } },
-    })
+  constructor(name, imgNormal, imgHover, imgDisabled, hoverColor = '#2c3e50', isEnabled = true, isConnected = false) {
+    defineReadOnlyProperties(this, { name, imgNormal, imgHover, imgDisabled, hoverColor })
+    this.isEnabled = isEnabled
+    this.isConnected = isConnected
   }
 }

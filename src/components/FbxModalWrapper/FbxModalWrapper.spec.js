@@ -9,5 +9,23 @@ describe('Components/FbxModalWrapper', () => {
       })
       expect(wrapper.html()).toMatchSnapshot()
     })
+
+    it('renders with loading correctly', () => {
+      const wrapper = shallowMount(FbxModalWrapper, {
+        propsData: {
+          isLoading: true
+        }
+      })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('renders without title correctly', () => {
+      const wrapper = shallowMount(FbxModalWrapper, {
+        propsData: {
+          title: undefined
+        }
+      })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
   })
 })

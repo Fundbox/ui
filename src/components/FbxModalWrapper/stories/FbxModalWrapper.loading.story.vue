@@ -40,7 +40,7 @@ export default {
     opened() {
       // console.log('opened')
     },
-    beforeClose({ params }) {
+    beforeClose({ params }) { // eslint-disable-line no-unused-vars
       // you can pass params when calling this.$modal.hide(modalName, { param1, param2 })
       // console.log('closed with params', params)
     },

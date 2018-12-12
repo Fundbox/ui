@@ -45,7 +45,7 @@ export default {
   inject: ['$validator'],
   methods: {
     onCloseClick() {
-      this.$modal.hide(this.modalName, { closedBtnClicked: true })
+      this.$modal.hide(this.modalName, { closeBtnClicked: true })
     }
   }
 }

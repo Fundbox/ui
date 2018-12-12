@@ -3,16 +3,18 @@ import { doc } from 'storybook-readme'
 
 import './stories/FbxModalWrapper.stories.scss'
 import summary from './FbxModalWrapper.md'
-import BasicModalWrapperStoryComponent from './stories/FbxModalWrapper.basic.story'
-import NoTitleModalWrapperStoryComponent from './stories/FbxModalWrapper.no-title.story'
-import ScrollableModalWrapperStoryComponent from './stories/FbxModalWrapper.scrollable.story'
-import LoadingModalWrapperStoryComponent from './stories/FbxModalWrapper.loading.story'
+import BasicModalStoryComponent from './stories/FbxModalWrapper.basic.story'
+import NoTitleModalStoryComponent from './stories/FbxModalWrapper.no-title.story'
+import ScrollableModalStoryComponent from './stories/FbxModalWrapper.scrollable.story'
+import LoadingModalStoryComponent from './stories/FbxModalWrapper.loading.story'
+import ModalWithOnCloseComponent from './stories/FbxModalWrapper.on-close.story'
 
 const stories = storiesOf('Components/ModalWrapper', module)
 
 stories.add('description', doc(summary))
-stories.add('loading', () => LoadingModalWrapperStoryComponent)
-stories.add('basic', () => BasicModalWrapperStoryComponent)
-stories.add('no title', () => NoTitleModalWrapperStoryComponent)
-stories.add('scrollable', () => ScrollableModalWrapperStoryComponent)
+stories.add('loading', () => LoadingModalStoryComponent)
+stories.add('basic', () => BasicModalStoryComponent)
+stories.add('no title', () => NoTitleModalStoryComponent)
+stories.add('scrollable', () => ScrollableModalStoryComponent)
+stories.add('with on-close handler', () => ModalWithOnCloseComponent)
 

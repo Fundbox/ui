@@ -28,7 +28,8 @@ export default {
     isLoading: Boolean,
     closeBtnDataQa: String,
     title: String,
-    modalName: String
+    modalName: String,
+    onClose: Function
   },
   computed: {
     headerClass() {
@@ -38,7 +39,7 @@ export default {
   inject: ['$validator'],
   methods: {
     onCloseClick() {
-      this.$modal.hide(this.modalName, { closedBtnClicked: true })
+      this.$modal.hide(this.modalName, { closedBtnClicked: true, onClose: this.onClose })
     }
   }
 }

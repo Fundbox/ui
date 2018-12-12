@@ -77,7 +77,7 @@ export default {
   }
 
   .tile {
-    padding: 0 $horizontal-spacing $vertical-spacing 0;
+    margin: 0 $horizontal-spacing $vertical-spacing 0;
     position: relative;
     height: 100px;
     cursor: pointer;
@@ -112,6 +112,21 @@ export default {
 
     &.disabled {
       cursor: not-allowed;
+    }
+
+    &.connected {
+      border: 2px solid $dark-green;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: url("../../assets/icon-check-white.svg") $dark-green no-repeat 65% 40%;
+      }
     }
   }
 

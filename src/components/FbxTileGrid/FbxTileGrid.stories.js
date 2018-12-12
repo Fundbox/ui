@@ -40,7 +40,7 @@ const bankTilesCollection = [
   new Tile('WellsFargo', img5Normal, img5Hover, img5Disabled, 'red'),
   new Tile('UnionBank', img459Normal, img459Hover, img459Disabled),
   new Tile('UsBank', img524Normal, img524Hover, img524Disabled),
-  new Tile('Chase', img643Normal, img643Hover, img643Disabled, '#5479ca'),
+  new Tile('Chase', img643Normal, img643Hover, img643Disabled, '#5479ca', true, true),
   new Tile('FifthThirdBank', img745Normal, img745Hover, img745Disabled, undefined, false),
   new Tile('Huntington', img782Normal, img782Hover, img782Disabled),
   new Tile('Regions', img783Normal, img783Hover, img783Disabled),

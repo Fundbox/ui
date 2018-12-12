@@ -17,7 +17,15 @@ export default {
       const modalName = 'my-modal-name'
       // this will be called via a dedicated vuex modal store
       // it's only here so that we can show the modal opening
-      this.$modal.show(FbxBasicModal, { showText: true, modalName },
+      this.$modal.show(FbxBasicModal,
+        {
+          showText: true,
+          modalName,
+          onClose() {
+            // this runs inside destroy lifecycle event
+            // console.log('closed')
+          }
+        },
         {
           name: modalName,
           adaptive: true,
@@ -45,7 +53,7 @@ export default {
       // console.log('closed with params', params)
     },
     closed() {
-      // console.log('closed')
+      // report to moxpanel
     }
   }
 }

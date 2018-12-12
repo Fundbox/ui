@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <div class="tile" :class="tileClasses(tile)" v-for="tile in tiles" :key="tile.name" @mouseenter="onHoverOverTile($event, tile)" @mouseleave="onHoverOverTile($event, tile)">
+    <div class="tile"
+         :class="tileClasses(tile)"
+         v-for="tile in tiles"
+         :key="tile.name"
+         @mouseenter="onHoverOverTile($event, tile)"
+         @mouseleave="onHoverOverTile($event, tile)"
+         :style="{ width: (100 / columns) + '%' }"
+    >
       <div class="tile-inner" >
         <template v-if="typeof tile === 'object'">
           <img class="normal" :src="tile.imgNormal" :alt="tile.name" v-show="tile.isEnabled">
@@ -19,7 +26,7 @@ export default {
   props: {
     columns: {
       type: Number,
-      default: 0,
+      default: 1,
     },
     tileData: {
       type: Array,
@@ -27,7 +34,7 @@ export default {
     },
     shouldShowPlaceholders: {
       type: Boolean,
-      default: true,
+      default: false,
     }
   },
   methods: {
@@ -74,19 +81,31 @@ export default {
   .container {
     // Negate the padding on tiles.
     margin: 0 (-$horizontal-spacing) (-$vertical-spacing) 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .tile {
-    margin: 0 $horizontal-spacing $vertical-spacing 0;
+    padding: 0 $horizontal-spacing $vertical-spacing 0;
     position: relative;
     height: 100px;
     cursor: pointer;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    &.placeholderTile {
+      .tile-inner {
+        border: 2px solid $white;
+        background: transparent;
+      }
+    }
 
     &-inner {
       background: $white;
       width: 100%;
       height: 100%;
       transition: background-color 200ms ease-in-out;
+      position:  relative;
     }
 
     img {
@@ -115,22 +134,20 @@ export default {
     }
 
     &.connected {
-      border: 2px solid $dark-green;
+      .tile-inner {
+        border: 2px solid $dark-green;
 
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: block;
-        width: 15px;
-        height: 15px;
-        background: url("../../assets/icon-check-white.svg") $dark-green no-repeat 65% 40%;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: 15px;
+          height: 15px;
+          background: url("../../assets/icon-check-white.svg") $dark-green no-repeat 65% 40%;
+        }
       }
     }
-  }
-
-  .placeholderTile {
-    border: 1px solid $white;
   }
 </style>

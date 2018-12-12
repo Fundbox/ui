@@ -1,11 +1,13 @@
 <template>
   <div class="container">
-    <div class="tile" :class="classes(tile)" v-for="tile in tiles" :key="tile.imgPath">
-      <template v-if="typeof tile === 'object'">
-        <img class="normal" :src="tile.imgNormal" :alt="tile.name">
-        <img class="hover" :src="tile.imgHover" :alt="tile.name">
-        <img class="disabled" :src="tile.imgDisabled" :alt="tile.name">
-      </template>
+    <div class="tile" :class="tileClasses(tile)" v-for="tile in tiles" :key="tile.name">
+      <div class="tile-inner">
+        <template v-if="typeof tile === 'object'">
+          <img class="normal" :src="tile.imgNormal" :alt="tile.name">
+          <img class="hover" :src="tile.imgHover" :alt="tile.name">
+          <img class="disabled" :src="tile.imgDisabled" :alt="tile.name">
+        </template>
+      </div>
     </div>
   </div>
 </template>
@@ -29,11 +31,13 @@ export default {
     }
   },
   methods: {
-    classes(tile) {
+    tileClasses(tile) {
       return {
-        placeholderTile: typeof tile === 'number'
+        placeholderTile: typeof tile === 'number',
+        disabled: tile.isDisabled,
+        connected: tile.isConnected,
       }
-    }
+    },
   },
   computed: {
     tiles() {
@@ -53,6 +57,22 @@ export default {
 
 <style lang="scss" scoped>
   @import "../../styles/utils/color-palette";
+
+  $horizontal-spacing: 10px;
+  $vertical-spacing: 10px;
+
+  .container {
+    // Negate the padding on tiles.
+    margin: 0 (-$horizontal-spacing) (-$vertical-spacing) 0;
+  }
+
+  .tile {
+    padding: 0 $horizontal-spacing $vertical-spacing 0;
+
+    &-inner {
+      background: $white;
+    }
+  }
 
   .placeholderTile {
     border: 1px solid $white;

@@ -118,7 +118,6 @@
   },
   "release": {
     "ci": false,
-    "dryRun": true,
     "repositoryUrl": "git@github.com:Fundbox/ui.git"
   }
 }

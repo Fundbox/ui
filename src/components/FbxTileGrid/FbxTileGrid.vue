@@ -55,6 +55,6 @@ export default {
   @import "../../styles/utils/color-palette";
 
   .placeholderTile {
-    border: 1px solid $light-gray;
+    border: 1px solid $white;
   }
 </style>

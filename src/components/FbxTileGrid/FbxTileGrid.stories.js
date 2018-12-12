@@ -1,7 +1,7 @@
 import { Tile } from './Tile'
 import { storiesOf } from '@storybook/vue'
 import { withInfo } from 'storybook-addon-vue-info'
-import { number as knobNumber } from '@storybook/addon-knobs'
+import { number as knobNumber, boolean as knobBoolean } from '@storybook/addon-knobs'
 import FbxTileGrid from './FbxTileGrid.vue'
 import summary from './FbxTileGrid.md'
 
@@ -58,13 +58,14 @@ function defaultStory() {
     },
     components: { FbxTileGrid },
     template: `
-<div style="background: #f7f8f8; padding: 1rem">
-
-  <fbx-tile-grid :columns="${ knobNumber('Columns', 3) }" :tile-data="tileData">
-  </fbx-tile-grid>
-
-</div>
-`
+      <div style="background: #f7f8f8; padding: 1rem">
+        <fbx-tile-grid :columns="${ knobNumber('Columns', 3) }" 
+                       :tile-data="tileData"
+                       :should-show-placeholders="${knobBoolean('Show placeholders', true)}"
+                       >
+        </fbx-tile-grid> 
+      </div>
+    `,
   }
 }
 

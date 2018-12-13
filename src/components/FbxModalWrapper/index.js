@@ -14,7 +14,7 @@ const VuePlugin = {
   }
 }
 
-Vue.use(VModal, { dynamic: true, injectModalsContainer: true })
+Vue.use(VModal, { componentName: 'fbx-ui-modal' })
 
 vueUse(VuePlugin)
 

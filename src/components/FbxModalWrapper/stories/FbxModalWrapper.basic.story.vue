@@ -23,7 +23,7 @@ export default {
           modalName,
           onClose() {
             // this runs inside destroy lifecycle event
-            // console.log('closed')
+            console.log('closed') // eslint-disable-line no-console
           }
         },
         {
@@ -50,7 +50,7 @@ export default {
     },
     beforeClose({ params }) { // eslint-disable-line no-unused-vars
       // you can pass params when calling this.$modal.hide(modalName, { param1, param2 })
-      // console.log('closed with params', params)
+      console.log('closed with params', params) // eslint-disable-line no-console
     },
     closed() {
       // report to moxpanel

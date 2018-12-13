@@ -4,6 +4,7 @@
     close-btn-data-qa="basic-modal-close-btn"
     :modal-name="modalName"
     :on-close="onClose"
+    @close-btn-clicked="onCloseBtnClicked"
   >
     <div v-if="showText">I am shown when showText is true</div>
     <div>some more text</div>
@@ -12,6 +13,7 @@
 
 <script>
 import FbxModalWrapper from '../FbxModalWrapper.vue'
+import { action } from '@storybook/addon-actions'
 
 export default {
   components: { FbxModalWrapper },
@@ -27,6 +29,11 @@ export default {
       default: false,
     },
     onClose: Function
+  },
+  methods: {
+    onCloseBtnClicked() {
+      console.log('close-btn-clicked') // eslint-disable-line no-console
+    }
   }
 }
 </script>

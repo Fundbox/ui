@@ -1,18 +1,19 @@
 <template>
   <div class="container">
     <div class="tile"
-         :class="tileClasses(tile)"
          v-for="tile in tiles"
          :key="tile.name"
+         :class="tileClasses(tile)"
+         :style="{ width: (100 / columns) + '%' }"
          @mouseenter="onHoverOverTile($event, tile)"
          @mouseleave="onHoverOverTile($event, tile)"
-         :style="{ width: (100 / columns) + '%' }"
+         @click="onClick(tile)"
     >
       <div class="tile-inner" >
-        <template v-if="typeof tile === 'object'">
-          <img class="normal" :src="tile.imgNormal" :alt="tile.name" v-show="tile.isEnabled">
-          <img class="hover" :src="tile.imgHover" :alt="tile.name">
-          <img class="disabled" :src="tile.imgDisabled" :alt="tile.name" v-show="!tile.isEnabled">
+        <template v-if="isTile(tile)">
+          <img class="normal" :src="tile.imgNormal" :alt="tile.name" v-show="tile.isEnabled" />
+          <img class="hover" :src="tile.imgHover" :alt="tile.name" />
+          <img class="disabled" :src="tile.imgDisabled" :alt="tile.name" v-show="!tile.isEnabled" />
         </template>
       </div>
     </div>
@@ -21,6 +22,8 @@
 
 <script>
 import { range } from 'lodash'
+import { Tile } from './Tile'
+
 export default {
   name: 'FbxTileGrid',
   props: {
@@ -35,15 +38,22 @@ export default {
     shouldShowPlaceholders: {
       type: Boolean,
       default: false,
-    }
+    },
+    onClick: {
+      type: Function,
+      default: () => null,
+    },
   },
   methods: {
     tileClasses(tile) {
       return {
-        placeholderTile: typeof tile === 'number',
+        placeholderTile: !this.isTile(tile),
         disabled: !tile.isEnabled,
         connected: tile.isConnected,
       }
+    },
+    isTile(tile) {
+      return tile instanceof Tile
     },
     onHoverOverTile(hoverEvent, tile) {
       if (tile.isEnabled) {

@@ -7,6 +7,11 @@ import BasicModalStoryComponent from './stories/FbxModalWrapper.basic.story'
 import NoTitleModalStoryComponent from './stories/FbxModalWrapper.no-title.story'
 import ScrollableModalStoryComponent from './stories/FbxModalWrapper.scrollable.story'
 import LoadingModalStoryComponent from './stories/FbxModalWrapper.loading.story'
+import FbxModalWrapper from './index'
+
+import Vue from 'vue'
+
+Vue.use(FbxModalWrapper)
 
 const stories = storiesOf('Components/ModalWrapper', module)
 

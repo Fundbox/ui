@@ -9,6 +9,7 @@
 <script>
 import FbxBasicModal from './FbxModal.basic.vue'
 import FbxButton from '../../FbxButton/FbxButton.vue'
+import { action } from '@storybook/addon-actions'
 
 export default {
   components: { FbxBasicModal, FbxButton },
@@ -23,7 +24,7 @@ export default {
           modalName,
           onClose() {
             // this runs inside destroy lifecycle event
-            console.log('closed') // eslint-disable-line no-console
+            action('@onClose')();
           }
         },
         {
@@ -48,9 +49,9 @@ export default {
     opened() {
       // console.log('opened')
     },
-    beforeClose({ params }) { // eslint-disable-line no-unused-vars
+    beforeClose({ params }) {
       // you can pass params when calling this.$modal.hide(modalName, { param1, param2 })
-      console.log('closed with params', params) // eslint-disable-line no-console
+      action('@beforeClose')(params);
     },
     closed() {
       // report to moxpanel

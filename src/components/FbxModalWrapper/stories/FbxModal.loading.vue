@@ -11,10 +11,7 @@
 </template>
 
 <script>
-import FbxModalWrapper from '../FbxModalWrapper.vue'
-
 export default {
-  components: { FbxModalWrapper },
   name: 'FbxLoadingModal',
   props: {
     modalName: {

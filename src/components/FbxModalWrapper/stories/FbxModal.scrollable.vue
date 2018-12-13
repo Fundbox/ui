@@ -77,10 +77,7 @@
 </template>
 
 <script>
-import FbxModalWrapper from '../FbxModalWrapper.vue'
-
 export default {
-  components: { FbxModalWrapper },
   name: 'FbxScrollableModal',
   props: {
     modalName: {

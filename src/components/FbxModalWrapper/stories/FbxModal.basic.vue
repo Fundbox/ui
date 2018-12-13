@@ -12,11 +12,9 @@
 </template>
 
 <script>
-import FbxModalWrapper from '../FbxModalWrapper.vue'
 import { action } from '@storybook/addon-actions'
 
 export default {
-  components: { FbxModalWrapper },
   name: 'FbxBasicModal',
   props: {
     modalName: {
@@ -32,7 +30,7 @@ export default {
   },
   methods: {
     onCloseBtnClicked() {
-      console.log('close-btn-clicked') // eslint-disable-line no-console
+      action('@close-btn-clicked')();
     }
   }
 }

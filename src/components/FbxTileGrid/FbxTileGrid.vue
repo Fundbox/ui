@@ -88,7 +88,7 @@ export default {
   .tile {
     padding: 0 $horizontal-spacing $vertical-spacing 0;
     position: relative;
-    height: 100px;
+    height: 75px;
     cursor: pointer;
     flex-shrink: 0;
     flex-grow: 0;
@@ -114,6 +114,8 @@ export default {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      max-width: 63%;
+      max-height: 55%;
     }
 
     .hover {

@@ -2,6 +2,7 @@ import { Tile } from './Tile'
 import { storiesOf } from '@storybook/vue'
 import { withInfo } from 'storybook-addon-vue-info'
 import { number as numberKnob, boolean as booleanKnob, object as objectKnob } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
 import FbxTileGrid from './FbxTileGrid.vue'
 import summary from './FbxTileGrid.md'
 
@@ -63,10 +64,14 @@ function defaultStory() {
         <fbx-tile-grid :columns="${ numberKnob('Columns', 3) }" 
                        :tile-data="tileData"
                        :should-show-placeholders="${ booleanKnob('Show placeholders', false) }"
+                       :on-click="onClick"
                        >
         </fbx-tile-grid>
       </div>
     `,
+    methods: {
+      onClick: action('Tile was clicked')
+    }
   }
 }
 

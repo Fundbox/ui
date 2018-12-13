@@ -27,13 +27,13 @@ import { Tile } from './Tile'
 export default {
   name: 'FbxTileGrid',
   props: {
-    columns: {
-      type: Number,
-      default: 1,
-    },
     tileData: {
       type: Array,
       required: true,
+    },
+    columns: {
+      type: Number,
+      default: 1,
     },
     shouldShowPlaceholders: {
       type: Boolean,

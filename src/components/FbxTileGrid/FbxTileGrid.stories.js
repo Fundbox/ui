@@ -53,7 +53,15 @@ function defaultStory() {
   return {
     data() {
       const numberOfTilesKnob = numberKnob('Number of tiles', tileData.length)
-      const tileDataKnobed = tileData.map(tile => objectKnob(tile.name, tile))
+      const tileDataKnobed = tileData
+        .map(tile => objectKnob(tile.name, tile))
+        .map(tile => {
+          if (tile instanceof Tile) {
+            return tile
+          } else {
+            return new Tile(tile.name, tile.imgNormal, tile.imgHover, tile.imgDisabled, tile.hoverColor, tile.isEnabled, tile.isConnected, tile.metadata)
+          }
+        })
       return {
         tileData: tileDataKnobed.slice(0, numberOfTilesKnob),
       }

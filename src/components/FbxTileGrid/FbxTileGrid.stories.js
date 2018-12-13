@@ -60,10 +60,10 @@ function defaultStory() {
     },
     components: { FbxTileGrid },
     template: `
-      <div style="background: #f7f8f8; padding: 1rem">
-        <fbx-tile-grid :columns="${ numberKnob('Columns', 3) }" 
+      <div style="background: #f7f8f8; padding: 20px; resize: horizontal; overflow: auto; border: 2px solid #d8d8d8">
+        <fbx-tile-grid :columns="${numberKnob('Columns', 3)}" 
                        :tile-data="tileData"
-                       :should-show-placeholders="${ booleanKnob('Show placeholders', false) }"
+                       :should-show-placeholders="${booleanKnob('Show placeholders', false)}"
                        :on-click="onClick"
                        >
         </fbx-tile-grid>

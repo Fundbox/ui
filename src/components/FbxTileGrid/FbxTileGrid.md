@@ -18,7 +18,8 @@ const tiles = [
       <DISABLED_IMAGE>,
       <HOVER_COLOR>,
       <IS_ENABELD>,
-      <IS_CONNECTED>
+      <IS_CONNECTED>,
+      <METADATA>,
     ),
   ...
 ]

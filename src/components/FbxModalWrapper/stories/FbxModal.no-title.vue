@@ -1,7 +1,7 @@
 <template>
   <fbx-modal-wrapper
     close-btn-data-qa="no-title-modal-close-btn"
-    @close-btn-clicked="onCloseBtnClicked"
+    :modal-name="modalName"
   >
     <div v-if="showText">I am shown when showText is true</div>
     <div>some more text</div>
@@ -9,8 +9,6 @@
 </template>
 
 <script>
-import { action } from '@storybook/addon-actions'
-
 export default {
 
   name: 'FbxNoTitleModal',
@@ -23,13 +21,6 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  methods: {
-    onCloseBtnClicked() {
-      action('@close-btn-clicked')()
-      // calling hide here is only for closing the demo. In the app this will be managed via the modal store
-      this.$modal.hide(this.modalName)
-    }
   }
 }
 </script>

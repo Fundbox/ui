@@ -19,7 +19,6 @@
   title="BASIC MODAL TITLE"
   close-btn-data-qa="basic-modal-close-btn"
   :modal-name="modalName"
-  @close-btn-clicked="onCloseBtnClicked"
 >
   <div v-if="showText">I am shown when showText is true</div>
   <div>some more text</div>

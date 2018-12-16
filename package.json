@@ -9,11 +9,11 @@
     "build:lib": "node scripts/build.js",
     "build": "npm run build:storybook && npm run build:lib",
     "deploy-gh-branch": "gh-pages -d docs",
-    "deploy": "npm run build:storybook && npm run deploy-gh-branch",
+    "deploy": "npm run build && npm run deploy-gh-branch && npm run release",
     "test": "npm run lint && jest --config test/unit/jest.conf.js --coverage",
     "lint": "eslint -f codeframe . --ext .js,.vue --max-warnings=0",
     "create": "node scripts/cli.js",
-    "release": "npm run build:lib && semantic-release"
+    "release": "semantic-release"
   },
   "contributors": [
     {

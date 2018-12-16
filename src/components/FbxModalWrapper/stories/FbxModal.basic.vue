@@ -2,7 +2,6 @@
   <fbx-modal-wrapper
     title="BASIC MODAL TITLE"
     close-btn-data-qa="basic-modal-close-btn"
-    :modal-name="modalName"
     :on-close="onClose"
     @close-btn-clicked="onCloseBtnClicked"
   >
@@ -19,18 +18,21 @@ export default {
   props: {
     modalName: {
       type: String,
-      default: '',
       required: true
     },
     showText: {
       type: Boolean,
       default: false,
-    },
-    onClose: Function
+    }
   },
   methods: {
     onCloseBtnClicked() {
-      action('@close-btn-clicked')();
+      action('@close-btn-clicked')()
+      // calling hide here is only for closing the demo. In the app this will be managed via the modal store
+      this.$modal.hide(this.modalName)
+    },
+    onClose() {
+      action('@onClose')()
     }
   }
 }

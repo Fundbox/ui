@@ -21,11 +21,7 @@ export default {
       this.$modal.show(FbxBasicModal,
         {
           showText: true,
-          modalName,
-          onClose() {
-            // this runs inside destroy lifecycle event
-            action('@onClose')();
-          }
+          modalName
         },
         {
           name: modalName,

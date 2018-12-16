@@ -34,7 +34,6 @@ export default {
     isLoading: Boolean,
     closeBtnDataQa: String,
     title: String,
-    modalName: String,
     onClose: Function
   },
   computed: {
@@ -46,7 +45,6 @@ export default {
   methods: {
     onCloseClick() {
       this.$emit('close-btn-clicked')
-      this.$modal.hide(this.modalName)
     }
   }
 }

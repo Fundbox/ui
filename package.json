@@ -15,6 +15,10 @@
     "create": "node scripts/cli.js",
     "release": "semantic-release"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Fundbox/ui.git"
+  },
   "contributors": [
     {
       "name": "Yogev Ahuvia",
@@ -122,7 +126,6 @@
     "access": "public"
   },
   "release": {
-    "ci": false,
-    "repositoryUrl": "git@github.com:Fundbox/ui.git"
+    "ci": false
   }
 }

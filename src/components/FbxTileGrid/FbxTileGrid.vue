@@ -23,6 +23,7 @@
 <script>
 import { range } from 'lodash'
 import { Tile } from './Tile'
+import { noop } from '../../utils'
 
 export default {
   name: 'FbxTileGrid',
@@ -41,7 +42,9 @@ export default {
     },
     onClick: {
       type: Function,
-      default: () => null,
+      default() {
+        return noop()
+      },
     },
   },
   methods: {

@@ -1,128 +1,150 @@
 import { shallowMount } from '@vue/test-utils'
 import FbxTileGrid from './FbxTileGrid.vue'
 import { Tile } from './Tile'
-import img5Normal from './story-assets/5_colored.svg'
-import img5Hover from './story-assets/5_white.svg'
-import img5Disabled from './story-assets/5_greyed.svg'
-import img459Normal from './story-assets/459_colored.svg'
-import img459Hover from './story-assets/459_white.svg'
-import img459Disabled from './story-assets/459_greyed.svg'
-import img524Normal from './story-assets/524_colored.svg'
-import img524Hover from './story-assets/524_white.svg'
-import img524Disabled from './story-assets/524_greyed.svg'
-import img643Normal from './story-assets/643_colored.svg'
-import img643Hover from './story-assets/643_white.svg'
-import img643Disabled from './story-assets/643_greyed.svg'
-import img745Normal from './story-assets/745_colored.svg'
-import img745Hover from './story-assets/745_white.svg'
-import img745Disabled from './story-assets/745_greyed.svg'
-import img782Normal from './story-assets/782_colored.svg'
-import img782Hover from './story-assets/782_white.svg'
-import img782Disabled from './story-assets/782_greyed.svg'
-import img783Normal from './story-assets/783_colored.svg'
-import img783Hover from './story-assets/783_white.svg'
-import img783Disabled from './story-assets/783_greyed.svg'
-import img1603Normal from './story-assets/1603_colored.svg'
-import img1603Hover from './story-assets/1603_white.svg'
-import img1603Disabled from './story-assets/1603_greyed.svg'
-import img2162Normal from './story-assets/2162_colored.svg'
-import img2162Hover from './story-assets/2162_white.svg'
-import img2162Disabled from './story-assets/2162_greyed.svg'
+import * as utils from './../../utils'
 
-const tileData = [
-  new Tile('WellsFargo', img5Normal, img5Hover, img5Disabled),
-  new Tile('UnionBank', img459Normal, img459Hover, img459Disabled),
-  new Tile('UsBank', img524Normal, img524Hover, img524Disabled),
-  new Tile('Chase', img643Normal, img643Hover, img643Disabled),
-  new Tile('FifthThirdBank', img745Normal, img745Hover, img745Disabled),
-  new Tile('Huntington', img782Normal, img782Hover, img782Disabled),
-  new Tile('Regions', img783Normal, img783Hover, img783Disabled),
-  new Tile('CitiBank', img1603Normal, img1603Hover, img1603Disabled),
-  new Tile('PncBank', img2162Normal, img2162Hover, img2162Disabled),
+const genMockTileData = () => [
+  new Tile('WellsFargo', 'story-assets/5_colored.svg', 'story-assets/5_white.svg', 'story-assets/5_white.svg'),
+  new Tile('UnionBank', 'story-assets/459_colored.svg', 'story-assets/459_white.svg', 'story-assets/459_white.svg'),
+  new Tile('UsBank', 'story-assets/524_colored.svg', 'story-assets/524_white.svg', 'story-assets/524_white.svg'),
+  new Tile('Chase', 'story-assets/643_colored.svg', 'story-assets/643_white.svg', 'story-assets/643_white.svg'),
+  new Tile('FifthThirdBank', 'story-assets/745_colored.svg', 'story-assets/745_white.svg', 'story-assets/745_white.svg'),
+  new Tile('Huntington', 'story-assets/782_colored.svg', 'story-assets/782_white.svg', 'story-assets/782_white.svg'),
+  new Tile('Regions', 'story-assets/783_colored.svg', 'story-assets/783_white.svg', 'story-assets/783_white.svg'),
+  new Tile('CitiBank', 'story-assets/1603_colored.svg', 'story-assets/1603_white.svg', 'story-assets/1603_white.svg'),
+  new Tile('PncBank', 'story-assets/2162_colored.svg', 'story-assets/2162_white.svg', 'story-assets/2162_white.svg'),
 ]
 
+const getNthTile = (wrapper, n = 1) => wrapper.find(`.tile:nth-of-type(${n})`)
+
 describe('Components/FbxTileGrid', () => {
+  beforeEach(() => {
+    // We re-assign a new noop function on each run to reset the function count
+    utils.noop = jest.fn()
+  })
+
   describe('snapshots', () => {
-    it('renders the default correctly', () => {
+    it('renders 3 columns correctly', () => {
       const wrapper = shallowMount(FbxTileGrid, {
         propsData: {
-          tileData,
+          tileData: genMockTileData(),
           columns: 3,
         }
       })
       expect(wrapper.html()).toMatchSnapshot()
     })
-  })
-})
 
-describe('FbxButton', () => {
-  describe('snapshots', () => {
-    it('renders the default correctly', () => {
-      const wrapper = shallowMount(FbxButton, {
-        slots: defaultSlot,
+    it('renders one column correctly', () => {
+      const wrapper = shallowMount(FbxTileGrid, {
+        propsData: {
+          tileData: genMockTileData().slice(0, 3),
+          columns: 1,
+        }
       })
-
       expect(wrapper.html()).toMatchSnapshot()
     })
 
-    it('renders loading correctly', () => {
-      const wrapper = shallowMount(FbxButton, {
-        propsData: { loading: true },
-        slots: defaultSlot,
+    it('renders disabled tile correctly', () => {
+      const wrapper = shallowMount(FbxTileGrid, {
+        propsData: {
+          tileData: genMockTileData().map((tile, i) => {
+            tile.isEnabled = i !== 0
+            return tile
+          }),
+          columns: 3,
+        }
       })
-
       expect(wrapper.html()).toMatchSnapshot()
     })
 
-    it('renders inverse correctly', () => {
-      const wrapper = shallowMount(FbxButton, {
-        propsData: { inverse: true },
-        slots: defaultSlot,
+    it('renders connected tile correctly', () => {
+      const wrapper = shallowMount(FbxTileGrid, {
+        propsData: {
+          tileData: genMockTileData().map((tile, i) => {
+            tile.isConnected = i === 1
+            return tile
+          }),
+          columns: 3,
+        }
       })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
 
+    it('renders hover correctly', () => {
+      const wrapper = shallowMount(FbxTileGrid, {
+        propsData: {
+          tileData: genMockTileData().map((tile, i) => {
+            switch (i) {
+              case 0:
+                tile.isEnabled = false
+                break
+              case 1:
+                tile.hoverColor = 'red'
+                break
+            }
+            return tile
+          }),
+          columns: 3,
+        }
+      })
+      getNthTile(wrapper).trigger('mouseenter')
+      expect(wrapper.html()).toMatchSnapshot()
+      getNthTile(wrapper).trigger('mouseleave')
+      expect(wrapper.html()).toMatchSnapshot()
+      getNthTile(wrapper, 2).trigger('mouseenter')
+      expect(wrapper.html()).toMatchSnapshot()
+      getNthTile(wrapper, 2).trigger('mouseleave')
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('renders placeholders correctly', () => {
+      const wrapper = shallowMount(FbxTileGrid, {
+        propsData: {
+          tileData: genMockTileData().slice(0, 8),
+          columns: 3,
+          shouldShowPlaceholders: true,
+        }
+      })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('renders NO placeholders when exactly fit in column correctly', () => {
+      const wrapper = shallowMount(FbxTileGrid, {
+        propsData: {
+          tileData: genMockTileData(),
+          columns: 3,
+          shouldShowPlaceholders: true,
+        }
+      })
       expect(wrapper.html()).toMatchSnapshot()
     })
   })
 
   describe('@events', () => {
-    it('listens to any event listener you pass', () => {
+    it('trigger onClick callback', () => {
       const mockClick = jest.fn()
-      const mockHover = jest.fn()
-      const wrapper = shallowMount(FbxButton, {
-        listeners: {
-          click: mockClick,
-          hover: mockHover,
+      const wrapper = shallowMount(FbxTileGrid, {
+        propsData: {
+          tileData: genMockTileData(),
+          columns: 3,
+          onClick: mockClick,
         }
       })
 
-      wrapper.trigger('click')
-      wrapper.trigger('hover')
-
+      wrapper.find('.tile:first-of-type').trigger('click')
       expect(mockClick).toHaveBeenCalledTimes(1)
-      expect(mockHover).toHaveBeenCalledTimes(1)
+      expect(mockClick.mock.calls[0][0]).toBeInstanceOf(Tile)
     })
-  })
 
-  describe('disabled', () => {
-    it('prohibits clicking again while loading', () => {
-      const mockClick = jest.fn()
-      const wrapper = shallowMount(FbxButton, {
-        listeners: {
-          click: mockClick,
-        },
-        slots: defaultSlot,
+    it('Check default callback (no callback passed)', () => {
+      const wrapper = shallowMount(FbxTileGrid, {
+        propsData: {
+          tileData: genMockTileData(),
+          columns: 3,
+        }
       })
-
-      wrapper.trigger('click')
-      wrapper.setProps({ loading: true })
-      expect(mockClick).toHaveBeenCalledTimes(1)
-
-      wrapper.trigger('click')
-      expect(mockClick).toHaveBeenCalledTimes(1)
-
-      wrapper.setProps({ loading: false })
-      wrapper.trigger('click')
-      expect(mockClick).toHaveBeenCalledTimes(2)
+      getNthTile(wrapper).trigger('click')
+      expect(utils.noop).toHaveBeenCalledTimes(1)
     })
   })
 })

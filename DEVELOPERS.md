@@ -15,7 +15,7 @@ Available scaffolding types:
 
 ## CI/CD
 
-CI/CD process of UI library uses TC and has two main flows:
+CI/CD process of UI library uses TeamCity and has two main flows:
 
 1. On each PR that is created/updated we run linter and unit tests. If one of them fails, it blocks the PR from being merged into `master` branch.
 2. On each merge into `master` branch we:
@@ -42,7 +42,7 @@ In order to automate last two steps, we use [semantic-release](https://semantic-
 
 **semantic-release** uses the commit messages to determine the type of changes in the codebase. Following formalized conventions for commit messages, **semantic-release** automatically determines the next [semantic version](https://semver.org) number, generates a changelog and publishes the release.
 
-We use [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). Here is an example of the release type that will be done based on a commit messages:
+We use [Google Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines). Here is an example of the release type that will be done based on a commit messages:
 
 | Commit message                                                                                                                                                                                   | Release type               |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|

@@ -8,12 +8,19 @@
     "build:storybook": "build-storybook -o docs",
     "build:lib": "node scripts/build.js",
     "build": "npm run build:storybook && npm run build:lib",
-    "deploy-gh-branch": "gh-pages -d dist",
-    "deploy": "npm run build && npm run deploy-gh-branch",
+    "deploy-gh-branch": "gh-pages -d docs",
+    "deploy": "npm run build && npm run deploy-gh-branch && npm run release",
     "test": "npm run lint && jest --config test/unit/jest.conf.js --coverage",
     "lint": "eslint -f codeframe . --ext .js,.vue --max-warnings=0",
     "create": "node scripts/cli.js",
-    "release": "npm run build:lib && semantic-release"
+    "release": "semantic-release"
+  },
+  "bugs": {
+    "url": "https://github.com/Fundbox/ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Fundbox/ui.git"
   },
   "contributors": [
     {
@@ -69,6 +76,7 @@
     "figlet": "^1.2.1",
     "file-loader": "^1.1.11",
     "flush-promises": "^1.0.2",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "inquirer": "^6.2.0",
     "jest": "^23.6.0",
@@ -121,7 +129,6 @@
     "access": "public"
   },
   "release": {
-    "ci": false,
-    "repositoryUrl": "git@github.com:Fundbox/ui.git"
+    "ci": false
   }
 }

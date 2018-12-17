@@ -59,7 +59,7 @@ module.exports = {
         test: /\.(png|svg|woff|woff2|eot|ttf)(\?.*)?$/,
         loader: "url-loader",
         options: {
-          limit: 10000,
+          limit: 1000,
           name: "assets/[name].[hash:8].[ext]",
         },
       },

@@ -47,7 +47,7 @@ export default {
     },
     beforeClose({ params }) {
       // you can pass params when calling this.$modal.hide(modalName, { param1, param2 })
-      action('@beforeClose')(params);
+      action('@beforeClose')(params)
     },
     closed() {
       // report to moxpanel

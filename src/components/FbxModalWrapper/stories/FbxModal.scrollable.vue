@@ -1,7 +1,6 @@
 <template>
   <fbx-modal-wrapper
     title="SCROLLABLE MODAL TITLE"
-    close-btn-data-qa="scrollable-modal-close-btn"
     :modal-name="modalName"
   >
     <div>some more text</div>

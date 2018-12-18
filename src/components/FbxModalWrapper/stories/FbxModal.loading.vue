@@ -1,7 +1,6 @@
 <template>
   <fbx-modal-wrapper
     title="LOADING MODAL TITLE"
-    close-btn-data-qa="loading-modal-close-btn"
     :is-loading="true"
     :modal-name="modalName"
   >

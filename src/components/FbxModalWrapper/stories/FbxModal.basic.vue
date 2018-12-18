@@ -1,7 +1,6 @@
 <template>
   <fbx-modal-wrapper
     title="BASIC MODAL TITLE"
-    close-btn-data-qa="basic-modal-close-btn"
     :modal-name="modalName"
   >
     <div v-if="showText">I am shown when showText is true</div>

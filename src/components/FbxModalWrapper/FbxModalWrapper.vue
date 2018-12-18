@@ -3,7 +3,7 @@
     <div :class="[headerClass, 'layout-row', 'vertical-center']">
       <div class="font-18">{{ title }}</div>
       <fbx-close-button
-        :data-qa="closeBtnDataQa"
+        data-qa="modal-close-button"
         class="modal-close-button"
         @click="onCloseClick"
       />
@@ -26,7 +26,6 @@ export default {
   name: 'FbxModalWrapper',
   props: {
     isLoading: Boolean,
-    closeBtnDataQa: String,
     title: String,
     modalName: String
   },

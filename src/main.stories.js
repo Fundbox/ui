@@ -2,6 +2,7 @@
 
 // Components
 import FbxIosSwitchButton from './components/FbxIosSwitchButton/FbxIosSwitchButton.stories.js'
+import FbxModalWrapper from './components/FbxModalWrapper/FbxModalWrapper.stories.js'
 import IntroductionStories from './components/introduction/introduction.stories.js'
 import FbxButtonStories from './components/FbxButton/FbxButton.stories.js'
 import FbxCheckboxStories from './components/FbxCheckbox/FbxCheckbox.stories.js'

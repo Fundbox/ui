@@ -1,4 +1,5 @@
 import FbxTileGrid from './FbxTileGrid'
+import FbxModalWrapper from './FbxModalWrapper'
 import FbxIosSwitchButton from './FbxIosSwitchButton'
 import FbxButton from './FbxButton'
 import FbxCheckbox from './FbxCheckbox'
@@ -12,6 +13,7 @@ import FbxPanelRadioButton from './FbxPanelRadioButton'
 
 export {
   FbxTileGrid,
+  FbxModalWrapper,
   FbxIosSwitchButton,
   FbxButton,
   FbxCheckbox,

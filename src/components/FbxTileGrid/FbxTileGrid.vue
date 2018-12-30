@@ -156,6 +156,7 @@ export default {
       .tile-inner {
         border: 2px solid $dark-green;
 
+        // Connected state check icon. Visual only.
         &:after {
           content: "";
           position: absolute;

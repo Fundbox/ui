@@ -93,6 +93,7 @@ export default {
 
   $horizontal-spacing: 10px;
   $vertical-spacing: 10px;
+  $height: 75px;
 
   .container {
     // Negate the padding on tiles.
@@ -104,7 +105,7 @@ export default {
   .tile {
     padding: 0 $horizontal-spacing $vertical-spacing 0;
     position: relative;
-    height: 75px;
+    height: $height;
     cursor: pointer;
     flex-shrink: 0;
     flex-grow: 0;

@@ -35,6 +35,9 @@ export default {
     columns: {
       type: Number,
       default: 1,
+      validator(column) {
+        return column > 1 && column < 20
+      }
     },
     shouldShowPlaceholders: {
       type: Boolean,

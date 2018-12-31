@@ -1,3 +1,4 @@
+import FbxTile from './FbxTile'
 import FbxTileGrid from './FbxTileGrid'
 import FbxModalWrapper from './FbxModalWrapper'
 import FbxIosSwitchButton from './FbxIosSwitchButton'
@@ -12,6 +13,7 @@ import FbxValidationMessage from './FbxValidationMessage'
 import FbxPanelRadioButton from './FbxPanelRadioButton'
 
 export {
+  FbxTile,
   FbxTileGrid,
   FbxModalWrapper,
   FbxIosSwitchButton,

@@ -2,304 +2,299 @@
 
 exports[`Components/FbxTileGrid snapshots renders 3 columns correctly 1`] = `
 <div class="container">
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/2162_colored.svg" alt="PncBank" class="normal"> <img src="story-assets/2162_white.svg" alt="PncBank" class="hover"> <img src="story-assets/2162_white.svg" alt="PncBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders NO placeholders when exactly fit in column correctly 1`] = `
 <div class="container">
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/2162_colored.svg" alt="PncBank" class="normal"> <img src="story-assets/2162_white.svg" alt="PncBank" class="hover"> <img src="story-assets/2162_white.svg" alt="PncBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders connected tile correctly 1`] = `
 <div class="container">
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile connected" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/2162_colored.svg" alt="PncBank" class="normal"> <img src="story-assets/2162_white.svg" alt="PncBank" class="hover"> <img src="story-assets/2162_white.svg" alt="PncBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders disabled tile correctly 1`] = `
 <div class="container">
-  <div class="tile disabled" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal" style="display: none;"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/2162_colored.svg" alt="PncBank" class="normal"> <img src="story-assets/2162_white.svg" alt="PncBank" class="hover"> <img src="story-assets/2162_white.svg" alt="PncBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders hover correctly 1`] = `
 <div class="container">
-  <div class="tile disabled" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal" style="display: none;"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/2162_colored.svg" alt="PncBank" class="normal"> <img src="story-assets/2162_white.svg" alt="PncBank" class="hover"> <img src="story-assets/2162_white.svg" alt="PncBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders hover correctly 2`] = `
 <div class="container">
-  <div class="tile disabled" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal" style="display: none;"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/2162_colored.svg" alt="PncBank" class="normal"> <img src="story-assets/2162_white.svg" alt="PncBank" class="hover"> <img src="story-assets/2162_white.svg" alt="PncBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders hover correctly 3`] = `
 <div class="container">
-  <div class="tile disabled" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal" style="display: none;"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner" style="background: red;"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/2162_colored.svg" alt="PncBank" class="normal"> <img src="story-assets/2162_white.svg" alt="PncBank" class="hover"> <img src="story-assets/2162_white.svg" alt="PncBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders hover correctly 4`] = `
 <div class="container">
-  <div class="tile disabled" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal" style="display: none;"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner" style=""><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/2162_colored.svg" alt="PncBank" class="normal"> <img src="story-assets/2162_white.svg" alt="PncBank" class="hover"> <img src="story-assets/2162_white.svg" alt="PncBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders one column correctly 1`] = `
 <div class="container">
-  <div class="tile" style="width: 100%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 100%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 100%;">
-    <div class="tile-inner"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 100%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 100%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 100%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;
 
 exports[`Components/FbxTileGrid snapshots renders placeholders correctly 1`] = `
 <div class="container">
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/5_colored.svg" alt="WellsFargo" class="normal"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="hover"> <img src="story-assets/5_white.svg" alt="WellsFargo" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/459_colored.svg" alt="UnionBank" class="normal"> <img src="story-assets/459_white.svg" alt="UnionBank" class="hover"> <img src="story-assets/459_white.svg" alt="UnionBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/524_colored.svg" alt="UsBank" class="normal"> <img src="story-assets/524_white.svg" alt="UsBank" class="hover"> <img src="story-assets/524_white.svg" alt="UsBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/643_colored.svg" alt="Chase" class="normal"> <img src="story-assets/643_white.svg" alt="Chase" class="hover"> <img src="story-assets/643_white.svg" alt="Chase" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/745_colored.svg" alt="FifthThirdBank" class="normal"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="hover"> <img src="story-assets/745_white.svg" alt="FifthThirdBank" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/782_colored.svg" alt="Huntington" class="normal"> <img src="story-assets/782_white.svg" alt="Huntington" class="hover"> <img src="story-assets/782_white.svg" alt="Huntington" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/783_colored.svg" alt="Regions" class="normal"> <img src="story-assets/783_white.svg" alt="Regions" class="hover"> <img src="story-assets/783_white.svg" alt="Regions" class="disabled" style="display: none;"></div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
-  <div class="tile" style="width: 33.333333333333336%;">
-    <div class="tile-inner"><img src="story-assets/1603_colored.svg" alt="CitiBank" class="normal"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="hover"> <img src="story-assets/1603_white.svg" alt="CitiBank" class="disabled" style="display: none;"></div>
-  </div>
-  <div class="tile placeholderTile disabled" style="width: 33.333333333333336%;">
-    <div class="tile-inner">
-      <!---->
-    </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
 </div>
 `;

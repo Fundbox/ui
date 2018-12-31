@@ -15,7 +15,8 @@ const genMockTileData = () => [
   new Tile('PncBank', 'story-assets/2162_colored.svg', 'story-assets/2162_white.svg', 'story-assets/2162_white.svg'),
 ]
 
-const getNthTile = (wrapper, n = 1) => wrapper.find(`.tile:nth-of-type(${n})`)
+const tileClass = '.tile-wrapper'
+const getNthTile = (wrapper, n = 1) => wrapper.find(`${tileClass}:nth-of-type(${n})`)
 
 describe('Components/FbxTileGrid', () => {
   beforeEach(() => {
@@ -131,7 +132,7 @@ describe('Components/FbxTileGrid', () => {
         }
       })
 
-      wrapper.find('.tile:first-of-type').trigger('click')
+      wrapper.find(`${tileClass}:first-of-type`).trigger('click')
       expect(mockClick).toHaveBeenCalledTimes(1)
       expect(mockClick.mock.calls[0][0]).toBeInstanceOf(Tile)
     })

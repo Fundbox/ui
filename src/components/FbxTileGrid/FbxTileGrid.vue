@@ -4,10 +4,10 @@
       v-for="tile in tiles"
       :style="{ width: (100 / columns) + '%' }"
       :key="tile.name"
+      @click="onClick(tile)"
     >
       <fbx-tile
         :tile="tile"
-        @click="onClick(tile)"
       >
       </fbx-tile>
     </div>
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import { range } from 'lodash'
 import { noop } from '../../utils'
 import FbxTile from '../FbxTile/FbxTile'
 import { Tile } from './Tile'
@@ -56,7 +55,7 @@ export default {
         const numberOfTiles = this.tileData.length
         const overBy = numberOfTiles % this.columns
         const rest = overBy === 0 ? 0 : this.columns - overBy
-        return this.tileData.concat(range(0, rest))
+        return this.tileData.concat([].fill(new Tile(),0, rest))
       } else {
         return this.tileData
       }

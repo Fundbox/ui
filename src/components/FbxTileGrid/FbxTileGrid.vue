@@ -35,7 +35,7 @@ export default {
       type: Number,
       default: 1,
       validator(column) {
-        return column > 1 && column < 20
+        return column > 0 && column < 20
       }
     },
     shouldShowPlaceholders: {

@@ -31,6 +31,9 @@ export default {
     tileData: {
       type: Array,
       required: true,
+      validator(tiles) {
+        return tiles.every(tile => tile instanceof Tile)
+      }
     },
     columns: {
       type: Number,

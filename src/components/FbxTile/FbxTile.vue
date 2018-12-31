@@ -4,7 +4,7 @@
        @mouseenter="onHoverOverTile($event, tile)"
        @mouseleave="onHoverOverTile($event, tile)"
   >
-    <template v-if="isTile(tile)">
+    <template v-if="!isPlaceHolder">
       <img class="normal" :src="tile.imgNormal" :alt="tile.name" v-show="tile.isEnabled" />
       <img class="hover" :src="tile.imgHover" :alt="tile.name" />
       <img class="disabled" :src="tile.imgDisabled" :alt="tile.name" v-show="!tile.isEnabled" />
@@ -26,16 +26,18 @@ export default {
       },
     },
   },
+  computed: {
+    isPlaceHolder() {
+      return !(this.tile.name && this.tile.imgNormal && this.tile.imgHover && this.tile.imgDisabled)
+    },
+  },
   methods: {
     tileClasses(tile) {
       return {
-        placeholderTile: !this.isTile(tile),
+        placeholderTile: this.isPlaceHolder,
         disabled: !tile.isEnabled,
         connected: tile.isConnected,
       }
-    },
-    isTile(tile) {
-      return tile instanceof Tile
     },
     onHoverOverTile(hoverEvent, tile) {
       if (tile.isEnabled) {

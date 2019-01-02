@@ -1,8 +1,8 @@
 <template>
   <div class="tile"
-       :class="tileClasses(tile)"
-       @mouseenter="onHoverOverTile($event, tile)"
-       @mouseleave="onHoverOverTile($event, tile)"
+       :class="tileClasses"
+       @mouseenter="onHoverOverTile($event)"
+       @mouseleave="onHoverOverTile($event)"
   >
     <template v-if="!isPlaceHolder">
       <img class="normal" :src="tile.imgNormal" :alt="tile.name" v-show="tile.isEnabled" />
@@ -31,19 +31,19 @@ export default {
       return !(this.tile.name && this.tile.imgNormal && this.tile.imgHover && this.tile.imgDisabled)
     },
   },
+  tileClasses() {
+    return {
+      placeholderTile: this.isPlaceHolder,
+      disabled: !this.tile.isEnabled,
+      connected: this.tile.isConnected,
+    }
+  },
   methods: {
-    tileClasses(tile) {
-      return {
-        placeholderTile: this.isPlaceHolder,
-        disabled: !tile.isEnabled,
-        connected: tile.isConnected,
-      }
-    },
-    onHoverOverTile(hoverEvent, tile) {
-      if (tile.isEnabled) {
+    onHoverOverTile(hoverEvent) {
+      if (this.tile.isEnabled) {
         let tileElement = hoverEvent.target
         if (hoverEvent.type === 'mouseenter') {
-          tileElement.style.background = tile.hoverColor
+          tileElement.style.background = this.tile.hoverColor
         } else {
           tileElement.style.background = ''
         }

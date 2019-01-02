@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import FbxTileGrid from './FbxTileGrid.vue'
-import { Tile } from './Tile'
+import { Tile } from '../FbxTile/Tile'
 import * as utils from './../../utils'
 
 const genMockTileData = () => [

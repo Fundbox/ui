@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { Tile } from '../FbxTileGrid'
+import { Tile } from './Tile'
 
 export default {
   name: 'FbxTile',

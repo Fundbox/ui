@@ -17,7 +17,7 @@
 <script>
 import { noop } from '../../utils'
 import FbxTile from '../FbxTile/FbxTile'
-import { Tile } from './Tile'
+import { Tile } from '../FbxTile/Tile'
 
 export default {
   name: 'FbxTileGrid',

@@ -55,7 +55,7 @@ export default {
         const numberOfTiles = this.tileData.length
         const overBy = numberOfTiles % this.columns
         const rest = overBy === 0 ? 0 : this.columns - overBy
-        return this.tileData.concat([].fill(new Tile(),0, rest))
+        return this.tileData.concat(Array(rest).fill(new Tile()))
       } else {
         return this.tileData
       }

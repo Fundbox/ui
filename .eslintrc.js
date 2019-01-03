@@ -53,7 +53,7 @@ module.exports = {
     }],
     eqeqeq: [2, "allow-null"],
     indent: [1, 2, {
-      SwitchCase: 2,
+      SwitchCase: 1,
       VariableDeclarator: {
         var: 2,
         let: 2,

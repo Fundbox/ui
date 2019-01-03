@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FbxTileGrid snapshots renders 3 columns correctly 1`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders NO placeholders when exactly fit in column correctly 1`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders connected tile correctly 1`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders disabled tile correctly 1`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders hover correctly 1`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders hover correctly 2`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders hover correctly 3`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders hover correctly 4`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders one column correctly 1`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 100%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 100%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 100%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;
+
+exports[`Components/FbxTileGrid snapshots renders placeholders correctly 1`] = `
+<div class="container">
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
+</div>
+`;

@@ -296,5 +296,8 @@ exports[`Components/FbxTileGrid snapshots renders placeholders correctly 1`] = `
   <div class="tile-wrapper" style="width: 33.333333333333336%;">
     <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
   </div>
+  <div class="tile-wrapper" style="width: 33.333333333333336%;">
+    <fbx-tile-stub tile="[object Object]"></fbx-tile-stub>
+  </div>
 </div>
 `;

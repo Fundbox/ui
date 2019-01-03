@@ -22,6 +22,11 @@ import { Tile } from '../FbxTile/Tile'
 export default {
   name: 'FbxTileGrid',
   components: { FbxTile },
+  data() {
+    return {
+      localTiles: this.tileData,
+    }
+  },
   props: {
     tileData: {
       type: Array,
@@ -52,13 +57,13 @@ export default {
     tiles() {
       if (this.shouldShowPlaceholders) {
         // Calculate how many placeholder tiles to add to the array.
-        const numberOfTiles = this.tileData.length
+        const numberOfTiles = this.localTiles.length
         const overBy = numberOfTiles % this.columns
         const rest = overBy === 0 ? 0 : this.columns - overBy
         const placeholderTiles = Array(rest).fill(new Tile())
-        return this.tileData.concat(placeholderTiles)
+        return this.localTiles.concat(placeholderTiles)
       } else {
-        return this.tileData
+        return this.localTiles
       }
     }
   },

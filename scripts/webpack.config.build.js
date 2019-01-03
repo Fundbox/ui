@@ -36,6 +36,7 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
     alias: {
       vue: 'vue/dist/vue.js',
     },
+    extensions: ['.js', '.json', '.vue']
   },
   module: {
     rules: [

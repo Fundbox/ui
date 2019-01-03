@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { Tile } from './Tile'
+import { Tile } from './models/Tile'
 
 export default {
   name: 'FbxTile',

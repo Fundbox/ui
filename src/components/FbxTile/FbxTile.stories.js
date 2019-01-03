@@ -1,4 +1,4 @@
-import { Tile } from './Tile'
+import { Tile } from './models/Tile'
 import { boolean as booleanKnob, object as objectKnob, text as textKnob } from '@storybook/addon-knobs'
 import * as images from './story-assets'
 import { storiesOf } from '@storybook/vue'

@@ -14,4 +14,4 @@ const VuePlugin = {
 vueUse(VuePlugin)
 
 export default VuePlugin
-export { Tile } from '../FbxTile'
+export * from '../FbxTile/models/Tile'

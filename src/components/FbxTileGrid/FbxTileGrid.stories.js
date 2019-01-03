@@ -1,4 +1,4 @@
-import { Tile } from '../FbxTile/Tile'
+import { Tile } from '../FbxTile/models/Tile'
 import { storiesOf } from '@storybook/vue'
 import { withInfo } from 'storybook-addon-vue-info'
 import { number as numberKnob, boolean as booleanKnob, object as objectKnob } from '@storybook/addon-knobs'

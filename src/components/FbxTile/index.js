@@ -14,4 +14,4 @@ const VuePlugin = {
 vueUse(VuePlugin)
 
 export default VuePlugin
-export * from './Tile'
+export * from './models/Tile'

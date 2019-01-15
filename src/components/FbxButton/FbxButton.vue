@@ -50,8 +50,9 @@ export default {
   padding: 10px 20px;
   overflow: hidden;
   transition: background $super-fast-ease;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 100;
+  text-transform: capitalize;
   // Prevent font mixin from making the button text uncentered
   line-height: normal !important;
   color: $white;

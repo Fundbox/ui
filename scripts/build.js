@@ -74,7 +74,7 @@ const buildElements = async() => {
 
 const buildValidations = async() => {
   logger.info('Started validations build')
-  const stats = await webpack(getWebpackConfig(null, 'validations', 'es'))
+  const stats = await webpack(getWebpackConfig(undefined, 'validations', 'es'))
   handleWebpackOutput(stats)
   logger.info('Finished validations build')
 }

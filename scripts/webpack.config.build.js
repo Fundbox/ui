@@ -18,7 +18,7 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   mode: process.env.NODE_ENV,
   devtool: 'source-map',
   entry: {
-    'fundbox-ui': path.join(process.cwd(), getEntryPath(elementName, elementType))
+    '@fundbox/ui': path.join(process.cwd(), getEntryPath(elementName, elementType))
   },
   externals: {
     'bootstrap-vue': 'bootstrap-vue',

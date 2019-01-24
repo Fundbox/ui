@@ -1,3 +1,4 @@
+import FbxNotice from './FbxNotice'
 import FbxTile from './FbxTile'
 import FbxTileGrid from './FbxTileGrid'
 import FbxModalWrapper from './FbxModalWrapper'
@@ -25,5 +26,6 @@ export {
   FbxTextField,
   FbxTooltip,
   FbxValidationMessage,
-  FbxPanelRadioButton
+  FbxPanelRadioButton,
+  FbxNotice
 }

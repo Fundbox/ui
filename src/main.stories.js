@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 // Components
+import FbxNotice from './components/FbxNotice/FbxNotice.stories.js'
 import FbxIosSwitchButton from './components/FbxIosSwitchButton/FbxIosSwitchButton.stories.js'
 import FbxTileGrid from './components/FbxTileGrid/FbxTileGrid.stories.js'
 import FbxTile from './components/FbxTile/FbxTile.stories.js'

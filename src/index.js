@@ -1,28 +1,20 @@
+const { VERSION } = require('../package.json')
 import * as components from './components'
 import * as directives from './directives'
 import './validations'
 import { vueUse } from './utils/plugins'
 
-const VuePlugin = {
+const FundboxUI = {
   install(Vue) {
-    if (Vue.fundbox_ui_installed) {
-      return
-    }
-
+    if (Vue.fundbox_ui_installed) return
     Vue.fundbox_ui_installed = true
 
-    // Register component plugins
-    for (let plugin in components) {
-      Vue.use(components[plugin])
-    }
-
-    // Register directive plugins
-    for (let plugin in directives) {
-      Vue.use(directives[plugin])
-    }
-  }
+    const use = plugin => Vue.use(plugin)
+    Object.values(components).forEach(use)
+    Object.values(directives).forEach(use)
+  },
+  version: VERSION
 }
 
-vueUse(VuePlugin)
-
-export default VuePlugin
+vueUse(FundboxUI)
+export default FundboxUI

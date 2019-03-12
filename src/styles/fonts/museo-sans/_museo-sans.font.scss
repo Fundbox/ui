@@ -4,7 +4,7 @@
 // NOTE: There is a probably bug with the resolver of one of the loaders
 // related to CSS, so we need to use `./fonts/` for resolving a file that
 // exist in the same folder
-$fontDir: "./styles/fonts/museo-sans";
+$fontDir: "./../fonts/museo-sans";
 @include defineFontFace($default-fbx-font, "MuseoSans_500-webfont", $fontDir, 500, normal);
 @include defineFontFace($default-fbx-font, "MuseoSans_300-webfont", $fontDir, 300, normal);
 @include defineFontFace($default-fbx-font, "MuseoSans_100-webfont", $fontDir, 100, normal);

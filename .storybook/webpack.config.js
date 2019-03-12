@@ -43,7 +43,12 @@ module.exports = {
         use: [
           "vue-style-loader",
           "css-loader",
-          "resolve-url-loader",
+          {
+            loader: "resolve-url-loader",
+            options: {
+              sourceMap: true
+            }
+          },
           "sass-loader?sourceMap",
         ],
       },

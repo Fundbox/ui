@@ -1,7 +1,7 @@
 @import "../../utils/variables";
 @import "../../utils/mixins";
 
-$fontDir: "./styles/fonts/tisa";
+$fontDir: "./../fonts/tisa";
 @include defineFontFace($tisaPro-font, 'TisaPro-Regular', $fontDir, 'normal', 'normal');
 @include defineFontFace($tisaPro-font, 'TisaPro-Medi', $fontDir, 500, 'normal');
 @include defineFontFace($tisaPro-font, 'TisaPro-Bold', $fontDir, 700, 'normal');

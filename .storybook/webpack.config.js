@@ -20,19 +20,11 @@ module.exports = {
           loader: require.resolve("@storybook/addon-storysource/loader"),
           options: {
             prettierConfig: {
-              parser: "babylon" //The default prettier parser (we might want "flow" in future)
+              parser: "babel" //The default prettier parser (we might want "flow" in future)
             }
           }
         }],
         enforce: "pre",
-      },
-      {
-        test: /\.css$/,
-        use: [
-          "vue-style-loader",
-          "css-loader",
-          "resolve-url-loader"
-        ],
       },
       {
         test: /\.html$/,
@@ -58,16 +50,7 @@ module.exports = {
         options: {
           name: "assets/[name].[hash:8].[ext]",
         },
-
-      },
-      {
-        test: /\.(png|svg|woff|woff2|eot|ttf)(\?.*)?$/,
-        loader: "url-loader",
-        options: {
-          limit: 1024,
-          name: "assets/[name].[hash:8].[ext]",
-        },
-      },
+      }
     ],
   },
   plugins,

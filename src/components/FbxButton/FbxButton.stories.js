@@ -1,26 +1,43 @@
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
 import { withInfo } from 'storybook-addon-vue-info'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, withKnobs } from '@storybook/addon-knobs'
 
 import FbxButton from './FbxButton.vue'
 import summary from './FbxButton.md'
 
 const stories = storiesOf('Components/Button', module)
 
-stories.add('default', withInfo({ summary })(() => ({
-  components: { FbxButton },
-  template: `<fbx-button
+stories.addDecorator(withKnobs).add(
+  'default',
+  withInfo({ summary })(() => ({
+    components: { FbxButton },
+    props: {
+      loading: {
+        default: boolean('Loading', false)
+      },
+      inverse: {
+        default: boolean('Inverse', false)
+      },
+      disabled: {
+        default: boolean('Disabled', false)
+      },
+      text: {
+        default: text('Text', 'Click me')
+      }
+    },
+    template: `<fbx-button
                 name="fbx-button"
                 id="my-id"
                 data-qa="button-qa"
                 tabindex="3"
                 @click="click"
-                :loading="${boolean('Loading', false)}"
-                :inverse="${boolean('Inverse', false)}"
-                :disabled="${boolean('Disabled', false)}"
+                :loading="loading"
+                :inverse="inverse"
+                :disabled="disabled"
             >
-              ${text('Text', 'Click me')}
+              {{text}}
             </fbx-button>`,
-  methods: { click: action('clicked') },
-})))
+    methods: { click: action('clicked') }
+  }))
+)

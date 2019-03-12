@@ -11,7 +11,7 @@ import FbxScrollableModal from './FbxModal.scrollable.vue'
 import FbxButton from '../../FbxButton/FbxButton.vue'
 
 export default {
-  components: { FbxScrollableModal, FbxButton },
+  components: { FbxButton },
   methods: {
     openModal() {
       const modalName = 'my-modal-name'

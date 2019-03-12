@@ -11,7 +11,7 @@ import FbxNoTitleModal from './FbxModal.no-title.vue'
 import FbxButton from '../../FbxButton/FbxButton.vue'
 
 export default {
-  components: { FbxNoTitleModal, FbxButton },
+  components: { FbxButton },
   methods: {
     openModal() {
       const modalName = 'my-modal-name'

@@ -12,7 +12,7 @@ import FbxButton from '../../FbxButton/FbxButton.vue'
 import { action } from '@storybook/addon-actions'
 
 export default {
-  components: { FbxBasicModal, FbxButton },
+  components: { FbxButton },
   methods: {
     openModal() {
       const modalName = 'my-modal-name'

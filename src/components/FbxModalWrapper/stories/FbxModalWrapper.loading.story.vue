@@ -11,7 +11,7 @@ import FbxLoadingModal from './FbxModal.loading.vue'
 import FbxButton from '../../FbxButton/FbxButton.vue'
 
 export default {
-  components: { FbxLoadingModal, FbxButton },
+  components: { FbxButton },
   methods: {
     openModal() {
       const modalName = 'my-modal-name'

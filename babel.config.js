@@ -29,6 +29,11 @@ module.exports = {
         '@babel/preset-env'
       ],
       plugins: [
+        ['@babel/plugin-transform-runtime',
+          {
+            regenerator: true
+          }
+        ],
         [
           '@babel/plugin-proposal-object-rest-spread',
           {

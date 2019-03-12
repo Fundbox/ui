@@ -1,5 +1,4 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
-import flushPromises from 'flush-promises'
 import VeeValidate from 'vee-validate'
 import FbxSelect from './FbxSelect.vue'
 
@@ -31,7 +30,7 @@ describe('FbxSelect', () => {
         sync: false,
         localVue
       })
-      await flushPromises()
+      await wrapper.vm.$nextTick()
       expect(wrapper.html()).toMatchSnapshot()
     })
 
@@ -54,7 +53,7 @@ describe('FbxSelect', () => {
         sync: false,
         localVue
       })
-      await flushPromises()
+      await wrapper.vm.$nextTick()
       expect(wrapper.html()).toMatchSnapshot()
       expect(wrapper.html()).toContain(validationMessage)
     })
@@ -71,11 +70,14 @@ describe('FbxSelect', () => {
         sync: false,
         localVue
       })
-      await flushPromises()
+      await wrapper.vm.$nextTick()
+      // promise.then(() => {
       const select = wrapper.find('select')
       const options = select.findAll('option')
       const selectedOption = options.at(select.element.selectedIndex)
       expect(selectedOption.text()).toEqual(option1)
+      //   done()
+      // })
     })
   })
 

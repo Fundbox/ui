@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VeeValidate from "vee-validate";
-import { configure, addDecorator } from "@storybook/vue"
-import { setOptions } from "@storybook/addon-options";
+import { configure, addDecorator, addParameters } from "@storybook/vue"
+import { create } from '@storybook/theming';
 import FbxStylesAddon from './../.storybook/addons/fundbox-styles-addon';
 import { withKnobs } from '@storybook/addon-knobs';
 
@@ -23,10 +23,15 @@ Vue.use(VeeValidate, {
   events: "change"
 });
 
-setOptions({
-  name: "Fundbox UI Library",
-  url: "https://github.com/Fundbox/ui",
-  addonPanelInRight: true,
-});
-
+addParameters({
+  options: {
+    theme: create({
+      base: 'dark',
+      brandTitle: 'Fundbox UI Library',
+      brandUrl: 'https://github.com/Fundbox/ui'
+    }),
+    isFullscreen: false,
+    panelPosition: 'right',
+  }
+})
 configure(() => require("../src/main.stories"), module);

@@ -4,6 +4,7 @@ Describe in detail what this pull request is all about. Explain the premise, the
 
 PR Resources | Links
 ------ | ------
+🎫 Ticket | [P1-828](https://fundbox.atlassian.net/browse/P1-828)
 🔗 Related PR | [backend#123](https://github.com/Fundbox/backend/pull/123)
 🎨 Designs | [InVision](https://fundbox.invisionapp.com/d/#/projects)
 

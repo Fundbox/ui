@@ -5,6 +5,7 @@ exports[`FbxTextField snapshots renders the default 1`] = `
   <div class="fbx-text-field__wrapper">
     <div class="fbx-text-field__input-wrapper"><input type="text" tabindex="0" class="fbx-text-field__input" data-mask="" data-previous-value="avocado" aria-required="false" aria-invalid="false">
       <!---->
+      <!---->
     </div>
     <!---->
   </div>

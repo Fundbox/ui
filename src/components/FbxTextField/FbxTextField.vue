@@ -53,8 +53,12 @@ export default {
   },
   props: {
     label: String,
-    value: [String, Number],
-    validations: [String, Object],
+    value: {
+      type: [String, Number],
+    },
+    validations: {
+      type: [String, Object],
+    },
     mask: {
       type: String,
       default: ''

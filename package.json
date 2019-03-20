@@ -11,7 +11,7 @@
     "build": "npm run build:storybook && npm run build:lib",
     "deploy-gh-branch": "node scripts/deploy-gh-pages.js",
     "deploy": "npm run build && npm run deploy-gh-branch && npm run release",
-    "test": "npm run lint && jest --config test/unit/jest.conf.js --coverage",
+    "test": "jest --config test/unit/jest.conf.js --coverage",
     "lint": "eslint -f codeframe . --ext .js,.vue --max-warnings=0",
     "create": "node scripts/cli.js",
     "release": "semantic-release"

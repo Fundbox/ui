@@ -36,6 +36,10 @@
     {
       "name": "Alex Volkov",
       "email": "altryne@gmail.com"
+    },
+    {
+      "name": "Nick Litwin",
+      "email": "nicklitwin88@gmail.com"
     }
   ],
   "devDependencies": {

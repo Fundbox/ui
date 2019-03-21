@@ -4,6 +4,7 @@
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
         <input
+          ref="fbxTextFieldInput"
           v-fbx-address-autocomplete="addressAutocomplete"
           v-fbx-autofocus="autofocus"
           v-mask="mask"
@@ -20,6 +21,7 @@
 
         <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 
+        <span class="fbx-text-field__clear-icon" @click="clearField" v-if="clearIcon">X</span>
       </div>
       <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
     </div>
@@ -70,7 +72,11 @@ export default {
     addressAutocomplete: {
       type: Boolean,
       default: false
-    }
+    },
+    clearIcon: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     passwordButtonText() {
@@ -86,6 +92,9 @@ export default {
   methods: {
     togglePassword() {
       this.type = this.type === 'password' ? 'text' : 'password'
+    },
+    clearField() {;
+      this.$emit('input', '')
     },
     onInput(event) {
       this.$emit('input', event.target.value)
@@ -147,15 +156,23 @@ export default {
     }
   }
 
-  .fbx-text-field__password-button {
+  .fbx-text-field__password-button,
+  .fbx-text-field__clear-icon {
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: $dark-green;
-    @include font(16);
     cursor: pointer;
     user-select: none;
+  }
+
+  .fbx-text-field__password-button {
+    @include font(16);
+    color: $dark-green;
+  }
+
+  .fbx-text-field__clear-icon {
+    color: $medium-blue;
   }
 
   .validation-message {

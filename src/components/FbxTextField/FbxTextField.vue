@@ -11,7 +11,7 @@
           :type="type"
           tabindex="0"
           class="fbx-text-field__input"
-          :class="{ password: isPassword, invalid: isInvalid }"
+          :class="{ password: isPassword, invalid: isInvalid, 'with-clear-icon': clearIcon }"
           v-validate="validations"
           v-bind="$attrs"
           :value="value"
@@ -21,7 +21,7 @@
 
         <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 
-        <span class="fbx-text-field__clear-icon" @click="clearField" v-if="clearIcon">X</span>
+        <span class="fbx-text-field__clear-icon" @click="clearField" v-if="clearIcon"></span>
       </div>
       <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
     </div>
@@ -155,6 +155,10 @@ export default {
       background-color: $extra-light-red;
       border-bottom: 1px solid $light-red;
     }
+
+    &.with-clear-icon {
+      padding-right: 35px;
+    }
   }
 
   .fbx-text-field__password-button,
@@ -173,7 +177,19 @@ export default {
   }
 
   .fbx-text-field__clear-icon {
+    display: block;
+    right: 5px;
+    width: 30px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     color: $medium-blue;
+    background-image: url("../../assets/icon_active_x_icon.png");
+    background-size: 12px 10px;
+
+    &:hover {
+      background-image: url("../../assets/icon_active_x_icon_active.png");
+    }
   }
 
   .validation-message {

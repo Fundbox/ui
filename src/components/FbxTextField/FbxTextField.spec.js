@@ -72,6 +72,26 @@ describe('FbxTextField', () => {
       })
     })
 
+    describe('clearField', () => {
+      it('emits an input event with an empty string', () => {
+        const mockOnInput = jest.fn()
+        const wrapper = shallowMount(FbxTextField, {
+          propsData: {
+            name: 'my-input',
+            value: '42',
+          },
+          listeners: {
+            input: mockOnInput,
+          },
+        })
+
+        wrapper.vm.clearField()
+
+        expect(mockOnInput).toHaveBeenCalled()
+        expect(mockOnInput).toHaveBeenCalledWith('')
+      })
+    })
+
     describe('onInput', () => {
       it('emits the change event with the input value', () => {
         const mockOnInput = jest.fn()

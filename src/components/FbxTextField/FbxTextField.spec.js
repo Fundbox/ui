@@ -1,5 +1,8 @@
 import { shallowMount } from '@vue/test-utils'
 import FbxTextField from './FbxTextField.vue'
+import VeeValidate from 'vee-validate'
+
+const v = new VeeValidate.Validator()
 
 describe('FbxTextField', () => {
   describe('snapshots', () => {
@@ -13,6 +16,22 @@ describe('FbxTextField', () => {
 
       expect(wrapper.html()).toMatchSnapshot()
     })
+
+    it('renders clear icon', () => {
+      const wrapper = shallowMount(FbxTextField, {
+        propsData: {
+          name: 'my-input',
+          value: 'avocado',
+          clearIcon: true,
+        },
+        provide: () => ({
+          $validator: v
+        })
+      })
+
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+  })
 
   describe('methods', () => {
     describe('togglePassword', () => {

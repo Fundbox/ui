@@ -4,7 +4,7 @@
 
 - Use `FbxTextField` for inputs of common types, e.g. `type="text"`, `type="email"`. If your input type isn't supported, open up a PR to add support for that input type
 - The default `type` is `text`, if you don't provide one
-- You can pass a `mask` prop to set up masking. See more info [here](https://www.npmjs.com/package/v-mask) 
+- You can pass a `mask` prop to set up masking. See more info [here](https://www.npmjs.com/package/v-mask)
 
 ```html
 <!-- Example Usage -->
@@ -42,5 +42,15 @@
   placeholder="Enter your address"
   v-model="inputText"
   @addressDataChanged="onAddressDataChanged"
+/>
+
+<!-- Example Usage with clear icon -->
+<fbx-text-field
+  validations="required"
+  name="phone"
+  class="input"
+  placeholder="Enter your search"
+  v-model="inputText"
+  clear-icon
 />
 ```

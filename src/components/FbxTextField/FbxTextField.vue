@@ -93,7 +93,8 @@ export default {
     togglePassword() {
       this.type = this.type === 'password' ? 'text' : 'password'
     },
-    clearField() {;
+    clearField() {
+      this.$refs.fbxTextFieldInput.focus()
       this.$emit('input', '')
     },
     onInput(event) {

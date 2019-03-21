@@ -38,7 +38,6 @@ describe('FbxTextField', () => {
     describe('togglePassword', () => {
       it('changes the input type from password to text', () => {
         const wrapper = shallowMount(FbxTextField, {
-          sync: false,
           propsData: {
             name: 'my-input',
             value: 'avocado',

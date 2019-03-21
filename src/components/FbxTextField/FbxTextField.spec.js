@@ -9,6 +9,7 @@ describe('FbxTextField', () => {
     it('renders the default', () => {
       const wrapper = shallowMount(FbxTextField, {
         propsData: {
+          name: 'my-input',
           value: 'avocado',
           label: 'Favorite Food',
         },
@@ -39,6 +40,7 @@ describe('FbxTextField', () => {
         const wrapper = shallowMount(FbxTextField, {
           sync: false,
           propsData: {
+            name: 'my-input',
             value: 'avocado',
             type: 'text',
           },
@@ -58,6 +60,7 @@ describe('FbxTextField', () => {
       it('changes the input type from text to password', () => {
         const wrapper = shallowMount(FbxTextField, {
           propsData: {
+            name: 'my-input',
             value: 'avocado',
             type: 'text',
           },
@@ -75,11 +78,12 @@ describe('FbxTextField', () => {
         const mockOnInput = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
           propsData: {
+            name: 'my-input',
             value: '42',
           },
           listeners: {
             input: mockOnInput,
-          }
+          },
         })
 
         wrapper.find('input').trigger('input')
@@ -94,11 +98,12 @@ describe('FbxTextField', () => {
         const mockOnChange = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
           propsData: {
+            name: 'my-input',
             value: '42',
           },
           listeners: {
             change: mockOnChange,
-          }
+          },
         })
 
         wrapper.find('input').trigger('change')

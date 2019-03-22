@@ -177,15 +177,15 @@ export default {
   }
 
   .fbx-text-field__clear-icon {
-    display: block;
     right: 5px;
+    display: block;
     width: 30px;
-    height: 40px;
+    height: 100%;
+    color: $medium-blue;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    color: $medium-blue;
-    background-image: url("../../assets/icon_active_x_icon.png");
     background-size: 12px 10px;
+    background-image: url("../../assets/icon_active_x_icon.png");
 
     &:hover {
       background-image: url("../../assets/icon_active_x_icon_active.png");

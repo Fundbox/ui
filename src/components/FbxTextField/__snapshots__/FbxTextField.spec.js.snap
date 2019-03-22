@@ -3,7 +3,7 @@
 exports[`FbxTextField snapshots renders clear icon 1`] = `
 <div class="fbx-text-field"><label class="fbx-text-field__label"></label>
   <div class="fbx-text-field__wrapper">
-    <div class="fbx-text-field__input-wrapper"><input type="text" tabindex="0" name="my-input" class="fbx-text-field__input with-clear-icon" data-mask="" data-previous-value="avocado" aria-required="false" aria-invalid="false">
+    <div class="fbx-text-field__input-wrapper"><input type="text" tabindex="0" name="my-input" class="fbx-text-field__input clearable" data-mask="" data-previous-value="avocado" aria-required="false" aria-invalid="false">
       <!----> <span class="fbx-text-field__clear-icon"></span></div>
     <!---->
   </div>

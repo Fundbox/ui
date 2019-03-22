@@ -11,7 +11,7 @@
           :type="type"
           tabindex="0"
           class="fbx-text-field__input"
-          :class="{ password: isPassword, invalid: isInvalid, 'with-clear-icon': clearIcon }"
+          :class="{ password: isPassword, invalid: isInvalid, clearable: clearable }"
           v-validate="validations"
           v-bind="$attrs"
           :value="value"
@@ -21,7 +21,7 @@
 
         <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 
-        <span class="fbx-text-field__clear-icon" @click="clearField" v-if="clearIcon"></span>
+        <span class="fbx-text-field__clear-icon" @click="clearField" v-if="clearable"></span>
       </div>
       <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
     </div>
@@ -73,7 +73,7 @@ export default {
       type: Boolean,
       default: false
     },
-    clearIcon: {
+    clearable: {
       type: Boolean,
       default: false
     },
@@ -156,7 +156,7 @@ export default {
       border-bottom: 1px solid $light-red;
     }
 
-    &.with-clear-icon {
+    &.clearable {
       padding-right: 35px;
     }
   }

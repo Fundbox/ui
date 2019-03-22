@@ -23,7 +23,7 @@ describe('FbxTextField', () => {
         propsData: {
           name: 'my-input',
           value: 'avocado',
-          clearIcon: true,
+          clearable: true,
         },
         provide: () => ({
           $validator: v

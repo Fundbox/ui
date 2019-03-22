@@ -151,7 +151,7 @@ const addressAutocompleteStory = () => ({
   `
 })
 
-const clearIconStory = () => ({
+const clearableStory = () => ({
   components: { FbxTextField },
   data() {
     return {
@@ -170,7 +170,7 @@ const clearIconStory = () => ({
         class="input"
         placeholder="Enter your search"
         v-model="inputText"
-        clear-icon
+        clearable
       />
     </div>
   `,
@@ -181,4 +181,4 @@ stories.add('password', withSummary(passwordStory))
 stories.add('mask', withSummary(maskStory))
 stories.add('autofocus', withSummary(autofocusStory))
 stories.add('address autocomplete', withSummary(addressAutocompleteStory))
-stories.add('clear icon', withSummary(clearIconStory))
+stories.add('clearable', withSummary(clearableStory))

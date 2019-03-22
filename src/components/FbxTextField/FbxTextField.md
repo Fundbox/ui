@@ -44,13 +44,13 @@
   @addressDataChanged="onAddressDataChanged"
 />
 
-<!-- Example Usage with clear icon -->
+<!-- Example Usage with a clear icon -->
 <fbx-text-field
   validations="required"
   name="phone"
   class="input"
   placeholder="Enter your search"
   v-model="inputText"
-  clear-icon
+  clearable
 />
 ```

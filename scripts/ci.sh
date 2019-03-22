@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-echo "##teamcity[blockOpened name='UI Tests']"
+echo "##teamcity[blockOpened name='UI TESTS']"
 
 # Set up NVM and proper node version
 NVM_WORKDIR='/usr/local/nvm'
@@ -20,4 +20,4 @@ echo "##teamcity[blockOpened name='UNIT TESTS']"
 npm test
 echo "##teamcity[blockClosed name='UNIT TESTS']"
 
-echo "##teamcity[blockClosed name='UI Tests']"
+echo "##teamcity[blockClosed name='UI TESTS']"

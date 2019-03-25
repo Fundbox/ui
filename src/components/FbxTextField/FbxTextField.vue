@@ -11,13 +11,20 @@
           :type="type"
           tabindex="0"
           class="fbx-text-field__input"
-          :class="{ password: isPassword, invalid: isInvalid, clearable: clearable }"
+          :class="{
+            password: isPassword,
+            invalid: isInvalid,
+            clearable: clearable,
+            currency: value.length,
+          }"
           v-validate="validations"
           v-bind="$attrs"
           :value="value"
-          @input="onInput"
+          v-on="{ input: currency ? onCurrencyInput : onInput }"
           @change="onChange"
         />
+
+        <span class="fbx-text-field__dollar-sign" v-if="value.length">$</span>
 
         <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 
@@ -30,6 +37,7 @@
 
 <script>
 import '../../validations'
+import { currencyFormatter } from "../../utils/currency-formatter.js"
 import { VueMaskDirective } from 'v-mask'
 import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue'
 import FbxAddressAutocomplete from '../../directives/FbxAddressAutocomplete/FbxAddressAutocomplete'
@@ -65,6 +73,10 @@ export default {
       type: String,
       default: '',
     },
+    currency: {
+      type: Boolean,
+      default: false,
+    },
     autofocus: {
       type: Boolean,
       default: false,
@@ -87,7 +99,7 @@ export default {
     },
     validationMessage() {
       return this.errors.first(this.$attrs.name, this.$attrs.scope)
-    }
+    },
   },
   methods: {
     togglePassword() {
@@ -96,6 +108,17 @@ export default {
     clearField() {
       this.$refs.fbxTextFieldInput.focus()
       this.$emit('input', '')
+    },
+    onCurrencyInput(event) {
+      let value = event.target.value
+      if (value !== '') {
+        value = currencyFormatter(value)
+      }
+      // TODO(nlitwin): Can we emit a value without the comma?
+      this.$emit('input', value)
+      // If a user types a letter instead of a number, immediately rerender with the formatted
+      // value, so that the letter does not appear in the input
+      this.$forceUpdate()
     },
     onInput(event) {
       this.$emit('input', event.target.value)
@@ -159,6 +182,20 @@ export default {
     &.clearable {
       padding-right: 35px;
     }
+
+    &.currency {
+      position: relative;
+      padding-left: 25px;
+    }
+  }
+
+  .fbx-text-field__dollar-sign {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    @include font(16);
+    user-select: none;
   }
 
   .fbx-text-field__password-button,

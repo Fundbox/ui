@@ -53,4 +53,14 @@
   v-model="inputText"
   clearable
 />
+
+<!-- Example Usage with currency -->
+<fbx-text-field
+  validations="required"
+  name="amount"
+  class="input"
+  placeholder="Enter an amount"
+  v-model="inputText"
+  currency
+/>
 ```

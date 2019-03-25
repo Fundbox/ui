@@ -176,9 +176,35 @@ const clearableStory = () => ({
   `,
 })
 
+const currencyStory = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: '',
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value`)(value)
+    },
+  },
+  template: `
+    <div style="width: 300px;">
+      <fbx-text-field
+        name="amount"
+        class="input"
+        placeholder="Enter an amount"
+        v-model="inputText"
+        currency
+      />
+    </div>
+  `,
+})
+
 stories.add('default', withSummary(defaultStory))
 stories.add('password', withSummary(passwordStory))
 stories.add('mask', withSummary(maskStory))
 stories.add('autofocus', withSummary(autofocusStory))
 stories.add('address autocomplete', withSummary(addressAutocompleteStory))
 stories.add('clearable', withSummary(clearableStory))
+stories.add('currency', withSummary(currencyStory))

@@ -15,7 +15,7 @@
             password: isPassword,
             invalid: isInvalid,
             clearable: clearable,
-            currency: value.length,
+            currency: isCurrency,
           }"
           v-validate="validations"
           v-bind="$attrs"
@@ -24,7 +24,7 @@
           @change="onChange"
         />
 
-        <span class="fbx-text-field__dollar-sign" v-if="value.length">$</span>
+        <span class="fbx-text-field__dollar-sign" v-if="isCurrency">$</span>
 
         <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 
@@ -99,6 +99,9 @@ export default {
     },
     validationMessage() {
       return this.errors.first(this.$attrs.name, this.$attrs.scope)
+    },
+    isCurrency() {
+      return this.currency && this.value.length
     },
   },
   methods: {

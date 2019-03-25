@@ -63,19 +63,19 @@ export default {
     },
     mask: {
       type: String,
-      default: ''
+      default: '',
     },
     autofocus: {
       type: Boolean,
-      default: false
+      default: false,
     },
     addressAutocomplete: {
       type: Boolean,
-      default: false
+      default: false,
     },
     clearable: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   computed: {

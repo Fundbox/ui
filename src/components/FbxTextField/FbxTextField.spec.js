@@ -32,6 +32,23 @@ describe('FbxTextField', () => {
 
       expect(wrapper.html()).toMatchSnapshot()
     })
+
+    // TODO(nlitwin): test currently broken due to sync bug
+    // https://github.com/vuejs/vue-test-utils/issues/829
+    it.skip('renders a currency mask', (done) => {
+      const wrapper = shallowMount(FbxTextField, {
+        sync: false,
+        propsData: {
+          name: 'my-input',
+          value: '12879.25',
+          currency: true,
+        },
+      })
+      wrapper.vm.$nextTick(() => {
+        expect(wrapper.html()).toMatchSnapshot()
+        done()
+      })
+    })
   })
 
   describe('methods', () => {
@@ -89,6 +106,30 @@ describe('FbxTextField', () => {
 
         expect(mockOnInput).toHaveBeenCalled()
         expect(mockOnInput).toHaveBeenCalledWith('')
+      })
+    })
+
+    // TODO(nlitwin): test currently broken due to sync bug
+    // https://github.com/vuejs/vue-test-utils/issues/829
+    describe('onCurrencyInput', () => {
+      it.skip('emits the change event with the input value', () => {
+        const mockOnInput = jest.fn()
+        const wrapper = shallowMount(FbxTextField, {
+          sync: false,
+          propsData: {
+            name: 'my-input',
+            value: '12879.25',
+            currency: true,
+          },
+          listeners: {
+            input: mockOnInput,
+          },
+        })
+
+        wrapper.find('input').trigger('input')
+
+        expect(mockOnInput).toHaveBeenCalled()
+        expect(mockOnInput).toHaveBeenCalledWith('12,879.25')
       })
     })
 

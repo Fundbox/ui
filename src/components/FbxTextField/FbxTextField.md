@@ -6,6 +6,8 @@
 - The default `type` is `text`, if you don't provide one
 - You can pass a `mask` prop to set up masking. See more info [here](https://www.npmjs.com/package/v-mask)
 
+🚨Note: you cannot currently use both `clearable` and `type="password"` as the Show/Hide and X buttons overlap 🚨
+
 ```html
 <!-- Example Usage -->
 <fbx-text-field

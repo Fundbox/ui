@@ -6,7 +6,7 @@ import { text } from '@storybook/addon-knobs'
 import FbxTextField from './FbxTextField.vue'
 import summary from './FbxTextField.md'
 const stories = storiesOf('Components/TextField', module)
-const withSummery = withInfo({ summary })
+const withSummary = withInfo({ summary })
 
 const defaultStory = () => ({
   components: { FbxTextField },
@@ -113,7 +113,7 @@ const autofocusStory = () => ({
   `
 })
 
-const addressAutocomplete = () => ({
+const addressAutocompleteStory = () => ({
   components: { FbxTextField },
   data() {
     return {
@@ -151,8 +151,34 @@ const addressAutocomplete = () => ({
   `
 })
 
-stories.add('default', withSummery(defaultStory))
-stories.add('password', withSummery(passwordStory))
-stories.add('mask', withSummery(maskStory))
-stories.add('autofocus', withSummery(autofocusStory))
-stories.add('address autocomplete', withSummery(addressAutocomplete))
+const clearableStory = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: '',
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value`)(value)
+    },
+  },
+  template: `
+    <div style="width: 300px;">
+      <fbx-text-field
+        name="search"
+        class="input"
+        placeholder="Enter your search"
+        v-model="inputText"
+        clearable
+      />
+    </div>
+  `,
+})
+
+stories.add('default', withSummary(defaultStory))
+stories.add('password', withSummary(passwordStory))
+stories.add('mask', withSummary(maskStory))
+stories.add('autofocus', withSummary(autofocusStory))
+stories.add('address autocomplete', withSummary(addressAutocompleteStory))
+stories.add('clearable', withSummary(clearableStory))

@@ -4,13 +4,14 @@
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
         <input
+          ref="fbxTextFieldInput"
           v-fbx-address-autocomplete="addressAutocomplete"
           v-fbx-autofocus="autofocus"
           v-mask="mask"
           :type="type"
           tabindex="0"
           class="fbx-text-field__input"
-          :class="{ password: isPassword, invalid: isInvalid }"
+          :class="{ password: isPassword, invalid: isInvalid, clearable: clearable }"
           v-validate="validations"
           v-bind="$attrs"
           :value="value"
@@ -20,6 +21,7 @@
 
         <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 
+        <span class="fbx-text-field__clear-icon" @click="clearField" v-if="clearable"></span>
       </div>
       <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
     </div>
@@ -53,8 +55,12 @@ export default {
   },
   props: {
     label: String,
-    value: [String, Number],
-    validations: [String, Object],
+    value: {
+      type: [String, Number],
+    },
+    validations: {
+      type: [String, Object],
+    },
     mask: {
       type: String,
       default: ''
@@ -66,7 +72,11 @@ export default {
     addressAutocomplete: {
       type: Boolean,
       default: false
-    }
+    },
+    clearable: {
+      type: Boolean,
+      default: false
+    },
   },
   computed: {
     passwordButtonText() {
@@ -82,6 +92,10 @@ export default {
   methods: {
     togglePassword() {
       this.type = this.type === 'password' ? 'text' : 'password'
+    },
+    clearField() {
+      this.$refs.fbxTextFieldInput.focus()
+      this.$emit('input', '')
     },
     onInput(event) {
       this.$emit('input', event.target.value)
@@ -141,17 +155,41 @@ export default {
       background-color: $extra-light-red;
       border-bottom: 1px solid $light-red;
     }
+
+    &.clearable {
+      padding-right: 35px;
+    }
   }
 
-  .fbx-text-field__password-button {
+  .fbx-text-field__password-button,
+  .fbx-text-field__clear-icon {
     position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: $dark-green;
-    @include font(16);
     cursor: pointer;
     user-select: none;
+  }
+
+  .fbx-text-field__password-button {
+    @include font(16);
+    color: $dark-green;
+  }
+
+  .fbx-text-field__clear-icon {
+    right: 5px;
+    display: block;
+    width: 30px;
+    height: 100%;
+    color: $medium-blue;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 12px 10px;
+    background-image: url("../../assets/icon_active_x_icon.png");
+
+    &:hover {
+      background-image: url("../../assets/icon_active_x_icon_active.png");
+    }
   }
 
   .validation-message {

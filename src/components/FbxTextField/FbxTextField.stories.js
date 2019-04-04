@@ -201,6 +201,31 @@ const currencyStory = () => ({
   `,
 })
 
+const editableStory = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: '',
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value`)(value)
+    },
+  },
+  template: `
+    <div style="width: 400px;">
+      <fbx-text-field
+        name="word"
+        class="input"
+        placeholder="Enter a word"
+        v-model="inputText"
+        editable
+      />
+    </div>
+  `,
+})
+
 stories.add('default', withSummary(defaultStory))
 stories.add('password', withSummary(passwordStory))
 stories.add('mask', withSummary(maskStory))
@@ -208,3 +233,4 @@ stories.add('autofocus', withSummary(autofocusStory))
 stories.add('address autocomplete', withSummary(addressAutocompleteStory))
 stories.add('clearable', withSummary(clearableStory))
 stories.add('currency', withSummary(currencyStory))
+stories.add('editable', withSummary(editableStory))

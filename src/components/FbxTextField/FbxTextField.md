@@ -64,3 +64,14 @@
   currency
 />
 ```
+
+<!-- Example Usage with editable field -->
+<fbx-text-field
+  validations="required"
+  name="word"
+  class="input"
+  placeholder="Enter a word"
+  v-model="inputText"
+  editable
+/>
+```

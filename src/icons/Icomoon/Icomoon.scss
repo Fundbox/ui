@@ -1,0 +1,15 @@
+.icon-story-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.icon-description-wrapper {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 10px;
+}
+
+[class^="fbx-icon-"], [class*=" fbx-icon-"] {
+  margin-right: 20px;
+}

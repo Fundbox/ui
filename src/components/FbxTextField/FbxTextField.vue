@@ -157,7 +157,7 @@ export default {
       this.$emit('input', this.valueBeforeEditing)
       this.$nextTick(() => {
       // Rerun validation on the value that we just rolled back to
-        this.$validator.validate()
+        this.$validator.validate(this.$attrs.name)
       })
     },
     onCurrencyInput(event) {

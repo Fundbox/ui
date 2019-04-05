@@ -7,6 +7,7 @@
           ref="fbxTextFieldInput"
           v-fbx-address-autocomplete="addressAutocomplete"
           v-fbx-autofocus="autofocus"
+          v-fbx-currency
           v-mask="mask"
           :type="type"
           tabindex="0"
@@ -51,7 +52,16 @@ export default {
   directives: {
     mask: VueMaskDirective,
     FbxAddressAutocomplete,
-    FbxAutofocus
+    FbxAutofocus,
+    FbxCurrency: {
+      update(el, __binding, vnode) {
+        if (vnode.context.currency) {
+          if (el.value !== '') {
+            el.value = currencyFormatter(el.value)
+          }
+        }
+      },
+    },
   },
   inheritAttrs: false,
   inject: ['$validator'],
@@ -117,8 +127,8 @@ export default {
       if (value !== '') {
         value = currencyFormatter(value)
       }
-      // TODO(nlitwin): Can we emit a value without the comma?
-      this.$emit('input', value)
+
+      this.$emit('input', value.replace(/,/g, ''))
       // If a user types a letter instead of a number, immediately rerender with the formatted
       // value, so that the letter does not appear in the input
       this.$forceUpdate()

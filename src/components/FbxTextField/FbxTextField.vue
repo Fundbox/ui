@@ -155,8 +155,10 @@ export default {
     onCancelEditing() {
       this.isEditing = false
       this.$emit('input', this.valueBeforeEditing)
-      // Rerender so that validation is run again on the value that we just rolled back to
-      this.$forceUpdate()
+      this.$nextTick(() => {
+      // Rerun validation on the value that we just rolled back to
+        this.$validator.validate()
+      })
     },
     onCurrencyInput(event) {
       let value = event.target.value

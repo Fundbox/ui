@@ -181,21 +181,50 @@ const currencyStory = () => ({
   data() {
     return {
       inputText: '',
+      inputText2: '9999.99',
+      inputText3: '',
     }
   },
   watch: {
     inputText(value) {
       action(`New value`)(value)
     },
+    inputText2(value) {
+      action(`New value`)(value)
+    },
+    inputText3(value) {
+      action(`New value`)(value)
+    },
   },
   template: `
-    <div style="width: 300px;">
+    <div style="width: 400px;">
       <fbx-text-field
         name="amount"
         class="input"
         placeholder="Enter an amount"
         v-model="inputText"
         currency
+      />
+      <fbx-text-field
+        label="Prefilled"
+        name="amount2"
+        class="input"
+        placeholder="Enter an amount"
+        v-model="inputText2"
+        currency
+      />
+      <fbx-text-field
+        label="With Validations (min $1,000, max $1,999.99)"
+        name="amount3"
+        class="input"
+        placeholder="Enter an amount"
+        v-model="inputText3"
+        currency
+        :validations="{
+          required: 'true',
+          max_value: 1999.99,
+          min_value: 1000,
+        }"
       />
     </div>
   `,

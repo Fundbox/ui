@@ -1,5 +1,6 @@
 import VeeValidate from 'vee-validate'
 import Vue from 'vue'
+import { currencyFormatter } from '../utils/currency-formatter.js'
 
 import {
   passwordValidation,
@@ -7,7 +8,9 @@ import {
   addressRequiredValidation,
   fullAddressValidation,
   phoneNumberValidation,
-  fullNameValidation
+  fullNameValidation,
+  maxValueValidation,
+  minValueValidation,
 } from './validations'
 
 VeeValidate.Validator.extend('password', {
@@ -38,6 +41,20 @@ VeeValidate.Validator.extend('fullAddress', {
 VeeValidate.Validator.extend('fullName', {
   getMessage: () => 'Please enter full name',
   validate: fullNameValidation
+})
+
+VeeValidate.Validator.extend('max_value', {
+  getMessage(field, [max]) {
+    return `The ${field} field must be ${currencyFormatter(max)} or less.`
+  },
+  validate: maxValueValidation,
+})
+
+VeeValidate.Validator.extend('min_value', {
+  getMessage(field, [max]) {
+    return `The ${field} field must be ${currencyFormatter(max)} or more.`
+  },
+  validate: minValueValidation,
 })
 
 Vue.use(VeeValidate)

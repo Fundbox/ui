@@ -19,9 +19,6 @@ const dictionary = {
 };
 VeeValidate.Validator.dictionary.merge(dictionary);
 
-Vue.use(VeeValidate, {
-  events: "change"
-});
 
 setOptions({
   name: "Fundbox UI Library",

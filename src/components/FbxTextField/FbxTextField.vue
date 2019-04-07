@@ -152,14 +152,17 @@ export default {
     },
     onEdit() {
       this.isEditing = true
+      this.$emit('editing', true)
       this.valueBeforeEditing = this.value
       this.$refs.fbxTextFieldInput.focus()
     },
     onDoneEditing() {
       this.isEditing = false
+      this.$emit('editing', false)
     },
     onCancelEditing() {
       this.isEditing = false
+      this.$emit('editing', false)
       this.$emit('input', this.valueBeforeEditing)
       this.$nextTick(() => {
       // Rerun validation on the value that we just rolled back to

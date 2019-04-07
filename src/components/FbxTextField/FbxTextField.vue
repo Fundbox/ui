@@ -35,7 +35,13 @@
           <span class="done-icons__cancel-icon fbx-icon-x" @click="onCancelEditing"></span>
         </div>
 
-        <span class="fbx-text-field__dollar-sign" v-if="isCurrency">$</span>
+        <span
+          class="fbx-text-field__dollar-sign"
+          :class="{ 'is-editing': showEdit }"
+          v-if="isCurrency"
+        >
+          $
+        </span>
 
         <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 
@@ -221,6 +227,10 @@ export default {
       padding-right: 60px;
     }
 
+    &:read-only {
+      color: $extra-dark-gray;
+    }
+
     // Don't show the focus bottom border if input is editable and in readonly mode
     &:not(:read-only):not(.invalid):focus {
       border-bottom: 1px solid $dark-green;
@@ -252,6 +262,10 @@ export default {
     transform: translateY(-50%);
     @include font(16);
     user-select: none;
+
+    &.is-editing {
+      color: $extra-dark-gray;
+    }
   }
 
 

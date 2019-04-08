@@ -209,6 +209,7 @@ export default {
     transform: translateY(-50%);
     @include font(16);
     user-select: none;
+    z-index: 1;
   }
 
   .fbx-text-field__password-button,

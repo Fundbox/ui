@@ -3,6 +3,8 @@
     <label class="fbx-text-field__label">{{ label }}</label>
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
+        <span class="fbx-text-field__dollar-sign" v-if="isCurrency">$</span>
+
         <input
           ref="fbxTextFieldInput"
           v-fbx-address-autocomplete="addressAutocomplete"
@@ -24,8 +26,6 @@
           v-on="{ input: currency ? onCurrencyInput : onInput }"
           @change="onChange"
         />
-
-        <span class="fbx-text-field__dollar-sign" v-if="isCurrency">$</span>
 
         <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
 

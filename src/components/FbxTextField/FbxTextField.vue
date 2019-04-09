@@ -22,6 +22,7 @@
             currency: isCurrency,
             editable: editable,
           }"
+          :data-vv-validate-on="validateOnType ? 'input' : 'change'"
           v-validate="validations"
           v-bind="$attrs"
           :value="value"
@@ -139,6 +140,9 @@ export default {
     isCurrency() {
       return this.currency && this.value.length
     },
+    validateOnType() {
+      return this.currency || this.editable
+    }
   },
   methods: {
     togglePassword() {

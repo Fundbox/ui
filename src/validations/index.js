@@ -45,14 +45,14 @@ VeeValidate.Validator.extend('fullName', {
 
 VeeValidate.Validator.extend('max_value', {
   getMessage(field, [max]) {
-    return `The ${field} field must be $${currencyFormatter(max)} or less.`
+    return `The ${field} field must be ${currencyFormatter(max)} or less.`
   },
   validate: maxValueValidation,
 })
 
 VeeValidate.Validator.extend('min_value', {
   getMessage(field, [max]) {
-    return `The ${field} field must be $${currencyFormatter(max)} or more.`
+    return `The ${field} field must be ${currencyFormatter(max)} or more.`
   },
   validate: minValueValidation,
 })

@@ -3,11 +3,13 @@
     <label class="fbx-text-field__label">{{ label }}</label>
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
+        <span class="fbx-text-field__dollar-sign" v-if="isCurrency">$</span>
+
         <input
           ref="fbxTextFieldInput"
           v-fbx-address-autocomplete="addressAutocomplete"
           v-fbx-autofocus="autofocus"
-          v-fbx-currency
+          v-fbx-currency="currency"
           v-mask="mask"
           :type="type"
           tabindex="0"
@@ -23,7 +25,7 @@
           v-validate="validations"
           v-bind="$attrs"
           :value="value"
-          v-on="{ input: currency ? onCurrencyInput : onInput }"
+          @input="onInput"
           @change="onChange"
         />
 
@@ -70,8 +72,8 @@ export default {
     FbxAddressAutocomplete,
     FbxAutofocus,
     FbxCurrency: {
-      update(el, __binding, vnode) {
-        if (vnode.context.currency) {
+      update(el, { value: isUsingCurrency }) {
+        if (isUsingCurrency) {
           if (el.value !== '') {
             el.value = currencyFormatter(el.value)
           }
@@ -181,6 +183,7 @@ export default {
       this.$forceUpdate()
     },
     onInput(event) {
+      if (this.currency) return this.onCurrencyInput(event)
       this.$emit('input', event.target.value)
     },
     onChange(event) {
@@ -265,6 +268,7 @@ export default {
     transform: translateY(-50%);
     @include font(16);
     user-select: none;
+    z-index: 1;
 
     &.is-editing {
       color: $extra-dark-gray;

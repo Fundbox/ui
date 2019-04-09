@@ -54,8 +54,8 @@ export default {
     FbxAddressAutocomplete,
     FbxAutofocus,
     FbxCurrency: {
-      update(el, { value } ) {
-        if (value) {
+      update(el, { value: isUsingCurrency } ) {
+        if (isUsingCurrency) {
           if (el.value !== '') {
             el.value = currencyFormatter(el.value)
           }

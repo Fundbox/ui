@@ -3,8 +3,6 @@
     <label class="fbx-text-field__label">{{ label }}</label>
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
-        <span class="fbx-text-field__dollar-sign" v-if="isCurrency">$</span>
-
         <input
           ref="fbxTextFieldInput"
           v-fbx-address-autocomplete="addressAutocomplete"
@@ -29,6 +27,8 @@
           @input="onInput"
           @change="onChange"
         />
+
+        <span class="fbx-text-field__dollar-sign" v-if="isCurrency">$</span>
 
         <div class="edit-buttons-wrapper" v-if="editable">
           <div class="fbx-text-field__done-icons" v-if="isEditing">

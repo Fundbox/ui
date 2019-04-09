@@ -42,7 +42,7 @@
 
         <span
           class="fbx-text-field__dollar-sign"
-          :class="{ 'is-not-editing': !isEditing }"
+          :class="{ 'is-not-editing': editable && !isEditing }"
           v-if="isCurrency"
         >
           $

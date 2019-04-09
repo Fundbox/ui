@@ -9,7 +9,7 @@
           ref="fbxTextFieldInput"
           v-fbx-address-autocomplete="addressAutocomplete"
           v-fbx-autofocus="autofocus"
-          v-fbx-currency
+          v-fbx-currency="currency"
           v-mask="mask"
           :type="type"
           tabindex="0"
@@ -54,8 +54,8 @@ export default {
     FbxAddressAutocomplete,
     FbxAutofocus,
     FbxCurrency: {
-      update(el, __binding, vnode) {
-        if (vnode.context.currency) {
+      update(el, { value } ) {
+        if (value) {
           if (el.value !== '') {
             el.value = currencyFormatter(el.value)
           }

@@ -178,9 +178,6 @@ export default {
       }
 
       this.$emit('input', value.replace(/,/g, ''))
-      // If a user types a letter instead of a number, immediately rerender with the formatted
-      // value, so that the letter does not appear in the input
-      this.$forceUpdate()
     },
     onInput(event) {
       if (this.currency) return this.onCurrencyInput(event)

@@ -13,7 +13,7 @@
           v-mask="mask"
           :type="type"
           tabindex="0"
-          :readonly="showEdit"
+          :readonly="editable && !isEditing"
           class="fbx-text-field__input"
           :class="{
             password: isPassword,
@@ -29,17 +29,19 @@
           @change="onChange"
         />
 
-        <span class="fbx-text-field__edit" v-if="showEdit" @click="onEdit">Edit</span>
+        <div class="edit-buttons-wrapper" v-if="editable">
+          <div class="fbx-text-field__done-icons" v-if="isEditing">
+            <span class="done-icons__done-icon" @click="onDoneEditing">Done</span>
+            <span class="done-icons__separator">|</span>
+            <span class="done-icons__cancel-icon fbx-icon-x" @click="onCancelEditing"></span>
+          </div>
 
-        <div class="fbx-text-field__done-icons" v-if="showDoneIcons">
-          <span class="done-icons__done-icon" @click="onDoneEditing">Done</span>
-          <span class="done-icons__separator">|</span>
-          <span class="done-icons__cancel-icon fbx-icon-x" @click="onCancelEditing"></span>
+          <span class="fbx-text-field__edit" v-else @click="onEdit">Edit</span>
         </div>
 
         <span
           class="fbx-text-field__dollar-sign"
-          :class="{ 'is-editing': showEdit }"
+          :class="{ 'is-not-editing': !isEditing }"
           v-if="isCurrency"
         >
           $
@@ -136,12 +138,6 @@ export default {
     },
     isCurrency() {
       return this.currency && this.value.length
-    },
-    showEdit() {
-      return this.editable && !this.isEditing
-    },
-    showDoneIcons() {
-      return this.editable && this.isEditing
     },
   },
   methods: {
@@ -270,7 +266,7 @@ export default {
     user-select: none;
     z-index: 1;
 
-    &.is-editing {
+    &.is-not-editing {
       color: $extra-dark-gray;
     }
   }

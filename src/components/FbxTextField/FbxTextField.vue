@@ -23,7 +23,7 @@
           v-validate="validations"
           v-bind="$attrs"
           :value="value"
-          v-on="{ input: currency ? onCurrencyInput : onInput }"
+          @input="onInput"
           @change="onChange"
         />
 
@@ -134,6 +134,7 @@ export default {
       this.$forceUpdate()
     },
     onInput(event) {
+      if (this.currency) return this.onCurrencyInput(event)
       this.$emit('input', event.target.value)
     },
     onChange(event) {

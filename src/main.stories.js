@@ -1,5 +1,8 @@
 /* eslint-disable no-unused-vars */
 
+// Icons
+import Icomoon from './icons/Icomoon/Icomoon.stories.js'
+
 // Components
 import FbxNotice from './components/FbxNotice/FbxNotice.stories.js'
 import FbxIosSwitchButton from './components/FbxIosSwitchButton/FbxIosSwitchButton.stories.js'

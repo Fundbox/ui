@@ -8,6 +8,7 @@ describe('FbxTextField', () => {
   describe('snapshots', () => {
     it('renders the default', () => {
       const wrapper = shallowMount(FbxTextField, {
+        sync: false,
         propsData: {
           name: 'my-input',
           value: 'avocado',
@@ -20,6 +21,7 @@ describe('FbxTextField', () => {
 
     it('renders clear icon', () => {
       const wrapper = shallowMount(FbxTextField, {
+        sync: false,
         propsData: {
           name: 'my-input',
           value: 'avocado',
@@ -33,9 +35,7 @@ describe('FbxTextField', () => {
       expect(wrapper.html()).toMatchSnapshot()
     })
 
-    // TODO(nlitwin): test currently broken due to sync bug
-    // https://github.com/vuejs/vue-test-utils/issues/829
-    it.skip('renders a currency mask', (done) => {
+    it('renders a currency mask', () => {
       const wrapper = shallowMount(FbxTextField, {
         sync: false,
         propsData: {
@@ -44,10 +44,8 @@ describe('FbxTextField', () => {
           currency: true,
         },
       })
-      wrapper.vm.$nextTick(() => {
-        expect(wrapper.html()).toMatchSnapshot()
-        done()
-      })
+
+      expect(wrapper.html()).toMatchSnapshot()
     })
   })
 
@@ -55,6 +53,7 @@ describe('FbxTextField', () => {
     describe('togglePassword', () => {
       it('changes the input type from password to text', () => {
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: 'avocado',
@@ -75,6 +74,7 @@ describe('FbxTextField', () => {
 
       it('changes the input type from text to password', () => {
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: 'avocado',
@@ -93,6 +93,7 @@ describe('FbxTextField', () => {
       it('emits an input event with an empty string', () => {
         const mockOnInput = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: '42',
@@ -109,10 +110,8 @@ describe('FbxTextField', () => {
       })
     })
 
-    // TODO(nlitwin): test currently broken due to sync bug
-    // https://github.com/vuejs/vue-test-utils/issues/829
     describe('onCurrencyInput', () => {
-      it.skip('emits the change event with the input value', () => {
+      it('emits the change event with the input value', () => {
         const mockOnInput = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
           sync: false,
@@ -129,7 +128,7 @@ describe('FbxTextField', () => {
         wrapper.find('input').trigger('input')
 
         expect(mockOnInput).toHaveBeenCalled()
-        expect(mockOnInput).toHaveBeenCalledWith('12,879.25')
+        expect(mockOnInput).toHaveBeenCalledWith('12879.25')
       })
     })
 
@@ -137,6 +136,7 @@ describe('FbxTextField', () => {
       it('emits the change event with the input value', () => {
         const mockOnInput = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: '42',
@@ -157,6 +157,7 @@ describe('FbxTextField', () => {
       it('emits the change event with the input value', () => {
         const mockOnChange = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: '42',

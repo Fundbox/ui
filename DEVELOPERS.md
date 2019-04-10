@@ -25,7 +25,13 @@ Developing for the UI library is done within the UI repository alone, as a Story
 
 Once the component is ready for deploy, you'd probably want to implement it within a front-end application to make sure that it fits and works as planned. Our front-end applications are installing the UI library from our [remote npm registry](https://www.npmjs.com/package/@fundbox/ui) so in-order to test the local version of the UI library you'd have to install your local version, located at `~/fundbox/ui`.
 
-To use the local ui package, run:
+To use the local version of the UI library, compile it with your current changes:
+```bash
+cd ~/fundbox/ui
+npm run build:lib
+```
+
+then, run:
 ```bash
 cd ~/fundbox/frontend
 npm run link:ui

@@ -176,9 +176,108 @@ const clearableStory = () => ({
   `,
 })
 
+const currencyStory = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: '',
+      inputText2: '9999.99',
+      inputText3: '',
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value`)(value)
+    },
+    inputText2(value) {
+      action(`New value`)(value)
+    },
+    inputText3(value) {
+      action(`New value`)(value)
+    },
+  },
+  template: `
+    <div style="width: 400px;">
+      <fbx-text-field
+        name="amount"
+        class="input"
+        placeholder="Enter an amount"
+        v-model="inputText"
+        currency
+      />
+      <fbx-text-field
+        label="Prefilled"
+        name="amount2"
+        class="input"
+        placeholder="Enter an amount"
+        v-model="inputText2"
+        currency
+      />
+      <fbx-text-field
+        label="With Validations (min $1,000, max $1,999.99)"
+        name="amount3"
+        class="input"
+        placeholder="Enter an amount"
+        v-model="inputText3"
+        currency
+        :validations="{
+          required: 'true',
+          max_value: 1999.99,
+          min_value: 1000,
+        }"
+      />
+    </div>
+  `,
+})
+
+const editableStory = () => ({
+  components: { FbxTextField },
+  data() {
+    return {
+      inputText: '',
+      inputText2: '',
+    }
+  },
+  watch: {
+    inputText(value) {
+      action(`New value`)(value)
+    },
+    inputText2(value) {
+      action(`New value`)(value)
+    },
+  },
+  template: `
+    <div style="width: 400px;">
+      <fbx-text-field
+        name="word"
+        class="input"
+        placeholder="Enter a word"
+        v-model="inputText"
+        editable
+      />
+      <fbx-text-field
+        label="With currency and validations (min $1,000, max $9,999.99)"
+        name="amount"
+        class="input"
+        placeholder="Enter an amount"
+        v-model="inputText2"
+        editable
+        currency
+        :validations="{
+          required: 'true',
+          max_value: 9999.99,
+          min_value: 1000,
+        }"
+      />
+    </div>
+  `,
+})
+
 stories.add('default', withSummary(defaultStory))
 stories.add('password', withSummary(passwordStory))
 stories.add('mask', withSummary(maskStory))
 stories.add('autofocus', withSummary(autofocusStory))
 stories.add('address autocomplete', withSummary(addressAutocompleteStory))
 stories.add('clearable', withSummary(clearableStory))
+stories.add('currency', withSummary(currencyStory))
+stories.add('editable', withSummary(editableStory))

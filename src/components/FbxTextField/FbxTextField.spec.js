@@ -8,6 +8,7 @@ describe('FbxTextField', () => {
   describe('snapshots', () => {
     it('renders the default', () => {
       const wrapper = shallowMount(FbxTextField, {
+        sync: false,
         propsData: {
           name: 'my-input',
           value: 'avocado',
@@ -20,6 +21,7 @@ describe('FbxTextField', () => {
 
     it('renders clear icon', () => {
       const wrapper = shallowMount(FbxTextField, {
+        sync: false,
         propsData: {
           name: 'my-input',
           value: 'avocado',
@@ -32,12 +34,26 @@ describe('FbxTextField', () => {
 
       expect(wrapper.html()).toMatchSnapshot()
     })
+
+    it('renders a currency mask', () => {
+      const wrapper = shallowMount(FbxTextField, {
+        sync: false,
+        propsData: {
+          name: 'my-input',
+          value: '12879.25',
+          currency: true,
+        },
+      })
+
+      expect(wrapper.html()).toMatchSnapshot()
+    })
   })
 
   describe('methods', () => {
     describe('togglePassword', () => {
       it('changes the input type from password to text', () => {
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: 'avocado',
@@ -58,6 +74,7 @@ describe('FbxTextField', () => {
 
       it('changes the input type from text to password', () => {
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: 'avocado',
@@ -76,6 +93,7 @@ describe('FbxTextField', () => {
       it('emits an input event with an empty string', () => {
         const mockOnInput = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: '42',
@@ -92,10 +110,33 @@ describe('FbxTextField', () => {
       })
     })
 
+    describe('onCurrencyInput', () => {
+      it('emits the change event with the input value', () => {
+        const mockOnInput = jest.fn()
+        const wrapper = shallowMount(FbxTextField, {
+          sync: false,
+          propsData: {
+            name: 'my-input',
+            value: '12879.25',
+            currency: true,
+          },
+          listeners: {
+            input: mockOnInput,
+          },
+        })
+
+        wrapper.find('input').trigger('input')
+
+        expect(mockOnInput).toHaveBeenCalled()
+        expect(mockOnInput).toHaveBeenCalledWith('12879.25')
+      })
+    })
+
     describe('onInput', () => {
       it('emits the change event with the input value', () => {
         const mockOnInput = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: '42',
@@ -116,6 +157,7 @@ describe('FbxTextField', () => {
       it('emits the change event with the input value', () => {
         const mockOnChange = jest.fn()
         const wrapper = shallowMount(FbxTextField, {
+          sync: false,
           propsData: {
             name: 'my-input',
             value: '42',

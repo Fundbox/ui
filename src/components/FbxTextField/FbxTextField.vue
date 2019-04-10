@@ -161,6 +161,7 @@ export default {
     onDoneEditing() {
       this.isEditing = false
       this.$emit('editing', false)
+      this.$emit('updated')
     },
     onCancelEditing() {
       this.isEditing = false

@@ -47,6 +47,35 @@ describe('FbxTextField', () => {
 
       expect(wrapper.html()).toMatchSnapshot()
     })
+
+    it('renders an edit button', () => {
+      const wrapper = shallowMount(FbxTextField, {
+        sync: false,
+        propsData: {
+          name: 'my-input',
+          value: 'hello',
+          editable: true,
+        },
+      })
+
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('renders save and clear buttons', () => {
+      const wrapper = shallowMount(FbxTextField, {
+        sync: false,
+        propsData: {
+          name: 'my-input',
+          value: 'hello',
+          editable: true,
+        },
+      })
+      wrapper.find('span').trigger('click')
+
+      wrapper.vm.$nextTick(() => {
+        expect(wrapper.html()).toMatchSnapshot()
+      })
+    })
   })
 
   describe('methods', () => {

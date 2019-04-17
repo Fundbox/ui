@@ -15,6 +15,21 @@ exports[`FbxTextField snapshots renders a currency mask 1`] = `
 </div>
 `;
 
+exports[`FbxTextField snapshots renders an edit button 1`] = `
+<div class="fbx-text-field"><label class="fbx-text-field__label"></label>
+  <div class="fbx-text-field__wrapper">
+    <div class="fbx-text-field__input-wrapper"><input type="text" tabindex="0" readonly="readonly" data-vv-validate-on="input" name="my-input" class="fbx-text-field__input editable" data-mask="" data-previous-value="hello" aria-required="false" aria-invalid="false">
+      <!---->
+      <div class="edit-buttons-wrapper"><span class="fbx-text-field__edit">Edit</span></div>
+      <!---->
+      <!---->
+      <!---->
+    </div>
+    <!---->
+  </div>
+</div>
+`;
+
 exports[`FbxTextField snapshots renders clear icon 1`] = `
 <div class="fbx-text-field"><label class="fbx-text-field__label"></label>
   <div class="fbx-text-field__wrapper">
@@ -23,6 +38,23 @@ exports[`FbxTextField snapshots renders clear icon 1`] = `
       <!---->
       <!---->
       <!----> <span class="fbx-text-field__clear-icon"></span></div>
+    <!---->
+  </div>
+</div>
+`;
+
+exports[`FbxTextField snapshots renders save and clear buttons 1`] = `
+<div class="fbx-text-field"><label class="fbx-text-field__label"></label>
+  <div class="fbx-text-field__wrapper">
+    <div class="fbx-text-field__input-wrapper"><input type="text" tabindex="0" data-vv-validate-on="input" name="my-input" class="fbx-text-field__input editable" data-mask="" data-previous-value="hello" aria-required="false" aria-invalid="false">
+      <!---->
+      <div class="edit-buttons-wrapper">
+        <div class="fbx-text-field__done-icons"><span class="done-icons__done-icon">Save</span> <span class="done-icons__separator">|</span> <span class="done-icons__cancel-icon fbx-icon-x"></span></div>
+      </div>
+      <!---->
+      <!---->
+      <!---->
+    </div>
     <!---->
   </div>
 </div>

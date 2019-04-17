@@ -32,7 +32,7 @@
 
         <div class="edit-buttons-wrapper" v-if="editable">
           <div class="fbx-text-field__done-icons" v-if="isEditing">
-            <span class="done-icons__done-icon" @click="onDoneEditing">Done</span>
+            <span class="done-icons__done-icon" @click="onDoneEditing">Save</span>
             <span class="done-icons__separator">|</span>
             <span class="done-icons__cancel-icon fbx-icon-x" @click="onCancelEditing"></span>
           </div>

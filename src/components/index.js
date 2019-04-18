@@ -1,3 +1,4 @@
+import FbxTextArea from './FbxTextArea'
 import FbxNotice from './FbxNotice'
 import FbxTile from './FbxTile'
 import FbxTileGrid from './FbxTileGrid'

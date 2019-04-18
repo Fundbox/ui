@@ -23,6 +23,7 @@ import FbxCheckboxStories from './components/FbxCheckbox/FbxCheckbox.stories.js'
 import FbxCloseButtonStories from './components/FbxCloseButton/FbxCloseButton.stories.js'
 import FbxIosSwitchButton from './components/FbxIosSwitchButton/FbxIosSwitchButton.stories.js'
 import FbxPanelRadioButtonStories from './components/FbxPanelRadioButton/FbxPanelRadioButton.stories.js'
+import FbxTextArea from './components/FbxTextArea/FbxTextArea.stories.js'
 import FbxTextField from './components/FbxTextField/FbxTextField.stories.js'
 import FbxSelect from './components/FbxSelect/FbxSelect.stories.js'
 

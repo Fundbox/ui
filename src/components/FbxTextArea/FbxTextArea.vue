@@ -1,6 +1,6 @@
 <template>
   <div class="fbx-text-area-wrapper">
-    <label class="fbx-text-area-label">{{ label }}</label>
+    <label v-if="label" class="fbx-text-area-label">{{ label }}</label>
     <textarea
       v-bind="$attrs"
       :value="value"

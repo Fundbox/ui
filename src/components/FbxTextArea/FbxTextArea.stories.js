@@ -14,6 +14,7 @@ stories.add('default', withInfo({ summary })(() => ({
       inputText: '',
       inputText2: '',
       inputText3: '',
+      inputText4: '',
     }
   },
   watch: {
@@ -24,6 +25,9 @@ stories.add('default', withInfo({ summary })(() => ({
       action(`New value`)(value)
     },
     inputText3(value) {
+      action(`New value`)(value)
+    },
+    inputText4(value) {
       action(`New value`)(value)
     },
   },
@@ -48,6 +52,14 @@ stories.add('default', withInfo({ summary })(() => ({
         placeholder="Write something here"
         resize="vertical"
         v-model="inputText3"
+      />
+      <fbx-text-area
+        label="With validation"
+        validations="required"
+        name="myTextArea4"
+        placeholder="You must write something here"
+        :max-count="30"
+        v-model="inputText4"
       />
     </div>
   `

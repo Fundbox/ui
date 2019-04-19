@@ -31,6 +31,7 @@ export default {
     label: String,
     value: {
       type: String,
+      default: '',
     },
     resize: {
       type: String,
@@ -48,7 +49,7 @@ export default {
   },
   computed: {
     charCount() {
-      return this.value.length || 0
+      return this.value.length
     },
     hasReachedMaxChars() {
       return this.value.length === this.maxCount

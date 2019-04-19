@@ -5,6 +5,7 @@
       v-bind="$attrs"
       :value="value"
       v-on="listeners"
+      tabindex="0"
       class="fbx-text-area"
       :style="textAreaStyles"
       :maxlength="maxCount"

@@ -15,6 +15,7 @@ import FbxValidationMessage from './FbxValidationMessage'
 import FbxPanelRadioButton from './FbxPanelRadioButton'
 
 export {
+  FbxTextArea,
   FbxTile,
   FbxTileGrid,
   FbxModalWrapper,

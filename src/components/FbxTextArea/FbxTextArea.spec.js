@@ -1,7 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import flushPromises from 'flush-promises'
 import FbxTextArea from './FbxTextArea.vue'
-import VeeValidate from 'vee-validate'
 
 const localVue = createLocalVue()
 

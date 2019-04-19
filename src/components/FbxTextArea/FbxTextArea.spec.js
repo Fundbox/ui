@@ -46,7 +46,6 @@ describe('Components/FbxTextArea', () => {
 
   describe('charCount', () => {
     it('is 0 if there is no value length', () => {
-      const text = 'I am text'
       const wrapper = shallowMount(FbxTextArea, {})
 
       expect(wrapper.vm.charCount).toBe(0)

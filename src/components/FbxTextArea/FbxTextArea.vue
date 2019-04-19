@@ -80,6 +80,7 @@ export default {
 
   .fbx-text-area {
     width: 100%;
+    min-height: 50px;
     padding: 15px 20px;
     color: $medium-blue;
     @include font(14);

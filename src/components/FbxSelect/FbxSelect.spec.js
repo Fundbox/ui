@@ -18,7 +18,7 @@ localVue.use(VeeValidate, {
 
 describe('FbxSelect', () => {
   describe('snapshots', () => {
-    it('renders the default correctly', async() => {
+    it('renders the default correctly', async () => {
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
         attrs: {
@@ -35,7 +35,7 @@ describe('FbxSelect', () => {
       expect(wrapper.html()).toMatchSnapshot()
     })
 
-    it('renders validations correctly', async() => {
+    it('renders validations correctly', async () => {
       const validationMessage = 'This field is required'
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
@@ -61,7 +61,7 @@ describe('FbxSelect', () => {
   })
 
   describe('initialization', () => {
-    it('sets correct value by passing value attr', async() => {
+    it('sets correct value by passing value attr', async () => {
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
         attrs: {

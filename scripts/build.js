@@ -20,7 +20,7 @@ const logger = {
   error(message) { console.log(chalk.red.bold(this.formatMessage(message))) }
 }
 
-const execCommand = async(command) => {
+const execCommand = async (command) => {
   const { stdout, stderr } = await exec(command)
   console.log(stdout)
   if (stderr) {
@@ -28,7 +28,7 @@ const execCommand = async(command) => {
   }
 }
 
-const cleanup = async() => {
+const cleanup = async () => {
   await execCommand('rm -rf es dist')
   logger.info('Removed output directories')
 }
@@ -52,7 +52,7 @@ const handleWebpackOutput = (stats) => {
   console.groupEnd()
 }
 
-const buildElements = async() => {
+const buildElements = async () => {
   logger.info('Started elements build')
   const builds = availableTypes
     .reduce((dirs, type) => {
@@ -72,21 +72,21 @@ const buildElements = async() => {
   logger.info('Finished elements build')
 }
 
-const buildValidations = async() => {
+const buildValidations = async () => {
   logger.info('Started validations build')
   const stats = await webpack(getWebpackConfig(undefined, 'validations', 'es'))
   handleWebpackOutput(stats)
   logger.info('Finished validations build')
 }
 
-const buildLibrary = async() => {
+const buildLibrary = async () => {
   logger.info('Started main library build')
   const stats = await webpack(getWebpackConfig())
   handleWebpackOutput(stats)
   logger.info('Finished main library build')
 };
 
-(async() => {
+(async () => {
   logger.info('Started Fbx build')
   console.time('Fbx build')
   await cleanup()

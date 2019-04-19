@@ -5,8 +5,10 @@
       v-bind="$attrs"
       :value="value"
       v-on="listeners"
+      v-validate="validations"
       tabindex="0"
       class="fbx-text-area"
+      :class="{ invalid: isInvalid }"
       :style="textAreaStyles"
       :maxlength="maxCount"
     />
@@ -14,13 +16,21 @@
     <div v-if="maxCount" class="fbx-text-area-char-count" :class="{ 'max-characters': hasReachedMaxChars }">
       {{ charCount }} / {{ maxCount }}
     </div>
+    <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
   </div>
 </template>
 
 <script>
+import '../../validations'
+import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue'
+
 export default {
   name: 'FbxTextArea',
+  components: {
+    FbxValidationMessage
+  },
   inheritAttrs: false,
+  inject: ['$validator'],
   data() {
     return {
       textAreaStyles: {
@@ -33,6 +43,9 @@ export default {
     value: {
       type: String,
       default: '',
+    },
+    validations: {
+      type: [String, Object],
     },
     resize: {
       type: String,
@@ -62,7 +75,13 @@ export default {
           this.$emit('input', event.target.value)
         },
       }
-    }
+    },
+    isInvalid() {
+      return this.errors.has(this.$attrs.name, this.$attrs.scope)
+    },
+    validationMessage() {
+      return this.errors.first(this.$attrs.name, this.$attrs.scope)
+    },
   },
 }
 </script>
@@ -89,6 +108,11 @@ export default {
     background: $extra-light-gray;
     border: none;
 
+    &.invalid {
+      background-color: $extra-light-red;
+      border-bottom: 1px solid $light-red;
+    }
+
     &::placeholder {
       @include font(14);
       line-height: 21px;
@@ -105,6 +129,10 @@ export default {
 
   .max-characters {
     color: $medium-red;
+  }
+
+  .validation-message {
+    margin-top: 10px;
   }
 }
 </style>

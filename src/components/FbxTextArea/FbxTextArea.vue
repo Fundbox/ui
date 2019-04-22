@@ -6,7 +6,6 @@
       :value="value"
       v-on="listeners"
       v-validate="validations"
-      tabindex="0"
       class="fbx-text-area"
       :class="{ invalid: isInvalid }"
       :style="textAreaStyles"

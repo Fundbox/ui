@@ -9,11 +9,11 @@
       class="fbx-text-area"
       :class="{ invalid: isInvalid }"
       :style="textAreaStyles"
-      :maxlength="maxCount"
+      :maxlength="maxLength"
     />
 
-    <div v-if="maxCount" class="fbx-text-area-char-count" :class="{ 'max-characters': hasReachedMaxChars }">
-      {{ charCount }} / {{ maxCount }}
+    <div v-if="maxLength" class="fbx-text-area-char-count" :class="{ 'max-length': hasReachedMaxLength }">
+      {{ charCount }} / {{ maxLength }}
     </div>
     <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
   </div>
@@ -53,7 +53,7 @@ export default {
         return ['none', 'both', 'vertical', 'horizontal'].includes(value)
       },
     },
-    maxCount: {
+    maxLength: {
       type: Number,
       validator(value) {
         return value > 0
@@ -64,8 +64,8 @@ export default {
     charCount() {
       return this.value.length
     },
-    hasReachedMaxChars() {
-      return this.value.length === this.maxCount
+    hasReachedMaxLength() {
+      return this.value.length === this.maxLength
     },
     listeners() {
       return {
@@ -126,7 +126,7 @@ export default {
     color: $extra-dark-gray;
   }
 
-  .max-characters {
+  .max-length {
     color: $medium-red;
   }
 

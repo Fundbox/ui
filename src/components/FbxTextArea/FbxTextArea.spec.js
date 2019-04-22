@@ -47,7 +47,7 @@ describe('Components/FbxTextArea', () => {
         sync: false,
         propsData: {
           name: 'my-text-area',
-          maxCount: 20,
+          maxLength: 20,
         },
         localVue,
       })
@@ -105,7 +105,7 @@ describe('Components/FbxTextArea', () => {
     })
   })
 
-  describe('hasReachedMaxChars', () => {
+  describe('hasReachedMaxLength', () => {
     it('returns true if the user has entered text that is too long', () => {
       const text = 'I am text'
       const wrapper = shallowMount(FbxTextArea, {
@@ -114,12 +114,12 @@ describe('Components/FbxTextArea', () => {
           name: 'my-text-area',
         },
         propsData: {
-          maxCount: text.length,
+          maxLength: text.length,
           value: text,
         },
       })
 
-      expect(wrapper.vm.hasReachedMaxChars).toBe(true)
+      expect(wrapper.vm.hasReachedMaxLength).toBe(true)
     })
   })
 })

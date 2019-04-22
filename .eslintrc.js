@@ -149,7 +149,11 @@ module.exports = {
       keywords: "always",
       classes: "always",
     }],
-    "space-before-function-paren": [1, "never"],
+    "space-before-function-paren": ["error", {
+      anonymous: "never",
+      named: "never",
+      asyncArrow: "always",
+    }],
     "space-in-parens": [1, "never"],
     "spaced-comment": [1, "always"],
     strict: [1, "global"],

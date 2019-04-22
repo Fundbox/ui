@@ -86,7 +86,7 @@ export default {
 
   .tile-wrapper {
     padding: 0 $horizontal-spacing $vertical-spacing 0;
-    height: $height;
+    height: $height + $vertical-spacing;
     position: relative;
     flex-shrink: 0;
     flex-grow: 0;

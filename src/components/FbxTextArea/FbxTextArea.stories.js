@@ -43,7 +43,7 @@ stories.add('default', withInfo({ summary })(() => ({
         label="With character count"
         name="myTextArea2"
         placeholder="Write something brief"
-        :max-count="10"
+        :max-length="10"
         v-model="inputText2"
       />
       <fbx-text-area
@@ -58,7 +58,7 @@ stories.add('default', withInfo({ summary })(() => ({
         validations="required"
         name="myTextArea4"
         placeholder="You must write something here"
-        :max-count="30"
+        :max-length="30"
         v-model="inputText4"
       />
     </div>

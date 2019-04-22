@@ -4,7 +4,7 @@
 
 - Use `FbxTextArea` whenever you need an HTML `<textarea>`
 - You can pass a resize option as a prop ('none', 'both', 'horizontal', and 'vertical')
-- If you pass a `max-count` value, you'll get a counter that will let the user know how many characters they have left
+- If you pass a `max-length` value, you'll get a counter that will let the user know how many characters they have left
 
 ```html
 <!-- Example usage with label -->
@@ -21,7 +21,7 @@
   name="myTextArea"
   placeholder="Write something here..."
   v-model="inputText"
-  :max-count="200"
+  :max-length="200"
 />
 
 <!-- Example usage with resize -->

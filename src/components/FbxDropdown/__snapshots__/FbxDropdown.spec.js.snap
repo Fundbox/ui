@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FbxDropdown snapshots menu closed when clicked outside 1`] = `
+<div class="drop-down"><button class="drop-down-button fbx-icon-arrow-down"></button>
+  <!---->
+</div>
+`;
+
+exports[`Components/FbxDropdown snapshots renders the default correctly 1`] = `
+<div class="drop-down"><button class="drop-down-button fbx-icon-arrow-down"></button>
+  <!---->
+</div>
+`;
+
+exports[`Components/FbxDropdown snapshots renders the open menu 1`] = `
+<div class="drop-down"><button class="drop-down-button fbx-icon-arrow-down"></button>
+  <div class="drop-down-content" name="slide-down"></div>
+</div>
+`;

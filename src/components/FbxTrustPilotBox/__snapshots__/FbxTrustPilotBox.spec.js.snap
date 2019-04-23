@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FbxTrustPilotBox snapshots renders the default correctly 1`] = `<div data-locale="en-US" data-template-id="ddd" data-businessunit-id="dds" data-style-height="150px" data-style-width="100%" data-theme="light" class="trustpilot-widget"><a href="ddsd" target="_blank" rel="noopener" class="fallback">Trustpilot</a></div>`;

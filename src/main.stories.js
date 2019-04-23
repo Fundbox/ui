@@ -4,6 +4,7 @@
 import Icomoon from './icons/Icomoon/Icomoon.stories.js'
 
 // Components
+import FbxDropdown from './components/FbxDropdown/FbxDropdown.stories.js'
 import FbxNotice from './components/FbxNotice/FbxNotice.stories.js'
 import FbxIosSwitchButton from './components/FbxIosSwitchButton/FbxIosSwitchButton.stories.js'
 import FbxTileGrid from './components/FbxTileGrid/FbxTileGrid.stories.js'

@@ -1,5 +1,5 @@
 # FbxDropdown
-A dropdown menu with a slot the content of the dropdown itself.
+A dropdown menu with a slot for the content of the dropdown itself.
 
 Intentionally, the dropdown itself is almost unstyled (besides for positioning) 
 to make this component as customizable as possible. 

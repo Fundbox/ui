@@ -1,4 +1,5 @@
 import FbxDropdown from './FbxDropdown'
+import FbxTextArea from './FbxTextArea'
 import FbxNotice from './FbxNotice'
 import FbxTile from './FbxTile'
 import FbxTileGrid from './FbxTileGrid'
@@ -15,6 +16,8 @@ import FbxValidationMessage from './FbxValidationMessage'
 import FbxPanelRadioButton from './FbxPanelRadioButton'
 
 export {
+  FbxTextArea,
+  FbxDropdown,
   FbxTile,
   FbxTileGrid,
   FbxModalWrapper,

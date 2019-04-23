@@ -25,7 +25,7 @@ const defaultStory = () => ({
     <fbx-text-field
       name="email"
       class="input"
-      validations="required"
+      validations="required|email"
       placeholder="Enter your email"
       :label="labelText"
       v-model="inputText"

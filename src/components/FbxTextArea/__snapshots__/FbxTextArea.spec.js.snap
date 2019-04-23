@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FbxTextArea snapshots renders the default correctly 1`] = `
+<div class="fbx-text-area-wrapper">
+  <!----> <textarea name="my-text-area" class="fbx-text-area" style="resize: none;" aria-required="false" aria-invalid="false"></textarea>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Components/FbxTextArea snapshots renders with a character counter 1`] = `
+<div class="fbx-text-area-wrapper">
+  <!----> <textarea maxlength="20" name="my-text-area" class="fbx-text-area" style="resize: none;" aria-required="false" aria-invalid="false"></textarea>
+  <div class="fbx-text-area-char-count">
+    0 / 20
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`Components/FbxTextArea snapshots renders with a label 1`] = `
+<div class="fbx-text-area-wrapper"><label class="fbx-text-area-label">Order Details</label> <textarea name="my-text-area" class="fbx-text-area" style="resize: none;" aria-required="false" aria-invalid="false"></textarea>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Components/FbxTextArea snapshots renders with a resize value 1`] = `
+<div class="fbx-text-area-wrapper">
+  <!----> <textarea name="my-text-area" class="fbx-text-area" style="resize: both;" aria-required="false" aria-invalid="false"></textarea>
+  <!---->
+  <!---->
+</div>
+`;
+
+exports[`Components/FbxTextArea snapshots renders with a validation message 1`] = `
+<div class="fbx-text-area-wrapper">
+  <!----> <textarea name="my-text-area" class="fbx-text-area invalid" style="resize: none;" aria-required="false" aria-invalid="false"></textarea>
+  <!---->
+  <fbx-validation-message-stub class="validation-message">This field is required</fbx-validation-message-stub>
+</div>
+`;

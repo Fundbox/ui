@@ -13,9 +13,14 @@ stories.add('default', withInfo({ summary })(() => ({
   <FbxLogo
     style="height: 50px; background: white; padding: 10px"
   ></FbxLogo>
-  <br>
-  <br>
-  <h3>Without text</h3>
+</div>
+`
+})))
+
+stories.add('Without text', withInfo({ summary })(() => ({
+  components: { FbxLogo },
+  template: `
+<div style="background: #f0f2f2; padding: 50px;">
   <FbxLogo
     style="height: 50px; background: white; padding: 10px"
     :withText="false"

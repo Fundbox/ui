@@ -17,6 +17,7 @@ import FbxPanelRadioButton from './FbxPanelRadioButton'
 
 export {
   FbxTextArea,
+  FbxLogo,
   FbxTile,
   FbxTileGrid,
   FbxModalWrapper,

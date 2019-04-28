@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="fbx-logo layout-row vertical-center">
+    <div class="fbx-logo vertical-center" :class="[vertical ? 'layout-column' : 'layout-row']">
       <svg class="hexagon-logo" viewBox="0 0 25.5 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
         <defs>
@@ -44,6 +44,10 @@ export default {
     withText: {
       type: Boolean,
       default: true,
+    },
+    vertical: {
+      type: Boolean,
+      default: false,
     }
   }
 }
@@ -63,10 +67,20 @@ export default {
 
 .hexagon-logo {
   height: 100%;
-  padding-right: 6%;
+  padding-right: 7%;
 }
 
 .text-logo {
-  height: 45%;
+  height: 46%;
+}
+
+.layout-column {
+  .hexagon-logo {
+    padding: 0 0 8% 0;
+  }
+
+  .text-logo {
+    height: 21%;
+  }
 }
 </style>

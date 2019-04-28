@@ -10,6 +10,8 @@
 </template>
 
 <script>
+const delayForClose = 200
+
 export default {
   name: 'FbxDropdown',
   data() {
@@ -22,8 +24,8 @@ export default {
       this.isMenuOpen = !this.isMenuOpen
     },
     clickedOutside() {
-      // Delay closing by 200ms for UX purposes.
-      setTimeout(() => this.isMenuOpen = false, 200)
+      // Delay closing by delayForClose for UX purposes.
+      setTimeout(() => this.isMenuOpen = false, delayForClose)
     },
   }
 }

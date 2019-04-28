@@ -6,11 +6,15 @@ import summary from './FbxLogo.md'
 
 const stories = storiesOf('Components/FundboxLogo', module)
 
+
+const wrapperStyle = 'background: #f0f2f2; padding: 50px;'
+const logoStyle = 'height: 100px; background: white; padding: 20px;'
+
 stories.add('default', withInfo({ summary })(() => ({
   components: { FbxLogo },
   template: `
-<div style="background: #f0f2f2; padding: 50px;">
-  <FbxLogo style="height: 50px; background: white; padding: 10px"></FbxLogo>
+<div style="${wrapperStyle}">
+  <FbxLogo style="${logoStyle}"></FbxLogo>
 </div>
 `
 })))
@@ -18,8 +22,8 @@ stories.add('default', withInfo({ summary })(() => ({
 stories.add('Without text', withInfo({ summary })(() => ({
   components: { FbxLogo },
   template: `
-<div style="background: #f0f2f2; padding: 50px;">
-  <FbxLogo style="height: 50px; background: white; padding: 10px" withoutText></FbxLogo>
+<div style="${wrapperStyle}">
+  <FbxLogo style="${ logoStyle }" withoutText></FbxLogo>
 </div>
 `
 })))
@@ -27,8 +31,8 @@ stories.add('Without text', withInfo({ summary })(() => ({
 stories.add('Vertical', withInfo({ summary })(() => ({
   components: { FbxLogo },
   template: `
-<div style="background: #f0f2f2; padding: 50px;">
-  <FbxLogo style="height: 50px; background: white; padding: 10px" vertical></FbxLogo>
+<div style="${ wrapperStyle }">
+  <FbxLogo style="${ logoStyle }" vertical></FbxLogo>
 </div>
 `
 })))
@@ -36,8 +40,8 @@ stories.add('Vertical', withInfo({ summary })(() => ({
 stories.add('Pay Logo', withInfo({ summary })(() => ({
   components: { FbxLogo },
   template: `
-<div style="background: #f0f2f2; padding: 50px;">
-  <FbxLogo style="height: 50px; background: white; padding: 10px" payLogo></FbxLogo>
+<div style="${ wrapperStyle }">
+  <FbxLogo style="${ logoStyle }" payLogo></FbxLogo>
 </div>
 `
 })))
@@ -45,8 +49,8 @@ stories.add('Pay Logo', withInfo({ summary })(() => ({
 stories.add('Vertical Pay Logo', withInfo({ summary })(() => ({
   components: { FbxLogo },
   template: `
-<div style="background: #f0f2f2; padding: 50px;">
-  <FbxLogo style="height: 50px; background: white; padding: 10px" payLogo vertical></FbxLogo>
+<div style="${ wrapperStyle }">
+  <FbxLogo style="${ logoStyle }" payLogo vertical></FbxLogo>
 </div>
 `
 })))

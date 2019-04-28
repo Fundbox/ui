@@ -16,5 +16,33 @@ describe('Components/FbxLogo', () => {
       })
       expect(wrapper.html()).toMatchSnapshot()
     })
+
+    it('renders vertical logo', () => {
+      const wrapper = shallowMount(FbxLogo, {
+        props: {
+          vertical: true,
+        }
+      })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('renders fundbox pay logo', () => {
+      const wrapper = shallowMount(FbxLogo, {
+        props: {
+          payLogo: true,
+        }
+      })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
+    it('renders fundbox pay logo vertically', () => {
+      const wrapper = shallowMount(FbxLogo, {
+        props: {
+          payLogo: true,
+          vertical: true,
+        }
+      })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
   })
 })

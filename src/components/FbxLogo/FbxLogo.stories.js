@@ -29,7 +29,6 @@ stories.add('Without text', withInfo({ summary })(() => ({
 `
 })))
 
-
 stories.add('Vertical', withInfo({ summary })(() => ({
   components: { FbxLogo },
   template: `
@@ -37,6 +36,18 @@ stories.add('Vertical', withInfo({ summary })(() => ({
   <FbxLogo
     style="height: 50px; background: white; padding: 10px"
     :vertical="true"
+  ></FbxLogo>
+</div>
+`
+})))
+
+stories.add('Pay Logo', withInfo({ summary })(() => ({
+  components: { FbxLogo },
+  template: `
+<div style="background: #f0f2f2; padding: 50px;">
+  <FbxLogo
+    style="height: 50px; background: white; padding: 10px"
+    :payLogo="true"
   ></FbxLogo>
 </div>
 `

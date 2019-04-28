@@ -1,6 +1,10 @@
 <template>
   <div class="drop-down">
-    <button class="drop-down-button fbx-icon-arrow-down" @click="dropDownButtonClicked" @focusout="clickedOutside"></button>
+    <button class="drop-down-button" @click="dropDownButtonClicked" @focusout="clickedOutside">
+      {{ menuText }}
+      <span v-if="menuText" class="nbsp"></span>
+      <span class="menu-icon fbx-icon-arrow-down"></span>
+    </button>
     <transition name="slide-down">
       <div class="drop-down-content" v-if="isMenuOpen">
         <slot></slot>
@@ -14,6 +18,9 @@ const delayForClose = 200
 
 export default {
   name: 'FbxDropdown',
+  props: {
+    menuText: String,
+  },
   data() {
     return {
       isMenuOpen: false
@@ -33,6 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../styles/fonts/icomoon/style.css";
+@import "../../styles/utils/utilities.scss";
 
 .drop-down {
   display: inline-block;
@@ -41,6 +49,10 @@ export default {
 
 .drop-down-button {
   cursor: pointer;
+}
+
+.drop-down-button, .menu-icon {
+  vertical-align: middle;
 }
 
 .drop-down-content {

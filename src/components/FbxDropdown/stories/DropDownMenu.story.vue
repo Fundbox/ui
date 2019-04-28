@@ -2,7 +2,7 @@
   <div class="wrapper">
     <h1>Drop down menu with text</h1>
     <div class="drop-down-wrapper">
-      Some Menu text
+      Text outside the menu don't click
       <fbx-dropdown>
         <a href="#">Help & Support</a>
         <a href="#">Agreement</a>

@@ -8,6 +8,15 @@ describe('Components/FbxDropdown', () => {
       expect(wrapper.html()).toMatchSnapshot()
     })
 
+    it('renders menu with text', () => {
+      const wrapper = shallowMount(FbxDropdown, {
+        props: {
+          menuText: 'menu text',
+        },
+      })
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
     it('renders the open menu', () => {
       const wrapper = shallowMount(FbxDropdown, {})
       wrapper.find('.drop-down-button').trigger('click')

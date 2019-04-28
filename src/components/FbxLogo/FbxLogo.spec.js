@@ -11,7 +11,7 @@ describe('Components/FbxLogo', () => {
     it('renders without text', () => {
       const wrapper = shallowMount(FbxLogo, {
         props: {
-          withText: false,
+          withoutText: true,
         }
       })
       expect(wrapper.html()).toMatchSnapshot()

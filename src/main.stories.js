@@ -13,6 +13,7 @@ import FbxTooltip from './components/FbxTooltip/FbxTooltip.stories.js'
 
 // Navigation
 import FbxTabs from './components/FbxTabs/FbxTabs.stories.js'
+import FbxDropdown from './components/FbxDropdown/FbxDropdown.stories.js'
 
 // Layout
 import FbxTileGrid from './components/FbxTileGrid/FbxTileGrid.stories.js'

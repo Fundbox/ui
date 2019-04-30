@@ -4,7 +4,7 @@ import { withInfo } from 'storybook-addon-vue-info'
 import FbxLogo from './FbxLogo.vue'
 import summary from './FbxLogo.md'
 
-const stories = storiesOf('Components/FundboxLogo', module)
+const stories = storiesOf('Components/Logo', module)
 
 
 const wrapperStyle = 'background: #f0f2f2; padding: 50px;'

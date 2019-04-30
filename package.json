@@ -14,6 +14,7 @@
     "test": "jest --config test/unit/jest.conf.js --coverage",
     "test:watch": "jest --config test/unit/jest.conf.js --watch",
     "lint": "eslint -f codeframe . --ext .js,.vue --max-warnings=0",
+    "fix": "eslint -f codeframe . --ext .js,.vue --max-warnings=0 --fix",
     "create": "node scripts/cli.js",
     "release": "semantic-release"
   },

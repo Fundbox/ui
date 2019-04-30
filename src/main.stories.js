@@ -5,6 +5,7 @@ import IntroductionStories from './components/introduction/introduction.stories.
 import Icomoon from './icons/Icomoon/Icomoon.stories.js'
 
 // Components
+import FbxPartnersLogos from './components/FbxPartnersLogos/FbxPartnersLogos.stories.js'
 import FbxLogo from './components/FbxLogo/FbxLogo.stories.js'
 // Alerts and Notifications
 import FbxNotice from './components/FbxNotice/FbxNotice.stories.js'

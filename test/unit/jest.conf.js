@@ -9,6 +9,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^.+\\.svg$': '<rootDir>/src/__mocks__/fileMock.js'
   },
   transform: {
     '^.+\\.vue$': 'vue-jest',

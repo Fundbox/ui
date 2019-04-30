@@ -11,6 +11,9 @@ import FbxNotice from './components/FbxNotice/FbxNotice.stories.js'
 import FbxModalWrapper from './components/FbxModalWrapper/FbxModalWrapper.stories.js'
 import FbxTooltip from './components/FbxTooltip/FbxTooltip.stories.js'
 
+// 3rd parties integration
+import FbxTrustPilotBox from './components/FbxTrustPilotBox/FbxTrustPilotBox.stories.js'
+
 // Navigation
 import FbxTabs from './components/FbxTabs/FbxTabs.stories.js'
 import FbxDropdown from './components/FbxDropdown/FbxDropdown.stories.js'

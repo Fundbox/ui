@@ -1,6 +1,7 @@
 import FbxDropdown from './FbxDropdown'
 import FbxLogo from './FbxLogo'
 import FbxTextArea from './FbxTextArea'
+import FbxTrustPilotBox from './FbxTrustPilotBox'
 import FbxNotice from './FbxNotice'
 import FbxTile from './FbxTile'
 import FbxTileGrid from './FbxTileGrid'
@@ -33,5 +34,6 @@ export {
   FbxTooltip,
   FbxValidationMessage,
   FbxPanelRadioButton,
-  FbxNotice
+  FbxNotice,
+  FbxTrustPilotBox,
 }

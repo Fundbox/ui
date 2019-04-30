@@ -47,9 +47,18 @@
 export default {
   name: 'FbxLogo',
   props: {
-    withoutText: Boolean,
-    vertical: Boolean,
-    payLogo: Boolean,
+    withoutText: {
+      type: Boolean,
+      default: false,
+    },
+    vertical: {
+      type: Boolean,
+      default: false,
+    },
+    payLogo: {
+      type: Boolean,
+      default: false,
+    },
   }
 }
 </script>

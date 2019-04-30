@@ -4,10 +4,12 @@ import VeeValidate from 'vee-validate'
 import FbxSelect from './FbxSelect.vue'
 
 const option1 = 'Option 1'
+const option2 = 'Option 2'
 const defaultSlot = {
   default: `
     <option>Default</option>
     <option value="${option1}">${option1}</option>
+    <option value="${option2}">${option2}</option>
   `
 }
 
@@ -82,21 +84,30 @@ describe('FbxSelect', () => {
   describe('events', () => {
     it('calls input event with selected value on value select', () => {
       const mockInput = jest.fn()
+      const mockChange = jest.fn()
       const wrapper = shallowMount(FbxSelect, {
         slots: defaultSlot,
         attrs: {
           name: 'select'
         },
         listeners: {
+          change: mockChange,
           input: mockInput,
         },
         sync: false,
         localVue
       })
-      const options = wrapper.find('select').findAll('option')
+      const selectWrapper = wrapper.find('select')
+      const options = selectWrapper.findAll('option')
+
       options.at(1).setSelected()
+      expect(mockChange).toHaveBeenCalledTimes(1)
+      expect(mockChange).toHaveBeenCalledWith(option1)
+
+      options.at(2).element.selected = true
+      options.at(2).trigger('input')
       expect(mockInput).toHaveBeenCalledTimes(1)
-      expect(mockInput).toHaveBeenCalledWith(option1)
+      expect(mockInput).toHaveBeenCalledWith(option2)
     })
 
     it('calls regular events of select', () => {

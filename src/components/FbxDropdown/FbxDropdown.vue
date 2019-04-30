@@ -14,7 +14,7 @@
 </template>
 
 <script>
-const delayForClose = 200
+const DELAY_FOR_CLOSE = 200
 
 export default {
   name: 'FbxDropdown',
@@ -32,7 +32,7 @@ export default {
     },
     clickedOutside() {
       // Delay closing by delayForClose for UX purposes.
-      setTimeout(() => this.isMenuOpen = false, delayForClose)
+      setTimeout(() => this.isMenuOpen = false, DELAY_FOR_CLOSE)
     },
   }
 }

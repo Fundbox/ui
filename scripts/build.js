@@ -1,7 +1,7 @@
 /* eslint no-console: 0 */
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
-const { lstatSync, readdirSync } = require('fs')
+const { lstatSync, readdirSync, copy } = require('fs-extra')
 const { join } = require('path')
 const webpack = util.promisify(require('webpack'))
 const getWebpackConfig = require('./webpack.config.build')
@@ -79,6 +79,12 @@ const buildValidations = async () => {
   logger.info('Finished validations build')
 }
 
+const buildStyles = async () => {
+  logger.info('Started Style build')
+  await copy(`${SRC_PATH}/styles`, 'es/styles')
+  logger.info('Finished Style build')
+}
+
 const buildLibrary = async () => {
   logger.info('Started main library build')
   const stats = await webpack(getWebpackConfig())
@@ -92,6 +98,7 @@ const buildLibrary = async () => {
   await cleanup()
   await buildElements()
   await buildValidations()
+  await buildStyles()
   await buildLibrary()
   console.timeEnd('Fbx build')
   logger.info('Finished Fbx build')

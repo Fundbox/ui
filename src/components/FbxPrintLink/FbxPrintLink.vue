@@ -5,7 +5,7 @@
   </div>
 </template>
 
- <script>
+<script>
 import escape from 'lodash/escape'
 
 export default {

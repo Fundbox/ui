@@ -2,8 +2,8 @@ import { shallowMount } from '@vue/test-utils'
 import FbxPrintLink from './FbxPrintLink.vue'
 
 describe('Components/FbxPrintLink', () => {
-  const printTitle = "A title"
-  const printContent = "Some content"
+  const printTitle = 'A title'
+  const printContent = 'Some content'
 
   describe('snapshots', () => {
     it('renders the default correctly', () => {
@@ -37,7 +37,7 @@ describe('Components/FbxPrintLink', () => {
         return {
           document: {
             documentElement: {
-              innerHTML: "",
+              innerHTML: '',
             },
           },
           focus,
@@ -58,7 +58,7 @@ describe('Components/FbxPrintLink', () => {
       wrapper.vm.printTextContent()
 
       const finalPrintContent = window.open.mock.results[0].value.document.documentElement.innerHTML
-      expect(finalPrintContent).toContain("DOCTYPE")
+      expect(finalPrintContent).toContain('DOCTYPE')
       expect(finalPrintContent).toContain(printTitle)
       expect(finalPrintContent).toContain(printContent)
       expect(window.open).toHaveBeenCalledTimes(1)

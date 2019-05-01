@@ -1,3 +1,4 @@
+import FbxPrintLink from './FbxPrintLink'
 import FbxDropdown from './FbxDropdown'
 import FbxLogo from './FbxLogo'
 import FbxPartnersLogo from './FbxPartnersLogo'
@@ -19,6 +20,7 @@ import FbxValidationMessage from './FbxValidationMessage'
 import FbxPanelRadioButton from './FbxPanelRadioButton'
 
 export {
+  FbxPrintLink,
   FbxTextArea,
   FbxDropdown,
   FbxLogo,

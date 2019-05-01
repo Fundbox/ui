@@ -32,6 +32,7 @@ import FbxPanelRadioButtonStories from './components/FbxPanelRadioButton/FbxPane
 import FbxTextArea from './components/FbxTextArea/FbxTextArea.stories.js'
 import FbxTextField from './components/FbxTextField/FbxTextField.stories.js'
 import FbxSelect from './components/FbxSelect/FbxSelect.stories.js'
+import FbxPrintLink from './components/FbxPrintLink/FbxPrintLink.stories.js'
 
 // Directives
 import FbxAddressAutocomplete from './directives/FbxAddressAutocomplete/FbxAddressAutocomplete.stories.js'

@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="logo-container">
-      <img class="logo" :src="IntuitLogo">
+      <img class="logo" :src="PaypalLogo">
     </div>
     <div class="logo-container">
-      <img class="logo" :src="PaypalLogo">
+      <img class="logo" :src="IntuitLogo">
     </div>
     <div class="logo-container">
       <img class="logo" :src="SynchronyLogo">

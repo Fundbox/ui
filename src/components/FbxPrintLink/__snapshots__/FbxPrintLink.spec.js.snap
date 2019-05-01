@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FbxPrintLink snapshots renders the default correctly 1`] = `
+<div class="fbx-print-link">
+  <div class="fbx-icon-printer"></div> <a href="#">Print this agreement</a>
+</div>
+`;
+
+exports[`Components/FbxPrintLink snapshots renders without a print icon 1`] = `
+<div class="fbx-print-link">
+  <!----> <a href="#">Print this agreement</a></div>
+`;

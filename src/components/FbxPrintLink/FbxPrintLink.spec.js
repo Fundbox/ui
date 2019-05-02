@@ -62,5 +62,57 @@ describe('Components/FbxPrintLink', () => {
       expect(focus).toHaveBeenCalledTimes(1)
       expect(print).toHaveBeenCalledTimes(1)
     })
+
+    it('escapes the print title', () => {
+      window.open = jest.fn(() => {
+        return {
+          document: {
+            documentElement: {
+              innerHTML: '',
+            },
+          },
+          focus: jest.fn(),
+          print: jest.fn(),
+        }
+      })
+
+      const wrapper = shallowMount(FbxPrintLink, {
+        propsData: {
+          printTitle: "&",
+          printHtmlContent,
+        },
+      })
+
+      wrapper.vm.onPrintButtonClick()
+
+      const finalPrintContent = window.open.mock.results[0].value.document.documentElement.innerHTML
+      expect(finalPrintContent).toContain('&amp;')
+    })
+
+    it('sanitizes the print content print content', () => {
+      window.open = jest.fn(() => {
+        return {
+          document: {
+            documentElement: {
+              innerHTML: '',
+            },
+          },
+          focus: jest.fn(),
+          print: jest.fn(),
+        }
+      })
+
+      const wrapper = shallowMount(FbxPrintLink, {
+        propsData: {
+          printTitle,
+          printHtmlContent: "<script>alert(42)</script>",
+        },
+      })
+
+      wrapper.vm.onPrintButtonClick()
+
+      const finalPrintContent = window.open.mock.results[0].value.document.documentElement.innerHTML
+      expect(finalPrintContent).toContain('&lt;script&gt;')
+    })
   })
 })

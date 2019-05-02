@@ -7,6 +7,7 @@
 
 <script>
 import escape from 'lodash/escape'
+import sanitizeHTML from 'sanitize-html'
 
 export default {
   name: 'FbxPrintLink',
@@ -35,7 +36,7 @@ export default {
           </head>
           <body>
             <h1>${escape(this.printTitle)}</h1>
-            <div>${this.$sanitize(this.printContent)}</div>
+            <div>${sanitizeHTML(this.printContent)}</div>
           </body>
         </html>
       `

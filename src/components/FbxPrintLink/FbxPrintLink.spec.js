@@ -50,9 +50,6 @@ describe('Components/FbxPrintLink', () => {
           printTitle,
           printContent,
         },
-        mocks: {
-          $sanitize: text => text,
-        },
       })
 
       wrapper.vm.printTextContent()

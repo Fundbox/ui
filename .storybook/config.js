@@ -23,8 +23,6 @@ Vue.use(VeeValidate, {
   events: "change"
 });
 
-Vue.prototype.$sanitize = text => text
-
 setOptions({
   name: "Fundbox UI Library",
   url: "https://github.com/Fundbox/ui",

@@ -28,7 +28,7 @@ describe('Components/FbxPrintLink', () => {
     })
   })
 
-  describe('printTextContent', () => {
+  describe('onPrintButtonClick', () => {
     it('prints the new document', () => {
       const focus = jest.fn()
       const print = jest.fn()
@@ -52,7 +52,7 @@ describe('Components/FbxPrintLink', () => {
         },
       })
 
-      wrapper.vm.printTextContent()
+      wrapper.vm.onPrintButtonClick()
 
       const finalPrintContent = window.open.mock.results[0].value.document.documentElement.innerHTML
       expect(finalPrintContent).toContain('DOCTYPE')

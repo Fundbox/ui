@@ -1,7 +1,7 @@
 <template>
   <div class="fbx-print-link">
     <div v-if="showPrintIcon" class="fbx-icon-printer"></div>
-    <a href="#" @click="printTextContent">Print this agreement</a>
+    <a href="#" @click="onPrintButtonClick">Print this agreement</a>
   </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
     },
   },
   methods: {
-    printTextContent() {
+    onPrintButtonClick() {
       const printContent = `
         <!DOCTYPE html>
         <html lang="en">

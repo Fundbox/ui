@@ -10,9 +10,9 @@ stories.add('default', withInfo({ summary })(() => ({
   components: { FbxPrintLink },
   data() {
     return {
-      printTitle: 'Ein &Cupcakelied',
+      printTitle: 'Ein Cupcakelied',
       printHtmlContent: `
-        Cupcake ipsum dolor &<script>alert(1)</script>sit amet cake jelly-o.
+        Cupcake ipsum dolor sit amet cake jelly-o.
         Topping biscuit donut biscuit jelly beans candy danish.
         Cheesecake macaroon pastry sweet roll bear claw powder dragée macaroon.
         Icing macaroon jelly beans sweet roll.

@@ -1,6 +1,6 @@
 import FbxDropdown from './FbxDropdown'
 import FbxLogo from './FbxLogo'
-import FbxPartnersLogo from './FbxPartnersLogo'
+import FbxPartnersLogos from './FbxPartnersLogos'
 import FbxTextArea from './FbxTextArea'
 import FbxTrustPilotBox from './FbxTrustPilotBox'
 import FbxNotice from './FbxNotice'
@@ -37,5 +37,5 @@ export {
   FbxPanelRadioButton,
   FbxNotice,
   FbxTrustPilotBox,
-  FbxPartnersLogo
+  FbxPartnersLogos
 }

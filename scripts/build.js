@@ -86,9 +86,9 @@ const buildStyles = async () => {
 }
 
 const buildAssets = async () => {
-  logger.info('Started Style build')
+  logger.info('Started Assets build')
   await copy(`${SRC_PATH}/assets`, 'es/assets')
-  logger.info('Finished Style build')
+  logger.info('Finished Assets build')
 }
 
 const buildLibrary = async () => {

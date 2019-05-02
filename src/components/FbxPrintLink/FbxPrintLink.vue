@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     onPrintButtonClick() {
-      const printContent = `
+      const htmlToPrint = `
         <!DOCTYPE html>
         <html lang="en">
           <head>
@@ -41,7 +41,7 @@ export default {
         </html>
       `
       const newWindow = window.open()
-      newWindow.document.documentElement.innerHTML = printContent
+      newWindow.document.documentElement.innerHTML = htmlToPrint
       newWindow.focus()
       newWindow.print()
     },

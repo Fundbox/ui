@@ -28,7 +28,7 @@ describe('Components/FbxPrintLink', () => {
     })
   })
 
-  describe('methodsprintTextContent', () => {
+  describe('printTextContent', () => {
     it('prints the new document', () => {
       const focus = jest.fn()
       const print = jest.fn()

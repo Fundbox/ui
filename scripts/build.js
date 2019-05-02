@@ -85,6 +85,12 @@ const buildStyles = async () => {
   logger.info('Finished Style build')
 }
 
+const buildAssets = async () => {
+  logger.info('Started Style build')
+  await copy(`${SRC_PATH}/assets`, 'es/assets')
+  logger.info('Finished Style build')
+}
+
 const buildLibrary = async () => {
   logger.info('Started main library build')
   const stats = await webpack(getWebpackConfig())
@@ -98,6 +104,7 @@ const buildLibrary = async () => {
   await cleanup()
   await buildElements()
   await buildValidations()
+  await buildAssets()
   await buildStyles()
   await buildLibrary()
   console.timeEnd('Fbx build')

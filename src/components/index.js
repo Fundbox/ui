@@ -1,3 +1,4 @@
+export { default as FbxIcomoon } from './FbxIcomoon'
 export { default as FbxSafeAndSecure }  from './FbxSafeAndSecure'
 export { default as FbxDropdown }  from './FbxDropdown'
 export { default as FbxLogo }  from './FbxLogo'

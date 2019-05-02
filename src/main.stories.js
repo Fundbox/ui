@@ -8,6 +8,7 @@ import Icomoon from './icons/Icomoon/Icomoon.stories.js'
 import FbxSafeAndSecure from './components/FbxSafeAndSecure/FbxSafeAndSecure.stories.js'
 import FbxPartnersLogos from './components/FbxPartnersLogos/FbxPartnersLogos.stories.js'
 import FbxLogo from './components/FbxLogo/FbxLogo.stories.js'
+import './components/FbxIcomoon/FbxIcomoon.stories'
 // Alerts and Notifications
 import FbxNotice from './components/FbxNotice/FbxNotice.stories.js'
 import FbxModalWrapper from './components/FbxModalWrapper/FbxModalWrapper.stories.js'

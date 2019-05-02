@@ -23,7 +23,7 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   externals: {
     'bootstrap-vue': 'bootstrap-vue',
     lodash: 'lodash',
-    'sanitize-html': 'sanitize-html',
+    xss: 'xss',
     'v-mask': 'v-mask',
     'vee-validate': 'vee-validate',
     vue: 'vue'

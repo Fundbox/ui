@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="partners-logos">
     <div class="logo-container">
       <img class="logo" :src="PaypalLogo">
     </div>
@@ -26,15 +26,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .container {
+  $margin: 25px;
+  .partners-logos {
     display: flex;
-  }
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -$margin;
 
-  .logo-container {
-    flex: 33.33%;
+    .logo-container {
+      flex: 33.33%;
+      min-width: 140px;
+      max-width: 140px;
+          margin: 0 $margin;
 
-    img {
-      width: 100%;
+      img {
+        width: 100%;
+      }
     }
   }
 

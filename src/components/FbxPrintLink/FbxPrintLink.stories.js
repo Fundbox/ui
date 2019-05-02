@@ -11,7 +11,7 @@ stories.add('default', withInfo({ summary })(() => ({
   data() {
     return {
       printTitle: 'Ein &Cupcakelied',
-      printContent: `
+      printHtmlContent: `
         Cupcake ipsum dolor &<script>alert(1)</script>sit amet cake jelly-o.
         Topping biscuit donut biscuit jelly beans candy danish.
         Cheesecake macaroon pastry sweet roll bear claw powder dragée macaroon.
@@ -28,7 +28,7 @@ stories.add('default', withInfo({ summary })(() => ({
       <div style="margin-bottom: 25px;">
         <fbx-print-link
           :print-title="printTitle"
-          :print-content="printContent"
+          :print-html-content="printHtmlContent"
         />
       </div>
 
@@ -36,7 +36,7 @@ stories.add('default', withInfo({ summary })(() => ({
 
       <fbx-print-link
         :print-title="printTitle"
-        :print-content="printContent"
+        :print-html-content="printHtmlContent"
         :show-print-icon="false"
       />
     </div>

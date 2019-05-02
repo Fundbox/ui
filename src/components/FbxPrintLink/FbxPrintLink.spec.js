@@ -3,14 +3,14 @@ import FbxPrintLink from './FbxPrintLink.vue'
 
 describe('Components/FbxPrintLink', () => {
   const printTitle = 'A title'
-  const printContent = 'Some content'
+  const printHtmlContent = 'Some content'
 
   describe('snapshots', () => {
     it('renders the default correctly', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           printTitle,
-          printContent,
+          printHtmlContent,
         }
       })
       expect(wrapper.html()).toMatchSnapshot()
@@ -20,7 +20,7 @@ describe('Components/FbxPrintLink', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           printTitle,
-          printContent,
+          printHtmlContent,
           showPrintIcon: false,
         }
       })
@@ -48,7 +48,7 @@ describe('Components/FbxPrintLink', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           printTitle,
-          printContent,
+          printHtmlContent,
         },
       })
 
@@ -57,7 +57,7 @@ describe('Components/FbxPrintLink', () => {
       const finalPrintContent = window.open.mock.results[0].value.document.documentElement.innerHTML
       expect(finalPrintContent).toContain('DOCTYPE')
       expect(finalPrintContent).toContain(printTitle)
-      expect(finalPrintContent).toContain(printContent)
+      expect(finalPrintContent).toContain(printHtmlContent)
       expect(window.open).toHaveBeenCalledTimes(1)
       expect(focus).toHaveBeenCalledTimes(1)
       expect(print).toHaveBeenCalledTimes(1)

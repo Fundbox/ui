@@ -8,6 +8,6 @@
 ```html
 <fbx-print-link
   print-title="A title"
-  print-content="Some content"
+  print-html-content="Some content"
 />
 ```

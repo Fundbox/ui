@@ -16,7 +16,7 @@ export default {
       type: String,
       required: true,
     },
-    printContent: {
+    printHtmlContent: {
       type: String,
       required: true,
     },
@@ -36,7 +36,7 @@ export default {
           </head>
           <body>
             <h1>${escape(this.printTitle)}</h1>
-            <div>${sanitizeHTML(this.printContent)}</div>
+            <div>${sanitizeHTML(this.printHtmlContent)}</div>
           </body>
         </html>
       `

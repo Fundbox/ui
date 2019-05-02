@@ -1,41 +1,20 @@
-import FbxDropdown from './FbxDropdown'
-import FbxLogo from './FbxLogo'
-import FbxPartnersLogo from './FbxPartnersLogo'
-import FbxTextArea from './FbxTextArea'
-import FbxTrustPilotBox from './FbxTrustPilotBox'
-import FbxNotice from './FbxNotice'
-import FbxTile from './FbxTile'
-import FbxTileGrid from './FbxTileGrid'
-import FbxModalWrapper from './FbxModalWrapper'
-import FbxIosSwitchButton from './FbxIosSwitchButton'
-import FbxButton from './FbxButton'
-import FbxCheckbox from './FbxCheckbox'
-import FbxCloseButton from './FbxCloseButton'
-import FbxSelect from './FbxSelect'
-import FbxTabs from './FbxTabs'
-import FbxTextField from './FbxTextField'
-import FbxTooltip from './FbxTooltip'
-import FbxValidationMessage from './FbxValidationMessage'
-import FbxPanelRadioButton from './FbxPanelRadioButton'
-
-export {
-  FbxTextArea,
-  FbxDropdown,
-  FbxLogo,
-  FbxTile,
-  FbxTileGrid,
-  FbxModalWrapper,
-  FbxIosSwitchButton,
-  FbxButton,
-  FbxCheckbox,
-  FbxCloseButton,
-  FbxSelect,
-  FbxTabs,
-  FbxTextField,
-  FbxTooltip,
-  FbxValidationMessage,
-  FbxPanelRadioButton,
-  FbxNotice,
-  FbxTrustPilotBox,
-  FbxPartnersLogo
-}
+export { default as FbxSafeAndSecure }  from './FbxSafeAndSecure'
+export { default as FbxDropdown }  from './FbxDropdown'
+export { default as FbxLogo }  from './FbxLogo'
+export { default as FbxPartnersLogo }  from './FbxPartnersLogos'
+export { default as FbxTextArea }  from './FbxTextArea'
+export { default as FbxTrustPilotBox }  from './FbxTrustPilotBox'
+export { default as FbxNotice }  from './FbxNotice'
+export { default as FbxTile }  from './FbxTile'
+export { default as FbxTileGrid }  from './FbxTileGrid'
+export { default as FbxModalWrapper }  from './FbxModalWrapper'
+export { default as FbxIosSwitchButton }  from './FbxIosSwitchButton'
+export { default as FbxButton }  from './FbxButton'
+export { default as FbxCheckbox }  from './FbxCheckbox'
+export { default as FbxCloseButton }  from './FbxCloseButton'
+export { default as FbxSelect }  from './FbxSelect'
+export { default as FbxTabs }  from './FbxTabs'
+export { default as FbxTextField }  from './FbxTextField'
+export { default as FbxTooltip }  from './FbxTooltip'
+export { default as FbxValidationMessage }  from './FbxValidationMessage'
+export { default as FbxPanelRadioButton }  from './FbxPanelRadioButton'

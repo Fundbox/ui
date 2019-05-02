@@ -78,7 +78,7 @@ describe('Components/FbxPrintLink', () => {
 
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
-          printTitle: "&",
+          printTitle: '&',
           printHtmlContent,
         },
       })
@@ -105,7 +105,7 @@ describe('Components/FbxPrintLink', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           printTitle,
-          printHtmlContent: "<script>alert(42)</script>",
+          printHtmlContent: '<script>alert(42)</script>',
         },
       })
 

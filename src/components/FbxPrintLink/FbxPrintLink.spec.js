@@ -29,9 +29,12 @@ describe('Components/FbxPrintLink', () => {
   })
 
   describe('onPrintButtonClick', () => {
-    it('prints the new document', () => {
-      const focus = jest.fn()
-      const print = jest.fn()
+    let focus
+    let print
+
+    beforeEach(() => {
+      focus = jest.fn()
+      print = jest.fn()
 
       window.open = jest.fn(() => {
         return {
@@ -44,7 +47,10 @@ describe('Components/FbxPrintLink', () => {
           print,
         }
       })
+    })
 
+
+    it('prints the new document', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title,
@@ -64,18 +70,6 @@ describe('Components/FbxPrintLink', () => {
     })
 
     it('escapes the print title', () => {
-      window.open = jest.fn(() => {
-        return {
-          document: {
-            documentElement: {
-              innerHTML: '',
-            },
-          },
-          focus: jest.fn(),
-          print: jest.fn(),
-        }
-      })
-
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title: '&',
@@ -90,18 +84,6 @@ describe('Components/FbxPrintLink', () => {
     })
 
     it('sanitizes the print content print content', () => {
-      window.open = jest.fn(() => {
-        return {
-          document: {
-            documentElement: {
-              innerHTML: '',
-            },
-          },
-          focus: jest.fn(),
-          print: jest.fn(),
-        }
-      })
-
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title,

@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import escape from 'lodash/escape'
 import xss from 'xss'
 
 export default {
@@ -32,10 +31,10 @@ export default {
         <html lang="en">
           <head>
             <meta charset="UTF-8">
-            <title>${escape(this.title)}</title>
+            <title>${xss(this.title)}</title>
           </head>
           <body>
-            <h1>${escape(this.title)}</h1>
+            <h1>${xss(this.title)}</h1>
             <div>${xss(this.htmlContent)}</div>
           </body>
         </html>

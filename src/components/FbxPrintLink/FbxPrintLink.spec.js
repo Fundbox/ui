@@ -82,10 +82,10 @@ describe('Components/FbxPrintLink', () => {
       expect(print).toHaveBeenCalledTimes(1)
     })
 
-    it('escapes the print title', () => {
+    it('sanitizes the title', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
-          title: '&',
+          title: '<script>alert(42)</script>',
           htmlContent,
         },
       })
@@ -93,10 +93,10 @@ describe('Components/FbxPrintLink', () => {
       wrapper.vm.onPrintButtonClick()
 
       const finalPrintContent = window.open.mock.results[0].value.document.documentElement.innerHTML
-      expect(finalPrintContent).toContain('&amp;')
+      expect(finalPrintContent).toContain('&lt;script&gt;')
     })
 
-    it('sanitizes the print content print content', () => {
+    it('sanitizes the html content', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title,

@@ -12,7 +12,7 @@ import xss from 'xss'
 export default {
   name: 'FbxPrintLink',
   props: {
-    printTitle: {
+    title: {
       type: String,
       required: true,
     },
@@ -32,10 +32,10 @@ export default {
         <html lang="en">
           <head>
             <meta charset="UTF-8">
-            <title>${escape(this.printTitle)}</title>
+            <title>${escape(this.title)}</title>
           </head>
           <body>
-            <h1>${escape(this.printTitle)}</h1>
+            <h1>${escape(this.title)}</h1>
             <div>${xss(this.printHtmlContent)}</div>
           </body>
         </html>

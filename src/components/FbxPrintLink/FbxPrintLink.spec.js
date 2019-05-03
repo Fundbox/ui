@@ -2,14 +2,14 @@ import { shallowMount } from '@vue/test-utils'
 import FbxPrintLink from './FbxPrintLink.vue'
 
 describe('Components/FbxPrintLink', () => {
-  const printTitle = 'A title'
+  const title = 'A title'
   const printHtmlContent = 'Some content'
 
   describe('snapshots', () => {
     it('renders the default correctly', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
-          printTitle,
+          title,
           printHtmlContent,
         }
       })
@@ -19,7 +19,7 @@ describe('Components/FbxPrintLink', () => {
     it('renders without a print icon', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
-          printTitle,
+          title,
           printHtmlContent,
           withIcon: false,
         }
@@ -47,7 +47,7 @@ describe('Components/FbxPrintLink', () => {
 
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
-          printTitle,
+          title,
           printHtmlContent,
         },
       })
@@ -56,7 +56,7 @@ describe('Components/FbxPrintLink', () => {
 
       const finalPrintContent = window.open.mock.results[0].value.document.documentElement.innerHTML
       expect(finalPrintContent).toContain('DOCTYPE')
-      expect(finalPrintContent).toContain(printTitle)
+      expect(finalPrintContent).toContain(title)
       expect(finalPrintContent).toContain(printHtmlContent)
       expect(window.open).toHaveBeenCalledTimes(1)
       expect(focus).toHaveBeenCalledTimes(1)
@@ -78,7 +78,7 @@ describe('Components/FbxPrintLink', () => {
 
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
-          printTitle: '&',
+          title: '&',
           printHtmlContent,
         },
       })
@@ -104,7 +104,7 @@ describe('Components/FbxPrintLink', () => {
 
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
-          printTitle,
+          title,
           printHtmlContent: '<script>alert(42)</script>',
         },
       })

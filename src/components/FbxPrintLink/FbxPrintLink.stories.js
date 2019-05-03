@@ -10,7 +10,7 @@ stories.add('default', withInfo({ summary })(() => ({
   components: { FbxPrintLink },
   data() {
     return {
-      printTitle: 'Ein Cupcakelied',
+      title: 'Ein Cupcakelied',
       printHtmlContent: `
         Cupcake ipsum dolor sit amet cake jelly-o.
         Topping biscuit donut biscuit jelly beans candy danish.
@@ -27,7 +27,7 @@ stories.add('default', withInfo({ summary })(() => ({
     <div>
       <div style="margin-bottom: 25px;">
         <fbx-print-link
-          :print-title="printTitle"
+          :title="title"
           :print-html-content="printHtmlContent"
         />
       </div>
@@ -35,7 +35,7 @@ stories.add('default', withInfo({ summary })(() => ({
       <p style="margin-bottom: 10px;">Without print icon:</p>
 
       <fbx-print-link
-        :print-title="printTitle"
+        :title="title"
         :print-html-content="printHtmlContent"
         :with-icon="false"
       />

@@ -7,7 +7,7 @@
 
 ```html
 <fbx-print-link
-  print-title="A title"
+  title="A title"
   print-html-content="Some content"
 />
 ```

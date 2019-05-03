@@ -3,14 +3,14 @@ import FbxPrintLink from './FbxPrintLink.vue'
 
 describe('Components/FbxPrintLink', () => {
   const title = 'A title'
-  const printHtmlContent = 'Some content'
+  const htmlContent = 'Some content'
 
   describe('snapshots', () => {
     it('renders the default correctly', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title,
-          printHtmlContent,
+          htmlContent,
         }
       })
       expect(wrapper.html()).toMatchSnapshot()
@@ -20,7 +20,7 @@ describe('Components/FbxPrintLink', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title,
-          printHtmlContent,
+          htmlContent,
           withIcon: false,
         }
       })
@@ -48,7 +48,7 @@ describe('Components/FbxPrintLink', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title,
-          printHtmlContent,
+          htmlContent,
         },
       })
 
@@ -57,7 +57,7 @@ describe('Components/FbxPrintLink', () => {
       const finalPrintContent = window.open.mock.results[0].value.document.documentElement.innerHTML
       expect(finalPrintContent).toContain('DOCTYPE')
       expect(finalPrintContent).toContain(title)
-      expect(finalPrintContent).toContain(printHtmlContent)
+      expect(finalPrintContent).toContain(htmlContent)
       expect(window.open).toHaveBeenCalledTimes(1)
       expect(focus).toHaveBeenCalledTimes(1)
       expect(print).toHaveBeenCalledTimes(1)
@@ -79,7 +79,7 @@ describe('Components/FbxPrintLink', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title: '&',
-          printHtmlContent,
+          htmlContent,
         },
       })
 
@@ -105,7 +105,7 @@ describe('Components/FbxPrintLink', () => {
       const wrapper = shallowMount(FbxPrintLink, {
         propsData: {
           title,
-          printHtmlContent: '<script>alert(42)</script>',
+          htmlContent: '<script>alert(42)</script>',
         },
       })
 

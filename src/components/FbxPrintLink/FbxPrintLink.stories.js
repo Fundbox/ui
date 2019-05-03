@@ -11,7 +11,7 @@ stories.add('default', withInfo({ summary })(() => ({
   data() {
     return {
       title: 'Ein Cupcakelied',
-      printHtmlContent: `
+      htmlContent: `
         Cupcake ipsum dolor sit amet cake jelly-o.
         Topping biscuit donut biscuit jelly beans candy danish.
         Cheesecake macaroon pastry sweet roll bear claw powder dragée macaroon.
@@ -28,7 +28,7 @@ stories.add('default', withInfo({ summary })(() => ({
       <div style="margin-bottom: 25px;">
         <fbx-print-link
           :title="title"
-          :print-html-content="printHtmlContent"
+          :html-content="htmlContent"
         />
       </div>
 
@@ -36,7 +36,7 @@ stories.add('default', withInfo({ summary })(() => ({
 
       <fbx-print-link
         :title="title"
-        :print-html-content="printHtmlContent"
+        :html-content="htmlContent"
         :with-icon="false"
       />
     </div>

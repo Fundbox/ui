@@ -49,6 +49,19 @@ describe('Components/FbxPrintLink', () => {
       })
     })
 
+    it('is triggered by click', () => {
+      const wrapper = shallowMount(FbxPrintLink, {
+        propsData: {
+          title,
+          htmlContent,
+        },
+      })
+      wrapper.setMethods({ onPrintButtonClick: jest.fn() })
+
+      wrapper.find('a').trigger('click')
+
+      expect(wrapper.vm.onPrintButtonClick).toHaveBeenCalledTimes(1)
+    })
 
     it('prints the new document', () => {
       const wrapper = shallowMount(FbxPrintLink, {

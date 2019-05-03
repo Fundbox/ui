@@ -1,6 +1,6 @@
 <template>
   <div class="fbx-print-link">
-    <div v-if="showPrintIcon" class="fbx-icon-printer"></div>
+    <div v-if="withIcon" class="fbx-icon-printer"></div>
     <a href="#" @click="onPrintButtonClick">Print this agreement</a>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
       type: String,
       required: true,
     },
-    showPrintIcon: {
+    withIcon: {
       type: Boolean,
       default: true,
     },

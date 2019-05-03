@@ -21,7 +21,7 @@ describe('Components/FbxPrintLink', () => {
         propsData: {
           printTitle,
           printHtmlContent,
-          showPrintIcon: false,
+          withIcon: false,
         }
       })
       expect(wrapper.html()).toMatchSnapshot()

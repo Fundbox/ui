@@ -37,7 +37,7 @@ stories.add('default', withInfo({ summary })(() => ({
       <fbx-print-link
         :print-title="printTitle"
         :print-html-content="printHtmlContent"
-        :show-print-icon="false"
+        :with-icon="false"
       />
     </div>
   `,

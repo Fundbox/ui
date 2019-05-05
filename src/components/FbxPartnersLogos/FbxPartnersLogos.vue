@@ -1,47 +1,42 @@
 <template>
   <div class="partners-logos">
     <div class="logo-container">
-      <img class="logo" :src="PaypalLogo">
+      <img class="partner-logo" :src="PaypalLogo">
     </div>
     <div class="logo-container">
-      <img class="logo" :src="IntuitLogo">
+      <img class="partner-logo" :src="QuickbooksLogo">
     </div>
     <div class="logo-container">
-      <img class="logo" :src="SynchronyLogo">
+      <img class="partner-logo" :src="SynchronyLogo">
     </div>
   </div>
 </template>
 
 <script>
-import IntuitLogo from './logos/Intuit.svg'
+import QuickbooksLogo from './logos/Quickbooks.svg'
 import PaypalLogo from './logos/Paypal.svg'
 import SynchronyLogo from './logos/Synchrony.svg'
 
 export default {
   name: 'FbxPartnersLogos',
   data() {
-    return { IntuitLogo, PaypalLogo, SynchronyLogo }
+    return { QuickbooksLogo, PaypalLogo, SynchronyLogo }
   },
 }
 </script>
 
 <style lang="scss" scoped>
-  $margin: 25px;
   .partners-logos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 -$margin;
 
     .logo-container {
-      flex: 33.33%;
-      min-width: 140px;
-      max-width: 140px;
-          margin: 0 $margin;
+      margin: 0 25px;
 
       img {
-        width: 100%;
+        height: 50px;
       }
     }
   }

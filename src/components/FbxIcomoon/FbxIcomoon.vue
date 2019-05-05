@@ -1,5 +1,5 @@
 <template>
-  <span class="icon-wrapper" :class="classes" :style="styles"></span>
+  <span class="icon-wrapper layout-row horizontal-center vertical-center" :class="classes" :style="styles"></span>
 </template>
 
 <script>
@@ -48,7 +48,6 @@ export default {
 $icon-size: 2.5em;
 
 .icon-wrapper{
-  display: inline-block;
   position: relative;
 
   &.styled {
@@ -63,9 +62,6 @@ $icon-size: 2.5em;
   &:before {
     background-color: inherit;
     color: inherit;
-    @extend .absolute-center;
-    // Icomoon icons are not dead centered.
-    transform: translate(-47%, -56%);
     font-size: inherit;
   }
 }

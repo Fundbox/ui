@@ -15,8 +15,3 @@ stories.add('with background styles', withInfo({ summary })(() => ({
   components: { FbxIcomoon },
   template: `<fbx-icomoon name="lock" background="#858585" color="white" round></fbx-icomoon>`
 })))
-
-stories.add('default', withInfo({ summary })(() => ({
-  components: { FbxIcomoon },
-  template: `<fbx-icomoon name="lock"></fbx-icomoon>`
-})))

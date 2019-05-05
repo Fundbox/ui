@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const UglifyJsPlugin = require('uglifyjs-3-webpack-plugin')
+const nodeExternals = require('webpack-node-externals')
 
 const getTypePath = (elementType) => elementType ? `/${elementType}` : ''
 
@@ -21,13 +22,8 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
     '@fundbox/ui': path.join(process.cwd(), getEntryPath(elementName, elementType))
   },
   externals: [
-    {
-      'bootstrap-vue': 'bootstrap-vue',
-      lodash: 'lodash',
-      'v-mask': 'v-mask',
-      'vee-validate': 'vee-validate',
-      vue: 'vue'
-    },
+    // Externalises all node modules.
+    nodeExternals(),
     function(__context, request, callback) {
       if (/^@fundbox\/ui.*/.test(request)) {
         return callback(null, `commonjs ${request}`)

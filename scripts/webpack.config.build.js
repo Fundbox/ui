@@ -20,13 +20,21 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   entry: {
     '@fundbox/ui': path.join(process.cwd(), getEntryPath(elementName, elementType))
   },
-  externals: {
-    'bootstrap-vue': 'bootstrap-vue',
-    lodash: 'lodash',
-    'v-mask': 'v-mask',
-    'vee-validate': 'vee-validate',
-    vue: 'vue'
-  },
+  externals: [
+    {
+      'bootstrap-vue': 'bootstrap-vue',
+      lodash: 'lodash',
+      'v-mask': 'v-mask',
+      'vee-validate': 'vee-validate',
+      vue: 'vue'
+    },
+    function(__context, request, callback) {
+      if (/^@fundbox\/ui.*/.test(request)) {
+        return callback(null, `commonjs ${request}`)
+      }
+      return callback()
+    },
+  ],
   output: {
     filename: getOutputFilename(elementName),
     libraryTarget: 'umd',
@@ -34,6 +42,7 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   },
   resolve: {
     alias: {
+      '@fundbox/ui/es': path.join(__dirname, '../src/'),
       vue: 'vue/dist/vue.js',
     },
     extensions: ['.js', '.json', '.vue']

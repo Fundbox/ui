@@ -1,17 +1,17 @@
 <template>
-  <article class="safe-and-secure layout-row split vertical-center security-logos">
-      <a v-once v-for="img in images" :key="img.ref" class="security-logo" :href="img.ref" target="_blank">
+  <article class="safe-and-secure">
+      <a v-once v-for="img in images" :key="img.ref" class="security-logo layout-row vertical-center" :href="img.ref" target="_blank">
         <img class="security-logo-image" :src="img.src" alt="">
       </a>
     </article>
 </template>
 
 <script>
-import norton from './assets/security-norton-logo.svg'
-import mcafee from './assets/security-mcafee-logo.svg'
-import bbb from './assets/security-bbb-logo.png'
+  import norton from './assets/security-norton-logo.svg'
+  import mcafee from './assets/security-mcafee-logo.svg'
+  import bbb from './assets/security-bbb-logo.png'
 
-export default {
+  export default {
   name: 'FbxSafeAndSecure',
   data() {
     return {
@@ -26,18 +26,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/utils/utilities.scss";
+@import "~@fundbox/ui/es/styles/utils/utilities.scss";
 
 .safe-and-secure {
-  height: 45px;
+  display: flex;
 }
 
 .security-logo {
   position: relative;
-  flex: 0 0 auto;
+  flex: 1 0 0;
+
+  &:not(:last-child) {
+    margin-right: 10%;
+  }
 }
 
-.security-logo-image, .security-logo {
-  height: 100%;
+.security-logo-image {
+  width: 100%;
 }
 </style>

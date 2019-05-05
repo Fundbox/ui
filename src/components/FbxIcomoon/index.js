@@ -14,3 +14,4 @@ const VuePlugin = {
 vueUse(VuePlugin)
 
 export default VuePlugin
+export { FbxIcomoon }

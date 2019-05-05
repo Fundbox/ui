@@ -86,9 +86,9 @@ const buildStyles = async () => {
 }
 
 const buildAssets = async () => {
-  logger.info('Started Asset build')
+  logger.info('Started Assets build')
   await copy(`${SRC_PATH}/assets`, 'es/assets')
-  logger.info('Finished Asset build')
+  logger.info('Finished Assets build')
 }
 
 const buildLibrary = async () => {
@@ -102,8 +102,8 @@ const buildLibrary = async () => {
   logger.info('Started Fbx build')
   console.time('Fbx build')
   await cleanup()
-  await buildStyles()
   await buildAssets()
+  await buildStyles()
   await buildElements()
   await buildValidations()
   await buildLibrary()

@@ -35,9 +35,9 @@ input[type=checkbox].fbx-checkbox {
   margin: 0;
 
   &:checked {
-    background: url("../../assets/icon_check_active.svg") center no-repeat;
+    background: url("~@fundbox/ui/es/assets/icon_check_active.svg") center no-repeat;
     &:disabled {
-      background-image: url("../../assets/icon_check_disabled.svg");
+      background-image: url("~@fundbox/ui/es/assets/icon_check_disabled.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-color: $light-gray;
@@ -80,7 +80,7 @@ input[type=checkbox].fbx-checkbox {
 }
 
 .diagonal-background {
-  background: url("../../assets/diagonal-pattern.svg") repeat;
+  background: url("~@fundbox/ui/es/assets/diagonal-pattern.svg") repeat;
 }
 
 .inline-block {
@@ -106,7 +106,7 @@ input[type=checkbox].fbx-checkbox {
 
 .dots-divider {
   width: 100%;
-  background: url("../../assets/divider-dot.png") repeat-x;
+  background: url("~@fundbox/ui/es/assets/divider-dot.png") repeat-x;
   min-height: 2px;
   background-size: 7px;
 }

@@ -42,8 +42,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/fonts/icomoon/style.css';
-@import '../../styles/utils/utilities.scss';
+@import '~@fundbox/ui/es/styles/fonts/icomoon/style.css';
+@import '~@fundbox/ui/es/styles/utils/utilities.scss';
 
 $icon-size: 2.5em;
 

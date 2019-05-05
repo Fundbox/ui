@@ -7,11 +7,11 @@
 </template>
 
 <script>
-  import norton from './assets/security-norton-logo.svg'
-  import mcafee from './assets/security-mcafee-logo.svg'
-  import bbb from './assets/security-bbb-logo.png'
+import norton from './assets/security-norton-logo.svg'
+import mcafee from './assets/security-mcafee-logo.svg'
+import bbb from './assets/security-bbb-logo.png'
 
-  export default {
+export default {
   name: 'FbxSafeAndSecure',
   data() {
     return {

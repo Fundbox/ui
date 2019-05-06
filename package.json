@@ -4,11 +4,21 @@
   "description": "Fundbox UI Components Library",
   "main": "dist/index.js",
   "license": "MIT",
+  "watch" : {
+    "build:lib": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "vue,js,scss",
+      "quiet": true
+    }
+  },
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook",
     "build:storybook": "build-storybook -o docs",
     "build:lib": "node scripts/build.js",
     "build": "npm run build:storybook && npm run build:lib",
+    "dev": "npm-watch build:lib",
     "deploy-gh-branch": "node scripts/deploy-gh-pages.js",
     "deploy": "npm run build && npm run deploy-gh-branch && npm run release",
     "test": "jest --config test/unit/jest.conf.js --coverage",
@@ -112,7 +122,8 @@
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
   },
   "peerDependencies": {
     "bootstrap-vue": "^2.0.0-rc.19",

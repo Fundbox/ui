@@ -1,11 +1,8 @@
----
-to: src/components/Fbx<%= name %>/index.js
----
-import Fbx<%= name %> from './Fbx<%= name %>.vue'
+import FbxSafeAndSecure from './FbxSafeAndSecure.vue'
 import { registerComponents, vueUse } from '../../utils/plugins'
 
 const components = {
-  Fbx<%= name %>
+  FbxSafeAndSecure
 }
 
 const VuePlugin = {
@@ -17,4 +14,4 @@ const VuePlugin = {
 vueUse(VuePlugin)
 
 export default VuePlugin
-export { Fbx<%= name %> }
+export { FbxSafeAndSecure }

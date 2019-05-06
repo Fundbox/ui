@@ -8,6 +8,7 @@ module.exports = {
     'vue',
   ],
   moduleNameMapper: {
+    '^@fundbox/ui/es/(.*)$': '<rootDir>/src/$1',
     '^@/(.*)$': '<rootDir>/src/$1',
     '^.+\\.svg$': '<rootDir>/src/__mocks__/fileMock.js'
   },

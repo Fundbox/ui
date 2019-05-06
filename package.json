@@ -4,11 +4,21 @@
   "description": "Fundbox UI Components Library",
   "main": "dist/index.js",
   "license": "MIT",
+  "watch" : {
+    "build:lib": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "vue,js,scss",
+      "quiet": true
+    }
+  },
   "scripts": {
     "start": "start-storybook -p 9002 -c .storybook",
     "build:storybook": "build-storybook -o docs",
     "build:lib": "node scripts/build.js",
     "build": "npm run build:storybook && npm run build:lib",
+    "dev": "npm-watch build:lib",
     "deploy-gh-branch": "node scripts/deploy-gh-pages.js",
     "deploy": "npm run build && npm run deploy-gh-branch && npm run release",
     "test": "jest --config test/unit/jest.conf.js --coverage",

@@ -1,5 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components/FbxIcomoon snapshots renders background color and round 1`] = `<span class="icon-wrapper fbx-icon-lock round styled" style="background: rgb(133, 133, 133); color: white;"></span>`;
+exports[`Components/FbxIcomoon snapshots renders background color and round 1`] = `<span class="icon-wrapper layout-row horizontal-center vertical-center fbx-icon-lock round styled" style="background: rgb(133, 133, 133); color: white;"></span>`;
 
-exports[`Components/FbxIcomoon snapshots renders the default correctly 1`] = `<span class="icon-wrapper fbx-icon-lock"></span>`;
+exports[`Components/FbxIcomoon snapshots renders the default correctly 1`] = `<span class="icon-wrapper layout-row horizontal-center vertical-center fbx-icon-lock"></span>`;

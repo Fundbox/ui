@@ -3,6 +3,7 @@
     <div :class="[headerClass, 'layout-row', 'vertical-center']">
       <div class="font-18">{{ title }}</div>
       <fbx-close-button
+        v-if="!hideCloseButton"
         data-qa="modal-close-button"
         class="modal-close-button"
         @click="onCloseClick"
@@ -10,7 +11,7 @@
     </div>
 
     <div class="body">
-      <div v-if="isLoading" class="loading"></div>
+      <div v-if="isLoading" class="fbx-ui-modal-wrapper__loading"></div>
       <div v-else>
         <slot/>
       </div>
@@ -26,6 +27,7 @@ export default {
   name: 'FbxModalWrapper',
   props: {
     isLoading: Boolean,
+    hideCloseButton: Boolean,
     title: String,
     modalName: String
   },
@@ -136,7 +138,7 @@ export default {
       }
     }
 
-    .loading {
+    .fbx-ui-modal-wrapper__loading {
       background-image: url("../../assets/loading-anim.gif");
       background-position: center;
       background-repeat: no-repeat;

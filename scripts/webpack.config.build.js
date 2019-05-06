@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const UglifyJsPlugin = require('uglifyjs-3-webpack-plugin')
+const nodeExternals = require('webpack-node-externals')
 
 const getTypePath = (elementType) => elementType ? `/${elementType}` : ''
 
@@ -20,14 +21,16 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   entry: {
     '@fundbox/ui': path.join(process.cwd(), getEntryPath(elementName, elementType))
   },
-  externals: {
-    'bootstrap-vue': 'bootstrap-vue',
-    lodash: 'lodash',
-    xss: 'xss',
-    'v-mask': 'v-mask',
-    'vee-validate': 'vee-validate',
-    vue: 'vue'
-  },
+  externals: [
+    // Externalises all node modules.
+    nodeExternals(),
+    function(__context, request, callback) {
+      if (/^@fundbox\/ui.*/.test(request)) {
+        return callback(null, `commonjs ${request}`)
+      }
+      return callback()
+    },
+  ],
   output: {
     filename: getOutputFilename(elementName),
     libraryTarget: 'umd',
@@ -35,6 +38,7 @@ module.exports = (elementName, elementType = '', outputDirectory = 'dist') => ({
   },
   resolve: {
     alias: {
+      '@fundbox/ui/es': path.join(__dirname, '../src/'),
       vue: 'vue/dist/vue.js',
     },
     extensions: ['.js', '.json', '.vue']

@@ -9,7 +9,7 @@ export PATH=/opt/node_install/bin:`pwd`/node_modules/.bin/:$PATH
 
 echo "##teamcity[blockOpened name='INSTALLING NPM PACKAGES']"
 nvm use
-npm run install:all
+npm ci
 echo "##teamcity[blockClosed name='INSTALLING NPM PACKAGES']"
 
 echo "##teamcity[blockOpened name='LINT']"

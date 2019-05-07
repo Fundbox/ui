@@ -40,6 +40,7 @@ const env = {
       '@babel/preset-env'
     ],
     plugins: [
+      ['@babel/plugin-transform-runtime', { useESModules: false }],
       [
         '@babel/plugin-proposal-object-rest-spread',
         {

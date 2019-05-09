@@ -30,7 +30,7 @@
 
         <span class="fbx-text-field__dollar-sign" v-if="isCurrency">$</span>
 
-        <div class="edit-buttons-wrapper" v-if="editable">
+        <div class="edit-buttons-wrapper" data-qa="fbx-text-field-edit-buttons" v-if="editable">
           <div class="fbx-text-field__done-icons" v-if="isEditing">
             <span class="done-icons__done-icon" @click="onDoneEditing">Save</span>
             <span class="done-icons__separator">|</span>
@@ -48,11 +48,23 @@
           $
         </span>
 
-        <span class="fbx-text-field__password-button" @click="togglePassword" v-if="isPassword">{{ passwordButtonText }}</span>
+        <span
+          class="fbx-text-field__password-button"
+          data-qa="fbx-text-field-password-button"
+          @click="togglePassword"
+          v-if="isPassword"
+        >
+          {{ passwordButtonText }}
+        </span>
 
-        <span class="fbx-text-field__clear-icon" @click="clearField" v-if="clearable"></span>
+        <span
+          class="fbx-text-field__clear-icon"
+          data-qa="fbx-text-field-clear-icon"
+          @click="clearField"
+          v-if="clearable"
+        />
       </div>
-      <fbx-validation-message class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
+      <fbx-validation-message data-qa="fbx-text-field-validation-message" class="validation-message" v-if="isInvalid">{{ validationMessage }}</fbx-validation-message>
     </div>
   </div>
 </template>

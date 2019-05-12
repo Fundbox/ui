@@ -1,4 +1,5 @@
 const webpack = require("webpack");
+const path = require("path")
 
 const plugins = [];
 if (process.env.NODE_ENV !== "production") {
@@ -8,6 +9,7 @@ if (process.env.NODE_ENV !== "production") {
 module.exports = {
   resolve: {
     alias: {
+      '@fundbox/ui/es': path.join(__dirname, '../src/'),
       "vue$": "vue/dist/vue.esm.js",
     },
     extensions: [".js", ".json", ".vue"]
@@ -20,7 +22,7 @@ module.exports = {
           loader: require.resolve("@storybook/addon-storysource/loader"),
           options: {
             prettierConfig: {
-              parser: "babylon" //The default prettier parser (we might want "flow" in future)
+              parser: "babel" //The default prettier parser (we might want "flow" in future)
             }
           }
         }],

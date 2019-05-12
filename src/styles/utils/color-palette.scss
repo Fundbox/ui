@@ -18,3 +18,22 @@ $extra-dark-gray: #858585;
 
 $white: #fff;
 $black: #000;
+
+:export {
+  extraLightRed: $extra-light-red;
+  lightRed: $light-red;
+  mediumRed: $medium-red;
+  darkRed: $dark-red;
+  extraLightGreen: $extra-light-green;
+  lightGreen: $light-green;
+  mediumGreen: $medium-green;
+  darkGreen: $dark-green;
+  lightBlue: $light-blue;
+  mediumBlue: $medium-blue;
+  extraLightGray: $extra-light-gray;
+  lightGray: $light-gray;
+  mediumGray: $medium-gray;
+  extraDarkGray: $extra-dark-gray;
+  white: $white;
+  black: $black;
+}

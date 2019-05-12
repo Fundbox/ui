@@ -19,7 +19,7 @@ exports[`Components/FbxModalWrapper snapshots renders with loading correctly 1`]
     <fbx-close-button-stub data-qa="modal-close-button" class="modal-close-button"></fbx-close-button-stub>
   </div>
   <div class="body">
-    <div class="loading"></div>
+    <div class="fbx-ui-modal-wrapper__loading"></div>
   </div>
 </div>
 `;

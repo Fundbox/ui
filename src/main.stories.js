@@ -5,8 +5,10 @@ import IntroductionStories from './components/introduction/introduction.stories.
 import Icomoon from './icons/Icomoon/Icomoon.stories.js'
 
 // Components
+import FbxSafeAndSecure from './components/FbxSafeAndSecure/FbxSafeAndSecure.stories.js'
 import FbxPartnersLogos from './components/FbxPartnersLogos/FbxPartnersLogos.stories.js'
 import FbxLogo from './components/FbxLogo/FbxLogo.stories.js'
+import './components/FbxIcomoon/FbxIcomoon.stories'
 // Alerts and Notifications
 import FbxNotice from './components/FbxNotice/FbxNotice.stories.js'
 import FbxModalWrapper from './components/FbxModalWrapper/FbxModalWrapper.stories.js'
@@ -32,6 +34,7 @@ import FbxPanelRadioButtonStories from './components/FbxPanelRadioButton/FbxPane
 import FbxTextArea from './components/FbxTextArea/FbxTextArea.stories.js'
 import FbxTextField from './components/FbxTextField/FbxTextField.stories.js'
 import FbxSelect from './components/FbxSelect/FbxSelect.stories.js'
+import FbxPrintLink from './components/FbxPrintLink/FbxPrintLink.stories.js'
 
 // Directives
 import FbxAddressAutocomplete from './directives/FbxAddressAutocomplete/FbxAddressAutocomplete.stories.js'

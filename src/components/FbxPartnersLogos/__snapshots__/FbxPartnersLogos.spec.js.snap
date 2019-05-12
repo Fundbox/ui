@@ -2,8 +2,8 @@
 
 exports[`Components/FbxPartnersLogos snapshots renders the default correctly 1`] = `
 <div class="partners-logos">
-  <div class="logo-container"><img src="test-file-stub" class="logo"></div>
-  <div class="logo-container"><img src="test-file-stub" class="logo"></div>
-  <div class="logo-container"><img src="test-file-stub" class="logo"></div>
+  <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
+  <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
+  <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
 </div>
 `;

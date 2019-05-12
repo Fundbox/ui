@@ -3,7 +3,7 @@
     <div :class="[headerClass, 'layout-row', 'vertical-center']">
       <div class="font-18">{{ title }}</div>
       <fbx-close-button
-        v-if="!hideCloseButton"
+        v-if="withCloseButton"
         data-qa="modal-close-button"
         class="modal-close-button"
         @click="onCloseClick"
@@ -27,7 +27,10 @@ export default {
   name: 'FbxModalWrapper',
   props: {
     isLoading: Boolean,
-    hideCloseButton: Boolean,
+    withCloseButton: {
+      type: Boolean,
+      default: true,
+    },
     title: String,
     modalName: String
   },

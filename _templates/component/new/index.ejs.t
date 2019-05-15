@@ -5,13 +5,13 @@ import Fbx<%= name %> from './Fbx<%= name %>.vue'
 import { registerComponents, vueUse } from '../../utils/plugins'
 
 const components = {
-  Fbx<%= name %>
+  Fbx<%= name %>,
 }
 
 const VuePlugin = {
   install(Vue) {
     registerComponents(Vue, components)
-  }
+  },
 }
 
 vueUse(VuePlugin)

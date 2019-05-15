@@ -4,6 +4,7 @@
 
 - Use `FbxTextField` for inputs of common types, e.g. `type="text"`, `type="email"`. If your input type isn't supported, open up a PR to add support for that input type
 - The default `type` is `text`, if you don't provide one
+- If you want to add a `data-qa`, add it as a prop with `:data-qa="my-data-qa"`. If you add it as a regular attribute instead, it will go on the `input` element, which has `v-bind="$attrs"`
 - You can pass a `mask` prop to set up masking. See more info [here](https://www.npmjs.com/package/v-mask)
 
 🚨Note: you cannot currently use both `clearable` and `type="password"` as the Show/Hide and X buttons overlap 🚨
@@ -17,7 +18,7 @@
   placeholder="Enter your email address"
   :label="'Email Address'"
   v-model.trim="email"
-  data-qa="my-email-qa"
+  :data-qa="my-email-qa"
 />
 
 <!-- Example Usage with mask -->

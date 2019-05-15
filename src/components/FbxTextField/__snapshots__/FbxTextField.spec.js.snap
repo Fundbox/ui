@@ -74,3 +74,18 @@ exports[`FbxTextField snapshots renders the default 1`] = `
   </div>
 </div>
 `;
+
+exports[`FbxTextField snapshots renders with a data qa 1`] = `
+<div data-qa="favorite-food-input" class="fbx-text-field"><label class="fbx-text-field__label">Favorite Food</label>
+  <div class="fbx-text-field__wrapper">
+    <div class="fbx-text-field__input-wrapper"><input type="text" tabindex="0" data-vv-validate-on="change" name="my-input" class="fbx-text-field__input" data-mask="" data-previous-value="avocado" aria-required="false" aria-invalid="false">
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+      <!---->
+    </div>
+    <!---->
+  </div>
+</div>
+`;

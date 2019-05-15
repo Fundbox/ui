@@ -28,6 +28,7 @@ const defaultStory = () => ({
       validations="required|email"
       placeholder="Enter your email"
       :label="labelText"
+      :data-qa="email-field-input"
       v-model="inputText"
     />
   `,

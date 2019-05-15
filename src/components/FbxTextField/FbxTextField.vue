@@ -1,5 +1,5 @@
 <template>
-  <div class="fbx-text-field">
+  <div class="fbx-text-field" :data-qa="dataQa">
     <label class="fbx-text-field__label">{{ label }}</label>
     <div class="fbx-text-field__wrapper">
       <div class="fbx-text-field__input-wrapper">
@@ -111,6 +111,10 @@ export default {
     },
     validations: {
       type: [String, Object],
+    },
+    dataQa: {
+      type: String,
+      default: undefined,
     },
     mask: {
       type: String,

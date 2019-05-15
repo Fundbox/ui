@@ -19,6 +19,20 @@ describe('FbxTextField', () => {
       expect(wrapper.html()).toMatchSnapshot()
     })
 
+    it('renders with a data qa', () => {
+      const wrapper = shallowMount(FbxTextField, {
+        sync: false,
+        propsData: {
+          name: 'my-input',
+          value: 'avocado',
+          label: 'Favorite Food',
+          dataQa: 'favorite-food-input',
+        },
+      })
+
+      expect(wrapper.html()).toMatchSnapshot()
+    })
+
     it('renders clear icon', () => {
       const wrapper = shallowMount(FbxTextField, {
         sync: false,

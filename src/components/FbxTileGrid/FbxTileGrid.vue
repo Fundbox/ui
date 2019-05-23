@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { noop } from '../../utils'
+import { noop } from '../../utils/noop'
 import FbxTile from '../FbxTile/FbxTile'
 import { Tile } from '../FbxTile/models/Tile'
 

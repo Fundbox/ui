@@ -34,7 +34,7 @@ const cleanup = async () => {
 }
 
 const SRC_PATH = 'src'
-const availableTypes = ['components', 'directives']
+const availableTypes = ['components', 'directives', 'utils']
 
 const isDirectory = source => lstatSync(source).isDirectory()
 

@@ -1,6 +1,6 @@
 import VeeValidate from 'vee-validate'
 import Vue from 'vue'
-import { currencyFormatter } from '../utils/currency-formatter.js'
+import { currencyFormatter } from '../utils/currency-formatter'
 
 import {
   passwordValidation,

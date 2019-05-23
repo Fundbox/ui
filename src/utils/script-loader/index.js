@@ -1,6 +1,6 @@
 const scripts = new Map()
 
-function loadScript(src) {
+export function loadScript(src) {
   if (!scripts.has(src)) {
     const promise = new Promise((resolve, reject) => {
       const script = document.createElement('script')
@@ -20,7 +20,4 @@ function loadScript(src) {
   }
 
   return scripts.get(src)
-};
-
-
-export { loadScript }
+}

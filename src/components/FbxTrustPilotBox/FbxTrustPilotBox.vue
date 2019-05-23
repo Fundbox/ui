@@ -6,7 +6,7 @@
 
 <script>
 
-import { loadScript } from '../../utils/script-loader.js'
+import { loadScript } from '../../utils/script-loader'
 
 function getTrustPilotUrl(version) {
   return `//widget.trustpilot.com/bootstrap/${version}/tp.widget.bootstrap.min.js`

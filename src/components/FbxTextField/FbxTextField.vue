@@ -59,7 +59,7 @@
 
 <script>
 import '../../validations'
-import { currencyFormatter } from '../../utils/currency-formatter.js'
+import { currencyFormatter } from '../../utils/currency-formatter'
 import { VueMaskDirective } from 'v-mask'
 import FbxValidationMessage from '../FbxValidationMessage/FbxValidationMessage.vue'
 import FbxAddressAutocomplete from '../../directives/FbxAddressAutocomplete/FbxAddressAutocomplete'

@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import FbxTileGrid from './FbxTileGrid.vue'
 import { Tile } from '../FbxTile/models/Tile'
-import * as utils from './../../utils'
+import * as noopUtil from './../../utils/noop'
 
 const genMockTileData = () => [
   new Tile('WellsFargo', 'story-assets/5_colored.svg', 'story-assets/5_white.svg', 'story-assets/5_white.svg'),
@@ -21,7 +21,7 @@ const getNthTile = (wrapper, n = 1) => wrapper.find(`${tileClass}:nth-of-type(${
 describe('Components/FbxTileGrid', () => {
   beforeEach(() => {
     // We re-assign a new noop function on each run to reset the function count
-    utils.noop = jest.fn()
+    noopUtil.noop = jest.fn()
   })
 
   describe('snapshots', () => {
@@ -145,7 +145,7 @@ describe('Components/FbxTileGrid', () => {
         }
       })
       getNthTile(wrapper).trigger('click')
-      expect(utils.noop).toHaveBeenCalledTimes(1)
+      expect(noopUtil.noop).toHaveBeenCalledTimes(1)
     })
   })
 })

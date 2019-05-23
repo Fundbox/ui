@@ -1,3 +1,4 @@
+export { default as FbxStepper } from './FbxStepper'
 export { default as FbxPrintLink } from './FbxPrintLink'
 export { default as FbxPartnersLogos } from './FbxPartnersLogos'
 export { default as FbxIcomoon } from './FbxIcomoon'

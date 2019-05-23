@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/FbxStepper snapshots renders active state correctly 1`] = `
+<ul class="steps-container layout-row">
+  <li class="step flex done">
+    <div class="step-number-wrapper"><span class="step-number">1</span></div>
+    <div class="step-label">step one</div>
+  </li>
+  <li class="step flex active">
+    <div class="step-number-wrapper"><span class="step-number">2</span></div>
+    <div class="step-label">step two</div>
+  </li>
+  <li class="step flex">
+    <div class="step-number-wrapper"><span class="step-number">3</span></div>
+    <div class="step-label">step three</div>
+  </li>
+</ul>
+`;
+
+exports[`Components/FbxStepper snapshots renders the default correctly 1`] = `
+<ul class="steps-container layout-row">
+  <li class="step flex active">
+    <div class="step-number-wrapper"><span class="step-number">1</span></div>
+    <div class="step-label">step one</div>
+  </li>
+  <li class="step flex">
+    <div class="step-number-wrapper"><span class="step-number">2</span></div>
+    <div class="step-label">step two</div>
+  </li>
+  <li class="step flex">
+    <div class="step-number-wrapper"><span class="step-number">3</span></div>
+    <div class="step-label">step three</div>
+  </li>
+</ul>
+`;

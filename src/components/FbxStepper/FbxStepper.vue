@@ -1,6 +1,6 @@
 <template>
   <ul class="steps-container layout-row">
-    <li v-for="(step, index) in steps" :key="step" class="step flex" :class="{ active: isStepActive(index), done: isStepDone(index) }">
+    <li v-for="(step, index) in steps" :key="index + step" class="step flex" :class="{ active: isStepActive(index), done: isStepDone(index) }">
       <div class="step-number-wrapper"><span class="step-number">{{ index + 1 }}</span></div>
       <div class="step-label">{{ step }}</div>
     </li>

@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components/FbxPartnersLogos snapshots renders the default correctly 1`] = `
-<div class="partners-logos">
-  <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
-  <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
-  <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
+<div class="partners-logos layout-column vertical-center horizontal-center"><label class="partners-logo-label">We work with great partners</label>
+  <div class="logos layout-row horizontal-center">
+    <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
+    <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
+    <div class="logo-container"><img src="test-file-stub" class="partner-logo"></div>
+  </div>
 </div>
 `;
